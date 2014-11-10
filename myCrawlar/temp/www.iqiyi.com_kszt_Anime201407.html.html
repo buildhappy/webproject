@@ -1,0 +1,1475 @@
+
+
+ 
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>2014夏季新番剧场</title>
+  <meta name="title" content="2014夏季新番剧场" />
+  <meta name="keywords" content="七月新番,新番动画,夏季新番,新番" />
+  <meta name="description" content="" />
+  <link rel="shortcut icon" href="http://www.qiyipic.com/common/images/logo.ico" type="image/icon"/>
+  <link media="all" type="text/css"  href="http://static.qiyi.com/css/common/topic-core.css" rel="stylesheet">
+  <script charset="utf-8" type="text/javascript" src="http://static.qiyi.com/js/common/topic-core.js"></script>
+  <script type="text/javascript">
+    
+
+/*js start component-id="1124667"*/
+Com.create({
+        id: '1124667'
+    }, {
+        element: null,
+        options: {
+            itemNum: null,
+            itemWidth: null,
+            itemHeight: null,
+            delay: 1000,
+            speed: 500,
+            defaultIndex: 0,
+            showInfo: true,
+            showDirector: false,
+            autoPlaying: true
+        },
+        properties: {
+            $element: null,
+            $wrapper: null,
+            $container: null,
+            $items: null,
+            $control: null,
+            $buttons: null,
+            currentItemIndex: 0,
+            pausing: false,
+            timer: null
+        },
+        construct: function() {
+            this.$element = $(this.element);
+            this.$wrapper = this.find('.com-wrapper');
+            this.$container = this.find('.item-container');
+            var copy = this.$container.html();
+            this.$container.html(copy + copy);
+            this.$control = this.find('.control');
+            this.$items = this.find('li');
+            this.$buttons = this.$control.find('em');
+            this.$info = this.find('.info');
+            this.$director = this.find('.director');
+            var options = this.options;
+            this.options.itemNum = this.options.itemNum || this.$items.size();
+            this.options.itemWidth = this.$wrapper.width();
+            try {
+                var _options = this.$container.attr('data-options');
+                $.extend(true, this.options, $.parseJSON(_options));
+            } catch(e) {
+                console.log('parseJSON error', e.message);
+            }
+            this.setInfo(this.$items[0]);
+            this._setItemSize();
+            this.bindEvent();
+        },
+
+        setInfo: function (item) {
+            var self = this;
+            var $item = $(item);
+            if ($item.length <= 0) {
+                return;
+            }
+            self.$info.find('a')[0].href = $item.find('a')[0].href;
+            self.$info.find('strong').html($item.data('title'));
+        },
+
+        showDirector: function() {
+            var options = this.options;
+            var display = (options.showDirector) ? 'block' : 'none';
+            this.$director.css({ 'display': display });
+        },
+
+        showInfo: function() {
+            var options = this.options;
+            var display = (options.showInfo) ? 'block' : 'none';
+            this.$info.css({ 'display': display });
+        },
+
+        run: function() {
+            if (this.$items.size() <= 2) {
+                return;
+            }
+            if (this.pausing) {
+                return;
+            }
+            var $buttons = this.$buttons;
+            var $button = $($buttons.get(this.currentItemIndex));
+            $button.addClass('active');
+            this.showInfo();
+            this.showDirector();
+            if (this.options.autoPlaying) {
+                this.play();
+            };
+        },
+
+        autoPlay: function() {
+            this.options.autoPlaying = true;
+            this.play();
+        },
+
+        play: function() {
+            var self = this;
+            var options = self.options;
+            self.pausing = false;
+            self.clearTimer();
+            if (!self.timer) {
+                self.timer = setTimeout(function() {
+                    if (!self.pausing) {
+                        self.next();
+                    }
+                }, options.delay);
+            }
+        },
+
+        clearTimer: function() {
+            var self = this;
+            try {
+                window.clearTimeout(self.timer);
+                delete self.timer;
+                self.timer = null;
+            } catch (e) {
+            }
+        },
+
+        pause: function() {
+            this.clearTimer();
+            this.pausing = true;
+        },
+
+        _moveAlternate: function(data, movedone) {
+            var $container = this.$container;
+            var $items = this.$items;
+            var itemNum = this.options.itemNum;
+            $items.each(
+                function(i, item) {
+                    if (i < itemNum) {
+                        $container.append(item);
+                    }
+                }
+            );
+            $container.css({
+                'margin-left': '0'
+            });
+        },
+
+        next: function() {
+            var self = this;
+            if (self.pausing) {
+                return;
+            }
+            var itemNum = this.options.itemNum / 2;
+            if (self.currentItemIndex < (itemNum)) {
+                self.currentItemIndex += 1;
+            } else {
+                self.currentItemIndex = 0;
+            }
+            self.showCurrentItem(self.defaultIndex, 'next');
+        },
+
+        prev: function() {
+            var self = this;
+            if (self.pausing) {
+                return;
+            }
+            var itemNum = this.options.itemNum / 2;
+            if (self.currentItemIndex === 0) {
+                self.currentItemIndex = itemNum - 1;
+            } else {
+                self.currentItemIndex -= 1;
+            }
+            self.showCurrentItem(self.defaultIndex, 'prev');
+        },
+
+        _setItemSize: function() {
+            var options = this.options;
+            this.$items.width(options.itemWidth);
+            this.$items.height(options.itemHeight);
+            this.$container.width(options.itemNum * options.itemWidth);
+        },
+
+        _toggleButton: function($buttons, $button) {
+            $buttons.removeClass('active');
+            $button.addClass('active');
+        },
+
+        showCurrentItem: function(index, direction) {
+            var self = this;
+            var index = index || this.currentItemIndex; 
+            direction = direction || 'next';
+            var options = this.options;
+            var left = index * options.itemWidth;
+            var itemNum = options.itemNum / 2;
+            var $item = $(this.$items.get(index));
+            var $buttons = self.$buttons;
+            var $button = $($buttons.get(index));
+            self._toggleButton($buttons, $button);
+            if ( index == itemNum ) {
+                self._toggleButton($buttons, $($buttons.get(0)));
+            }
+            var _showItem = function() {
+                var _loadDone = function() {
+                    if (index == itemNum) {
+                        self.currentItemIndex = 0;
+                        self._moveAlternate();
+                    }
+                };
+
+                self.$info.animate({
+                    'margin-bottom': '0'
+                }, options.speed, null, _loadDone);
+                if (self.options.autoPlaying) {
+                    self.autoPlay();
+                }
+            };
+
+            self.setInfo($item[0]);
+            self.$info.css({
+                'margin-bottom': '-60px'
+            });
+
+            self.$container.animate({
+                'margin-left': '-' + left + 'px'
+            }, options.speed, 'linear', _showItem);
+
+        },
+
+        bindControl: function() {
+            var self = this;
+            var $buttons = self.$buttons;
+            var _click = function(i, button) {
+                self.pause();
+                if (self.currentItemIndex != i) {
+                    self.currentItemIndex = i;
+                    self.showCurrentItem(i);
+                } else {
+                    $(self.$items.get(i)).hide().fadeIn();
+                }
+            };
+            $buttons.each(
+                function(i, button) {
+                    $(button).click(function() {
+                        _click(i, button);
+                    });
+                }
+            );
+            self.$control.on('mouseover', function () {
+                self.pause();
+            });
+            self.$info.on('mouseover', function () {
+                self.pause();
+            });
+            self.$info.on('mouseout', function () {
+                if (self.options.autoPlaying) {
+                    self.autoPlay();
+                }
+            });
+            self.$director.on('click', '.arrow-left', function () {
+                self.pause();
+                self.pausing = false;
+                self.prev();
+            });
+            // TODO: theme css should be change.
+            self.$director.find('.arrow-right').css({
+                left: (self.$wrapper.width() - 30)
+            });
+            self.$director.on('click', '.arrow-right', function () {
+                self.pause();
+                self.pausing = false;
+                self.next();
+            });
+        },
+
+        bindItem: function() {
+            var self = this;
+            var $items = self.$items;
+            var _mouseover = function() {
+                self.pause();
+            };
+            var _mouseout = function() {
+                if (self.options.autoPlaying) {
+                    self.autoPlay();
+                }
+            };
+            $items.each(
+                function(i, item) {
+                    $(item).mouseover(function() {
+                        _mouseover(i, item);
+                    });
+                    $(item).mouseout(function() {
+                        _mouseout(i, item);
+                    });
+                }
+            );
+        },
+
+        bindEvent: function() {
+            this.bindControl();
+            this.bindItem();
+        }
+    }
+);
+/*js end*/
+
+  </script>
+  <style type="text/css">
+    .cms-template-blank {
+   /* 空白模板样式 */
+}
+/*css start component-id="1060094"*/
+.com-1060094 .footmenu a{
+	color: #000;
+}
+.com-1060094 .footmenu a:hover{
+	color: #518900;
+	text-decoration: underline;
+}
+.com-1060094 .footerN1214{
+	background: url(http://www.qiyipic.com/common/fix/public_images/footerbg1229.png) repeat-x center 0;
+	background-color: #f2f2f2;
+	padding: 15px 0 20px 0;
+	font-size: 12px;
+}
+.com-1060094 .fEn{
+	font-family: "\5FAE\8F6F\96C5\9ED1","\9ED1\4F53";
+}
+
+/*css end*/
+
+/*css start component-id="1074688"*/
+.com-1074688 .com-item img {
+			width: 140px;
+}
+.com-1074688 .com-item p {
+			margin: 8px 0;
+			text-align: center;
+			font-size: 14px;
+}
+.com-1074688 .com-body {
+      padding: 20px 0 20px 10px;
+}
+.com-1074688 .com-item {
+      margin: 0 9px;
+}
+
+/*css end*/
+
+/*css start theme*/
+.cms-component {
+  font-family: '微软雅黑', Arial;
+  font-size: 14px;
+  color: #000;
+}
+/*css end*/
+
+/*css start component-id="1124667"*/
+.com-1124667 .com-wrapper{
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    width:100%;
+}
+.com-1124667 .item-container{
+    text-align: center;
+    overflow: hidden;
+    width: 10000px;
+}
+.com-1124667 .com-wrapper .item{
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    margin: auto;
+    z-index: -1;
+}
+.com-1124667 .com-wrapper .item a{
+    text-decoration:none;
+    display: block;
+}
+.com-1124667 .com-wrapper .info{
+    width: 100%;
+    margin-top: -6px;
+    padding-top: 6px;
+    bottom: 0;
+    position: absolute;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+.com-1124667 .com-wrapper .info a{
+    display: block;
+    color: #fff;
+    z-index: 3;
+    line-height: 1.8em;
+    font-family:'微软雅黑';
+    font-size: 18px;
+    text-decoration: none;
+}
+.com-1124667 .com-wrapper .info strong{
+    font-weight: normal;
+}
+.com-1124667 .com-wrapper .control{
+    text-align: center;
+    position: absolute;
+    z-index: 10;
+    bottom: 10px;
+    right: 15px;
+}
+.com-1124667 .com-wrapper .control .btn-disc{
+    box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 0.34),inset -1px -1px 0px rgba(255, 255, 255, 0.22);
+    width: 16px;
+    height: 16px;
+    border-radius: 9px;
+    display: inline-block;
+    background: #ccc;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+.com-1124667 .com-wrapper .arrow-h{
+    background: green;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+}
+.com-1124667 .com-wrapper .arrow-h .ico{
+    background-image:url(http://lego-fe-test-dev01.qiyi.virtual:9000/lego-static/img/topic-icon.png);
+    position: absolute;
+    top: 50%;
+}
+.com-1124667 .com-wrapper .arrow-right{
+    background-position: -11px -64px;
+    float: none;
+    right: 0px;
+}
+.com-1124667 .com-wrapper .arrow-left{
+    background-position: -11px -13px;
+}
+.com-1124667 .com-wrapper .control .btn-disc.active, .com-1124667 .com-wrapper .control .btn-disc:hover{
+    background-color: #729e11;
+}
+.com-1124667 .com-wrapper .control .btn-disc.active .item, .com-1124667 ..com-wrapper .control .btn-disc:hover .item{
+    z-index: 10;
+    opacity: 1;
+}
+
+/*css end*/
+
+/*css start component-id="1059794"*/
+.com-1059794 .com-item p {
+text-align: center;
+line-height: 30px;
+}
+.com-1059794 .com-item {
+display: block;
+}
+
+/*css end*/
+
+  </style>
+  <script type="text/javascript">window.__qlt = {};window.__qlt.statisticsStart = +new Date;window.__qlt.pgtype = "quicktopic";
+   window.__qlt.cid= "4";
+  </script>
+</head>
+
+
+<body class="cms-body " style="cursor: auto; background-image: url(http://pic1.qiyipic.com/common/lego/20140715/f268c675282c40e383a8727f59754408.jpg) !important; background-position: 50% 45px; background-repeat: no-repeat no-repeat;">
+ 	
+ 	
+<div class="cms-component com-1059731" com-type="default" >
+  <link rel="shortcut icon" href="http://www.qiyipic.com/common/images/logo.ico" type="image/icon" />
+  <link rel="stylesheet" type="text/css" href="http://static.qiyi.com/css/common/v3-basic/v3-basic_other.css" />
+  <link rel="stylesheet" type="text/css" href="http://static.qiyi.com/css/common/play_new_css/play_new.css" />
+  <script type="text/javascript" src="http://static.iqiyi.com/js/lib/sea1.2.js"></script>
+  
+  <!-- 播放器地址 -->
+  <span 
+  data-widget-flashplayerparam="public"
+  data-flashplayerparam-flashurl="http://www.iqiyi.com/player/20140331130540/Player.swf"
+  data-flashplayerparam-flashvars="tipdataurl=http://static.qiyi.com/ext/201402201523/tipdata.xml&components=fefff7e6e&cid=&exclusivePreloader=http://www.iqiyi.com/player/20140120131607/loading.swf&preloader=http://www.iqiyi.com/player/20140218112703/loading.swf&vipPreloader=http://www.iqiyi.com/player/20130121161835/vip.swf&gpu=&showBrand=&adurl=http://www.iqiyi.com/player/20140331112614/Player.swf&flashP2PCoreUrl=http://www.qiyipic.com/201403051650/fix/20083.jpg"
+  style="display:none;"
+  ></span>
+  
+  
+  <div class="topNavWrap-player" data-widget-compatible="wrap" data-ipadhack-elem="nav">
+    <div class="navPlayer topNav-player topNav-fixed" data-widget-navctrl="player" data-widget-toplinefloater="blackFloater">
+      <div class="navcont clearfix">
+        <div class="topNavLt">
+          <a class="logo" href="http://www.iqiyi.com/" data-navpingback="logo" rseat="iQIYI_logo"><img title="爱奇艺 iQIYI.COM" alt="爱奇艺 iQIYI.COM" src="http://www.qiyipic.com/common/fix/public_images/logo108x35_black.png" rseat="iQIYI_yxpz"></a>
+        </div>
+        <div class="topNavMid" data-widget-navanim="wrap" data-navanim-param="play">
+          <div class="dhome"><a href="http://www.iqiyi.com/" data-btn="backhome" data-navpingback="home" title="返回爱奇艺首页" alt="返回爱奇艺首页" rseat="返回爱奇艺首页"></a></div>
+          <div class="dhBox">
+            <div class="dhGuide" data-widget-navctrl-elem="guide">
+              <div class="" data-widget-navctrl-elem="shadow" rseat="导航">导航</div>
+            </div>
+            <div class="ydBox" data-widget-navctrl-elem="tip">
+              <div class="gtips-bg"></div>
+              <div class="gtips-txt"><p><span rseat="更多频道内容在这里查看">更多频道内容在这里查看</span><a href="javascript:void(0);" j-tipclose="closebtn" class="xclose" rseat="知道了">知道了</a></p></div>
+            </div>
+            <div data-private-display="block" class="navboxFirst-v3" data-widget-navctrl-elem="first" style="display:none;">
+              <div class="navFirst">
+                <div class="pop-channel">
+                  <ul class="channel_list_qs clearfix">
+                    <li><a href="http://www.iqiyi.com/" rseat="爱奇艺首页">爱奇艺首页</a></li>
+                  </ul>
+                  <ul class="channel_list_type clearfix">
+                    <li><a href="http://yule.iqiyi.com" rseat="娱乐">娱乐</a></li>
+                    <li><a href="http://www.iqiyi.com/zongyi/" rseat="综艺">综艺</a></li>
+                    <li class="word_three"><a href="http://www.iqiyi.com/dianshiju/" rseat="电视剧">电视剧</a></li>
+                    <li><a href="http://www.iqiyi.com/dongman/" rseat="动漫">动漫</a></li>
+                    <li><a href="http://child.iqiyi.com" rseat="少儿">少儿</a></li>
+                    <li><a href="http://fun.iqiyi.com" rseat="搞笑">搞笑</a></li>
+                    <li><a href="http://dv.iqiyi.com" rseat="原创">原创</a></li>
+                    <li><a href="http://music.iqiyi.com" rseat="音乐">音乐</a></li>
+                    <li><a href="http://sports.iqiyi.com" rseat="体育">体育</a></li>
+                  </ul>
+                  <ul class="channel_list_type clearfix">
+                    <li><a href="http://www.iqiyi.com/news/" rseat="资讯">资讯</a></li>
+                    <li><a href="http://www.iqiyi.com/dianying/" rseat="电影">电影</a></li>
+                    <li class="word_three"><a href="http://www.iqiyi.com/weidianying/" rseat="微电影">微电影</a></li>
+                    <li><a href="http://trailer.iqiyi.com" rseat="片花">片花</a></li>
+                    <li><a href="http://games.iqiyi.com" rseat="游戏">游戏</a></li>
+                    <li><a href="http://life.iqiyi.com" rseat="生活">生活</a></li>
+                    <li class="channel_item_new">
+                      <a href="http://paike.iqiyi.com" rseat="拍客">拍客
+                        <i data-animword-elem="icon" class="icon_new"></i>
+                      </a>
+                    </li>
+                    <li><a href="http://f.iqiyi.com" rseat="时尚">时尚</a></li>
+                    <li><a href="http://www.iqiyi.com/lvyou/" rseat="旅游">旅游</a></li>
+                  </ul>
+                  <ul class="channel_list_type mt15 clearfix">
+                    <li><a href="http://edu.iqiyi.com" rseat="教育">教育</a></li>
+                    <li><a href="http://business.iqiyi.com" rseat="财经">财经</a></li>
+                    <li class="channel_item_new">
+                      <a href="http://mil.iqiyi.com" rseat="军事">军事
+                        <i data-animword-elem="icon" class="icon_new"></i>
+                      </a>
+                    </li>
+                    <li class="word_three"><a href="http://www.iqiyi.com/jilupian/" rseat="纪录片">纪录片</a></li>
+                    <li class="word_four"><a href="http://g.pps.tv" rseat="PPS游戏">PPS游戏</a></li>
+                    <script type="text/javascript">
+                      (function(){
+                        var v = '';
+                        try{
+                          if(Q.browser.iPad){
+                            v = ' style="display:none;"';
+                          }
+                        }catch(e){}
+                        document.write('<li class="word_four"' + v + '><a href="http://www.iqiyi.com/live/" rseat="直播中心">直播中心</a></li>');
+                      })();
+                    </script>
+                    <li class="word_four"><a href="http://vip.iqiyi.com/?fc=b4df9faa4b31aec4" rseat="VIP会员">VIP会员</a></li>
+                    <li class="word_five"><a href="http://www.iqiyi.com/qiyichupin/" rseat="爱奇艺出品">爱奇艺出品</a></li>
+                  </ul>
+                  <ul class="channel_list_type clearfix">
+                    <li><a href="http://ad.iqiyi.com" rseat="广告">广告</a></li>
+                    <li><a href="http://auto.iqiyi.com" rseat="汽车">汽车</a></li>
+                    <li><a href="http://www.iqiyi.com/tese/" rseat="特色">特色</a></li>
+                    <li class="word_three"><a href="http://top.iqiyi.com" rseat="风云榜">风云榜</a></li>
+                    <li class="word_four"><a href="http://www.iqiyi.com/lib/" rseat="影视大全">影视大全</a></li>
+                    <li class="word_four"><a href="http://www.iqiyi.com/u/" rseat="个人中心">个人中心</a></li>
+                    <li class="word_four"><a href="http://app.iqiyi.com/index.html" rseat="APP专区">APP专区</a></li>
+                    <li class="word_five"><a href="http://www.iqiyi.com/common/iqiyitv.html" rseat="爱奇艺电视">爱奇艺电视</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <iframe class="frame-leftMenus-pop" frameborder="0" data-navctrl-elem="underframe"></iframe>
+          </div>
+        </div>
+        <div class="topNavRt topNavRt_new"  data-widget-navmsgtips="navmsgtips">
+          <div class="topLogin" id="data-temp-new" data-con="head" style="display: block;">
+            <div class="topNav_user usrTx-box" data-widget-indexpageuserinfo="indexpageuserinfo">
+              <div class="usrTx-outer" data-widget-userregistlogin="userregistlogin" id="widget-userregistlogin" style="display: none;">
+                <span>
+                  <div class="usrTx-inner-box_hover" style="display: none;" data-widget-userbox="userbox"></div>
+                  <span j-user="name" style="display: none;" class="usrTx-name" data-elem="topUserName" data-private-display="block">
+                    <span data-widget-score="name">
+                      <a class="myName" href="http://www.iqiyi.com/u/"></a>
+                      <i data-vipheader-elem="vipicon" style="display: none;" class="kthy0201"></i>
+                      <i data-vipheader-elem="notvipicon" style="display: none;" class="no-kthy0201" data-private-display="block"></i>
+                    </span>
+                    <span class="my-jifen0409" data-widget-score="score" data-private-display="" style="display: none;"></span>
+                  </span>
+                </span>
+                <span>
+                  <div data-private-display="" data-elem="topLoginBar" class="usrTx-login">
+                    <a class="login0201" href="javascript:void(0)" data-elem="topLoginPanel" j-login="title"  rseat="tj_login">登录</a>
+                    <div class="usrTxGeneral-box_hover" style="display: none;" data-widget-loginbox="loginbox" data-private-display="block"></div>
+                  </div>
+                  <div class="fl ml5 mr5" data-elem="splitline">|</div>
+                  <div data-private-display="" data-elem="topRegisterBar" class="usrTx-register">
+                    <a j-register="title" href="javascript:void(0)" data-elem="topRegistPanel" class="register0201" rseat="tj_ regist">注册</a>
+                    <div class="usrTxGeneral-box_hover usrTxGeneral-box_hover_reg" style="display: none;" data-widget-registbox="registbox"></div>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div class="topNav_vip" data-vipheader-elem="wrapper" id="widget-vipheader" data-vipheader-cls="topNav_vip">
+              <a class="gx0201" href="http://serv.vip.iqiyi.com/order/preview.action?pid=a0226bd958843452&fc=a988b1d4503873af" j-playhistory="title" data-vipheader-elem="header" j-data-elem="zjuser" data-private-display="" style="display: block;" rseat="tj_opvip">开通VIP</a>
+              <a class="gx0201" href="http://serv.vip.iqiyi.com/order/guide.action?pid=90c863adab050b22&amp;fc=a988b1d4503873af" j-playhistory="title" data-vipheader-elem="header" style="display: none;" rseat="升级VIP">升级VIP</a>
+              <a class="gx0201" href="http://serv.vip.iqiyi.com/order/guide.action?pid=a0226bd958843452&fc=a988b1d4503873af" j-playhistory="title" data-vipheader-elem="header" style="display: none;" rseat="续费VIP">续费VIP</a>
+              <a class="gx0201" href="http://vip.iqiyi.com/?fc=a988b1d4503873af" j-playhistory="title" data-vipheader-elem="header" style="display: none;">VIP会员</a>
+              <a class="gx0201" href="http://serv.vip.iqiyi.com/order/preview.action?pid=adb3376b039b970b&fc=a988b1d4503873af" j-playhistory="title" data-vipheader-elem="header" style="display: none;" rseat="续费VIP">续费VIP</a>
+              <p class="pub_arrow" style="display:none"></p>
+            </div>
+            <div class="topNav_update" id="data-widget-navmessagefloater" data-navmessagefloater-showcls="topNav_update-hover">
+              <span data-navmessagefloater-elem="title" class="toGeng">
+                <div style="display:none;" class="icon-qidanTip" data-navmessagefloater-elem="numtip"  data-navmsgtips-icon="icon">
+                  <i class="nav_mag_dot"></i>
+                </div>
+                <a href="javascript:void(0)" class="gx" rseat="tj_ favorite">消息<b></b></a>
+              </span>
+              <div class="qy_nav_pop" data-navmessagefloater-elem="body">
+                <div class="nav_pop_inner">
+                  <div class="nav_pop_arrow">
+                    <i class="arrow-inner"></i>
+                    <i class="arrow-outer"></i>
+                  </div>
+                  <div class="nav_pop_title">
+                    <ul class="pop_title_list">
+                      <li class="selected" data-navmessagefloater-elem="tabtitle">
+                        <a class="title_item" href="javascript:void(0);" rseat="更新提醒">更新提醒<i class="title_item_tip" style="display:none;" data-navmessagefloater-elem="num">6</i></a>
+                      </li>
+                      <li data-navmessagefloater-elem="tabtitle">
+                        <a class="title_item" href="javascript:void(0);" rseat="与我相关">与我相关<i class="title_item_tip" style="display:none;" data-navmessagefloater-elem="num">6</i></a>
+                      </li>
+                      <li data-navmessagefloater-elem="tabtitle">
+                        <a class="title_item" href="javascript:void(0);" rseat="系统通知">系统通知<i class="title_item_tip" style="display:none;" data-navmessagefloater-elem="num">6</i></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="nav_pop_main" data-playhistory-elem="navpopmain">
+                    <div class="pop_main_inner" data-navmessagefloater-elem="tabbody">
+                    </div>
+                    <div class="pop_main_inner" style="display:none;" data-navmessagefloater-elem="tabbody">
+                    </div>
+                    <div class="pop_main_inner" style="display:none;" data-navmessagefloater-elem="tabbody">
+                    </div>
+                  </div>
+                  <div class="nav_pop_footer clearfix">
+                    <div class="pop_footer_sign"><a href="javascript:void(0);" data-navmessagefloater-elem="markreadbtn" rseat="全部标记已读">全部标记为已读</a></div>
+                    <div class="pop_footer_more"><a data-navmessagefloater-elem="morebtn" rseat="查看更多">查看更多>></a></div>
+                  </div>
+                </div>
+              </div>
+              <div style="display: block;">
+                <iframe src="about:blank" frameborder="0" style="position: absolute; z-index: 4; top: 25px; left: -156px; width: 300px; height: 375px; background-color: rgb(255, 255, 255); display: none; background-position: initial initial; background-repeat: initial initial;"></iframe>
+              </div>
+            </div>
+            <div class="topNav_update topNav_records topNav_records" data-playhistory-cls="topNav_update" id="widget-playhistory-new">
+              <a class="a1 jilu" onfocus="this.blur();" href="#" data-playhistory-elem="title" rseat="tj_record">播放记录<b></b></a>
+              <div class="qy_nav_pop" data-playhistory-elem="body"  style="position:absolute; right:0; top:25px;">
+                <div class="nav_pop_inner"  data-playhistory-elem="nulltip" >
+                  <div class="noRecorder_tips">您还没有观看任何视频</div>
+                  <div class="nav_pop_arrow">
+                    <i class="arrow-inner"></i>
+                    <i class="arrow-outer"></i>
+                  </div>
+                  <div class="nav_pop_main nav_pop_main-recorder" >
+                    <div class="timeLine" data-playhistory-elem="timeline"></div>
+                    <div class="historytips" style="display:none;" data-playhistory-elem="tip" data-name="exactRecord">
+                      <div class="historytips-bg"></div>
+                      <div class="historytips-txt" data-playhistory-elem="tiptext" style="cursor: pointer;">爱奇艺用户将能永久保存播放记录</div>
+                      <a href="javascript:void(0)" class="iconjl-close" j-delegate="historyTip-close" style="display: block;" data-playhistory-elem="tipclose"></a>
+                    </div>
+                    <div class="pop_main_inner">                        
+                      <div class="nav_pop_recorderWrap" data-playhistory-elem="content">
+                        <div class="unReader" style="height: 140px; line-height: 24px; overflow: hidden; padding-top: 60px; text-align: center; display: none;" data-playhistory-elem="loadingtip"> <img src="http://www.qiyipic.com/common/images/load.gif"><br>
+                          <span class="j-historyMaskLoading-txt" data-playhistory-elem="loadingtiptext">正在为您读取历史记录</span> </div>
+                        <div class="nav_pop_recorder"  data-playhistory-elem="today">
+                          <div class="recorder_timeTip">
+                            <i class="icon-timeTipDot">●</i>
+                            <span class="timeTip">今天</span>
+                          </div>
+                          <div class="recorder_list">
+                            <ul class="recorder_list_inner" data-playhistory-elem="todaylist">
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="nav_pop_recorder" data-playhistory-elem="week">
+                          <div class="recorder_timeTip">
+                            <i class="icon-timeTipDot">●</i>
+                            <span class="timeTip">本周</span>
+                          </div>
+                          <div class="recorder_list">
+                            <ul class="recoadingtiptext">正在为您读取历史记录</span> </div>
+                        <div class="nav_pop_recorder"  data-playhistory-elem="today">
+                          <div class="recorder_timeTip">
+                            <i class="icon-timeTipDot">●</i>
+                            <span class="timeTip">今天</span>
+                          </div>
+                          <div class="recorder_list">
+                            <ul class="recorder_list_inner" data-playhistory-elem="todaylist">
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="nav_pop_recorder" data-playhistory-elem="week">
+                          <div class="recorder_timeTip">
+                            <i class="icon-timeTipDot">●</i>
+                            <span class="timeTip">本周</span>
+                          </div>
+                   order_list_inner" data-playhistory-elem="weeklist">               
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="nav_pop_recorder" data-playhistory-elem="early">
+                          <div class="recorder_timeTip recorder_timeTip-gray">
+                            <i class="icon-timeTipDot">●</i>
+                            <span class="timeTip">更早</span>
+                          </div>
+                          <div class="recorder_list">
+                            <ul class="recorder_list_inner" data-playhistory-elem="earlylist">                 
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="nav_pop_ft_recorder clearfix">
+                  <a data-playhistory-elem="more" href="#" title="查看更多">查看更多&gt;</a>
+                </div>
+              </div>
+              <div data-playhistory-elem="underframe" style="display: block;">
+              </div>
+            </div>
+          </div>
+          <div class="clearfix">
+            <div data-widget-suggest="suggest" data-suggest-tip="" data-suggest-layout="0" class="searchbox" data-suggest-focusoutblacklist="iqiyi.com">
+              
+                <a title="爸爸去哪儿第二季" href='http://so.iqiyi.com/so/q_%E7%88%B8%E7%88%B8%E5%8E%BB%E5%93%AA%E5%84%BF%E7%AC%AC%E4%BA%8C%E5%AD%A3' target='_blank' style="display:none;" data-suggest-elem="keyword"></a>
+              
+              <form data-suggest-elem="form">
+                <div data-suggest-elem="container" class="srchDef">
+                  <span class="in">
+                    <input type="text" autocomplete="off" class="navTopTxt" data-suggest-elem="input">
+                  </span>
+                  <span class="out">
+                    <input type="button" class="navTopBtn" value="" data-suggest-elem="btn" rseat="tj_serch">
+                  </span>
+                </div>
+              </form>
+              <div class="soResult" data-suggest-elem="body" style="display:none;">
+                <div class="soResult_con">
+                  <ul class="soResult_list" data-suggest-elem="list"></ul>
+                </div>
+              </div>
+            </div>
+            <div class="nav_updateBtn" id="data-widget-upload"><a target="_blank" href="http://up.ipd.pps.tv/upload?type=0" rseat="tj_upld">上传视频</a></div>
+          </div>
+          <div class="nav_pop_single" data-navmsgtips-content="content" ></div>
+          <div class="gradientLayer"></div>
+        </div>
+        <div data-widget-topnavloginbar="loginbar">
+          <div class="topNav_loginBar" data-topnavloginbar-elem="container">
+            <a href="#" j-delegate="login" data-topnavloginbar-loginbtn="login" class="lightGreen" rseat="登录爱奇艺">登录爱奇艺</a>
+            <span>，��享高品质视频生活。您还可以</span>
+            <a j-delegate="authLoginBtn" data-topnavloginbar-sinabtn="sinabtn" href="http://passport.iqiyi.com/oauth/login.php?type=2&isiframe=1" data-sourceid="2" class="loginBtn-weibo"><i class="loginIcon-weibo"></i><span rseat="微博登录">微博登录</span></a>
+            <a j-delegate="authLoginBtn" data-topnavloginbar-qqbtn="qqbtn" href="http://passport.iqiyi.com/oauth/login.php?type=4&isiframe=1" data-sourceid="4" class="loginBtn-qq"><i class="loginIcon-qq"></i><span rseat="QQ登录">QQ登录</span></a>
+          </div>
+          <textarea data-topnavloginbar-tpl="weibo" style="display: none">
+            <spclass="gradientLayer"></div>
+        </div>
+        <div data-widget-topnavloginbar="loginbar">
+          <div class="topNav_loginBar" data-topnavloginbar-elem="container">
+            <a href="#" j-delegate="login" data-topnavloginbar-loginbtn="login" class="lightGreen" rseat="登录爱奇艺">登录爱奇艺</a>
+            <span>，�an>使用您的微博帐号登录，即刻尊享微博用户专属服务。</span>
+            <a j-delegate="authLoginBtn" data-topnavloginbar-sinabtn="sinabtn" href="http://passport.iqiyi.com/oauth/login.php?type=2&isiframe=1" data-sourceid="2" class="loginBtn-weibo"><i class="loginIcon-weibo"></i><span rseat="微博登录">微博登录</span></a>
+          </textarea>
+          <textarea data-topnavloginbar-tpl="qq" style="display: none">
+            <span>使用您的QQ帐号登录，即刻尊享QQ用户专属服务。</span>
+            <a j-delegate="authLoginBtn" data-topnavloginbar-qqbtn="qqbtn" href="http://passport.iqiyi.com/oauth/login.php?type=4&isiframe=1" data-sourceid="4" class="loginBtn-qq"><i class="loginIcon-qq"></i><span rseat="QQ登录">QQ登录</span></a>
+          </textarea>
+          <textarea data-topnavloginbar-tpl="renren" style="display: none">
+            <span>使用您的人人帐号登录，即刻尊享人人用户专属服务。</span>
+            <a j-delegate="authLoginBtn" data-topnavloginbar-renrenbtn="renrenbtn" href="http://passport.iqiyi.com/oauth/login.php?type=3&isiframe=1" data-sourceid="3" class="loginBtn-renren"><i class="loginIcon-renren"></i><span rseat="人人登录">人人登录</span></a>
+          </textarea>
+        </div>
+        <iframe data-topnavloginbar-elem="underframe" class="frame-loginBar" frameborder="0"></iframe>
+      </div>
+      <iframe class="frame-topNav-player" frameborder="0"></iframe>
+    </div>
+  </div>
+  <script type="text/javascript">
+    (function(){var a=Q.$("#widget-userregistlogin"),b=a.down("[data-elem='topUserName']"),d=a.down("[data-elem=topLoginPanel]"),e=a.down("[data-elem=topRegistPanel]"),f=a.down("*[data-elem=splitline]"),c=Q.cookie.get("P00002")&&JSON.parse(Q.cookie.get("P00002"));c&&c.nickname?(d.hide(),e.hide(),f&&f.hide(),Q.browser.IE6&&b.down("a").css("width",Math.min(12*c.nickname.length,36)+"px"),a.show(),b.show(),b.down("a").html(c.nickname)):(b.hide(),d.html("登录").css("display",""),e.html("注册").css("display",                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ""),a.show())})();
+  </script>
+</div>
+  <div class="cms-banner" style=""></div>
+  <div class="cms-wrapper">
+    <div class="cms-layout layout-980">
+      <!-- 这里是插入自己HTML的地方 -->
+      <div class="cms-row">
+        <div class="cms-block col-12">
+          
+
+<div class="cms-component com-1233612" com-type="default" style="height: 200px;">
+</div>
+          
+        </div>
+      </div>
+      
+    <div class="cms-row"><div class="cms-block col-8">
+
+<div class="cms-component com-1124667" com-type="default" style="opacity:1;z-index:0;width:650;height:315;">
+  
+  <div class="com-wrapper" >
+    <ul class="item-container" data-options=''>
+      
+      <li class="item" data-title="LOVE STAGE!!" data-no="0">
+        <a href="http://www.iqiyi.com/v_19rrhnt6kg.html" target="_blank"><img src="http://pic4.qiyipic.com/common/lego/20140723/eb16feec75fe467ab3cbbd23e4c2a343.jpg"></a>
+      </li>
+        
+      <li class="item" data-title="魔法少女伊莉雅 第二季 " data-no="1">
+        <a href="http://www.iqiyi.com/v_19rrhnt92g.html" target="_blank"><img src="http://pic1.qiyipic.com/common/lego/20140723/14620c6af97042479c21ff265bb7c1c3.jpg"></a>
+      </li>
+        
+      <li class="item" data-title="修业魔女璐璐萌 " data-no="2">
+        <a href="http://www.iqiyi.com/v_19rrhnt6iw.html" target="_blank"><img src="http://pic9.qiyipic.com/common/lego/20140723/e2b11d3ad7cc40958e8f0e31c3d03eba.jpg"></a>
+      </li>
+        
+      <li class="item" data-title="东京喰种 " data-no="3">
+        <a href="http://www.iqiyi.com/v_19rrhil8fo.html" target="_blank"><img src="http://pic7.qiyipic.com/common/lego/20140723/4651aa39a1f54e2a89be7c52483c9e67.jpg"></a>
+      </li>
+        
+    </ul>
+    
+    <h3 class="info"><a target="_blank"><strong></strong></a></h3>
+    <div class="control">
+      
+      <em class="btn-disc"></em>
+      
+      <em class="btn-disc"></em>
+      
+      <em class="btn-disc"></em>
+      
+      <em class="btn-disc"></em>
+      
+    </div>
+    <p class="director arrow-h">
+      <i class="ico pull-left arrow-left" title="后退"></i><i class="ico pull-right arrow-right" title="前进"></i>
+    </p>
+  </div>
+      
+</div></div><div class="cms-block col-4">
+
+<div class="cms-component com-1059794" com-type="default" style="opacity:1;z-index:0;height:315;color:#0a0a0a;">
+	 <a name=""></a>
+  <div class='com-wrapper'>
+    <div class='com-body-2'>
+      <div class='com-item'>
+      	<h3 class='com-title-2'></h3>
+      </div>
+      
+        <a class='com-item' href="http://www.iqiyi.com/a_19rrhzp0j8.html" title="" alt="">
+          <img src='http://pic9.qiyipic.com/common/lego/20140715/b42357e91ebb4de783f8e2f9ee94608e.jpg' title="" alt=""/>
+          <p class='com-text'></p>
+        </a>
+      
+        <a class='com-item' href="http://www.iqiyi.com/dongman/P4GASP.html" title="" alt="">
+          <img src='http://pic1.qiyipic.com/common/lego/20140715/22d2e9430a7d467fa40e25bb4610544a.jpg' title="" alt=""/>
+          <p class='com-text'></p>
+        </a>
+      
+        <a class='com-item' href="http://www.iqiyi.com/a_19rrhlczwg.html" title="" alt="">
+          <img src='http://pic3.qiyipic.com/common/lego/20140715/b05c8bda91994435ac2fa4f3fcf56333.jpg' title="" alt=""/>
+          <p class='com-text'></p>
+        </a>
+      
+      <div class='com-item'>
+        <ul>
+          
+            <li><a href=" " class='com-text'> </a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</div></div></div><div class="cms-row">
+        <div class="cms-block col-12">
+		
+
+<div class="cms-component com-1074688" com-type="default" style="background-color:#ffffff;color:#0a0a0a;">
+   <a name="周日"></a>
+  <div class='com-wrapper'>
+    <div class='com-head'>
+      <div class='com-head-left'>     
+ 		<h3 class="com-title">周日</h3>
+   ngman/P4GASP.html" title="" alt="">
+          <img src='http://pic1.qiyipic.com/common/lego/20140715/22d2e9430a7d467fa40e25bb4610544a.jpg' title="" alt=""/>
+          <p class='com-text'></p>
+        </a>
+      
+        <a class='com-item' href="http://www.iqiyi.com/a_19rrhlczwg.html" title="" alt="">
+          <img src='http://pic3.qiyipic.com/common/lego/20140715/b05c8bda91994435ac2fa4f3fcf56333.jpg' title="" alt=""/>
+          <p class='com-text'></p>
+        </a>
+      
+      <div class='com-item'>
+        <ul>
+          
+            <li><a href=" " class='com-text'> </a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</div></div></div><div class="cms-r   </div>
+    </div>
+    <div class='com-body'>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgi8upt.html" alt="地球队长" title="地球队长">
+             	<img src='http://pic4.qiyipic.com/image/20140405/77/50/8c/a_100003774_m_601.jpg' alt="地球队长" title="地球队长" />
+              	<p class='com-text'>地球队长</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgif78l.html" alt="战国BASARA 第三季" title="战国BASARA 第三季">
+             	<img src='http://pic6.qiyipic.com/image/20140704/a4/7c/a_100005688_m_601.jpg' alt="战国BASARA 第三季" title="战国BASARA 第三季" />
+              	<p class='com-text'>战国BASARA 第三季</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgif715.html" alt="元气囝仔" title="元气囝仔">
+             	<img src='http://pic2.qiyipic.com/image/20140704/cf/2d/a_100005691_m_601.jpg' alt="元气囝仔" title="元气囝仔" />
+              	<p class='com-text'>元气囝仔</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgjao65.html" alt="钻石王牌" title="钻石王牌">
+             	<img src='http://pic5.qiyipic.com/image/20130929/a_100000562_m_601_m1.jpg' alt="钻石王牌" title="钻石王牌" />
+              	<p class='com-text'>钻石王牌</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgif9il.html" alt="Space☆Dandy 第二季" title="Space☆Dandy 第二季">
+             	<img src='http://pic6.qiyipic.com/image/20140715/44/3e/a_100005702_m_600_m1_180_236.jpg' alt="Space☆Dandy 第二季" title="Space☆Dandy 第二季" />
+              	<p class='com-text'>Space☆Dandy 第二季</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+      <div style='clear: both;'></div>
+    </div>
+  </div>
+</div>
+
+<div class="cms-component com-1074688" com-type="default" style="background-color:#ffffff;color:#0a0a0a;">
+   <a name="周一"></a>
+  <div class='com-wrapper'>
+    <div class='com-head'>
+      <div class='com-head-left'>     
+ 		<h3 class="com-title">周一</h3>
+      </div>
+    </div>
+    <div class='com-body'>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgif6md.html" alt="斩！赤红之瞳" title="斩！赤红之瞳">
+             	<img src='http://pic3.qiyipic.com/image/20140704/0b/ee/a_100005696_m_601.jpg' alt="斩！赤红之瞳" title="斩！赤红之瞳" />
+              	<p class='com-text'>斩！赤红之瞳</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgif6ex.html" alt="月刊少女野崎君" title="月刊少女野崎君">
+             	<img src='http://pic0.qiyipic.com/image/20140704/d2/88/a_100005699_m_601.jpg' alt="月刊少女野崎君" title="月刊少女野崎君" />
+              	<p class='com-text'>月刊少女野崎君</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+        <div class='com-item'>
+
+         <div class='com-body'>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgif6md.html" alt="斩！赤红之瞳" title="斩！赤红之瞳">
+             	<img src='http://pic3.qiyipic.com/image/20140704/0b/ee/a_100005696_m_601.jpg' alt="斩！赤红之瞳" title="斩！赤红之瞳" />
+                  <a href="http://www.iqiyi.com/a_19rrgif6qp.html" alt="DRAMAtical Murder" title="DRAMAtical Murder">
+             	<img src='http://pic2.qiyipic.com/image/20140704/b0/d7/a_100005697_m_601.jpg' alt="DRAMAtical Murder" title="DRAMAtical Murder" />
+              	<p class='com-text'>DRAMAtical Murder</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgi8tcp.html" alt="网球优等生" title="网球优等生">
+             	<img src='http://pic5.qiyipic.com/image/20140406/86/34/75/a_100003780_m_601.jpg' alt="网球优等生" title="网球优等生" />
+              	<p class='com-text'>网球优等生</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+      <div style='clear: both;'></div>
+    </div>
+  </div>
+</div>
+
+<div class="cms-component com-1074688" com-type="default" style="color:#0a0a0a;background-color:#ffffff;">
+   <a name="周二"></a>
+  <div class='com-wrapper'>
+    <div class='com-head'>
+      <div class='com-head-left'>     
+ 		<h3 class="com-title">周二</h3>
+      </div>
+    </div>
+    <div class='com-body'>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgi95ql.html" alt="M3 ~黑钢~" title="M3 ~黑钢~">
+             	<img src='http://pic6.qiyipic.com/image/20140421/f3/33/8c/a_100003987_m_601.jpg' alt="M3 ~黑钢~" title="M3 ~黑钢~" />
+              	<p class='com-text'>M3 ~黑钢~</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgi8f8t.html" alt="激战奥雷卡" title="激战奥雷卡">
+             	<img src='http://pic3.qiyipic.com/image/20140410/d9/c9/d3/a_100003823_m_601.jpg' alt="激战奥雷卡" title="激战奥雷卡" />
+              	<p class='com-text'>激战奥���卡</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgi8fd5.html" alt="龙收藏" title="龙收藏">
+             	<img src='http://pic2.qiyipic.com/image/20140410/bc/0d/91/a_100003824_m_601.jpg' alt="龙收藏" title="龙收藏" />
+              	<p class='com-text'>龙收藏</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+        <div class='com-item'>
+
+            <a href="" alt="" title="">
+             	<img src='' alt="" title="" />
+              	<p class='com-text'></p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+      <div style='clear: both;'></div>
+    </div>
+  </div>
+</div>
+
+<div class="cms-component com-1074688" com-type="default" style="color:#0a0a0a;background-color:#ffffff;">
+   <a name="周四"></a>
+  <div class='com-wrapper'>
+    <div class='com-head'>
+      <div class='com-head-left'>     
+ 		<h3 class="com-title">周四</h3>
+      </div>
+    </div>
+    <div class='com-body'>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgiff91.html" alt="幕末摇滚" title="幕末摇滚">
+             	<img src='http://pic2.qiyipic.com/image/20140708/6f/1a/a_100005628_m_601_m1.jpg' alt="幕末摇滚" title="幕末摇滚" />
+              	<p class='com-text'>幕末摇滚</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+        <div class='com-item'>
+
+         	<p class='com-text'></p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+      <div style='clear: both;'></div>
+    </div>
+  </div>
+</div>
+
+<div class="cms-component com-1074688" com-type="default" style="color:#0a0a0a;background-color:#ffffff;">
+   <a name="周四"></a>     <a href="http://www.iqiyi.com/a_19rrgif0st.html" alt="魔法少女伊莉雅2" title="魔法少女伊莉雅2">
+             	<img src='http://pic1.qiyipic.com/image/20140708/3a/74/a_100005766_m_601.jpg' alt="魔法少女伊莉雅2" title="魔法少女伊莉雅2" />
+              	<p class='com-text'>魔法少女伊莉雅2</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgif06l.html" alt="修业魔女璐璐萌" title="修业魔女璐璐萌">
+             	<img src='http://pic4.qiyipic.com/image/20140708/ee/86/a_100005774_m_601.jpg' alt="修业魔女璐璐萌" title="修业魔女璐璐萌" />
+              	<p class='com-text'>修业魔女璐璐萌</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgif0kh.html" alt="LOVE STAGE" title="LOVE STAGE">
+             	<img src='http://pic2.qiyipic.com/image/20140708/4a/57/a_100005769_m_601.jpg' alt="LOVE STAGE" title="LOVE STAGE" />
+              	<p class='com-text'>LOVE STAGE</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgif3l1.html" alt="白银的意志" title="白银的意志">
+             	<img src='http://pic9.qiyipic.com/image/20140703/a1/8c/a_100005656_m_601.jpg' alt="白银的意志" title="白银的意志" />
+              	<p class='com-text'>白银的意志</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgif3ql.html" alt="玻璃之唇" title="玻璃之唇">
+             	<img src='http://pic3.qiyipic.com/image/20140703/55/55/a_100005654_m_601.jpg' alt="玻璃���唇" title="玻璃之唇" />
+              	<p class='com-text'>玻璃之唇</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+      <div style='clear: both;'></div>
+    </div>
+  </div>
+</div>
+
+<div class="cms-component com-1074688" com-type="default" style="background-color:#ffffff;color:#0a0a0a;">
+   <a name="周五"></a>
+  <div class='com-wrapper'>
+    <div class='com-head'>
+      <div class='com-head-left'>     
+ 		<h3 class="com-title">周五</h3>
+      </div>
+    </div>
+    <div class='com-body'>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgif5id.html" alt="东京喰种" title="东京喰种">
+             	<img src='http://pic5.qiyipic.com/image/20140703/a5/ed/a_100005672_m_601.jpg' alt="东京喰种" title="东京喰种" />
+              	<p class='com-text'>东京喰种</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgif36t.html" alt="黑执事 第三季" title="黑执事 第三季">
+             	<img src='http://pic6.qiyipic.com/image/20140708/b8/f1/a_100005776_m_601.jpg' alt="黑执事 第三季" title="黑执事 第三季" />
+              	<p class='com-text'>黑执事 第三季</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgif2ph.html" alt="女神异闻录4 黄金版" title="女神异闻录4 黄金版">
+             	<img src='http://rgif5id.html" alt="东京喰种" title="东京喰种">
+             	<img src='http://pic5.qiyipic.com/image/20140703/a5/ed/a_100005672_m_601.jpg' alt="东京喰种" title="东京喰种" />
+              	<p class='com-text'>东京喰种</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </dipic5.qiyipic.com/image/20140708/d6/5a/a_100005780_m_601.jpg' alt="女神异闻录4 黄金版" title="女神异闻录4 黄金版" />
+              	<p class='com-text'>女神异闻录4 黄金版</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgif399.html" alt="普通女高中生要做当地偶像" title="普通女高中生要做当地偶像">
+             	<img src='http://pic1.qiyipic.com/image/20140703/2c/e3/a_100005658_m_601.jpg' alt="普通女高中生要做当地偶像" title="普通女高中生要做当地偶像" />
+              	<p class='com-text'>普通女高中生要做当..</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+      <div style='clear: both;'></div>
+    </div>
+  </div>
+</div>
+
+<div class="cms-component com-1074688" com-type="default" style="color:#0a0a0a;background-color:#ffffff;">
+   <a name="周六"></a>
+  <div class='com-wrapper'>
+    <div class='com-head'>
+      <div class='com-head-left'>     
+ 		<h3 class="com-title">周六</h3>
+      </div>
+    </div>
+    <div class='com-body'>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgiixqd.html" alt="东京ESP" title="东京ESP">
+             	<img src='http://pic5.qiyipic.com/image/20140710/ff/29/a_100005944_m_601.jpg' alt="东京ESP" title="东京ESP" />
+              	<p class='com-text'>东京ESP</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+        <div class='com-item'>
+
+            <a href="http://www.iqiyi.com/a_19rrgif6w9.html" alt="Aldnoah·Zero" title="Aldnoah·Zero">
+             	<img src='http://pic2.qiyipic.com/image/20140704/60/bc/a_100005695_m_601.jpg' alt="Aldnoah·Zero" title="Aldnoah·Zero" />
+              	<p class='com-text'>Aldnoah·Zero</p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+        <div class='com-item'>
+
+            <a href="" alt="" title="">
+             	<img src='' alt="" title="" />
+              	<p class='com-text'></p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+        <div class='com-item'>
+
+            <a href="" alt="" title="">
+             	<img src='' alt="" title="" />
+              	<p class='com-text'></p><p class='com-text'></p>
+            </a>
+          <p>
+            
+          </p>
+        </div>
+      
+      <div style='clear: both;'></div>
+    </div>
+  </div>
+</div>
+</div>
+      </div></div>
+  </div>
+ 
+ 
+<div class="cms-component com-1060094" com-type="default" >
+  <div class="footerN1214" data-css="fragments/block_footerN1214.css"  data-widget-footer="footer">
+    <p class="footmenu"> 
+      <a href="http://app.iqiyi.com/" class="s1">APP专区</a>
+      <a href="http://www.iqiyi.com/common/aboutus.html">公司介绍</a> 
+      <a href="http://www.iqiyi.com/common/news.html">新闻动态</a>
+      <a href="http://www.iqiyi.com/common/contactus.html">联系方式</a> 
+      <a href="http://www.iqiyi.com/common/employ.html">招聘英才</a>
+      <a href="http://labs.iqiyi.com">奇艺实验室</a>
+      <a href="http://www.iqiyi.com/common/helpandsuggest.html?entry=yedi">帮助与反馈</a>
+      <a href="http://www.iqiyi.com/common/20100420/n4813.html">About Us</a></p>
+    <p class="fEn"><a href="http://www.iqiyi.com" class="link0">爱奇艺</a>&nbsp;&nbsp;&copy; 2014
+      iQIYI.COM</p>
+  </div>
+  
+  <script type="text/javascript">
+  </div>
+</div>
+</div>
+      </div></div>
+  </div>
+ 
+ 
+<div class="cms-component com-1060094" com-type="default" >
+  <div class="footerN1214" data-css="fragments/block_footerN1214.css"  data-widget-footer="footer">
+    <p class="footmenu"> 
+      <a href="http://app.iqiyi.com/" class="s1">APP专区</a>
+      <a href="http://www.iqiyi  Q.projectName = 'qiyiV2';
+    Q.PageInfo = Q.PageInfo || {};
+    Q.ready(function (lib) {
+      Q.load('newTopic');
+    });
+    $(function() {
+      Com.run('topic');
+    });
+  </script>
+  
+   
+  <script type="text/javascript">  
+    (function(){
+      if(window.__qlt && window.__qlt.start){
+        window.__qlt.start("qaLoadReady");
+      }
+      var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
+      s.async = true;
+      s.src = document.location.protocol + "//static.iqiyi.com/js/pingback/qa.js";
+      s.onload = s.onreadystatechange = function () {
+        if (!s.readyState || "loaded" == s.readyState || "complete" == s.readyState) {
+          if(window.__qlt && window.__qlt.end){
+            window.__qlt.end("qaLoadReady");
+          }
+          s.onload = s.onreadystatechange = null;
+        }
+      };
+      el.parentNode.insertBefore(s, el);
+    })();
+  </script>
+  <!-- Begin 艾瑞 -->
+  <script>
+    var _iwt_UA="UA-iqiyi-000001",_iwt_no_flash=1; //客户项目编号,根据实际生成
+    if(window.__qlt && window.__qlt.start){
+      window.__qlt.start("iwtLoadReady");
+    }
+    (function (D) {
+      var s=D.createElement("script"),h=D.getElementsByTagName("head")[0];s.src="http://static.iqiyi.com/js/pingback/iwt.js";s.type="text/javascript";s.charset="utf-8";
+      s.onload = s.onreadystatechange = function () {
+        if (!s.readyState || "loaded" == s.readyState || "complete" == s.readyState) {
+          if(window.__qlt && window.__qlt.end){
+            window.__qlt.end("iwtLoadReady");
+          }
+          // __LT__.j['iwt'] = new Date() - __LT__.j['iwt'];
+          s.onload = s.onreadystatechange = null;
+        }
+      };
+      h.appendChild(s);
+    })(document);
+  </script>
+  <!-- End 艾瑞 -->
+  <!-- Begin comScore Tag -->
+  <script>
+    var __LT__ = window.__LT__ || {
+      j:{},
+      c:{},
+      f:{},
+      l:{},
+      i:{},
+      s:{}
+    };
+    __LT__.j['comscore'] = new Date();
+    __LT__.j['iwt'] = __LT__.j['comscore'];
+    var _comscore = _comscore || [];
+    _comscore.push({ c1: "2", c2: "7290408" });
+    if(window.__qlt && window.__qlt.start){
+      window.__qlt.start("comscoreLoadReady");
+    }
+    (function() {
+      var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
+      s.async = true;
+      s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+      s.onload = s.onreadystatechange = function () {
+        if (!s.readyState || "loaded" == s.readyState || "complete" == s.readyState) {
+          if(window.__qlt && window.__qlt.end){
+            window.__qlt.end("comscoreLoadReady");
+          }
+          __LT__.j['comscore'] = new Date() - __LT__.j['comscore'];
+          s.onload = s.onreadystatechange = null;
+        }
+      };
+      el.parentNode.insertBefore(s, el);
+    })();
+  </script>
+  <noscript>
+    <img src="http://b.scorecardresearch.com/p?c1=2&c2=7290408&cv=2.0&cj=1"/>
+  </noscript>
+  <!-- End comScore Tag -->
+  
+</div>	
+	
+</body>
+ 
+</html>: "2", c2: "7290408" });
+    if(window.__qlt && window.__qlt.start){
+      window.__qlt.start("comscoreLoadReady");
+    }
+    (function() {
+      var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
+      s.async = true;
+      s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+      s.onload = s.onreadystatechange = function () {
+        if (!s.readyState || "loaded" == s.readyState || "complete" == s.readyState) {
+          if(window.__qlt && window.__qlt.end){
+            window.__qlt.end("comscoreLoadReady");
+          }
+          __LT__.j['comscore'] = new Date() - __LT__.j['comscore'];
+          s.onload = s.onreadystatechange = null;
+        }
+      };
+      el.parentNode.insertBefore(s, el);
+    })();
+  </script>
+  <noscript>
+    <img src="http://b.scorecardresearch.com/p?c1=2&c2=729

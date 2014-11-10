@@ -1,0 +1,4 @@
+1411787953573	Delete resource 'hadoopPro'
+1411787957538	Delete resource 'hadoopMaven/result.txt'
+1411788043489	Delete resource 'hadoopMaven/src/main/java/buildhappy/hadoop/hdfs/core-site.xml'
+1411788045199	Delete resource 'hadoopMaven/src/main/java/buildhappy/hadoop/hdfs/hdfs-site.xml'

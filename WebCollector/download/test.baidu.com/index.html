@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>百度众测平台</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="description" content="百度众测平台，全民众测，做做小任务，礼券奖品拿不停">
+        <link rel="shortcut icon" href="http://www.baidu.com/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="http://test.baidu.com/crowdtest/css/n/global.css">
+        <link rel="stylesheet" type="text/css" href="http://test.baidu.com/crowdtest/css/login/login.css?v=20140801">
+    </head>
+    <body>
+        <div class="header-bar">
+            <div class="container">
+                <a class="uuap-login" href="http://crowdtestuuap.offline.bae.baidu.com" rel="nofollow">
+                    <img src="http://crowdtestuuap.offline.bae.baidu.com/img/uuap_button.png" onerror="this.style.cssText='display:none'">
+                </a>
+                <a class="logo" href="/"><img src="http://test.baidu.com/crowdtest/images/global/new_logo.png"></a>
+            </div>
+        </div>
+        <div class="main">
+            <div class="daytime-canvas">
+                <div class="canvas-container container">
+                    <div class="canvas-main">
+                        <div class="canvas-daytime ">
+                            <img class="sun hide" src="http://test.baidu.com/crowdtest/images/login/sun.png" alt="sun">
+                            <img class="back-cloud hide" src="http://test.baidu.com/crowdtest/images/login/back_cloud.png" alt="back-cloud">
+                            <img class="earth" src="http://test.baidu.com/crowdtest/images/login/earth.png" alt="earth">
+                            <img class="front-cloud hide" src="http://test.baidu.com/crowdtest/images/login/front_cloud.png" alt="front-cloud">
+                            <img class="front-sea" src="http://test.baidu.com/crowdtest/images/login/front_sea.png" alt="front-sea"> 
+                            <img class="character hide" src="http://test.baidu.com/crowdtest/images/login/character.png" alt="character">
+                            <img class="fish" src="http://test.baidu.com/crowdtest/images/login/fish.png" alt="fish">
+                                                        <p class="front-tips hide"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="night-canvas hide">
+                <div class="canvas-container container">
+                    <div class="canvas-main">
+                        <div class="canvas-night">
+                            <img class="moon hide" src="http://test.baidu.com/crowdtest/images/login/moon.png" alt="moon">
+                            <img class="earth" src="http://test.baidu.com/crowdtest/images/login/earth_dark.png" alt="earth">
+                            <img class="back-ballon hide" src="http://test.baidu.com/crowdtest/images/login/back_ballon.png" alt="back-ballon">
+                            <img class="front-ballon hide" src="http://test.baidu.com/crowdtest/images/login/front_ballon.png" alt="front-ballon">
+                            <img class="front-beach" src="http://test.baidu.com/crowdtest/images/login/front_beach.png" alt="front-beach"> 
+                            <img class="character-night hide" src="http://test.baidu.com/crowdtest/images/login/character_night.png" alt="character-night">
+                            <img class="crab" src="http://test.baidu.com/crowdtest/images/login/crab.png" alt="crab">
+                                                        <p class="night-tips hide"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container login-container">
+                <div class="login-wrap">
+                    <div class="login-head">
+                        <a href="https://passport.baidu.com/v2/?reg&tpl=crowdtest&u=http%3A%2F%2Ftest.baidu.com%2F" target="_blank" class="login-register-link">注册 <img src="http://test.baidu.com/crowdtest/images/login/register.png"></a>
+                        登录众测
+                    </div>
+                    <div id="login_container">
+                    </div>
+                </div>
+                <div class="slide-point-wrap">
+                    <ul>
+                        <li class="active" data-canvas="daytime">&bull;</li>
+                        <li data-canvas="night">&bull;</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="footer" style="text-align:center;">
+    <p class="b">
+        <a href="http://test.baidu.com/crowdtest/help/contact" target="_blank">问题反馈</a>
+    	&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    	<a href="http://baike.baidu.com/view/6265110.htm" target="_blank">关于众测</a>
+    	&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        <a href="http://test.baidu.com/crowdtest/help/friendSite" target="_blank">友情链接</a>
+    	</p>
+    <p class="b">
+    &copy;2014 Baidu&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.baidu.com/duty/">使用百度前必读</a>
+    <a target="_blank" href="http://www.miibeian.gov.cn">京ICP证030173号</a>
+    <img style=" width: 15px; height: 17px; " src="http://gimg.baidu.com/img/gs.gif">
+    </p>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="http://passport.baidu.com/passApi/js/wrapper.js?cdnversion=20140812"></script>
+        <script>
+
+passport.use('login', {
+         tangram:true
+ }, function(apiMagic) {
+         //实例化登录api
+         var loginInstance = new apiMagic.passport.login({
+            product : "crowdtest",
+            charset: 'utf-8',
+            loginType: 1,
+            defaultCss:true,//是否加载CSS
+            loginMerge:true,//是否合并
+            //hasRegUrl:true,//是否有注册链接
+            autosuggest:true,//是否自动提示
+            hasPlaceholder:true,//是否有placeholder
+            authsiteLogin:['qzone','tsina','renren'],//第三方登录
+            sms:true,//短信登录
+            u: 'http://test.baidu.com/',
+            isPhone: false,
+            safeFlag: 0,
+            staticPage: location.protocol + '//' + location.host + '/v3Jump.html'
+        });
+         
+         //渲染表单
+         loginInstance.render('login_container');
+    });
+        </script>
+        <script src="http://test.baidu.com/crowdtest/js/sea.js"></script>
+        <script src="http://test.baidu.com/crowdtest/js/sea_config.js"></script>
+        <script>seajs.use('login/index.js');</script>
+<script>
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fee067321f257787b74d66558f6cd5733' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

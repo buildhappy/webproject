@@ -1,0 +1,293 @@
+<!doctype html><html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="keywords" content="百度词典搜索支持全面的英汉词典、汉英词典、汉语字典、汉语词典、汉语成语词典功能，以及强大的中英文自动翻译功能。"/>
+<link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" />
+<title>百度词典</title>
+
+<style>
+body{font:12px arial;text-align:center;background:#fff}body,p,form,ul,li{margin:0;padding:0;list-style:none}body,form,#fm{position:relative}td{text-align:left}img{border:0}a{color:#00c}a:active{color:#f60}iframe{border:0;}
+/*i{margin: 0 6px;color: #888;font-style: normal;}*/
+#u{color:#999;padding:4px 10px 5px 0;text-align:right;}
+#m{width:680px;margin:0 auto;}
+#nv{height:19px;font-size:16px;margin:0 0 4px;text-align:left;text-indent:117px;}
+#nv a, #nv b, .btn, #lk{font-size:14px;}
+#fm{padding-left:90px;text-align:left;margin-bottom:180px;}
+#fm input{padding-top:0;padding-bottom:0;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+#fm .s_btn_wr{width:97px;height:34px;display:inline-block;background:url(http://s1.bdstatic.com/r/www/img/i-1.0.0.png) no-repeat -202px 0;z-index:0;vertical-align:top;}
+#fm .s_btn {border:0;padding:0;width:95px;height:32px;padding-top:2px\9;font-size:14px;background:#DDD url(http://s1.bdstatic.com/r/www/img/i-1.0.0.png);cursor:pointer;}
+#fm .s_btn_h{background-position:-100px 0}
+#fm .i{width:420px;height:32px;padding:5px 7px;*padding-top:7px;font:16px arial;background:url(http://www.baidu.com/img/i2.png) no-repeat;border:1px solid #B6B6B6;border-color:#7B7B7B #B6B6B6 #B6B6B6 #7B7B7B;vertical-align:top;margin-right:5px;outline:none;overflow:hidden;*padding-top:7px;*height:18px;}
+#fm .tools{position:absolute;right:-20px;top:6px;color:#999;top:8px\9;}
+#fm .tools a{margin:0 5px;}
+
+#cp, #cp a {color:#77C;}
+
+#mask-layer{opacity:0.6;filter:alpha(opacity=60);background-color:#000;position:absolute;left:0;top:0;display:none;z-index:10000;}
+#setter-layer{background:#fff;position:absolute;left:0;top:0;z-index:20000;display:none;width:300px;height:160px;border: 4px solid #E4E4E4;text-align:center;}
+#setter-layer h3{margin:20px 10px;text-align:left;}
+#setter-layer p{margin-bottom:10px;}
+#setter-layer #sv{margin-top:10px;}
+#setter-layer-close{display:block;position:absolute;right:0;top:2px;width: 18px;height: 20px;background: url(http://img.baidu.com/img/iknow/popclose.gif) no-repeat;}
+#setter-layer-close:hover{background-position:-16px 0;}
+
+#loginin{margin:0 5px;}
+
+.arrow-down {
+	width:0;
+	height:0;
+	overflow:hidden;
+	font-size:0;
+	display:inline-block;
+	border-width:3px;
+	border-color:#00c transparent transparent transparent;
+	border-style:solid dashed dashed dashed;
+}
+
+/*百度翻译APP广告*/
+.tran-download-ad{margin:0 0 44px 90px;}
+.tran-download-ad a,.tran-download-ad img{display:block;width:520px;height:90px;}
+
+</style>
+<link rel="stylesheet" href="/static/css/userbar.css" />
+<script src="http://passport.baidu.com/js/pass_uni_loginWrapper.js"></script>
+</head>
+
+
+<body>
+
+
+<div class="wrap-userbar">
+	<ul class="userbar">
+				
+		<li class="userbar-item">
+			<a href="http://fanyi.baidu.com/appdownload/download.html" target="_blank" id="new_mobile_phone">手机版</a>
+		</li>
+		<li class="pipe userbar-item">|</li>
+		<li class="userbar-item">
+			<a href="http://fanyi.baidu.com" target="_blank">百度翻译</a>
+		</li>
+		<li class="pipe userbar-item">|</li>
+		<li class="userbar-item">
+			<a href="http://www.baidu.com" target="_blank">百度首页</a>
+		</li>
+		
+		<li class="pipe userbar-item">|</li>
+					<li class="userbar-item userbar-login">
+						<a href="##" title="登录" id="userbar-login">登录</a>
+					</li>
+					<li class="userbar-item">
+						<a target="_blank" href="http://passport.baidu.com/v2/?reg&amp;regType=1&amp;u=http://dict.baidu.com/" rel="nofollow" title="注册" id="userbar-signin">注册</a>
+					</li>	</ul>
+</div>
+
+<div id="m">
+	<p id="lg"><a href='/'><img src="/static/img/logo-index.png" width="270" height="129"></a></p>
+	<p id="nv"><a href="http://news.baidu.com">新&nbsp;闻</a>　<a href='http://www.baidu.com'>网&nbsp;页</a>　<a href="http://tieba.baidu.com">贴&nbsp;吧</a>　<a href="http://zhidao.baidu.com">知&nbsp;道</a>　<a href="http://music.baidu.com">音乐</a>　<a href="http://image.baidu.com">图&nbsp;片</a>　<a href="http://fanyi.baidu.com">翻&nbsp;译</a>　<b>词&nbsp;典</b></p>
+	<div id="fm">
+		<form name="f" action="/s"><input type="text" name="wd" id="kw" maxlength="100" class="i" autocomplete="off"><span class="s_btn_wr"><input type="submit" value="百度一下" id="su" class="s_btn" onmousedown="this.className='s_btn s_btn_h'" onmouseout="this.className='s_btn'"></span><div id="sug" style="display:none;"></div></form>
+		<span class="tools"><a href='#' id='setter'>设置</a>|<a href='http://www.baidu.com/search/dict.html' target="_blank">帮助</a></span>
+	</div>
+	<!-- fanyi app banner -->
+	<div class="tran-download-ad">
+		<a id="tran-download-ad-link" href="http://fanyi.baidu.com/appdownload/download.html" title="百度翻译,您的掌上翻译专家" target="_blank"><img src="img/banner/tran_download_dict.jpg" alt="百度翻译,您的掌上翻译专家"></a>
+	</div>
+	<!-- fanyi app banner end -->
+	<p id="cp">&copy;2014 Baidu 
+		<a href="http://www.baidu.com/duty/">使用百度前必读</a> 
+		<a href="http://www.baidu.com">百度首页</a>
+		<a href="#" target="_blank" id="shoucang">收藏</a></p>
+</div>
+<script>
+	bdPass.pop.init({
+		id: 'userbar-login',
+		cache: false,
+		staticpage: 'http://' + document.location.host + '/static/v2Jump.html', 
+		u: document.location.href
+	})
+</script>
+
+<div id="mask-layer"></div>
+<div id="setter-layer">
+	<a href='#' id="setter-layer-close"></a>
+	<h3 style="">搜索框提示</h3>
+	<p style="">是否希望搜索<b>汉字</b>和<b>英语</b>时显示搜索框提示</p>				
+	<label><input type="radio" value="yes" name="sughint" id="st1" checked="checked"/>显示</label>
+	<label><input type="radio" value="no" name="sughint" id="st2"/>不显示</label><br/>
+	<input type="button" value="保存设置" id="sv"/>
+</div>
+
+<script src="/static/js/tangram-base-1.5.0.js"></script>
+<script src="/static/js/mis-min.js"></script>
+<script>
+//加载sug.js
+if(document.cookie.indexOf("sug=no") === -1){
+	document.write("<script src='/static/js/sug.js'><"+"/script>");
+}
+
+(function(baidu) {
+	baidu.on(baidu.g("shoucang"),"click",function(e){
+		var url = "http://dict.baidu.com",
+			title = "百度词典";
+		if(baidu.browser.ie){
+			window.external.addFavorite(url,title);
+		}else{
+			try{
+				window.sidebar.addPanel(title,url,'');
+			}catch(e){
+				alert("加入收藏失败，请使用Ctrl+D进行添加");
+			}
+		}
+		baidu.event.preventDefault(e);
+	});
+
+
+	baidu.on(baidu.g("setter"),"click",function(e){
+		var width = Math.max(document.body.clientWidth,document.documentElement.clientWidth),
+			height = Math.max(document.body.clientHeight,document.documentElement.clientHeight);
+
+		baidu.dom.setStyles("mask-layer",{height : height + "px",width : width + "px",display : "block"});
+		baidu.dom.setStyles("setter-layer",{left : width / 2 - parseInt(baidu.dom.getStyle("setter-layer","width")) / 2 + "px", top : (window.innerHeight || document.documentElement.clientHeight) / 2 - parseInt(baidu.dom.getStyle("setter-layer","height")) / 2 + "px", display : "block"});
+		baidu.event.preventDefault(e);
+	});
+
+	baidu.on(baidu.g("setter-layer-close"),"click",function(e){
+		baidu.dom.setStyle("mask-layer","display","none");
+		baidu.dom.setStyle("setter-layer","display","none");
+		baidu.event.preventDefault(e);
+	});
+
+	baidu.on(baidu.g("sv"),"click",function(){
+		if(baidu.g("st1").checked){
+			var date = new Date();
+			date.setTime(date.getTime() - 30 * 24 * 60 * 60 * 1000);
+			document.cookie = "sug=yes;expires="+date.toGMTString();
+		}else{
+			var date = new Date();
+			date.setTime(date.getTime() + 365 * 30 * 24 * 60 * 60 * 1000);
+			document.cookie = "sug=no;expires="+date.toGMTString();
+		}
+
+		baidu.dom.setStyle("mask-layer","display","none");
+		baidu.dom.setStyle("setter-layer","display","none");
+		window.location.reload(false);
+	});
+
+	baidu.on(window,"load",function(){
+		baidu.g("kw").focus();
+	});
+	baidu.dom.query('.bold')
+})(baidu);
+
+
+/*账号系统和单词本添加*/
+
+(function(baidu) {
+	if(baidu.g("userbar-login")) {
+		baidu.on(baidu.g("userbar-login"),"click",function(e){
+			baidu.event.preventDefault(e);
+		});
+	}
+})(baidu);
+
+(function() {
+	var usernameTitle, usernameMenu, i, a, n, l;
+	usernameTitle = document.getElementById("username-title");
+	usernameMenu = document.getElementById("userbar-username-menu");
+	i = -1;
+	a = 500;
+	n = false;
+	l = false;
+
+	function o() {
+		if (n) {
+			if (l) {
+				usernameMenu.style.display = "none";
+				l = false;
+				clearInterval(i);
+				i = -1
+			}
+		}
+	}
+	if(usernameTitle) {
+		usernameTitle.onmouseover = function() {
+			if (!l) {
+				usernameMenu.style.display = "block";
+				l = true;
+				n = false;
+				if (i < 0) {
+					i = setInterval(o, a)
+				}
+			} else {
+				o()
+			}
+			return false
+		};
+		usernameTitle.onmouseout = function() {
+			n = true
+		};
+	}
+	if(usernameMenu) {
+		usernameMenu.onmouseover = function() {
+			n = false
+		};
+		usernameMenu.onmouseout = function() {
+			n = true
+		};
+	}
+})();
+
+if(!String.prototype.trim) {
+	String.prototype.trim = function(str) {
+		return this.replace('/^\s+|\s+$/g', '')
+	}
+}
+
+
+
+/*账号系统和单词本添加 end*/
+
+//页面点击统计
+var dictLog = new mis.widget.miniLog('http://nsclick.baidu.com/v.gif?pid=201',{pj: 'newdict',type: 1,pt:'home',path: mis.global.location.href,url: '#'});
+
+dictLog.send({ld: 1,ref:document.referrer || 'home'});
+
+if(baidu.g("userbar-item-myword")) {
+	baidu.on(baidu.g("userbar-item-myword"),"click",function(e){
+		dictLog.send({mdt: 'gotoWordbook', fm: 'index'});
+	});
+}
+
+if(baidu.g("userbar-login")) {
+	baidu.on(baidu.g("userbar-login"),"click",function(e){
+		dictLog.send({mdt: 'clickLogin', fm: 'index'});
+	});
+}
+
+if(baidu.g("userbar-signin")) {
+	baidu.on(baidu.g("userbar-signin"),"click",function(e){
+		dictLog.send({mdt: 'clickSignin', fm: 'index'});
+	});
+}
+
+
+
+
+</script>
+
+<script>
+	var userNumId = 0;</script>
+
+<script>
+	dictLog.send({mdt: 'loginuser', userNumId: userNumId, fm: 'index'});
+</script>
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3eb79004886d2d32543bea2e0900fe8d' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+</body>
+</html>

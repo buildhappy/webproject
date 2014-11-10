@@ -1,0 +1,16 @@
+package buildhappy.tools.berkeleyDB;
+
+import com.sleepycat.bind.serial.StoredClassCatalog;
+import com.sleepycat.je.Environment;
+
+/**
+ * 使用抽象类封装对Berkeley DB的操作
+ * @author Administrator
+ *
+ */
+public abstract class AbstractFrontier {
+	private Environment env;
+	private static final String CLASS_CATALOG = "java_class_catalog";
+	protected StoredClassCatalog javaCatalog;
+	protected Database catalogdatabase;
+}

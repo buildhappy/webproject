@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean name="person" class="com.chapter2_02.constructor.Person">
+		<constructor-arg index="0" value="buildhappy"></constructor-arg>
+		<constructor-arg index="1" value="12"></constructor-arg>
+	</bean>
+	
+</beans>

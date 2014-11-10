@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="backends">
+		<list key="order">
+			<item value="CHAhttp://eclipse-plugins.2y.net/eclipse/plugins_backend.jsp?what=newandupdated"/>
+			<item value="CHAhttp://www.eclipseproject.de/backendforum2.php"/>
+			<item value="CHAhttp://www.eclipseproject.de/backendforum1.php"/>
+			<item value="CHAhttp://sourceforge.net/export/rss2_projfiles.php?group_id=57621"/>
+			<item value="CHAhttp://www.phpeclipse.de/tiki-forums_rss.php"/>
+			<item value="CHAhttp://www.eclipseproject.de/backend.php"/>
+			<item value="CHAhttp://www.eclipseproject.de/backendforum8.php"/>
+			<item value="CHAhttp://www.phpeclipse.de/tiki-forum_rss_de.php"/>
+			<item value="CHAhttp://www.phpeclipse.de/tiki-wiki_rss.php"/>
+			<item value="CHAhttp://today.java.net/pub/q/java_today_rss?x-ver=1.0"/>
+			<item value="CHAhttp://www.jsurfer.org/backend.php"/>
+			<item value="CHAhttp://www.eclipseproject.de/backendforum4.php"/>
+			<item value="CHAhttp://www.php.net/news.rss"/>
+		</list>
+		<section name="CHAhttp://www.jsurfer.org/backend.php">
+			<item value="JSurfer.org" key="title"/>
+			<item value="1" key="type"/>
+			<item value="http://www.jsurfer.org/backend.php" key="url"/>
+			<list key="read">
+			</list>
+		</section>
+		<section name="CHAhttp://www.eclipseproject.de/backendforum4.php">
+			<item value="EclipseProject.de - Eclipse Plugins benutzen" key="title"/>
+			<item value="1" key="type"/>
+			<item value="http://www.eclipseproject.de/backendforum4.php" key="url"/>
+			<list key="read">
+			</list>
+		</section>
+		<section name="CHAhttp://www.eclipseproject.de/backend.php">
+			<item value="EclipseProject.de - News" key="title"/>
+			<item value="1" key="type"/>
+			<item value="http://www.eclipseproject.de/backend.php" key="url"/>
+			<list key="read">
+			</list>
+		</section>
+		<section name="CHAhttp://today.java.net/pub/q/java_today_rss?x-ver=1.0">
+			<item value="Java.net" key="title"/>
+			<item value="1" key="type"/>
+			<item value="http://today.java.net/pub/q/java_today_rss?x-ver=1.0" key="url"/>
+			<list key="read">
+			</list>
+		</section>
+		<section name="CHAhttp://www.php.net/news.rss">
+			<item value="php.net News" key="title"/>
+			<item value="1" key="type"/>
+			<item value="http://www.php.net/news.rss" key="url"/>
+			<list key="read">
+			</list>
+		</section>
+		<section name="CHAhttp://sourceforge.net/export/rss2_projfiles.php?group_id=57621">
+			<item value="PHPeclipse - new file releases" key="title"/>
+			<item value="1" key="type"/>
+			<item value="http://sourceforge.net/export/rss2_projfiles.php?group_id=57621" key="url"/>
+			<list key="read">
+			</list>
+		</section>
+		<section name="CHAhttp://www.phpeclipse.de/tiki-wiki_rss.php">
+			<item value="PHPeclipse - Wiki" key="title"/>
+			<item value="1" key="type"/>
+			<item value="http://www.phpeclipse.de/tiki-wiki_rss.php" key="url"/>
+			<list key="read">
+			</list>
+		</section>
+		<section name="CHAhttp://www.eclipseproject.de/backendforum2.php">
+			<item value="EclipseProject.de - Eclipse Plugins entwickeln" key="title"/>
+			<item value="1" key="type"/>
+			<item value="http://www.eclipseproject.de/backendforum2.php" key="url"/>
+			<list key="read">
+			</list>
+		</section>
+		<section name="CHAhttp://www.eclipseproject.de/backendforum1.php">
+			<item value="EclipseProject.de - Eclipse als IDE nutzen" key="title"/>
+			<item value="1" key="type"/>
+			<item value="http://www.eclipseproject.de/backendforum1.php" key="url"/>
+			<list key="read">
+			</list>
+		</section>
+		<section name="CHAhttp://www.phpeclipse.de/tiki-forum_rss_de.php">
+			<item value="PHPeclipse - deutsches Benutzer Forum" key="title"/>
+			<item value="1" key="type"/>
+			<item value="http://www.phpeclipse.de/tiki-forum_rss_de.php" key="url"/>
+			<list key="read">
+			</list>
+		</section>
+		<section name="CHAhttp://eclipse-plugins.2y.net/eclipse/plugins_backend.jsp?what=newandupdated">
+			<item value="EclipsePlugins" key="title"/>
+			<item value="1" key="type"/>
+			<item value="http://eclipse-plugins.2y.net/eclipse/plugins_backend.jsp?what=newandupdated" key="url"/>
+			<list key="read">
+			</list>
+		</section>
+		<section name="CHAhttp://www.phpeclipse.de/tiki-forums_rss.php">
+			<item value="PHPeclipse - User Forums" key="title"/>
+			<item value="1" key="type"/>
+			<item value="http://www.phpeclipse.de/tiki-forums_rss.php" key="url"/>
+			<list key="read">
+			</list>
+		</section>
+		<section name="CHAhttp://www.eclipseproject.de/backendforum8.php">
+			<item value="EclipseProject.de - SWT/JFace/RCP" key="title"/>
+			<item value="1" key="type"/>
+			<item value="http://www.eclipseproject.de/backendforum8.php" key="url"/>
+			<list key="read">
+			</list>
+		</section>
+	</section>
+</section>

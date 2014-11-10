@@ -1,0 +1,21 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  
+  
+  <!-- 定义DispatcherServlet，其会根据一个XML文件来加载sping的上下文，该xml文件名字基于它的servlet-name来确定 -->
+  <!-- 在此会创建WebApplicationContext容器；DispatchServlet会在作为一个成员(Map实例)存在该容器中，以便它用 -->
+	<servlet>
+		<servlet-name>news</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>news</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+</web-app>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Nwaf"
+  id="myeclipse.1371711143843"
+  context-root="/Nwaf"
+  j2ee-spec="6.0"
+  archive="Nwaf.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration> 
+  <path> 
+    <item dir="/root/software/naxsi-ui-0.48/naxsi-ui/" name="naxsi-ui"/>  
+    <item dir="" name="log-error"/>  
+    <item dir="" name="sqlite"/>  
+    <item dir="" name="modsecurity-rule"/>  
+    <item dir="/usr/local/apache/conf/httpd.conf" name="apache-conf"/> 
+  </path>  
+  <black-list>
+    <item checked="true" conf_file="/home/shuizhihun/file/base_rule/xss.conf" description="xss_attack" name="xss"/>
+    <item checked="true" conf_file="/home/shuizhihun/file/base_rule/sql.conf" description="sql_attack" name="sql"/>
+    <item checked="true" conf_file="/home/shuizhihun/file/base_rule/inbound.conf" description="inbound_attack" name="inbound"/>
+    <item checked="true" conf_file="/home/shuizhihun/file/base_rule/outbound.conf" description="outbound_attack" name="outbound"/>
+  </black-list>  
+  <white-list> 
+    <item checked="" url=""/> 
+  </white-list> 
+</configuration>

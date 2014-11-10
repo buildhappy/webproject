@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 9 elements from project &apos;JavaTest&apos;&#x0D;&#x0A;- Original project: &apos;JavaTest&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     file&#x0D;&#x0A;     1.txt&#x0D;&#x0A;     a_copy.txt&#x0D;&#x0A;     a.txt&#x0D;&#x0A;     aa.apk&#x0D;&#x0A;     aa.txt&#x0D;&#x0A;     b.txt&#x0D;&#x0A;     c.txt&#x0D;&#x0A;     fileaa.txt" description="Delete elements" element1="fileaa.txt" element2="aa.txt" element3="a.txt" element4="a_copy.txt" element5="aa.apk" element6="file" element7="1.txt" element8="b.txt" element9="c.txt" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="9" stamp="1406537519752" subPackages="false" version="1.0"/>
+</session>

@@ -1,0 +1,507 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]>
+<html xmlns:ng="http://angularjs.org" id="ng-app" ng-app='gxt' class="ie6"> <![endif]-->
+<!--[if IE 7 ]>
+<html xmlns:ng="http://angularjs.org" id="ng-app" ng-app='gxt' class="ie7"> <![endif]-->
+<!--[if IE 8 ]>
+<html xmlns:ng="http://angularjs.org" id="ng-app" ng-app='gxt' class="ie8"> <![endif]-->
+<!--[if IE 9 ]>
+<html xmlns:ng="http://angularjs.org" id="ng-app" ng-app='gxt' class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html xmlns:ng="http://angularjs.org" id="ng-app" ng-app='gxt'>
+<!--<![endif]-->
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="网站安全检测，网站体检，漏洞扫描，网络监测，网站故障怎么办，网站被篡改" name="keywords">
+    <meta content="百度云观测是百度旗下的云服务产品，为站长提供7*24小时网站监测和报警服务，功能覆盖网站运行状况、安全性、访问速度、SEO等" name="description">
+    <meta name="baidu-site-verification" content="yRwllMSoHx" />
+
+    <title>百度云观测 - 百度旗下网站云监测平台|免费安全检测|网站测速|漏洞扫描|网站检测</title>
+
+    <link type="image/x-icon" rel="shortcut icon" href="/res/img/favicon.ico">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="/res/lib/bootstrap3/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/res/css/non-responsive.css">
+    <link rel="stylesheet" type="text/css" href="/res/css/index.css?v=20140812">
+    <link rel="stylesheet" type="text/css" href="/res/css/directive.css?v=20140812">
+    <link rel="stylesheet" type="text/css" href="/res/css/ng-animation.css?v=20140812">
+    <link rel="stylesheet" type="text/css" href="/res/css/css-animation.css?v=20140812">
+
+    <script type="text/javascript" src="/res/js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="/res/lib/bootstrap3/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/res/js/tuna.js?v=20140812"></script>
+    <script type="text/javascript" src="http://cas.baidu.com/staticv2/dep/common-login/api.js"></script>
+    <script type="text/javascript" src="/res/js/uclogin/login.js?v=20140812"></script>
+    <script type="text/javascript" src="http://passport.baidu.com/passApi/js/uni_login_wrapper.js?v=20140812"></script>
+    <script type="text/javascript" src="/res/js/passport/login.js?v=20140812"></script>
+    <script type="text/javascript" src="/res/js/moment.min.js"></script>
+    <script type="text/javascript" src="/res/js/underscore-min.js"></script>
+    <script type="text/javascript" src="/res/js/es5-shim.js"></script>
+    <script type="text/javascript" src="/res/lib/respond/respond.src.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="/res/js/json2.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="/res/lib/PIE-2.0/PIE_IE678.js"></script>
+    <![endif]-->
+    <!--[if IE 9]>
+        <script type="text/javascript" src="/res/lib/PIE-2.0/PIE_IE9.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+        var PASSPORTDOMAIN = "passport.baidu.com";
+        var URLPREFIX = "/";
+        var YII_CSRF_TOKEN = "81581c7dc77b4acaec52b7dd867c7065545c3272";
+        var ServerConfigs = {"id":0};
+        var static_version = "?v=20140812";
+    </script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "//hm.baidu.com/hm.js?322d2c125c00316481e6b3696650e820";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body ng-cloak data-spy="scroll" data-target="#navi-wrapper">
+    <!--[if lt IE 8]>
+        <div style="color:#B94A48;text-align:center;font-size:13px;border:1px solid #dedede;background:#FCF8E3;height:24px;line-height:24px;">你的浏览器版本过低，百度云观测暂不支持，百度云观测推荐你升级到<a href="http://windows.microsoft.com/zh-CN/internet-explorer/products/ie/home" target="_blank">IE8</a>以上或者使用<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html" target="_blank">谷歌浏览器</a></div>
+    <![endif]-->
+    <div loading></div>
+
+            <!--导航开始-->
+<nav class="navbar navbar-default" role="navigation" style="min-width: 1150px;">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="container" style="min-width: 1050px; width: 1150px;">
+        <div class="navbar-header">
+            <a class="pcl-img navbar-brand" id="nav-logo" href="/"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav bordered-left header-on-homepage">
+                <li class="">
+                    <a href="/?r=index">首页</a>
+                    <div class="focus">
+                        <div class="arrow"></div>
+                        <div class="border"></div>
+                    </div>
+                </li>
+                <li class="" id="product-service" style="width: 125px;">
+                    <a href="/?r=index/service&tab=0">产品服务</a>
+                    <span class="indicator"></span>
+                    <div class="service-list">
+                        <ul class=" list-unstyled dropdown-menu">
+                            <li><a href="/?r=index/service&tab=0">7x24网站观测</a></li>
+                            <li><a href="/?r=index/service&tab=1">网站安全监测</a></li>
+                            <li><a href="/?r=index/service&tab=2">网站速度监测</a></li>
+                        </ul>
+                    </div>
+                    <!--<span class="menu-hoverable-new"></span>-->
+                    <div class="focus">
+                        <div class="arrow"></div>
+                        <div class="border"></div>
+                    </div>
+                </li>
+                <li class="">
+                    <a href="/?r=index/monitor" target="_blank">观测大盘</a>
+                    <!--<span class="menu-hoverable-hot"></span>-->
+                    <span class="menu-hoverable-new"></span>
+                    <div class="focus">
+                        <div class="arrow"></div>
+                        <div class="border"></div>
+                    </div>
+                </li>
+                <li class="">
+                    <a href="/?r=about/list" target="_blank">帮助中心</a>
+                    <div class="focus">
+                        <div class="arrow"></div>
+                        <div class="border"></div>
+                    </div>
+                </li>
+            </ul>
+                                    <ul class="nav navbar-nav navbar-right right-links">
+                                <li id="login-select">
+                    <a href="#" style="display: inline-block; height: 40px;"><span class="login-icon"></span>登录</a>
+                    <ul class="login-platform list-unstyled dropdown-menu">
+                        <li><a href="#" id="gxt_login">普通帐号登录</a></li>
+                        <li><a href="#" id="gxt_login_uclogin">联盟帐号登录</a></li>
+                    </ul>
+                </li>
+                <li>|</li>
+                <li><a id="gxt_reg" target="_blank" style="color: #00b7ee">注册</a></li>
+                                <!--<li>|</li>-->
+                <!--<li><a href="/?r=about/list" target="_blank">帮助中心</a></li>-->
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div>
+</nav>
+<style>
+    #login-select {
+        width: 58px;
+    }
+    #login-select .login-icon {
+        display: inline-block;
+        background: url('res/img/login-icon.png');
+        width: 16px;
+        height: 16px;
+        position: relative;
+        top: 3px;
+        right: 5px;
+    }
+    #login-select .login-platform {
+        width: 110px;
+        margin: 6px;
+        float: none;
+        left: -10px;
+        margin-top: -10px;
+        right: auto;
+        display: none;
+        border-radius: 0;
+    }
+    #login-select .login-platform li {
+
+    }
+    #login-select .login-platform li + li {
+
+    }
+</style>
+<script>
+    var platformElement = $('.login-platform');
+    $('#login-select').hover(function() {
+        platformElement.show();
+    }, function() {
+        platformElement.hide();
+    });
+
+    var serviceElement = $('.service-list');
+    $('#product-service').hover(function() {
+        serviceElement.show();
+    }, function() {
+        serviceElement.hide();
+    });
+
+    var tmp = "";
+    window.isLogined = tmp ? true : false;
+</script>
+
+<!--导航结束-->
+
+    
+<script src="/res/lib/angularjs/angular.js"></script>
+<script src="/res/lib/angularjs/angular-sanitize.js"></script>
+<script src="/res/lib/angularjs/angular-animate.js"></script>
+<script src="/res/lib/angularjs/angular-locale_zh-cn.js"></script>
+<script src="/res/lib/angular-cookies/angular-cookie.js"></script>
+<script src="/res/js/ui-bootstrap-tpls-0.10.0-custom.js?v=20140812"></script>
+<script src="/res/lib/introjs/angular-intro.min.js"></script>
+<script src="/res/lib/infinite-scroll/ng-infinite-scroll.js"></script>
+
+<script src="/res/common/config.js?v=20140812"></script>
+<script src="/res/common/httpfactory.js?v=20140812"></script>
+<script src="/res/common/directives.js?v=20140812"></script>
+<script src="/res/common/filters.js?v=20140812"></script>
+<script src="/res/common/services.js?v=20140812"></script>
+
+<script src="/res/app.js?v=20140812"></script>
+
+
+<link rel="stylesheet" type="text/css" href="/res/css/homepage.css?v=20140812">
+
+<!--STATUS OK-->
+
+<div class="homepage-container container" ng-controller="IndexController">
+
+    <div class="homepage-header-container">
+
+        <div id="carousel-generic" class="carousel slide" data-ride="carousel" data-interval="10000">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-generic" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item box-banner-0 active">
+                    <table width="100%" height="100%">
+                        <tr>
+                            <td align="center" valign="middle">
+                                <div style="width:980px; margin-left: auto; margin-right: auto; position: relative;">
+                                    <button class="btn-score btn-score-1"></button>
+                                    <img class="banner-img" src="res/img/banner-item00.png" alt="百度云观测">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item box-banner-1">
+                    <table width="100%" height="100%">
+                        <tr>
+                            <td align="center" valign="middle">
+                                <div style="width:980px; margin-left: auto; margin-right: auto; position: relative;">
+                                    <button class="btn-score btn-score-1"></button>
+                                    <img class="banner-img" src="res/img/banner-item01.png" alt="百度云观测">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item box-banner-2">
+                    <table width="100%" height="100%">
+                        <tr>
+                            <td align="center" valign="middle">
+                                <div style="width:980px; margin-left: auto; margin-right: auto; position: relative;">
+                                    <button class="btn-score btn-score-1"></button>
+                                    <img class="banner-img" src="res/img/banner-item02.png" alt="百度云观测">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item box-banner-3">
+                    <table width="100%" height="100%">
+                        <tr>
+                            <td align="center" valign="middle">
+                                <div style="width:980px; margin-left: auto; margin-right: auto; position: relative;">
+                                    <button class="btn-score btn-score-1"></button>
+                                    <img class="banner-img" src="res/img/banner-item03.png" alt="百度云观测">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-generic" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-generic" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+
+        <!-- 一键评测 -->
+        <div class="search">
+            <div class="search-wrapper">
+                <div class="serach-title hotspot">30秒，了解你的网站状态</div>
+                <div class="serach-content hotspot fade">体验百度自主研发的云观测引擎，让一切尽在掌控</div>
+                <div class="arrow hotspot"></div>
+            </div>
+            <div class="home-scan">
+                <input ng-model="hosturl" ng-keypress="redirectOneKeyEval($event)" class="input-scan" placeholder="输入网站url，如:www.baidu.com">
+                <span class="btn-scan" ng-click="redirectOneKeyEval($event)"></span>
+            </div>
+            <div class="home-scan-background"></div>
+            <!-- <div id="test"></div> -->
+        </div>
+
+        <div class="homepage-banner" style="background-color: #fff;">
+            <div class="homepage-banner-wrapper">
+                <div class="homepage-banner-bg-0 left-fadein" ng-show="scrollToQuery"></div>
+                <div class="homepage-banner-context-0 right-fadein" ng-show="scrollToQuery">
+                    <div class="homepage-banner-title-0">联动搜索引擎，告别安全风险</div>
+                    <div class="homepage-banner-content-0">先于搜索引擎，安全风险早知道</div>
+                    <div class="homepage-banner-content-0">保障你的网站无虚假信息、恶意软件、黑链与漏洞</div>
+                    <div class="homepage-banner-tip-0">开启百度云观测，提前获知可能影响搜索状态的风险</div>
+                </div>
+            </div>
+        </div>
+        <div class="homepage-banner">
+            <div class="homepage-banner-wrapper">
+                <div class="homepage-banner-context-1 left-fadein" ng-show="scrollToMonitor">
+                    <div class="homepage-banner-title-1">7x24小时网站观测</div>
+                    <div class="homepage-banner-content-1">服务器、DNS、网络状态、访问速度</div>
+                    <div class="homepage-banner-content-1">精准分析，确保你的网站健康稳定</div>
+                    <div class="homepage-banner-tip-1">可视化图表，网站运行状况一目了然</div>
+                </div>
+                <div class="homepage-banner-bg-1 right-fadein" ng-show="scrollToMonitor"></div>
+            </div>
+        </div>
+
+        <div class="homepage-banner" style="background-color: #fff;">
+            <div class="homepage-banner-context-2 left-fadein">
+                <div class="homepage-banner-title-2">及时、贴心的网站报警</div>
+                <div class="homepage-banner-content-2">当网站发生运行故障与安全风险时，第一时间发出报警通告，为你减少损失和影响</div>
+            </div>
+            <div class="homepage-banner-bg-2 right-fadein">
+                <div class="homepage-banner-info-title">支持微信、手机短信及邮件报警</div>
+                <ul>
+                    <li class="alert-by-wechat"></li>
+                    <li class="alert-by-sms"></li>
+                    <li class="alert-by-email"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 大家都在用 -->
+    <div class="homepage-users-container">
+        <div class="users-title">大家都在用</div>
+        <div class="users-content">网站健康评价是一项长期指标，较低的评分可能影响搜索引擎收录</div>
+        <div id="carousel-user" class="carousel slide" interval=false>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="users-item">
+                        <div class="users-logo">
+                            <img src="/res/img/user-logo/logo1.png">
+                        </div>
+                        <div class="users-name">中国人民银行</div>
+                        <div class="users-stars stars10"></div>
+                        <div class="users-score">9.8</div>
+                    </div>
+
+                    <div class="users-item">
+                        <div class="users-logo">
+                            <img src="/res/img/user-logo/logo2.png">
+                        </div>
+                        <div class="users-name">浙江卫视官方网站</div>
+                        <div class="users-stars stars9"></div>
+                        <div class="users-score">9.4</div>
+                    </div>
+
+                    <div class="users-item">
+                        <div class="users-logo">
+                            <img src="/res/img/user-logo/logo3.png">
+                        </div>
+                        <div class="users-name">文汇网</div>
+                        <div class="users-stars stars9"></div>
+                        <div class="users-score">9.2</div>
+                    </div>
+
+                    <div class="users-item">
+                        <div class="users-logo">
+                            <img src="/res/img/user-logo/logo4.png">
+                        </div>
+                        <div class="users-name">腾讯旅游</div>
+                        <div class="users-stars stars9"></div>
+                        <div class="users-score">9.4</div>
+                    </div>
+
+                    <div class="users-item">
+                        <div class="users-logo">
+                            <img src="/res/img/user-logo/logo5.png">
+                        </div>
+                        <div class="users-name">新大陆集团</div>
+                        <div class="users-stars stars9"></div>
+                        <div class="users-score">9.1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="homepage-users-container-btn btn-score-0 btn-score" id="btn-id-2"></button>
+    </div>
+
+    <div class="homepage-bottom-container">
+        <div class="homepage-introduct-container">
+            <div class="panel-introduct">
+                <div class="bottom-title">官方公告</div>
+                <div class="item-introduct left">
+                    <div class="img-introduct">
+                        <div class="bottom-month">七月</div>
+                        <div class="bottom-day">30</div>
+                    </div>
+                    <div class="title-introduct"><a href="/?r=about/log&anchor=anchor0" target="_blank">云观测大盘上线</a></div>
+                    <div class="desp-introduct">新增云观测大盘，大数据展示全球网站动态</div>
+                </div>
+                <div class="item-introduct right">
+                    <div class="img-introduct">
+                        <div class="bottom-month">七月</div>
+                        <div class="bottom-day">10</div>
+                    </div>
+                    <div class="title-introduct"><a href="/?r=about/log&anchor=anchor1" target="_blank">云观测功能全面更新</a></div>
+                    <div class="desp-introduct">新增实时全景分析、DNS、CDN加速分析功能，网站体检闪亮登场</div>
+                </div>
+                <div class="item-introduct left">
+                    <div class="img-introduct">
+                        <div class="bottom-month">六月</div>
+                        <div class="bottom-day">16</div>
+                    </div>
+                    <div class="title-introduct"><a href="/?r=about/log&anchor=anchor2" target="_blank">官方微信服务上线</a></div>
+                    <div class="desp-introduct">关注百度云观测微信服务号，随时随心查看网站状态及报警信息</div>
+                </div>
+                <div class="item-introduct right">
+                    <div class="img-introduct">
+                        <div class="bottom-month">四月</div>
+                        <div class="bottom-day">22</div>
+                    </div>
+                    <div class="title-introduct"><a href="/?r=about/log&anchor=anchor3" target="_blank">增加搜索联动功能</a></div>
+                    <div class="desp-introduct">网站报告联动搜索结果，处理问题快人一步</div>
+                </div>
+            </div>
+            <div class="panel-notice">
+                <div class="bottom-title">站长专区</div>
+                <div class="bottom-FAQ">
+                    <div class="bottom-FAQ-left">FAQ</div>
+                    <div class="bottom-FAQ-right">
+                        <ul>
+                            <li style="margin: 5px 0 5px 15px;"><a href="http://tieba.baidu.com/p/3012487852"  target="_blank">什么是网站健康评价</a></li>
+                            <li style="margin: 5px 0 5px 15px;"><a href="http://tieba.baidu.com/p/3024138529" target="_blank">如何添加我的网站</a></li>
+                        </ul>
+                        <!--<a class="item-notice">
+                            <div class="icon-notice home-img"></div>
+                            <div class="content-notice"><a href="http://tieba.baidu.com/p/2974685205"  target="_blank">什么是网站健康评价</a></div>
+                        </a>
+                        <a class="item-notice">
+                            <div class="icon-notice home-img"></div>
+                            <div class="content-notice"><a href="http://tieba.baidu.com/p/2974681164" target="_blank">如何添加我的网站</a></div>
+                        </a>-->
+                    </div>
+                </div>
+                <div style="clear: both;"></div>
+                <div class="wechat">
+                    <div class="wechat-info">
+                        <div class="wechat-title">微信扫描</div>
+                        <div class="wechat-content">添加云观测微信服务号</div>
+                    </div>
+                </div>
+                <div class="weibo">
+                    <a href="http://weibo.com/5099529596" id="weibo-bg" target="_blank">百度云观测</a><span class="weibo-person"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toggle customer-service" ng-show="showServiceOP">
+        <a href="http://crm2.qq.com/page/portalpage/wpa.php?uin=4008768800&aty=0&a=0&curl=&ty=1" target="_blank" class="service-op">
+            <span class="icon-customer-service"></span>
+            <span class="text-customer-service">联系客服</span>
+        </a>
+    </div>
+</div>
+
+<script src="/res/controllers/IndexController.js?v=20140812"></script>
+<script type="text/javascript" src="/res/js/homepage.js?v=20140812"></script>
+    <div class="footer ">
+        <div class="container">
+            <div class="container-logo"></div>
+            <p class="pull-left" style="margin-left: -10px;"><span class="pingcele_log_small"></span>
+                ©2014 Baidu <a href="http://www.baidu.com/duty/">使用百度前必读</a>
+                <span>京ICP证030173号</span>
+                <!--
+                <img style="position: relative; top: -2px;" width="13" height="16" data-loadfunc="1" src="http://su.bdimg.com/static/superplus/img/copy_rignt_24.png" data-loaded="1">
+                -->
+            </p>
+            <p class="pull-right">
+                <a href="/?r=about/list" target="_blank">关于百度云观测</a> |
+                <a href="http://tieba.baidu.com/f?kw=%B0%D9%B6%C8%D4%C6%B9%DB%B2%E2&fr=index" target="_blank">官方贴吧</a> |
+                <a href="http://crm2.qq.com/page/portalpage/wpa.php?uin=4008768800&aty=0&a=0&curl=&ty=1" target="_blank">联系客服</a> |
+                <a href="/?r=about/list" target="_blank">帮助中心</a>
+            </p>
+        </div>
+    </div>
+
+    </body>
+</html>
+

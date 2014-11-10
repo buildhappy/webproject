@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Connection Name="zkhost1" SessionTimeout="5000" Version="1">
+<ZooKeeperServers>
+<ZooKeeperServer Host="10.108.112.181" Port="2222"/>
+</ZooKeeperServers>
+<AuthInfos/>
+</Connection>

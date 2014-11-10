@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--STATUS OK-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>百度锁屏_百度无线      </title>
+<meta name="keywords" content="锁屏，实事，壁纸，美化，解锁，热点，百度，搜索，新闻，baidu，百度锁屏，热词，滑动换屏，潮流，lock，locker，风云榜，百变，资讯，订阅，有趣，星空，海，极光，蓝" />
+<meta name="description" content="百度锁屏是一款和时下热点结合起来的锁屏优化软件。" />
+<link href="/resource/css/code.css" rel="stylesheet" type="text/css" />
+<link href="/resource/css/baidulock.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://wuxian.baidu.com/resource/js/tangram-1.1.0.js"></script>
+<script type="text/javascript" src="http://wuxian.baidu.com/resource/js/jquery.js"></script>
+<script type="text/javascript" src="http://wuxian.baidu.com/channel.ini"></script>
+</head>
+<body>
+<div class="top">
+    <div class="logo"><a href="http://wuxian.baidu.com"><img height="39px" src="/resource/images/baidulock/logo.png" alt="百度无线" title="百度无线"/></a></div>
+    <div class="right"><a href="http://wuxian.baidu.com">返回无线官网 >></a></div>
+</div>
+<div class="banner">
+	<div class="content">
+    <a id='banner_dowbload_btn' href='http://wuxian.baidu.com/download/BaiduLock_Android_1-0-2-7.apk' class="btn-download"></a>    
+    <div class="versions">
+      <p>版本: 3.2.1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大小: 2.2MB</p>
+      <p>发布日期: 2013.9.27</p>
+    </div>
+    <div class="line"></div>
+    <div class="box-img"> <img src="" id="img2d" /> <p>扫描二维码</p></div>
+	</div>
+</div>
+<div class="main">
+    <dl class="hotspot">
+        <dt>随时关注时下热点</dt>
+        <dd>无需解锁，点亮屏幕既知天下动态，<br />再忙也要与时俱进！</dd>
+    </dl>
+    <dl class="weather">
+        <dt>轻松掌握天气冷暖</dt>
+        <dd>一天太少？三天不够用？<br />天气信息增至5天，出行更方便</dd>
+    </dl>
+    <dl class="ready">
+        <dt>神奇小窗口 惬意阅读</dt>
+        <dd>每次只能看一条消息不够过瘾？<br />神奇小窗口出世！尽览天下事！</dd>
+    </dl>
+    <dl class="hd">
+        <dt>高清壁纸随心炫</dt>
+        <dd>与全网顶尖壁纸app合作<br />每日更新，提供内容丰富的在线壁纸库！</dd>
+    </dl>
+    <div class="bottom-download">
+        <p>体验全新极炫解锁</p>
+        <a id="bottom-download-btn" href="http://wuxian.baidu.com/download/BaiduLock_Android_1-0-2-7.apk" class="bottom-download-btn"></a>
+    </div>
+</div>
+<div class="foot">&copy; 2013 Baidu</div>
+<script type="text/javascript">
+var from;
+//对jQuery进行方法扩展
+$.fn.extend({
+	/**	
+	*	@return Object json对象
+	*/
+	urlParse: function(){
+		var strSearch = window.location.search,
+			arrSearch = [],
+			object = {};
+		
+		if(strSearch != ''){
+			strSearch = strSearch.replace('?','');
+			arrSearch = strSearch.split('&');
+			
+			for(var i=0,len=arrSearch.length; i<len; i++){
+				var arrItem = arrSearch[i].split('=');
+				object[arrItem[0]] = arrItem[1];
+			}
+		}
+		
+		return object;
+	},
+	
+	/**
+	*	@param Object jsonObject json格式的参数对象
+	*	@return String 字符串格式的url
+	*/
+	urlAssemble: function(jsonObject){
+		var url = ''
+			arrUrl = [];
+			
+		for(var key in jsonObject){
+			arrUrl.push(key + '=' + jsonObject[key]);
+		}
+		
+		url = '?' + arrUrl.join('&');
+		
+		return url;
+	}
+});
+
+var objUrl = $.fn.urlParse(),	//解析url参数
+	
+	//当前页面的from参数
+	from = objUrl['from'],
+	
+	//如果渠道号为空，设置为默认default
+	from = (from == '' ? 'default' : from),
+	
+
+	//【每次修改都在这里统一配置】
+	//渠道白名单
+	mapWhiteList = {
+		'1000466b': {
+			'download_url': 'http://wuxian.baidu.com/download/1000466b/BaiduLock_Android_3-2-1_1000466b.apk',
+			//下载链接参数
+			'url_param': {
+				'from': '1000466b',			
+				'ref': 'undefined'		
+			}
+		},
+		'1000466j': {
+			'download_url': 'http://wuxian.baidu.com/download/1000466j/BaiduLock_Android_3-2-1_1000466j.apk',
+			//下载链接参数
+			'url_param': {
+				'from': '1000466j',
+				'ref': 'undefined'
+			}
+		}
+		
+	};
+//如果在渠道白名单内，使用对应的下载地址
+if(!mapWhiteList.hasOwnProperty(from)){
+	from = '1000466b';
+}
+
+urlDownloadLink = mapWhiteList[from]['download_url'] + $.fn.urlAssemble(mapWhiteList[from]['url_param']);
+$('#banner_dowbload_btn').attr('href',urlDownloadLink);
+$('#bottom-download-btn').attr('href', urlDownloadLink);
+document.getElementById('img2d').src = '/resource/images/baidulock/'+from+'.png';
+
+
+function setVcode(){
+	document.getElementById('vcode').src = imgurl;
+};
+</script>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F6aa727090439af56894ce9de5057aedd' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

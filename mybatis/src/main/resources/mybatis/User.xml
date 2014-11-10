@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+ <!DOCTYPE mapper   PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"   "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">  
+  <mapper namespace="mybatis.entity.User" >
+     <resultMap id="UserResultMap"  type="mybatis.entity.User">
+       <result property="id" column="id" jdbcType="VARCHAR"  javaType="string"/> 
+       <result property="name" column="name" javaType = "string"  jdbcType="VARCHAR"/>   
+       <result property="createtime" column="createtime" javaType =  "string" jdbcType="VARCHAR"/> 
+       <result property="tilepath" column="tilepath" javaType =  "string" jdbcType="VARCHAR"/> 
+       <result property="lastlogintime" column="lastlogintime"  javaType = "string" jdbcType="VARCHAR"/>   
+       <result property="nickname" column="nickname" javaType =  "string" jdbcType="VARCHAR"/>  
+       <result property="password" column="password" javaType =  "string" jdbcType="VARCHAR"/> 
+       <result property="picture" column="picture" javaType = "string"  jdbcType="VARCHAR"/>  
+       <result property="sex" column="sex" javaType = "string"  jdbcType="VARCHAR"/>  
+       <result property="username" column="username" javaType =  "string" jdbcType="VARCHAR"/> 
+    </resultMap>
+    
+    <select id="user" parameterType="int" resultType="mybatis.entity.User"  resultMap="UserResultMap">select * from users where id=#{id} </select> 
+    <select id="users"   resultMap="UserResultMap">select * from users order by id asc </select> 
+    <insert id="addUser" parameterType="mybatis.entity.User" parameterMap="UserResultMap">insert into users (id,name,createtime,email,tilepath,lastloginip,lastlogintime,nickname,password,picture,sessionid,sex,tel,username)   values (#{id},#{name},#{createtime},#{email},#{tilepath},#{lastloginip},#{lastlogintime},#{nickname},#{password},#{picture},#{sessionid},#{sex},#{tel},#{username})</insert>
+    
+     <!-- Dynamic SQL 这里的方法未经测试 -->
+     <!-- IF -->
+     <select id="dynamic_user"   resultMap="UserResultMap">select * from users where username=#{username} 
+        <if test="name!=null">and name=#{name}</if>
+     </select> 
+     
+     <!-- FOREACH -->
+      <select id="dynamic_users"   resultMap="UserResultMap">select * from users name=#{name} and createtime in
+         <foreach collection="list" item="classTimeList"  open="(" separator="," close=")">  
+            #{classTimeList}  
+         </foreach>  
+     </select> 
+     
+     <!-- choose when  otherwise-->
+     <select id="dynamic_findNameLike"  resultMap="UserResultMap">
+         SELECT * FROM USERS WHERE NAME IS NOT NULL
+      <choose>
+         <when test="nickname!=null">AND nickname like #{nickname}</when>
+         <when test="picture!=null ">AND picture like #{picture}</when>
+         <otherwise>AND lastlogintime > #{lastlogintime}</otherwise>
+     </choose>
+    </select>
+    
+     <!-- WHERE -->
+    <select id="dynamic_findUSERSLike" resultMap="UserResultMap">select * from users
+     <where>
+       <if test="name!=null">WHERE name LIKE #{name}</if>
+     </where>
+   </select>
+   
+ </mapper>

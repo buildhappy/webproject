@@ -1,0 +1,41 @@
+<!DOCTYPE web-app PUBLIC
+	 "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+	 "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+
+	<servlet>
+		<servlet-name>EditArticle</servlet-name>
+		<display-name>EditArticle</display-name>
+		<description></description>
+		<servlet-class>controller.admin.EditArticle</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AdminService</servlet-name>
+		<display-name>AdminService</display-name>
+		<description></description>
+		<servlet-class>controller.AdminService</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>PrintNews</servlet-name>
+		<display-name>PrintNews</display-name>
+		<description></description>
+		<servlet-class>controller.PrintNews</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>EditArticle</servlet-name>
+		<url-pattern>/EditArticle</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AdminService</servlet-name>
+		<url-pattern>/AdminService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PrintNews</servlet-name>
+		<url-pattern>/PrintNews</url-pattern>
+	</servlet-mapping>
+	
+
+</web-app>

@@ -1,0 +1,19 @@
+1407482974609	Copy package
+1407483005311	Copy package
+1407483019199	Copy package
+1407483028128	Copy package
+1407483039636	Copy package
+1407483048752	Copy package
+1407483253954	Move compilation units
+1407483267791	Rename type 'AuthorService'
+1407483312126	Rename package 'com.dao'
+1407483322360	Rename package 'com.dao.mybatis.model'
+1407483330363	Rename package 'com.service.impl'
+1407483339442	Rename package 'com.utils'
+1407483350893	Rename package 'com.web.controller'
+1407483358334	Rename package 'com.web.ui'
+1407483717625	Rename type 'NewsService'
+1407500475381	Move compilation units
+1407500486644	Rename package 'com.buildhappy.dao.mybatis.model'
+1407503337361	Rename resource 'com.buildhappy'
+1407503344818	Move folder

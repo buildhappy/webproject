@@ -1,0 +1,5 @@
+127.0.0.1 - - [09/Aug/2014:08:51:50 +0800] "GET / HTTP/1.1" 404 951
+127.0.0.1 - - [09/Aug/2014:08:51:51 +0800] "GET /newsManagement3.1Beta/ HTTP/1.1" 200 52
+127.0.0.1 - - [09/Aug/2014:08:54:49 +0800] "GET / HTTP/1.1" 404 951
+127.0.0.1 - - [09/Aug/2014:08:54:50 +0800] "GET /newsManagement3.0SpringAndMybatis/ HTTP/1.1" 200 4283
+127.0.0.1 - - [09/Aug/2014:08:54:50 +0800] "GET /newsManagement3.0SpringAndMybatis/%3C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20?php%20echo%20site_url().%27/admin/admin/copy%27%20?%3E HTTP/1.1" 404 5

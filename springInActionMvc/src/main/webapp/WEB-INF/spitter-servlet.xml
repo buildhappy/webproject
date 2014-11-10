@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+        xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-4.1.xsd
+        http://www.springframework.org/schema/util 
+        http://www.springframework.org/schema/util/spring-util-4.1.xsd">
+
+<!-- 自动扫描该包下的所有类，将含有controller标签的类，加载到spring中 -->
+	<context:component-scan base-package="com.buildhappy.spitter.mvc,com.buildhappy.spitter.service"/>
+	
+<!-- 配置视图解析器 P173 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+		<property name="prefix" value="/WEB-INF/views/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+	
+<!-- 配置converter转换工具 -->
+	<bean id = "stringHttpMessageConverter" class = "org.springframework.http.converter.StringHttpMessageConverter">
+	</bean>
+	
+<!-- 链接数据库 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/springinaction"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="123456"></property>
+	</bean>
+	
+<!-- TilesConfigurer记录Tiles定义的所有信息 -->
+	<!-- <bean class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>WEB-INF/views/**/views.xml</value>
+			</list>
+		</property>
+	</bean>
+	 -->
+	 
+<!-- 使用Apache Tiles之前要把TilesViewResolver注册为一个bean P174-->
+	<!--  
+	<bean class="org.springframework.web.servlet.view.tiles2.TilesViewResolver">
+	</bean>
+	-->
+	
+	
+</beans>

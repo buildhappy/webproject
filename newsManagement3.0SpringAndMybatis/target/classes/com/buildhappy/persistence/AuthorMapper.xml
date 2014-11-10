@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		<!--namespace指向该sql mapper对应的接口-->
+<mapper namespace="com.buildhappy.persistence.AuthorMapper">  
+	<resultMap id="authorResultMap" type="author">
+		<id property="id" column="id"/>
+		<result property="name" column="name" />
+		<result property="password" column="password"/>
+	</resultMap>
+		<!--select all author -->
+	<select id="selectAllAuthor" resultMap="authorResultMap">
+		select * from author;
+	</select>
+		<!--select author by Id-->
+	<select id="selectAuthorById" parameterType="int" resultMap="authorResultMap">
+		select * from author where id=#{id}
+	</select>
+		<!--select passwore by name -->
+	<select id="selectPasswordByName" parameterType="String" resultType="String" >
+		select password from author where name=#{name}
+	</select>
+	
+		<!--delete author by Id-->
+	<delete id="deleteAuthorById" parameterType="int">
+		delete from author where id=#{id}
+	</delete>
+	
+		<!-- insert author -->
+	<insert id="insertAuthor" parameterType="Author">
+		insert into author(id,name,password) values(#{id},#{name},#{password})
+	</insert>
+	
+		<!-- update author -->
+	<update id="updateAuthor" parameterType="Author">
+		update author set name=#{name},password=#{password} where id=#{id}
+	</update>
+</mapper>

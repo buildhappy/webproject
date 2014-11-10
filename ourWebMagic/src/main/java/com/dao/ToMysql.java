@@ -1,0 +1,19 @@
+package com.dao;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.utils.HibernateUtils;
+
+public class ToMysql {
+	public void save(String name,String url){
+		Session session =HibernateUtils.currentSession() ;
+		Transaction tx =  session.beginTransaction() ;
+		Details d =new Details() ;
+		d.setName(name);
+		d.setUrl(url);
+		session.save(d);
+		tx.commit();
+		HibernateUtils.closeSession();
+	}
+}

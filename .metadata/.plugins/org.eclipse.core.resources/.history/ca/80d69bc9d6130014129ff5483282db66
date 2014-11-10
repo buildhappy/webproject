@@ -1,0 +1,7 @@
+package buildhappy.tools.berkeleyDB;
+
+public interface Frontier {
+	public CrawlerUrl getNext()throws Exception;
+	public boolean putUrl(CrawUrl url) throws Exception;
+	
+}

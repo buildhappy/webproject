@@ -1,0 +1,12 @@
+package buildhappy.tools.berkeleyDB;
+
+public class CrawlUrl {
+	private static final long serialVersionUID = 7931672194843948629L;
+	
+	public CrawlUrl(){
+	}
+	
+	private String oriUrl; //原始URL的值，主机部分是域名
+	
+	private String url;//URL的值。主机部分是IP，为了防止重复主机的出现
+}

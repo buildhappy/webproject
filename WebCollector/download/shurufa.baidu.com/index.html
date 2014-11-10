@@ -1,0 +1,670 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>百度输入法</title>
+	<link rel="stylesheet" type="text/css" href="css/IP-common.css?v=20131112">
+	<link rel="stylesheet" type="text/css" href="css/IME-common.css?v=2014080816">
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<meta property="wb:webmaster" content="68b07934c30c76be" />
+	
+
+	<!--[if IE 6]><script type="text/javascript" src="js/ie6Png24.js"></script>
+	<script type="text/javascript">DD_belatedPNG.fix('.imgPng');</script><![endif]-->
+</head>
+<body>
+<!-- 顶部banner图 -->
+
+<div id="top_banner"><a href="http://wubi.baidu.com/" target="_blank"><img src="img/ime/top_banner.jpg"/></a><div class="abs close_top_banner"><a href="javascript:;"></a></div></div>
+<!-- end -->
+
+  <div class="header">
+		<div class="bar">
+			<div class="main bar-cont rel">
+				<a target="_blank" href="http://wubi.baidu.com/">百度五笔输入法<img class="tipimg" src="img/ime/new_tip.gif" width="21" height="14" alt=""></a> | <a target="_blank" href="http://srf.baidu.com/">百度手机输入法</a> | <a target="_blank" href="http://wuxian.baidu.com/input/mac.html">百度MAC输入法</a>
+			</div>
+		</div>
+		<div class="nav main rel">
+			<div class="logo abs"><a href="index.html"></a></div>
+			<div class="nav-list rel">
+
+				<ul>
+					<li  class="active"><a href="index.html"></a></li>
+					
+					<li class="skin"><a href="skin.html"></a></li>
+					<li class="dict"><a href="dict.html"></a></li>
+					<li class="update"><a href="update.html"></a></li>
+					<li class="help"><a href="help.html" target='_blank'></a></li>
+				</ul>			<div id='topBar' class='abs'></div>
+			</div>
+			<div class="nav-right fr rel">				<span class="nav-user"><a id="user-login" title="登录百度帐号，配置词库随身带">登录</a>|<a href="https://passport.baidu.com/v2/?reg&tpl=sr&u=http%3A%2F%2Fshurufa.baidu.com" title='登录百度帐号，配置词库随身带'>注册</a></span>
+					<script type="text/javascript" src="https://passport.baidu.com/passApi/js/uni_login_wrapper.js?v=20131030"></script>
+					<script type="text/javascript" src="js/ime-passport-new.js?v=201403131730"></script>
+					<script type="text/javascript">
+					   
+					</script>				<script type='text/javascript' src ='js/jquery.easing.1.3.js'></script>				
+				<script type="text/javascript">
+				$(function(){
+ 						$(".home").hover(function(){
+						    $("#user-subMenu").show();
+						},function(){
+						    $("#user-subMenu").hide();
+						});
+
+						$("#myskin").click(function(){
+							location.href='user-skin.html';
+						});
+						
+						$("#mydict").click(function(){
+							location.href='user-dict.html';
+						});
+						var indexLi;
+						var offsetL;
+						var hideId;
+						$('.nav-list li').hover(function(){
+							if(hideId){
+								clearTimeout(hideId);
+							}
+							if($(this).hasClass('active')){
+								$("#topBar").stop().animate({'opacity':"0"});
+								return false
+							}
+							indexLi =  $('.nav-list li').index(this);
+							indexLi +=1;
+							// offsetL = 140 + (86*indexLi);
+							$("#topBar").stop().animate({
+								'left':139 + (86*indexLi)+ 'px',
+								'opacity':'1'
+							},{
+								duration:800,
+								easing:'easeOutElastic'
+							});						
+						},function(){
+							//hideId = setTimeout(function(){
+								$("#topBar").stop().animate({'opacity':"0"});
+							//},10)
+							
+						});	
+						$('.home').hover(function(){
+							$(this).find('.center').addClass('rotate');
+						},function(){
+							$(this).find('.center').removeClass('rotate');
+						})			
+				})
+					   
+				</script>				</div>
+			<div class="nav-cont"></div>
+		</div>
+			<div class='hr'></div>
+	</div>
+	<div class="content">		
+		<div class="index-banner rel">
+			<ul id="bannerItems" class="banner-imgs">
+				<li class="bg1">
+					<div class="banner-bg-1-1"></div>
+					<div class="banner-bg-1-2"></div>
+				</li>
+				<li class="bg2">
+					<div class="banner-bg-2-1"></div>
+					<div class="banner-bg-2-2"></div>
+				</li>				
+			</ul>			
+			<div class="cont-box">
+				<div class="info-box">
+					<div id="downloadInfo" class="download-info">
+						<div class="downLoadBtn">
+							<a id="statuBar" onclick="sendLog()" href="http://dl.client.baidu.com/download.php?source=/ime/BaiduPinyinSetup.exe"></a>
+						</div>			
+						<div class="version">
+							2.11版(31.8M)&nbsp;&nbsp;更新时间：2014-08-01<br />
+							支持XP/Vista/Win7/Win8
+						</div>
+					</div>
+					<div id="downloadWubi" class="download-info download-wubi">
+						<div class="downLoadBtn">
+							<a></a>
+						</div>
+						<div class="version">
+							更新时间：2014-07-01<br />
+							支持XP/Vista/Win7/Win8
+						</div>
+					</div>
+				</div>	
+				<div id="bannerTips" class="banner-tips">
+					<p class="current"></p>
+					<p></p>
+				</div>			
+				<div id="bannerWubi" class="bannerWubi abs">
+					<a class="abs" href="http://wubi.baidu.com/" target="_blank"></a>
+				</div>
+			</div>			
+		</div>
+		<div class="main index-cont">
+			<div class="index-cont-l fl rel">
+				<!-- 精彩皮肤 -->
+				<div class="index-mod index-skins rel">
+					<div class="title">
+						<p class="title-bg fl"></p>
+						<p class="title-more fr"><a href="skin.html"></a></p>
+					</div>
+					<div class="skins">
+						<ul class='list_contain'>
+							 <script type="text/javascript">var page_tag = "new" </script>					         					<li class="skinItem rel">
+													<div class="skin-img skin-hover" link="http://shurufacdn.baidu.com/shurufa/201406231608520574.jpg">
+														<a href="skin-info.html?id=12136">
+															<img alt="丛林之王-泰山" width="163" height="108" src="http://shurufacdn.baidu.com/shurufa/201406231608470211.jpg"/>
+															<img class="hidden" src ="http://shurufacdn.baidu.com/shurufa/201406231608520574.jpg"/>
+														</a>
+														<div class='index_mask abs'><a log='skin-info' class="log-item"  href="skin-info.html?id=12136" target="_blank"></a></div>
+													</div>
+													<div class="skin-info rel">
+														<p class="skin-text fl">
+															<a log='skin-name' class="_rollitem skin-tit log-item" href="skin-info.html?id=12136" target='_blank'>
+																<span class='small_name'>丛林之王-泰山</span>
+																<span  class='all_name hidden' >丛林之王-泰山&nbsp;&nbsp;</span>
+															</a>										
+					 									</p>
+														<span class='down-btn down-btn-new'><a log='down-btn' class="abs hand log-item" href="./?act=skin-download&id=12136"></a></span>
+													</div>
+												</li>					         					<li class="skinItem rel">
+													<div class="skin-img skin-hover" link="http://shurufacdn.baidu.com/shurufa/skin_image_2_12400_20140725163250.gif">
+														<a href="skin-info.html?id=12400">
+															<img alt="音乐之声【电台皮肤】" width="163" height="108" src="http://shurufacdn.baidu.com/shurufa/skin_image_5_12400_20140725163250.gif"/>
+															<img class="hidden" src ="http://shurufacdn.baidu.com/shurufa/skin_image_2_12400_20140725163250.gif"/>
+														</a>
+														<div class='index_mask abs'><a log='skin-info' class="log-item"  href="skin-info.html?id=12400" target="_blank"></a></div>
+													</div>
+													<div class="skin-info rel">
+														<p class="skin-text fl">
+															<a log='skin-name' class="_rollitem skin-tit log-item" href="skin-info.html?id=12400" target='_blank'>
+																<span class='small_name'>音乐之声【电</span>
+																<span  class='all_name hidden' >音乐之声【电台皮肤】&nbsp;&nbsp;</span>
+															</a>										
+					 									</p>
+														<span class='down-btn down-btn-new'><a log='down-btn' class="abs hand log-item" href="./?act=skin-download&id=12400"></a></span>
+													</div>
+												</li>					         					<li class="skinItem rel">
+													<div class="skin-img skin-hover" link="http://shurufacdn.baidu.com/shurufa/201408061045370850.jpg">
+														<a href="skin-info.html?id=12913">
+															<img alt="路灯下的守望[囧爱]-JONJON囧囧" width="163" height="108" src="http://shurufacdn.baidu.com/shurufa/201408061045580144.jpg"/>
+															<img class="hidden" src ="http://shurufacdn.baidu.com/shurufa/201408061045370850.jpg"/>
+														</a>
+														<div class='index_mask abs'><a log='skin-info' class="log-item"  href="skin-info.html?id=12913" target="_blank"></a></div>
+													</div>
+													<div class="skin-info rel">
+														<p class="skin-text fl">
+															<a log='skin-name' class="_rollitem skin-tit log-item" href="skin-info.html?id=12913" target='_blank'>
+																<span class='small_name'>路灯下的守望</span>
+																<span  class='all_name hidden' >路灯下的守望[囧爱]-JONJON囧囧&nbsp;&nbsp;</span>
+															</a>										
+					 									</p>
+														<span class='down-btn down-btn-new'><a log='down-btn' class="abs hand log-item" href="./?act=skin-download&id=12913"></a></span>
+													</div>
+												</li>					         					<li class="skinItem rel">
+													<div class="skin-img skin-hover" link="http://shurufacdn.baidu.com/shurufa/201408061456390843.gif">
+														<a href="skin-info.html?id=12938">
+															<img alt="【初久】心跳记忆" width="163" height="108" src="http://shurufacdn.baidu.com/shurufa/201408061456440185.gif"/>
+															<img class="hidden" src ="http://shurufacdn.baidu.com/shurufa/201408061456390843.gif"/>
+														</a>
+														<div class='index_mask abs'><a log='skin-info' class="log-item"  href="skin-info.html?id=12938" target="_blank"></a></div>
+													</div>
+													<div class="skin-info rel">
+														<p class="skin-text fl">
+															<a log='skin-name' class="_rollitem skin-tit log-item" href="skin-info.html?id=12938" target='_blank'>
+																<span class='small_name'>【初久】心跳</span>
+																<span  class='all_name hidden' >【初久】心跳记忆&nbsp;&nbsp;</span>
+															</a>										
+					 									</p>
+														<span class='down-btn down-btn-new'><a log='down-btn' class="abs hand log-item" href="./?act=skin-download&id=12938"></a></span>
+													</div>
+												</li>					         					<li class="skinItem rel">
+													<div class="skin-img skin-hover" link="http://shurufacdn.baidu.com/shurufa/201408041639280566.gif">
+														<a href="skin-info.html?id=12885">
+															<img alt="rainbow·动态·一起摇摆" width="163" height="108" src="http://shurufacdn.baidu.com/shurufa/201408041640070816.gif"/>
+															<img class="hidden" src ="http://shurufacdn.baidu.com/shurufa/201408041639280566.gif"/>
+														</a>
+														<div class='index_mask abs'><a log='skin-info' class="log-item"  href="skin-info.html?id=12885" target="_blank"></a></div>
+													</div>
+													<div class="skin-info rel">
+														<p class="skin-text fl">
+															<a log='skin-name' class="_rollitem skin-tit log-item" href="skin-info.html?id=12885" target='_blank'>
+																<span class='small_name'>rainbo</span>
+																<span  class='all_name hidden' >rainbow·动态·一起摇摆&nbsp;&nbsp;</span>
+															</a>										
+					 									</p>
+														<span class='down-btn down-btn-new'><a log='down-btn' class="abs hand log-item" href="./?act=skin-download&id=12885"></a></span>
+													</div>
+												</li>					         					<li class="skinItem rel">
+													<div class="skin-img skin-hover" link="http://shurufacdn.baidu.com/shurufa/201407231354360905.gif">
+														<a href="skin-info.html?id=12646">
+															<img alt="【刀风·动态】快乐假期" width="163" height="108" src="http://shurufacdn.baidu.com/shurufa/201407231354480863.gif"/>
+															<img class="hidden" src ="http://shurufacdn.baidu.com/shurufa/201407231354360905.gif"/>
+														</a>
+														<div class='index_mask abs'><a log='skin-info' class="log-item"  href="skin-info.html?id=12646" target="_blank"></a></div>
+													</div>
+													<div class="skin-info rel">
+														<p class="skin-text fl">
+															<a log='skin-name' class="_rollitem skin-tit log-item" href="skin-info.html?id=12646" target='_blank'>
+																<span class='small_name'>【刀风·动态</span>
+																<span  class='all_name hidden' >【刀风·动态】快乐假期&nbsp;&nbsp;</span>
+															</a>										
+					 									</p>
+														<span class='down-btn down-btn-new'><a log='down-btn' class="abs hand log-item" href="./?act=skin-download&id=12646"></a></span>
+													</div>
+												</li>					         					<li class="skinItem rel">
+													<div class="skin-img skin-hover" link="http://shurufacdn.baidu.com/shurufa/201407150457420242.png">
+														<a href="skin-info.html?id=12481">
+															<img alt="蓝恋" width="163" height="108" src="http://shurufacdn.baidu.com/shurufa/201407150457470256.png"/>
+															<img class="hidden" src ="http://shurufacdn.baidu.com/shurufa/201407150457420242.png"/>
+														</a>
+														<div class='index_mask abs'><a log='skin-info' class="log-item"  href="skin-info.html?id=12481" target="_blank"></a></div>
+													</div>
+													<div class="skin-info rel">
+														<p class="skin-text fl">
+															<a log='skin-name' class="_rollitem skin-tit log-item" href="skin-info.html?id=12481" target='_blank'>
+																<span class='small_name'>蓝恋</span>
+																<span  class='all_name hidden' >蓝恋&nbsp;&nbsp;</span>
+															</a>										
+					 									</p>
+														<span class='down-btn down-btn-new'><a log='down-btn' class="abs hand log-item" href="./?act=skin-download&id=12481"></a></span>
+													</div>
+												</li>					         					<li class="skinItem rel">
+													<div class="skin-img skin-hover" link="http://shurufacdn.baidu.com/shurufa/201408052003420373.png">
+														<a href="skin-info.html?id=12907">
+															<img alt="『花满楼』吴世勋①" width="163" height="108" src="http://shurufacdn.baidu.com/shurufa/201408052003480711.png"/>
+															<img class="hidden" src ="http://shurufacdn.baidu.com/shurufa/201408052003420373.png"/>
+														</a>
+														<div class='index_mask abs'><a log='skin-info' class="log-item"  href="skin-info.html?id=12907" target="_blank"></a></div>
+													</div>
+													<div class="skin-info rel">
+														<p class="skin-text fl">
+															<a log='skin-name' class="_rollitem skin-tit log-item" href="skin-info.html?id=12907" target='_blank'>
+																<span class='small_name'>『花满楼』吴</span>
+																<span  class='all_name hidden' >『花满楼』吴世勋①&nbsp;&nbsp;</span>
+															</a>										
+					 									</p>
+														<span class='down-btn down-btn-new'><a log='down-btn' class="abs hand log-item" href="./?act=skin-download&id=12907"></a></span>
+													</div>
+												</li>						</ul>
+					</div>
+					<div class='clear'></div>
+				</div>
+				<!-- 热门词库 -->
+				<div class="index-mod index-dict">
+					<div class="title">
+						<p class="title-bg fl"></p>
+						<p class="title-more fr"><a href="dict.html"></a></p>
+					</div>
+					<div class="dict">
+						<ul class='list_contain'>
+			         					<li class="rel" >
+								<div class="dict-img">
+									<a href="javascript:dictInfoBox('dict-info.html?id=16');">
+										<img alt="电脑游戏词汇" width="128" height="100" src="http://shurufacdn.baidu.com/shurufa/dict_image_16_20131101140739.jpg"/>
+									</a>
+								</div>
+								<div class="dict-desc fl">
+									<a href="javascript:dictInfoBox('dict-info.html?id=16');">电脑游戏词汇</a>
+								</div>
+								<p class="pic-detail-down fr"><a class="s_down_btn" href="./?act=dict-download&id=16" title="点击下载"></a></p>
+							</li>				         					<li class="rel" >
+								<div class="dict-img">
+									<a href="javascript:dictInfoBox('dict-info.html?id=9');">
+										<img alt="电影名称" width="128" height="100" src="http://shurufacdn.baidu.com/shurufa/dict_image_9_20131101140951.jpg"/>
+									</a>
+								</div>
+								<div class="dict-desc fl">
+									<a href="javascript:dictInfoBox('dict-info.html?id=9');">电影名称</a>
+								</div>
+								<p class="pic-detail-down fr"><a class="s_down_btn" href="./?act=dict-download&id=9" title="点击下载"></a></p>
+							</li>				         					<li class="rel" >
+								<div class="dict-img">
+									<a href="javascript:dictInfoBox('dict-info.html?id=727');">
+										<img alt="流行歌曲及专辑名称大全" width="128" height="100" src="http://shurufacdn.baidu.com/shurufa/dict_image_727_20131101140842.jpg"/>
+									</a>
+								</div>
+								<div class="dict-desc fl">
+									<a href="javascript:dictInfoBox('dict-info.html?id=727');">流行歌曲及专辑</a>
+								</div>
+								<p class="pic-detail-down fr"><a class="s_down_btn" href="./?act=dict-download&id=727" title="点击下载"></a></p>
+							</li>				         					<li class="rel" >
+								<div class="dict-img">
+									<a href="javascript:dictInfoBox('dict-info.html?id=13');">
+										<img alt="动漫作品词汇" width="128" height="100" src="http://shurufacdn.baidu.com/shurufa/dict_image_13_20131101140759.jpg"/>
+									</a>
+								</div>
+								<div class="dict-desc fl">
+									<a href="javascript:dictInfoBox('dict-info.html?id=13');">动漫作品词汇</a>
+								</div>
+								<p class="pic-detail-down fr"><a class="s_down_btn" href="./?act=dict-download&id=13" title="点击下载"></a></p>
+							</li>				         					<li class="rel" >
+								<div class="dict-img">
+									<a href="javascript:dictInfoBox('dict-info.html?id=26');">
+										<img alt="古诗词精选" width="128" height="100" src="http://shurufacdn.baidu.com/shurufa/dict_image_26_20131101140705.jpg"/>
+									</a>
+								</div>
+								<div class="dict-desc fl">
+									<a href="javascript:dictInfoBox('dict-info.html?id=26');">古诗词精选</a>
+								</div>
+								<p class="pic-detail-down fr"><a class="s_down_btn" href="./?act=dict-download&id=26" title="点击下载"></a></p>
+							</li>										
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="index-cont-r fr rel" style="over-flow:hidden">
+				<form action="./skin-list.html" method="get" id='searchSkin'>
+					<p class="search rel">
+						<input type="text" name="keyword" id="keyword" value="找皮肤..." />
+						<span class="search-btn hand "><a  class='abs' id='submit'></a></span>
+						<span class="mask_word abs" style="display: none">找皮肤...</span>	
+					</p>
+				</form> 
+				<div class="attention">
+					<p class="tit fl"></p>
+					<div class="attention-cont fl">
+						 <a class='sina' title='百度输入法新浪微博' href="http://e.weibo.com/baidushurufa" target='_blank'></a>
+			   			 <a class='qq' title='百度输入法腾讯微博' href="http://t.qq.com/baidushurufa?preview" target='_blank'></a>
+			   			 <a class='tieba' title='百度输入法官方贴吧' href="http://tieba.baidu.com/f?kw=%B0%D9%B6%C8%CA%E4%C8%EB%B7%A8" target='_blank'></a>
+			   			 <a class='luntan' title='百度输入法官方论坛' href="http://rw.baidu.com/forum.php?mod=forumdisplay&fid=164" target='_blank'></a>
+					</div>
+				</div>	
+				<!-- 扩展功能 -->
+				<div class="extension">
+					<p class="tit"></p>					
+					<div class="extension-items">
+						<ul>
+							<li class="line">
+								<p class="icon fl">
+									<a class='down-btn'><img width="44" src="img/ime/index-icon-BdCalendar.jpg"></a>
+								</p>
+								<p class="version fl">
+									<a title="农历、天气、假期尽在掌握" href="http://dl.client.baidu.com/download.php?source=ime/plugin/BdCalendar/BdCalendarSetup.exe">贴心日历</a>
+									<span class='f12'>0.9.9.195版</span>
+								</p>
+								<p class="down-btn abs"><a href="http://dl.client.baidu.com/download.php?source=ime/plugin/BdCalendar/BdCalendarSetup.exe"></a></p>
+							</li>
+							<li class="line">
+								<p class="icon fl">
+									<a class='down-btn'><img width="44" src="img/ime/index-icon-letter.jpg"></a>
+								</p>
+								<p class="version fl">
+									<a title="原笔迹手写" href="http://dl.client.baidu.com/download.php?source=ime/plugin/PersonalLetter/PersonalLetterSetup.exe">亲笔信</a>
+									<span class='f12'>1.0.0.42版</span>
+								</p>
+								<p class="down-btn abs"><a href="http://dl.client.baidu.com/download.php?source=ime/plugin/PersonalLetter/PersonalLetterSetup.exe"></a></p>
+							</li>
+							<li class="line">
+								<p class="icon fl">
+									<a class='down-btn'><img width="44" src="img/ime/index-icon-text.jpg"></a>
+								</p>
+								<p class="version fl">
+									<a title="文本、名片无线传输" href="http://dl.client.baidu.com/download.php?source=ime/plugin/QRMaker/QRMakerSetup.exe">神码传文</a>
+									<span class='f12'>1.0.0.47版</span>
+								</p>
+								<p class="down-btn abs"><a href="http://dl.client.baidu.com/download.php?source=ime/plugin/QRMaker/QRMakerSetup.exe"></a></p>
+							</li>							
+							<li class="line">
+								<p class="icon fl">
+									<a class='down-btn'><img src="img/ime/index-icon-input.gif?v=201401211750"></a>
+								</p>
+								<p class="version fl">
+									<a title="真正的手写输入" href='http://dl.client.baidu.com/download.php?source=ime/plugin/HandInput/HandInputSetup.exe'>手写输入</a>
+									<span class='f12'>1.0.0.95版</span>
+								</p>
+								<p class="down-btn abs"><a href="http://dl.client.baidu.com/download.php?source=ime/plugin/HandInput/HandInputSetup.exe"></a></p>
+							</li>
+							<li class="line">
+								<p class="icon fl">
+									<a class='down-btn'><img src="img/ime/index-icon-cut.gif"></a>
+								</p>
+								<p class="version fl">
+									<a title='简单方便的截图工具' href='http://dl.client.baidu.com/download.php?source=ime/plugin/Screenshot/ScreenshotSetup.exe'>截图工具</a>
+									<span class='f12'>2.0.0.190版</span>
+								</p>
+								<p class="down-btn abs"><a href="http://dl.client.baidu.com/download.php?source=ime/plugin/Screenshot/ScreenshotSetup.exe"></a></p>
+							</li>
+							<li>
+								<p class="icon fl">
+									<a class='down-btn'><img src="img/ime/index-icon-voice.gif"></a>
+								</p>
+								<p class="version fl">
+									<a title='打字太累？说出来吧！' href='http://dl.client.baidu.com/download.php?source=ime/plugin/SpeechInput/SpeechInputSetup.exe'>语音输入</a>
+									<span class='f12'>1.0.0.49版</span>
+								</p>
+								<p class="down-btn abs"><a href="http://dl.client.baidu.com/download.php?source=ime/plugin/SpeechInput/SpeechInputSetup.exe"></a></p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 最新动态 -->
+				<div class="trends">
+					<p class="tit"></p>
+					<div class="trends-items rel" id="trends-items">
+						<ul class='listContain'>
+							<li class="active">
+								<a target="_blank" href="./imeact/qixi/index.html?from=bdime"><img src="img/ime/slider_140731.jpg"></a>
+							</li>
+							<li>
+								<a target="_blank" href="http://tieba.baidu.com/p/3180099585#"><img src="img/ime/houhuiwuqi140722.jpg"></a>
+							</li>
+							<li >
+								<a target="_blank" href="http://tieba.baidu.com/tb/zt/tnglish.html"><img src="img/ime/slider_140716.jpg"></a>
+							</li>
+								
+							<li>
+								<a target="_blank" href="http://wubi.baidu.com/"><img src="img/ime/slider_140310.jpg"></a>
+							</li>						
+							<li>
+								<a target="_blank" href="tiebatools/index.html"><img src="img/ime/slider-4.jpg"></a>
+							</li>														 
+						</ul>
+						<div class="tips abs">
+							<span>
+								<a href="javascript:" class="active"></a>
+								<a href="javascript:"></a>
+								<a href="javascript:"></a>
+								<a href="javascript:"></a>
+								<a href="javascript:" class="last"></a>
+							</span><strong></strong>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>
+		<div id="footer">
+    <span class='foot'>&copy;2014 Baidu</span>&nbsp;|&nbsp;<a href="http://www.baidu.com/duty/" target="_blank">使用百度前必读</a>&nbsp;|
+    <a href="mailto:zhongnan@baidu.com" title="商务合作联络">商务合作联络</a>
+</div>
+<div id="axBox"></div>
+<div id="feedback"><a class="imgPng" href="http://pcbbs.baidu.com/thread-334827-1-1.html" target="_blank"></a></div>
+<!-- <div id="Egg" class="hammer imgPng">
+	<div class="close"><a id="closeEgg" class="abs"></a></div>
+	<div id="lines"></div>
+	<div class="InfoBox">
+		<div class="ruleDetail imgPng abs">
+			<p class="rule_title">活动规则：</p>
+			1、活动时间：<span class="yellow">2013.11.13-2013.11.19</span></br>
+			2、登录后，每天可获赠1次砸彩蛋机会<br>
+			3、请及时保存活动中获得的3元彩金卡号及<br>&nbsp;&nbsp;&nbsp;密码，可凭彩金卡到乐和彩官网购买彩<br>&nbsp;&nbsp;&nbsp;票，使用规则请见乐和彩页面<br>&nbsp;&nbsp;&nbsp;（有效期：2013.11.12-12.31）<br>
+			4、活动中获得的实物礼品将于活动结束后<br>&nbsp;&nbsp;&nbsp;7个工作日内寄出实物奖品仅包邮中国<br>&nbsp;&nbsp;&nbsp;大陆地区，超出邮寄范围奖品将不予发送<br>
+			5、活动最终解释权归百度公司所有
+		</div>
+		<a class="rule abs imgPng"></a>
+		<a class="winers abs imgPng" href='http://pcbbs.baidu.com/forum.php?mod=viewthread&tid=335504&extra=' target="_blank"></a>
+	</div>
+</div> -->
+<!--  <div id="lottery" class="lottery">
+
+</div> -->
+<div style="display: none">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F356ff5d9a8ad25d0234e15d0a820e12b' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</div>
+<script type="text/javascript" src='js/main.js?v=201403211225'></script>
+<!-- <script type="text/javascript" src="js/egg.js"></script> -->	<div class='bigImg'><img src=""/></div>
+	<!-- 凤巢统计代码 -->
+	<div style='display:none'>
+		<script type="text/javascript">
+			var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+
+			document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F9f3ca61ff722f335443d0da01b7c64ef' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<!--网盟页面的百度统计代码-->
+		<script type="text/javascript">
+			var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+			document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4c68741e5ac34e72062b2e36d3cee7aa' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	</div>
+	<!-- 凤巢统计end -->
+	<script src="js/ime.js" type="text/javascript"></script>
+	<script src="js/IP-pager.js" type="text/javascript"></script>
+	<script src="js/IP-core.js" type="text/javascript"></script>
+	<script type="text/javascript" language="javascript">
+	var logUrl = "http://shurufa.baidu.com/img/log.gif",		
+		urlKeyVal = GetUrlParams('from')
+		downURL = '';
+	function GetUrlParams(name){
+	    var reg = new RegExp("(\\?|#|&)" + name + "=([^&#]*)(&|#|$)");
+	    var match = encodeHTML(location.href).match(reg);
+	    return (!match ? "" : match[2]);
+	}
+	// 是否为凤巢
+		
+	//$('#index-big-downBtn').attr('href', downURL);
+	
+	$(function(){
+	   if (encodeHTML(location.href).indexOf("?from=fc_client")>-1) {
+		downURL = 'http://dl.client.baidu.com/download.php?source=/ime/fc_client/BaiduPinyinSetup.exe';				
+		} else if(encodeHTML(location.href).indexOf("?from=wangmeng")>-1){
+			downURL = 'http://dl.client.baidu.com/download.php?source=/ime/20140411_09/BaiduPinyinSetup.exe';
+		}else{ 
+			downURL = 'http://dl.client.baidu.com/download.php?source=/ime/BaiduPinyinSetup.exe';		
+		}
+	   $('#statuBar').attr('href', downURL);
+	   // $('#statuBar').click(function () {
+	   // 		IME.doReport('http://shurufa.baidu.com/img/e-n-log.GIF?from=ztl&t=' + (+new Date()));
+	   // });
+	   //init flash
+	   //IME.createFlash("index-flash","flashswf","img/left_690_295.swf","690","295","");   
+	});
+	
+	function installOnline(obj) {		
+		IME.doReport(logUrl + '?src=official&action=download&source=online&t=' + (+new Date()));		
+		window.open($(obj).attr('link'), 'downloadiframe');
+	}
+
+function getBrowser() {
+	var UA = navigator.userAgent.toLowerCase();  
+	if(UA.indexOf("msie")>0) {return "MSIE"; } 
+	if(UA.indexOf("chrome/")>0){return "Chrome";} 
+	if(UA.indexOf("gecko/")>0){return "Gecko";}
+	return '';
+} 
+function isCancel() {
+	var UA = navigator.userAgent.toLowerCase();  
+	return (UA.indexOf("windows nt 6.2") > 0 && UA.indexOf("chrome/") > 0);
+}
+var setup_obj = {
+	isInstall: '',
+	start: function() {	
+		try { 
+			if (!isCancel()) {
+				document.getElementById('axBox').innerHTML= document.getElementById('axBox').innerHTML + '<object id="setup_obj1" TYPE="application/baidusetup-activex" width=0 height=0 clsid="{8C891026-0BE9-434E-B807-118E6E5EA3B6}" />';
+				document.getElementById('axBox').innerHTML= document.getElementById('axBox').innerHTML + '<object id="setup_obj2" width=0 height=0 classid="clsid:8C891026-0BE9-434E-B807-118E6E5EA3B6"/>';
+				
+				var obj1 = document.getElementById('setup_obj1'),
+					obj2 = document.getElementById('setup_obj2');
+				try {
+					if (obj1.GetVersion()) { 
+						isInstall = 'y';
+					}
+				} catch (e) {				
+					try {
+						if (obj2.GetVersion()) {
+							isInstall = 'y';
+						}
+					} catch(e) {
+						isInstall = 'n';
+					}
+				}	
+			}
+			
+		} catch (e) {
+			isInstall = '';
+		}		
+		IME.doReport(logUrl + '?src=official&action=installax&source=' + isInstall + '&t=' + (+new Date()));
+	}
+}
+</script>
+    <script type='text/javascript'>
+    	$(function(){		
+			var listContain =$("#trends-items li");
+			var tipslist =$("#trends-items .tips a");
+			var i = 0 ;
+			var Width=$("#trends-items .tips").width()/2;
+			var timer =null;		
+			$("#trends-items .tips ").css('margin-left',-Width);
+			autoplay();
+			function autoplay(){
+				clearInterval(timer);	
+				timer = setInterval(function(){
+					i++;
+					if(i>listContain.length){
+						i=0;
+					}
+					listContain.eq(i).addClass("active").siblings().removeClass("active");
+					tipslist.eq(i).addClass("active").siblings().removeClass("active");				
+				},5000)
+			}	
+			$("#trends-items").mouseover(function(){
+				clearInterval(timer);	
+			});
+			
+			$("#trends-items").mouseout(function(){
+				autoplay();	
+			});		
+			tipslist.mouseover(function(){
+				i=$(this).index();
+				listContain.eq(i).addClass("active").siblings().removeClass("active");
+				tipslist.eq(i).addClass("active").siblings().removeClass("active");			 
+			});
+
+			//#top_banner 顶部横幅
+			
+			// 大banner轮播			 
+			animate.animateChange({
+				items: $('#bannerItems li'),
+				len: $('#bannerItems li').length,
+				tips: $('#bannerTips p'),
+				num: 0,
+				delay: 6000
+			});
+			// banner hover效果
+			$('#bannerTips p').hover(function () {
+				var num = $(this).index();
+				animate.clearTimer();
+				$('#bannerTips p').removeClass('current');
+				$(this).addClass('current');
+				$('#bannerItems li').hide(); 
+				$('#bannerItems li').eq(num).css({opacity: '1'}).show();
+				// animate.bannerClick(num);				
+			}, function () {		
+				var num = $(this).index();				
+				animate.animateChange({
+					items: $('#bannerItems li'),
+					len: $('#bannerItems li').length,
+					tips: $('#bannerTips p'),
+					num: num,
+					delay: 6000
+				});				
+			});
+			//banner wubi 点击
+
+		});
+    </script>
+</body>
+</html>

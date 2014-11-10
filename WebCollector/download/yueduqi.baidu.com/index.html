@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>百度阅读器</title>
+		<meta name="description" content="百度阅读器是一款全面便捷地为您提供快速、轻量、优质的文档阅读的工具。百度阅读器体积小、速度快，支持PDF及TXT两种格式，更能提供全屏或翻书的阅读模式和多种阅读背景。" />
+		<meta name="keywords" content="阅读器，支持PDF，支持txt，目录自动提取，多格式支持，轻量，快速安装" />
+		<meta name="generator" content="Studio 3 http://aptana.com/" />
+		<meta name="author" content="wangyan" />
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<link rel="stylesheet" href="css/style-read.css?v=201305281947" />
+		<script type="text/javascript" src="js/common.js?v=201305131520"></script>
+	</head>
+	<body>
+		<div class="main">
+			<div class="header">
+				<div class="top">
+					<div class="t_l"></div>
+					<div class="t_r">
+						<select id="link" name="language"><option value="http://pc.baidu.com/">更多百度软件</option><option value="http://liulanqi.baidu.com">百度浏览器</option><option value="http://player.baidu.com/">百度影音</option><option value="http://shurufa.baidu.com/">百度输入法</option></select>
+						<a href="http://pc.baidu.com/" target="_blank">百度软件世界</a> 
+					</div>
+				</div>
+				<div class="nav">
+					<ul class="tabs">
+						<li class="avtive">官方首页</li>
+						<li><a href="function.html" hidefocus="true">功能特点</a></li>
+						<li><a href="upgradelog.html" hidefocus="true">升级日志</a></li>
+						<li><a href="help/index.html" hidefocus="true" target="blank">使用帮助</a></li>
+						<!-- <li><a href="lab.html" hidefocus="true">实验室</a></li>--> 
+					</ul>
+					
+				</div>
+			</div>
+			<div class="content">
+				<div class="border">
+					<div class="show_demo">
+						<div class="r">
+							<div class="r_title"></div>
+							<p>百度阅读器精简版beta1.1(237)</p>
+							<div id="d_click" class="download"></div>
+							<p class="current">2013.02.05(4.0M)    支持XP/Vista/win7</p>
+						</div>
+						<div class="clear"></div>						
+					</div>
+				</div>	
+					<div class="fn_content">
+						<div class="c_help">
+							<div class="down_entry l">
+								
+							</div>							
+							<div class="qst r">
+								<div class="tip l">常见问题</div>
+								<div class="itms l">
+									<ul class="list" id="qs_list">
+										<li><a href="http://yueduqi.baidu.com/help/basic.html#n1" target="_blank">如何安装百度阅读器？</a></li>
+										<li><a href="http://yueduqi.baidu.com/help/basic.html#n4" target="_blank">如何使用百度阅读器阅读本地文档？</a></li>
+										<li><a href="http://yueduqi.baidu.com/help/basic.html#n5" target="_blank">怎么添加本地文档到百度阅读器？</a></li>
+										<li><a href="http://yueduqi.baidu.com/help/index.html" target="_blank">更多问题？</a></li>
+									</ul>
+								</div>
+								<div class="r btn"><input type="button" hidefocus="true" class="prev_n" id="prev" /><input type="button" hidefocus="true" class="next_y" id="next" /></div>
+							</div>
+						</div>
+						
+						<div class="fn_title">
+							<ul>
+								<li>
+									体积不到4M，拥有超快的启动速度。<br />精心打造各项阅读功能，是一款<br />为电子阅读用户量身定做的轻量、<br />快速、方便和美观的阅读工具。
+								</li>
+								<li>
+									提供翻书、全屏等阅读模式，更有书<br />香、护眼、羊皮纸、夜间四种阅读背<br />景，助您不同场景随心切换。清新精<br />致的界面让阅读体验更加沉静舒适。
+								</li>
+								<li>
+									阅读器为您自动提取文档目录，您可<br />以方便查看文档目录，并快速找到自<br />己需要的内容。
+								</li>
+								<li>
+									支持PDF及TXT两种格式，采用多标<br />签的展示形态，支持多个文档同时<br />打开。
+								</li>
+							</ul>
+						</div>
+					</div>					
+			</div>
+			<div class="footer">All Rights Reserved  2013 Baidu <a href="http://www.baidu.com/duty/">使用百度前必读</a></div>
+			<!-- 流量统计 -->
+			<div style="display:none;">
+			<script type="text/javascript">
+				var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+				document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F26ea85d9235d453d26e51793dec59390' type='text/javascript'%3E%3C/script%3E"));
+			</script>
+			</div>
+		</div>
+		<script type="text/javascript">
+			//查看常见问题
+			var c=0,
+				m=240,				
+				obj =document.getElementById("qs_list"),
+				n = obj.getElementsByTagName("li").length;			
+				obj.style.marginLeft="0px"; 
+			document.getElementById("prev").onclick=function(){	changeQuest(1,this,obj);}
+			document.getElementById("next").onclick=function(){	changeQuest(-1,this,obj);}			
+			
+			var uaValue = getUA();
+			//download按钮效果
+			addLoadEvent(downloadEvent("d_click"));
+			addLoadEvent(gotoPage(uaValue));
+		</script>
+	</body>
+</html>

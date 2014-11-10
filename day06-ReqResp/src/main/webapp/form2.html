@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>form2.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+     <form action="/day06ResReq/Request06Encoding" method="get">
+    	用户名：<input type="text" name="username"><br/>
+    	<input type="submit" value="提交">
+    </form>
+    
+    <!-- 超链接中提交的数据如果包含中文，一定要url编码(后面讲) -->
+    <a href="/day06ResReq/Request07?name=中国">点点</a>
+    
+  </body>
+</html>

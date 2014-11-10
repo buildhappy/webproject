@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html style="height:100%;">
+<head>
+    <meta name="VIP_BFB_PAYMENT" content="BAIFUBAO" />
+    
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<meta http-equiv="X-UA-Compatible" content="IE=11;IE=10;IE=9;IE=8;" />
+<link rel="Bookmark" href="/favicon.ico" />
+<link rel="shortcut icon" href="/favicon.ico" />
+
+<title>百度指数</title>
+<meta name="keywords" content="百度指数,大数据,数据分享平台,搜索趋势" />
+<meta name="description" content="百度指数是以百度海量网民行为数据为基础的数据分享平台。在这里，你可以研究关键词搜索趋势、洞察网民兴趣和需求、监测舆情动向、定位受众特征。" />
+
+<script type="text/javascript">
+window.pageStatus = false;
+var PPval = {
+    adjust: 1407827685000 - new Date(),
+    dataStm: 1407741285000,
+    modCtrl: '',
+    hostUrl: function (u) {return u.split('/').slice(0,3).join('/');}(location.href),
+    baseUrl: '/',
+    routeUrl: '/',
+    staticUrl: '/static/',
+    imgsUrl: '/static/imgs/',
+    dataface: '/Interface/',
+    isSnap: 1
+};
+</script>
+
+                        
+    
+        <link type="text/css" rel="stylesheet" href="/static/css/styles.css?140704" />
+
+
+
+
+
+
+</head>
+
+<body style="height:100%;background:#e4e6e5 url(/static/imgs/index_bg2.jpg) center top no-repeat;">
+
+
+<style>
+    #footer{position:fixed;bottom:0;left:0;width:100%;min-width:1000px;height:18px;padding:4px 0;background-color:#909090;color:#fff;border:0;_position:absolute;}
+    #footer .copyright{width:1000px;margin:0 auto;}
+    #footer .copyright, #footer .copyright a{color:#fff;}
+
+    .demoWords a.item{margin-right:15px;}
+    .ihd_30{padding-top:12px;position:relative;_width:1000px;_margin-top:-40px;}
+    .ihd_30 .mw1300{max-width:100%;}
+
+    #imgbox_width .imgItem{position:absolute;display:none;width:100%;height:100%;}
+    #imgbox_width .imgItem img{max-width:100%;max-height:100%;_display:none;}
+
+    #imgs_lamp{position:absolute;width:110px;height:20px;left:50%;margin-left:-55px;bottom:15px;}
+    #imgs_lamp li{float:left;width:20px;height:20px;margin:0 3px;background:url(/static/imgs/index_icons.png) -120px -320px;cursor:pointer;}
+    #imgs_lamp li.curr{background-position:-140px -320px;}
+</style>
+
+
+
+<div style="position:absolute;width:100%;left:0;top:0;min-width:1000px;height:49px;overflow:hidden;">
+    <p>百度指数是以百度海量网民行为数据为基础的数据分享平台。在这里，你可以研究关键词搜索趋势、洞察网民兴趣和需求、监测舆情动向、定位受众特征。</p>
+</div>
+<div style="position:absolute;width:100%;left:0;top:0;min-width:1000px;height:49px;background-color:#fff;border-bottom:1px solid #ccc;">
+    <div style="_width:1000px;margin:0 auto;">
+        <a href="/">
+            <div style="float:left;margin:8px 0 0 20px;width:100px;height:32px;background:url(/static/imgs/index_icons.png) -140px 0px;_margin-left:10px;"></div>
+        </a>
+        <div class="ihd_30">
+        
+
+
+<div class="mw1300" style="_position:relative;_z-index:1;">
+<div id="userbar">
+<ul class="usernav">
+            <li class="navli"><a target="_blank" href="/Helper/?tpl=help&word=">帮助</a></li>
+        <li class="navli split">|</li>
+        <li class="navli"><a id="pas_regLink" href="https://passport.baidu.com/v2/?reg">注册</a></li>
+        <li class="navli split">|</li>
+        <li class="navli"><a href="javascript:BID.popLogin();">登录</a></li>
+        <li class="navli split">|</li>
+        <li class="navli"><a target="_blank" href="/VIP/buy/?word=">创建新词</a></li>
+        <li class="navli split">|</li>
+        <li class="navli">
+        <span>关注我们</span>
+        <a class="icons tieba" target="_blank" href="http://tieba.baidu.com/f?kw=%B0%D9%B6%C8%D6%B8%CA%FD"></a>
+        <a class="icons weibo" target="_blank" href="http://weibo.com/indexprobaidu"></a>
+    </li>
+</ul>
+</div>
+</div>
+
+
+
+
+                        
+    
+        <link type="text/css" rel="stylesheet" href="/static/css/pas_baae9c97.css?140704" />
+
+
+
+
+<div id="smHideDiv" style="display:none;">
+<div id="loginDialog">
+
+
+<div class="tabUnit">
+    <div class="tabTitle" style="margin:-10px;margin-bottom:0;">
+        <ul class="tabUl" onclick="BID.tabFun()" id="tab_pas_cas">
+            <li class="tabLi curr">百度账号</li>
+            <li class="tabLi">百度推广账号</li>
+        </ul>
+    </div>
+    <div class="tabConts">
+        <div class="tabCont">
+            <div id="pas_login"></div>
+        </div>
+        <div class="tabCont dsn">
+            <form id="cas_loginForm" class="tang-pass-login" method="post" action="https://cas.baidu.com/?action=login">
+                <input type="hidden" name="appid"   value="212" />
+                <input type="hidden" name="charset" value="GBK" />
+                <input type="hidden" name="senderr" value="1" />
+                <input type="hidden" name="fromu"   value="" id="cas_fromu" />
+                <p class="pass-generalErrorWrapper"><span class="pass-generalError" id="cas_Error"></span></p>
+                <p class="pass-form-item" style="margin-top:0;">
+                    <input class="pass-text-input pass-text-input-userName" id="cas_userName" name="entered_login" chk_typ="name" hold_txt="百度推广账号" />
+                </p>
+                <p class="pass-form-item" id="cas_normal_pwd">
+                    <input class="pass-text-input pass-text-input-password" id="cas_password" name="entered_password" type="password" chk_typ="pass" hold_txt="密码" />
+                </p>
+                <div class="pass-form-item" id="uc-safe-pwd-input" style="display:none;height:26px;margin-bottom:15px;border:1px solid #dedede;"></div>
+                <p class="pass-form-item" style="height:28px;">
+                    <input class="pass-text-input pass-text-input-verifyCode" id="cas_imageCode" name="entered_imagecode" maxlength="4" style="margin-bottom:8px;" chk_typ="code" hold_txt="验证码" />
+                    <img id="cas_imgValid" class="pass-verifyCode" src="http://cas.baidu.com/?action=image" align="absmiddle" onclick="this.src=this.src.split('&')[0]+'&'+new Date().getTime();" />
+                    <a class="pass-change-verifyCode" title="点击更换验证码" href="javascript:;" onclick="T('#cas_imgValid').click();">换一张</a>
+                </p>
+                <p class="pass-form-item" style="margin:0 5px 8px 0;text-align:right;*padding-top:6px;">
+                    <label style="float:left;"><input id="ucsl_check" type="checkbox" style="float:left;margin:2px 8px 0 0;*margin-top:-2px;" />安全控件登录</label>
+                    <a target="_blank" href="http://www2.baidu.com/user/getpwd.php" style=>忘记密码</a>
+                </p>
+                <p class="pass-form-item pass-form-item-submit">
+                    <input id="cas_submit" type="button" name="button2" value="登录" class="pass-button pass-button-submit" />
+                </p>
+                <div style="padding-top:10px;">
+                    <div style="float:right;"><a target="_blank" href="http://e.baidu.com/">立即注册</a></div>
+                    <div style="float:left;color:#ccc;">想加入百度推广？</div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<div id="footer">
+
+    <p class="copyright">
+        &copy;2014&nbsp;Baidu&nbsp;
+        <a target="_blank" href="/Helper/?tpl=duty">使用百度指数前必读</a>
+        &nbsp;京ICP证030173号&nbsp;
+
+    </p>
+</div>
+
+
+
+
+
+
+<div style="width:1000px;margin:0 auto;">
+<div id="schbox_top" style="position:absolute;width:1000px;top:150px;">
+        <div style="width:240px;margin:0 auto;height:50px;background:url(/static/imgs/index_logo.png) center center no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/imgs/index_logo.png', sizingMethod='scale');">
+        </div>
+    <form method="get" action="/" style="width:750px;margin:40px auto 0 auto;">
+        <input name="tpl" type="hidden" value="trend" />
+        <div style="float:left;width:628px;height:38px;border:1px solid #ccc;background-color:#fff;">
+            <label for="schword" style="display:block;padding:9px;">
+                <input id="schword" name="word" maxlength="50" style="border:0px;width:100%;height:20px;font-size:14px;" hold_txt="请输入您想查询的关键字" />
+            </label>
+        </div>
+        <div style="float:left;margin:0 -20px 0 10px;border:1px solid #3977cf;background-color:#4284e2;">
+            <div style="border:1px solid #5291e6;border-width:1px 0 0 1px;">
+                <input type="submit" value="" style="width:106px;height:37px;border:0;background:#4284e2 url(/static/imgs/index_icons.png) -134px -40px;cursor:pointer;" onmousemove="this.style.backgroundColor = '#4a94f2'" onmouseout="this.style.backgroundColor = '#4284e2'" onclick="searchDemoWords()" />
+            </div>
+        </div>
+        <div class="ftc"></div>
+                        <div id="demoWords_toe" class="demoWords" style="padding-top:3px;" onclick="searchDemoWords()">
+            <span style="color:#706c6c;">推荐关键词<span style="color:#000;">：</span></span>
+                        <a class="item" href="javascript:;">爸爸去哪儿,中国好声音</a>
+                    </div>
+            </form>
+</div>
+</div>
+
+
+<div id="imgbox_height" style="position:absolute;width:100%;min-width:1000px;height:411px;left:0;top:400px;overflow:hidden;display:none;">
+    <div style="width:1000px;height:100%;margin:0 auto;_overflow:hidden;">
+        <div id="imgbox_width" style="position:relative;width:1440px;height:100%;">
+        </div>
+    </div>
+    <ul id="imgs_lamp"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+                    
+    
+        <script type="text/javascript" src="/static/js/tangram.js"></script>
+<script type="text/javascript" src="/static/js/magic.js"></script>
+<script type="text/javascript" src="https://passport.baidu.com/passApi/js/wrapper.js?cdnversion=201408121514" charset="UTF-8"></script>
+
+
+
+
+
+
+                        
+    
+        <script type="text/javascript" src="/static/js/funs.js?140704"></script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+    BID.fnsDate.adjust = (PPval.ppt = '', PPval.status = '' || '0', PPval.adjust);
+    if(PPval.status == '301'){BID.vVerify();}
+            document.write('<script type="text/javascript" src="//' +
+    'cas.baidu.com/ucsl/ucsl.js?appid=212&d=' + (new Date / 864e5 | 0) +
+    '" charset="UTF-8"><\/script>');
+
+BID.popLogin = function () {
+    var fns = BID.popLogin;
+    T('#cas_fromu').val(location.href);
+    T('#cas_imgValid').click();
+    fns.passport_use();
+    fns.showDialog();
+};
+
+BID.popLogin.passport_use = function () {
+    var fns = BID.popLogin,
+        iPasUse = fns.iPasUse;
+    if(iPasUse){return;}
+    passport.use('login', {tangram: false}, function (magic) {
+        iPasUse = new magic.passport.login({
+            product : 'index',
+            loginType: 1,
+            defaultCss: true,//自动加载CSS
+            loginMerge: true,//合并
+            hasRegUrl: true,//注册链接
+            autosuggest: true,//输入提示
+            hasPlaceholder: true,
+            u: location.href,
+            isPhone: false,
+            safeFlag: 0,
+            staticPage: PPval.hostUrl + PPval.staticUrl + 'v3Jump.htm'
+        });
+        iPasUse.on('loginSuccess', function () {
+        });
+        iPasUse.on('loginError', function () {
+        });
+        iPasUse.on('renderVerifycode', function () {
+        });
+        iPasUse.render('pas_login');
+        fns.iPasUse = iPasUse;
+    });
+};
+
+BID.popLogin.showDialog = function () {
+    var fns = BID.popLogin,
+        loginDialog = fns.loginDialog;
+    if(!loginDialog){
+        loginDialog = new magic.Dialog({
+            draggable: true,
+            mask: {enable: true},
+            titleText: '登录百度指数',
+            content: T('#loginDialog')[0],
+            contentType: 'element',
+            left: T(window).width() / 2 - 140,
+            top: 190,
+            width: 280,
+            height: 325
+        });
+        loginDialog.render();
+        fns.loginDialog = loginDialog;
+    }
+    loginDialog.show();
+};
+
+BID.popLogin.ucsl_init = function () {
+    var fns = BID.popLogin;
+    if(fns.ucsl_inited){return;}else{fns.ucsl_inited = 1;}
+    var safeHolder = 'uc-safe-pwd-input';
+    var cas_normal_pwd = 'cas_normal_pwd';
+    var cas_submit = 'cas_submit';
+    var ucsl_check = 'ucsl_check';
+    var ucsl_status = '';
+    setTimeout(function () {
+        BID.placehold('#cas_userName', {cssText: 'z-index:18;padding:6px 23px;color:#ccc;'});
+        BID.placehold('#cas_password', {cssText: 'z-index:18;padding:6px 23px;color:#ccc;'});
+        BID.placehold('#cas_imageCode', {cssText: 'z-index:18;padding:5px 10px;left:0;color:#ccc;'});
+    }, 200);
+    function errLog (strErr) {T("#cas_Error").html(strErr);}
+    function setLoading () {
+        T('#' + cas_normal_pwd).hide();
+        T('#' + safeHolder).show();
+        T('#' + cas_submit).val('loading...');
+        ucsl_status = 'loading';
+    }
+    function ucsl_ready () {
+        ucsl_status = 'ready';
+        T('#' + cas_submit).val('登录').css({'background-color': ''});
+    }
+    function ucsl_fail () {
+        ucsl_status = 'error';
+        errLog('安全控件加载失败');
+        T('#' + cas_submit).val('登录').css({'background-color': '#ccc'});
+    }
+    function formChk (safeChecked) {
+        var sErr = '';
+        if("" == T.string(T("#cas_imageCode").val()).trim()){sErr = '请填写验证码！';}
+        if("" == T.string(T("#cas_userName").val()).trim()){sErr = '请填写账号！';}
+        if(sErr){return sErr;}
+        if(safeChecked){
+            if(!ucsl.verify()){sErr = '请填写合适的密码！';}
+        }
+        return sErr;
+    }
+    function toSubmit() {
+        var safeChecked = T('#' + ucsl_check).attr('checked');
+        if(safeChecked && ucsl_status != 'ready'){return;}
+        var sErr = formChk(safeChecked);
+        errLog(sErr);
+        if(sErr){return;}
+        T("#cas_loginForm").submit();
+    }
+    T('#cas_imageCode').keydown(function (e) {
+        if(e.keyCode == 13){toSubmit();}
+    });
+    T('#' + cas_submit).click(toSubmit);
+    T('#' + ucsl_check).click(function () {
+        if(!ucsl.support()){
+            T(this).attr('checked', false).parent().hide();
+        }
+        if(!this.checked){
+            T('#' + cas_submit).val('登录').css({'background-color': ''});
+        }
+        if(!this.checked || !ucsl.support()){
+            T('#' + cas_normal_pwd).show();
+            T('#' + safeHolder).hide();
+            return;
+        }
+        if(ucsl_status == 'error'){
+            ucsl_fail();
+        }
+        if(ucsl_status == 'loading'){
+            T('#' + cas_submit).val('loading...');
+        }
+        if(ucsl_status == 'ready' || ucsl_status == 'loading' || ucsl_status == 'error'){
+            T('#' + cas_normal_pwd).hide();
+            T('#' + safeHolder).show();
+            return;
+        }
+        if(ucsl_status == ''){
+            setLoading();
+            ucsl.init({
+                fid: safeHolder,
+                style: {width: 237, height: 27, tabindex: 2},
+                tabout: "cas_imageCode",
+                ready: ucsl_ready,
+                fail: ucsl_fail
+            });
+        }
+    }).click();
+};
+
+BID.evts.care('tab_pas_cas_tabClick', function (index) {
+    if(index == 1){BID.popLogin.ucsl_init();}
+});
+
+    </script>
+
+
+
+
+<script type="text/javascript">
+T(function () {
+    
+    
+            T('#pas_regLink').each(function () {
+    this.href = this.href.split('&')[0] + '&u=' + encodeURIComponent(location.href);
+});
+T('#userbar a.cas_logout').each(function () {
+    this.href = this.href.split('&')[0] + '&u=' + encodeURIComponent(PPval.hostUrl + PPval.routeUrl);
+});
+
+            
+    
+                    T(function () {
+                
+        });
+                    T(function () {
+            BID.scroll_resize();
+var schbox_top = T('#schbox_top'),
+    imgbox_height = T('#imgbox_height'),
+    imgbox_width = T('#imgbox_width'),
+    footer = T('#footer');
+BID.evts.care('window_resize', function (width, height) {
+    var min_height = 588,
+        max_height = 811,
+        height_foot = height - 26,
+        ratio = (height_foot - min_height) / (max_height - min_height);
+    ratio = Math.max(0, Math.min(1, ratio));
+    schbox_top.css({'top': 95 + (150 - 95) * ratio});
+    var img_top = 280 + (400 - 280) * ratio,
+        img_height = height_foot - img_top;
+    if(height_foot >= max_height){img_top = height_foot - 411;}
+    img_height = Math.max(214, Math.min(411, img_height));
+    var img_width = img_height * 1440 / 411;
+    imgbox_height.css({'top': img_top, 'height': img_height});
+    imgbox_width.css({'width': img_height * 1440 / 411, 'left': (1000 - img_width) / 2});
+    if(height <= 520){
+        footer.css({'position': 'absolute', 'top': (520 - 26) + 'px', 'bottom': ''});
+    }else{
+        if(T.browser.ie == 6){
+            footer.css({'position': 'absolute', 'top': (height - 26) + 'px'});
+        }else{
+            footer.css({'position': 'fixed', 'top': '', 'bottom': 0});
+        }
+    }
+    if(T.browser.ie == 6){
+        imgbox_height.css({'width': width < 1000 ? 1000 : '100%'});
+    }
+    imgbox_height.show();
+}, {lt: 40})('window_resize', window, T(window).width(), T(window).height());
+
+
+BID.placehold('#schword', {cssText: 'padding:0;font-size:14px;'});
+var nsg = BID.newSuggestion('schword', {
+    offset: {'offsetX': -10, 'offsetY': 10},
+    onconfirm: function (e, o) {
+        var word = T.string(o.data).trim();
+        if(!word){return;}
+        T('#schword').closest('form').submit();
+    }
+});
+nsg.onshow = function () {
+    T(this.getElement('suggestion')).children('.tang-foreground').width(628).find('table.tang-suggestion-table').width(628);
+};
+
+
+
+
+
+BID.dataBanner('login', '', function (data, items) {
+    if(!data || !data.length){return;}
+    var imgSrcs = [];
+    var imgLinks = [];
+    var sh = '', lsh = '';
+    for (var i = 0; i < data.length; i++) {
+        if (data[i].image_url) {
+            imgSrcs.push(data[i].image_url);
+            imgLinks.push(data[i].image_href || '');
+        }
+    }
+    var lenLamp = imgSrcs.length;
+    window.index_imgLinks = imgLinks;
+    for(var i = 0; i < lenLamp; i++){
+        sh += '<div class="imgItem" style="_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=\'' + imgSrcs[i] + '\', sizingMethod=\'scale\');';
+        if (imgLinks[i] && imgLinks[i] != '#') {
+            sh += 'cursor:pointer;" onclick="window.open(index_imgLinks[' + i + ']);';
+        }
+        sh += '">';
+        sh += '<img src="' + imgSrcs[i] + '" /></div>';
+        lsh += '<li lpindex="' + i + '"></li>';
+    }
+    T('#imgbox_width').html(sh).find('.imgItem').eq(0).show();
+    if (lenLamp > 1) {
+        T('#imgs_lamp').css({width: lenLamp * 27, 'margin-left': -lenLamp * 26 / 2}).html(lsh).find('li').mousedown(function () {
+            chgImgs_ani(T(this).attr('lpindex'));
+        }).eq(0).addClass('curr');
+    }
+});
+
+
+var chgImgs_ing = 0;
+var lastLamp = 0;
+window.index_imgLinks = [];
+var chgImgs_ani = function (lpindex) {
+    lpindex = +lpindex || 0;
+    if(lpindex == lastLamp || chgImgs_ing){return;}
+    chgImgs_ing = 1;
+    var items = T('#imgbox_width .imgItem');
+    var dir = lpindex > lastLamp ? 1 : -1;
+    var aniOpts = {'left': -1000 * dir, 'opacity': 0};
+    lpindex = lpindex % index_imgLinks.length;
+    T('#imgs_lamp li').removeClass('curr').eq(lpindex).addClass('curr');
+    if(T.browser.ie < 9){delete aniOpts.opacity;}
+    items.eq(lastLamp).animate(aniOpts, function () {chgImgs_ing = 0; T(this).hide();});
+    var aniOpts = {'left': 1000 * dir, 'opacity': 0};
+    var aniOpts2 = {'left': 0, 'opacity': 1};
+    if(T.browser.ie < 9){delete aniOpts.opacity; delete aniOpts2.opacity;}
+    items.eq(lpindex).show().css(aniOpts).animate(aniOpts2);
+    lastLamp = lpindex;
+};
+
+T('#imgbox_width').mousedown(function () {
+    if (index_imgLinks.length <= 1 || (index_imgLinks[lastLamp] && index_imgLinks[lastLamp] != '#')) {return;}
+    var evt = BID.getEvt(),
+        dir = (evt.pageX - T(this).offset().left) * 2 > T(this).width() ? 1 : -1;
+    chgImgs_ani(lastLamp + dir);
+});
+
+
+        });
+    
+    
+    });
+</script>
+
+
+
+
+
+    <script type="text/javascript" src="//hm.baidu.com/h.js?d101ea4d2a5c67dab98251f0b5de24dc"></script>
+    
+    
+
+
+
+
+
+</body>
+</html>
+

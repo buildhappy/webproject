@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+		<!--namespace指向该sql mapper对应的接口-->
+<mapper namespace="com.buildhappy.persistence.NewsMapper">  
+	<resultMap id="newsResultMap" type="News">
+		<id property="id" column="id"/>
+		<result property="author" column="author" />
+		<result property="authorId" column="authorId"/>
+		<result property="type" column="type" />
+		<result property="title" column="title" />
+		<result property="content" column="content" />
+		<result property="createTime" column="createTime" />
+	</resultMap>
+	
+	<!--select all news -->
+	<select id="selectAllNews" resultMap="newsResultMap">
+		select * from news;
+	</select>
+	<!--select news by Id-->
+	<select id="selectNewsById" parameterType="int" resultMap="newsResultMap">
+		select * from news where id=#{id}
+	</select>
+	<!--select news by title -->
+	<select id="selectNewsByTitle" parameterType="String" resultMap="newsResultMap">
+		select * from news where title like #{title}
+	</select>
+	<!--select all news with same type -->
+	<select id="selectNewsByType" parameterType="String" resultMap="newsResultMap">
+		select * from news where type like #{type}
+	</select>
+	<select id="selectNewsByAuthor" parameterType="String" resultMap="newsResultMap">
+		select * from news where author like #{author}
+	</select>
+	
+	<!--delete news by Id-->
+	<delete id="deleteById" parameterType="int">
+		delete from news where id=#{id}
+	</delete>
+	<!--delete news with same type-->
+	<delete id="deleteByType" parameterType="String">
+		delete from news where type like #{type}
+	</delete>
+	<!--delete news with same author -->
+	<delete id="deleteByAuthor" parameterType="String">
+		delete from news where author like #{author}
+	</delete>
+	
+	<!-- insert news -->
+	<insert id="insertNews" parameterType="News">
+		insert into news(id,author,authorId,type,title,content,createTime) 
+				  values(#{id},#{author},#{authorId},#{type},#{title},#{content},#{createTime})
+	</insert>
+	
+	<!-- update news -->
+	<update id="updateNews" parameterType="News">
+		update news set author=#{author},authorId=#{authorId},
+			type=#{type},title=#{title},content=#{content},createTime=#{createTime}
+			where id=#{id}
+	</update>
+</mapper>

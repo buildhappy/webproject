@@ -1,0 +1,504 @@
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="/lbs-lbc/login/login.css?version=8973" rel="stylesheet">
+    <link rel="shortcut icon" href="/lbs-lbc/favicon.ico" type="image/x-icon" />
+    <title>登录</title>
+    
+    <style type="text/css">
+        .tip-intro{
+            background: url(/lbs-lbc/libs/resource/images/tip-intro.png)  no-repeat left center !important;
+        }
+        .tip-text {
+            padding: 5px 5px;
+            color: #c1c1c1;
+            margin-left: 5px;
+            font-size: 12px;
+            font-family: "SimSun";
+        }
+    </style>
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+    </script>
+</head>
+<body>
+<!-- 导航条 -->
+<div class="navbar">
+    <div class="container">
+        <a class="logo-login"></a>
+    </div>
+</div>
+<!-- 内容区 -->
+<div class="body-box">
+    <div class="body-container">
+        <div class="login-box">
+            <div class="login-title">
+                <a href="#none" class="login-text">登录百度商户中心</a>
+                <a href='http://passport.baidu.com/v2/?reg&regType=1&tpl=nlbc&u=http%3A%2F%2Fnlbc.baidu.com%2Flbs-lbc%2F' target="_blank" class="login-reg" onclick="_hmt.push(['_trackEvent', '注册百度账号', 'click', 'btn']);">注册百度账号</a>
+            </div>
+            <!-- 登录tab和表单容器dom，将该代码嵌在页面合适的位置 -->
+            <ul class="login-tab">
+                <li class="tab-item tab-item-left tab-selected">
+                    <a href="#" onclick="return false;" hidefocus="true">普通登录</a>
+                </li>
+                <li class="tab-item tab-item-right">
+                    <a href="#" onclick="return false;" hidefocus="true">手机登录</a>
+                </li>
+            </ul>
+            <div id="LBC_pass_login_form" class="tang-pass-login"></div>
+            <a href="/lbs-lbc/clerk/login.action" class="otherLogin">店员账号专属登录入口</a>
+        </div>
+		<div class="login-body-befor" id="img-view">
+            <div class="carousel-img">
+                <img src="/lbs-lbc/login/img/img1.png" usemap="#img1">
+                <map name="img1" id="img1">
+                    <area shape="rect" coords="0,274,110,310" href ="http://nlbc.baidu.com/lbs-lbc/help/saleway_faq.html" target="_blank" />
+                </map>
+            </div>
+            <div class="carousel-img" style="display: none;">
+                <img src="/lbs-lbc/login/img/img2.png" usemap="#img2">
+                <map name="img2" id="img2">
+                    <area shape="rect" coords="0,229,110,265" href ="http://nlbc.baidu.com/lbs-lbc/help/saleway_faq.html" target="_blank" />
+                </map>
+            </div>
+            <div class="carousel-img" style="display: none;">
+                <img src="/lbs-lbc/login/img/img3.png">
+            </div>
+            <div class="carousel-img" style="display: none;">
+                <img src="/lbs-lbc/login/img/img4.png">
+            </div>
+            <ol class="circle-view">
+                <li class="circle-focus" index="0"></li>
+                <li class="circle-blur" index="1"></li>
+                <li class="circle-blur" index="2"></li>
+                <li class="circle-blur" index="3"></li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div class="why">
+    <div class="container">
+        <p class="point-title">为什么要标注？</p>
+        <ul class="whyPoi-ul">
+            <li class="li-1">
+                <div class="line1">
+                    <span class="why-title">优势1</span>
+                    <span class="why-text">百度地图亿万用户</span>
+                </div>
+                <p class="line2">标注您的商铺，获得海量曝光</p>
+            </li>
+            <li class="li-2">
+                <div class="line1">
+                    <span class="why-title">优势2</span>
+                    <span class="why-text">自主管理锁定商机</span>
+                </div>
+                <p class="line2">自主管理您的商铺信息，方便用户查询</p>
+            </li>
+            <li class="li-3">
+                <div class="line1">
+                    <span class="why-title">优势3</span>
+                    <span class="why-text">官方权威认证</span>
+                </div>
+                <p class="line2">百度官方认证，提高品牌知名度</p>
+            </li>
+            <li class="li-4">
+                <div class="line1">
+                    <span class="why-title">优势4</span>
+                    <span class="why-text">更多增值服务</span>
+                </div>
+                <p class="line2">为商家量身定做多款实用营销工具</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="how">
+    <div class="container">
+        <p class="point-title">怎样标注认领？</p>
+        <ul class="how-ul">
+            <li class="how-li-1">
+                <div class="how-line1">
+                    <span class="how-text">使用百度账号</span>
+                    <button class="how-login" id="junpToLogin"></button>
+                </div>
+                <div class="how-line2">
+                    <p class="how-text">搜索店铺，直接认领</p>
+
+                    <p class="how-info">标注时先搜索自己的店铺，搜索到可直接认领，完善商铺信息并上传资质图片。审核通过后，商铺即在地图上生效。</p>
+                </div>
+                <div class="how-line1">
+                    <p class="how-text">搜索不到店铺，新添标注</p>
+
+                    <p class="how-info">输入精确到门牌号的详细地址，在地图最大级别精确标注您的商铺。</p>
+                </div>
+            </li>
+            <li class="how-li-2">
+                <p><img src="login/img/eg1.jpg"></p>
+
+                <p><img src="login/img/eg2.jpg"></p>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="bottom">
+    <div class="bottom-container">
+        <a href="http://map.baidu.com/">百度地图</a>
+        <a href="http://www.baidu.com/duty/">使用前必读</a>
+        <a href="/lbs-lbc/help/saleway_faq.html">帮助中心</a>
+        <a href="javascript:void(0);" id="a_opinion">意见反馈</a>
+    </div>
+</div>
+<div class="opinion hide" id="opinion-dialog">
+    <div class="head">
+        <button type="button" class="close">×</button>
+        <h3 class="head-title">意见反馈</h3>
+    </div>
+    <div class="middle">
+        <form id="opinion-form">
+            <div class="form-line">
+                <label class="lt"><font color="red">*</font>标题：</label>
+
+                <div class="rt">
+                    <input type="text" id="poi-title" class="input-text input-large" maxlength="20">
+                    <span class="tip-error"></span>
+                </div>
+            </div>
+            <div class="form-line">
+                <label class="lt">分类：</label>
+
+                <div class="rt">
+                    <label class="radio"><input type="radio" checked name="opi-radio" value="1">标注</label>
+                    <label class="radio"><input type="radio" name="opi-radio" value="2">审核</label>
+                    <label class="radio"><input type="radio" name="opi-radio" value="3">POI纠错</label>
+                    <label class="radio"><input type="radio" name="opi-radio" value="4">其他</label>
+                </div>
+            </div>
+            <div class="form-line">
+                <label class="lt">图片：</label>
+
+                <div class="rt rt-upload">
+                    <a href="javascript:void(0);" class="upload">上传图片</a>
+                    <span class="tip-error"></span>
+                    <span class="tip-text tip-intro"></span>
+                </div>
+            </div>
+            <div class="form-line form-detail">
+                <label class="lt"><font color="red">*</font>描述：</label>
+
+                <div class="rt">
+                    <textarea id="detail" class="opinion-detail input-large textarea-text" maxlength="999"
+                              placeholder="欢迎您反馈使用产品的问题和建议。我们无法逐一回复，但我们会参考您的建议，不断优化产品，为您提供更好的服务。"></textarea>
+                    <textarea id="detail-placeholder" class="opinion-detail input-placeholder input-large">欢迎您反馈使用产品的问题和建议。我们无法逐一回复，但我们会参考您的建议，不断优化产品，为您提供更好的服务。</textarea>
+                    <span class="tip-error"></span>
+                </div>
+            </div>
+            <div class="form-line">
+                <label class="lt">联系方式：</label>
+                <div class="rt">
+                    <input type="text" id="poi-contact" class="input-text input-large" maxlength="20" placeholder="请留下您的电话，以便我们第一时间回复您。">
+                    <input type="text" id="poi-contact-placeholder" class="input-text input-placeholder input-large" value="请留下您的电话，以便我们第一时间回复您。">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <a href="javascript:void(0);" class="subBtn">提交</a>
+    </div>
+</div>
+<div class="hide opinion" id="reportSubmitResult">
+    <div class="point-title" style="padding: 20px 0;text-align: center;"></div>
+</div>
+<script src="/lbs-lbc/lib/js/jquery-1.9.1.min.js"></script>
+<script src="/lbs-lbc/lib/js/myplugin/ajaxupload.js"></script>
+<script>
+    (function ($, undefined) {
+        $.getScript('http://passport.baidu.com/passApi/js/wrapper.js?cdnversion=' + new Date().getTime(), function () {
+            function initTab(loginInstance, tabDom) {
+                tabDom.children('li').each(function (index) {
+                    $(this).click(function (event) {
+                        event.preventDefault();
+                        tabDom.children('li').removeClass('tab-selected');
+                        $(this).addClass('tab-selected');
+                        loginInstance.switchTo(['normal', 'phone'][index]);
+                    });
+                });
+            }
+
+            passport.use('login', {
+                tangram: true
+            }, function (apiMagic) {
+                //实例化登录api
+                var loginInstance = new apiMagic.passport.login({
+                    product: 'LBC',
+                    staticPage: 'http://nlbc.baidu.com/lbs-lbc/login/v3Jump.html',
+                    u: 'http:\/\/nlbc.baidu.com\/lbs-lbc\/index.action?from=map',
+                    charset: '',
+                    memberPass: true,
+                    safeFlag: 0
+                });
+                //渲染表单
+                $('#LBC_pass_login_form').html('');
+                loginInstance.render('LBC_pass_login_form');
+                initTab(loginInstance, $('#LBC_pass_login_form').prevAll('ul.login-tab'));
+
+                $('.tang-pass-login .pass-fgtpwd').remove().appendTo($('.pass-form-item-memberPass'));
+                $('.pass-form-item-memberPass label').html("记住我");
+                var TANGRAM__PSP_1__memberPassWrapper = $('.pass-form-item-memberPass').remove();
+                var TANGRAM__PSP_1__submitWrapper = $('.pass-form-item-submit').remove();
+                var form = $('#LBC_pass_login_form form');
+                TANGRAM__PSP_1__submitWrapper.appendTo(form);
+                TANGRAM__PSP_1__memberPassWrapper.appendTo(form);
+                $('.tang-pass-login .pass-button-submit').val('登  录')
+            });
+        });
+    })(window.jQuery);
+</script>
+<script>
+    //bind the click event handler of "登录本地商户中心" button
+    $(document).ready(function(){
+        $('#junpToLogin').on('click', function(){
+            $('#LBC_pass_login_form').find('input[name="userName"]').focus();
+        });
+    });
+
+
+    var bindPictureUpload = function(button){
+        var tiperror = $('.rt-upload .tip-error');
+        var interval;
+        new AjaxUpload(button, {
+            action: '/lbs-lbc/poi/uploadImage.action',
+            name: 'image',
+            onSubmit : function(file, ext){
+                if (ext && /^(jpg|png|jpeg|gif)$/i.test(ext)){
+                    this.setData({
+                        'info': '文件类型为图片'
+                    });
+                } else {
+                    tiperror.html('非图片类型文件，请重传');
+                    return false;
+                }
+                //只允许上传一张图片
+                this.disable();
+                tiperror.text('文件上传中');
+                interval = window.setInterval(function(){
+                    var text = tiperror.text();
+                    if (text.length < 14){
+                        tiperror.text(text + '.');
+                    } else {
+                        tiperror.text('文件上传中');
+                    }
+                }, 200);
+            },
+            onComplete: function(file, response){
+                var that = this;
+                var data = $.parseJSON($($.parseHTML(response)[0]).html());
+                setTimeout(function(){
+                    if(data.errno == 1 || data.code != 200){
+                        util.alert({
+                            message: data.message
+                        });
+                    }else  if(data.code == 200 && data.data != ""){
+                        $('span[class="tip-text tip-intro"]').html(
+                                '<a href="' + data.data.url + '" target="_blank">' + file + '</a>' +
+                                '<input type="hidden" id="userReportPictureId" value="' + data.data.id + '"/>'
+                        );
+                    }
+                    tiperror.text('');
+                    button.text('重新上传');
+                    window.clearInterval(interval);
+                    that.enable();
+                }, 2000);
+
+            }
+        });
+    };
+    $('#a_opinion').on('click', function () {
+        $('#opinion-form')[0].reset();
+        $('#opinion-form .tip-error').html("");
+        $('#opinion-form .upload').html("上传图片");
+        $('span[class="tip-text tip-intro"]').html('');
+        bindPictureUpload($('#opinion-form .upload'));
+        var scrollTop = $(window).scrollTop() || $('body').scrollTop;
+        $('#opinion-dialog')
+                .removeClass('hide')
+                .css({
+                    "top": scrollTop + 100 + 'px'
+                });
+    });
+    $('#opinion-dialog .close').on('click', function () {
+        $('#opinion-dialog').addClass('hide');
+    });
+    $('#opinion-dialog .subBtn').on('click', function () {
+        var $title = $('#poi-title'),
+                $detail = $('#detail');
+        if (!$.trim($title.val())) {
+            $('.tip-error', $title.parent()).html('请填写标题');
+            return false;
+        }
+        if (!$.trim($detail.val())) {
+            $('.tip-error', $detail.parent()).html('请填写描述');
+            return false;
+        }
+
+        //if the image is uploading,return
+        if($('.rt-upload .tip-error').text().indexOf("上传") > 0){
+            return false;
+        }
+
+        var pictureId = $('#userReportPictureId').val();
+        if(pictureId == 'undefined'){
+            pictureId = null;
+        }
+
+        var sendData = {'userReport.title': $title.val(),
+            'userReport.type': $('input:radio[name="opi-radio"]:checked').val() - 0,
+            'userReport.pictureStr': pictureId,
+            'userReport.content': $detail.val(),
+            'userReport.contact': $('#poi-contact').val()};
+        $.ajax({
+            url: '/lbs-lbc/user/report/add.action',
+            type: 'POST',
+            data: sendData,
+            async: true,
+            dataType: 'json',
+            traditional: true,
+            success: function(data, status){
+                $('#opinion-dialog .close').click();
+                var scrollTop = $(window).scrollTop() || $('body').scrollTop;
+                $('#reportSubmitResult > .point-title').text('感谢您的反馈');
+                $('#reportSubmitResult')
+                        .removeClass('hide')
+                        .css({"top": scrollTop + 100 + 'px', 'width':'400px', 'display':'block'})
+                        .fadeOut(3000);
+            },
+            error: function(){
+                $('#opinion-dialog .close').click();
+                var scrollTop = $(window).scrollTop() || $('body').scrollTop;
+                $('#reportSubmitResult > .point-title').text('意见反馈提交失败');
+                $('#reportSubmitResult')
+                        .removeClass('hide')
+                        .css({"top": scrollTop + 100 + 'px', 'width':'400px', 'display':'block'})
+                        .fadeOut(3000);
+            }
+        });
+    });
+    $('#poi-title').on('blur', function () {
+        var $this = $(this),
+                $tip = $('.tip-error', $this.parent());
+        $tip.html("");
+        if (!$.trim($this.val())) {
+            $tip.html("请填写标题");
+        }
+    });
+    $('#detail').on('blur', function () {
+        var $this = $(this),
+                $tip = $('.tip-error', $this.parent());
+        $tip.html("");
+        if (!$.trim($this.val())) {
+            $tip.html("请填写描述");
+        }
+    })
+    var $placeholder = $('#detail-placeholder'),
+        $detail = $('#detail'),
+        $poi_contact = $('#poi-contact'),
+        $poi_contact_placeholder = $('#poi-contact-placeholder');
+    if (!$.support.leadingWhitespace) {
+
+        $detail.hide();
+        $poi_contact.hide();
+        $placeholder.focus(function () {
+            $placeholder.hide();
+            $detail.show().focus();
+        });
+        $detail.blur(function () {
+            if ($detail.val() == "") {
+                $detail.hide();
+                $placeholder.show();
+            }
+        });
+        $poi_contact_placeholder.focus(function(){
+            $poi_contact_placeholder.hide();
+            $poi_contact.show().focus();
+        });
+        $poi_contact.blur(function () {
+            if ($poi_contact.val() == "") {
+                $poi_contact.hide();
+                $poi_contact_placeholder.show();
+            }
+        });
+    } else {
+        $placeholder.hide();
+        $detail.show();
+        $poi_contact_placeholder.hide();
+        $poi_contact.show();
+    }
+  	//图片轮播
+    var carouselImg = {
+        init: function(){
+            this.$arrayImg = $("#img-view .carousel-img");
+            this.$queueImg = $.makeArray(this.$arrayImg);
+            this.$arrayCircle = $(".circle-view li");
+            this.$queueCircle = $.makeArray(this.$arrayCircle);
+            this.bindEvent();
+            this.$queueImg.push(this.$queueImg.shift());
+            this.$queueCircle.push(this.$queueCircle.shift());
+            this.interval();
+        },
+        bindEvent: function(){
+            $(".circle-view").delegate('li.circle-blur', "click", $.proxy(this.fnC_circle, this));
+        },
+        start: function(){
+            this.$arrayImg.fadeOut();
+            var img = this.$queueImg.shift();
+            $(img).fadeIn();
+            this.$queueImg.push(img);
+            //按钮
+            this.$arrayCircle.removeClass();
+            this.$arrayCircle.addClass("circle-blur");
+            var circle = this.$queueCircle.shift();
+            $(circle).removeClass("circle-blur");
+            $(circle).addClass("circle-focus");
+            this.$queueCircle.push(circle);
+        },
+        stop: function(){
+            clearInterval(this.img_interval)
+        },
+        interval: function(){
+            this.img_interval = setInterval($.proxy(this.start, this), 5000);
+        },
+        fnC_circle: function(e){
+            this.stop();
+            var $this = $(e.target),
+                $index = parseInt($this.attr("index")),
+                forLength = this.$arrayImg.length,
+                forIndex = $index;
+
+            this.$queueImg = [];
+            this.$queueCircle = [];
+            for(var i = 0; i < forLength; i++){
+                if(forIndex >= forLength){
+                    forIndex = 0;
+                }
+                this.$queueImg.push(this.$arrayImg[forIndex]);
+                this.$queueCircle.push(this.$arrayCircle[forIndex]);
+                forIndex ++;
+            }
+            this.start();
+            this.interval();
+        }
+    };
+    carouselImg.init();
+</script>
+<div style="display:none;">
+    <script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5ec4990827a31a224693a711ae088160' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+</body>
+</html>

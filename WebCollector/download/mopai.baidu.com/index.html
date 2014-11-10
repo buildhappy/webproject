@@ -1,0 +1,369 @@
+<!--STATUS OK-->
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>百度相机</title>
+	<script type="text/javascript">
+        (function(){
+            var isWebapp = /iPhone|iPad|Android/;
+            if (isWebapp.test(navigator.userAgent)) {
+                location.href = 'http://xiangji.baidu.com/m.html';
+            }
+        })();
+	    if (/mopai\.baidu\.com/.test(location.href)) {
+	        location.href = 'http://mopai.baidu.com/home/';
+	    }
+	</script>
+	<style type="text/css">
+		html,body{
+			margin:0;
+			padding:0;
+			background: #1c1c1c;
+			font-family:arial,sans-serif;
+		}
+		ul,li,dl,dd,dt,h1,h2,h3,h4,h5,h6,em,p{
+			font-style: normal;
+			font-weight: 500;
+			list-style: none;
+			padding:0;
+			margin:0;
+			display: block;
+		}
+		.yahei {
+			font-family: "Microsoft Yahei", "微软雅黑", Arial, STHeiti, Tahoma, Helvetica;
+		}
+		.clearfix:after {
+			content:'\20';
+			display:block;
+			height:0;
+			clear:both;
+		}
+		.clearfix {
+			zoom:1;
+		}
+		.mod-header{
+			background: url(http://mopai.baidu.com/cms/xiangji/img/index/bg_xj_hd.jpg) top center no-repeat;
+			height: 689px;
+		}
+		.mod-header .bt-download{
+			background: url(http://mopai.baidu.com/cms/xiangji/img/down-btn.png) no-repeat;
+			text-indent: -9999em;
+			width: 224px;
+			height: 66px;
+			position: absolute;
+			top: 425px;
+			left: 50%;
+			margin-left: -6px;
+			border-radius: 3px;
+		}
+		.mod-header .qrcode{
+			width: 101px;
+			height: 101px;
+			border: 7px solid #fff;
+			opacity: 0.7;
+			border-radius: 3px;
+			top: 406px;
+			position: absolute;
+			left: 50%;
+			margin-left: 270px;
+		}
+		.mod-header .bt-download:hover{
+			background-position: 0 -66px;
+		}
+		.mod-xj-l{
+			padding-top:35px;
+			width: 1100px;
+			margin: 0 auto;
+		}
+		.mod-xj-l .xj-i{
+			background: url(http://mopai.baidu.com/cms/xiangji/img/index/bg_xj_i.jpg) bottom center repeat-x;
+			padding-top: 100px;
+		}
+		.mod-xj-l .xj-i.num4{
+			background: none;
+		}
+		.mod-xj-l .xj-i .hd{
+			padding-left: 170px;
+			background: url(http://mopai.baidu.com/cms/xiangji/img/index/spr_xj_num.png) no-repeat;
+			height: 84px;
+			padding-bottom: 33px;
+			margin-bottom: 38px;
+			border-bottom: 1px solid #333;
+		}
+		.mod-xj-l .xj-i.right .hd{
+			padding-left: 660px;
+		}
+		.mod-xj-l .xj-i .hd .xj-t{
+			font-size: 48px;
+			color:#f3f3f3;
+			height: 50px;
+			line-height: 50px;
+			padding-bottom: 10px;
+		}
+		.mod-xj-l .xj-i .hd .xj-d{
+			color: #898989;
+			height: 24px;
+			line-height:24px;
+			font-size: 20px;
+		}
+		.mod-xj-l .xj-i.num1 .hd{
+			background-position: 50px 0;
+			width:700px;
+		}
+		.mod-xj-l .xj-i.num2 .hd{
+			background-position: 435px -149px;
+			margin-left:100px;
+			padding-left:560px;
+		}
+		.mod-xj-l .xj-i.num3 .hd{
+			background-position: 50px -299px;
+		}
+		.mod-xj-l .xj-i.num4 .hd{
+			background-position: 335px -449px;
+			margin-left:200px;
+			padding-left:460px;
+		}
+		.mod-xj-l .desc{
+			padding: 0 50px 0 50px;
+			position: relative;
+		}
+		.mod-xj-l .desc .content{
+			width: 480px;
+			padding-bottom: 155px;
+		}
+		.mod-xj-l .xj-i.right .desc .content{
+			float: right;
+		}
+		.mod-xj-l .xj-i.num3 .desc .content{
+			padding-bottom: 110px;
+		}
+		.mod-xj-l .desc .content dt{
+			color: #f3f3f3;
+			font-size: 24px;
+			height: 36px;
+			line-height: 36px;
+		}
+		.mod-xj-l .desc .content dd{
+			color: #ccc;
+			font-size: 14px;
+			line-height: 24px;
+			padding-bottom: 15px;
+		}
+		.mod-xj-l .xj-i .desc .bg{
+			top: -170px;
+			right: 50px;
+			position: absolute;
+		}
+		.mod-xj-l .xj-i.right .desc .bg{
+			left: 50px;
+		}
+		.mod-xj-l .xj-i.num1 .desc .bg{
+			width: 429px;
+			height: 560px;
+			background: url(http://mopai.baidu.com/cms/xiangji/img/index/bg_xj_i1.png) no-repeat;
+			_background:none;
+			_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://mopai.baidu.com/cms/xiangji/img/index/bg_xj_i1.png');
+		}
+		.mod-xj-l .xj-i.num2 .desc .bg{
+			width: 470px;
+			height: 601px;
+			background: url(http://mopai.baidu.com/cms/xiangji/img/index/bg_xj_i2.png) no-repeat;
+			top: -150px;
+			left:20px;
+			_background:none;
+			_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://mopai.baidu.com/cms/xiangji/img/index/bg_xj_i2.png');
+		}
+		.mod-xj-l .xj-i.num3 .desc .bg{
+			width: 604px;
+			height: 474px;
+			background: url(http://mopai.baidu.com/cms/xiangji/img/index/bg_xj_i3.png) no-repeat;
+			_background:none;
+			_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://mopai.baidu.com/cms/xiangji/img/index/bg_xj_i3.png');
+			top:20px;
+		}
+		.mod-xj-l .xj-i.num4 .desc .bg{
+			width: 585px;
+			height: 679px;
+			background: url(http://mopai.baidu.com/cms/xiangji/img/index/bg_xj_i4.png) no-repeat;
+			_background:none;
+			_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://mopai.baidu.com/cms/xiangji/img/index/bg_xj_i4.png');
+			left: 0;
+			top: -140px;
+		}
+		.mod-footer {
+		    padding: 30px 0 60px 0;
+		    background: #343538;
+		    text-align: center;
+		}
+		.mod-footer p,
+		.mod-footer a{
+		    color: #999;
+		    line-height: 35px;
+		}
+		.mod-footer .mail {
+		    margin: 0 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="mod-header">
+		<a id="downloadBtn" href="http://bcscdn.baidu.com/bcs-cdn/pic-camera/SuperCamera_1.0.0_1426h.apk" class="bt-download">立即下载</a>
+		<img id="erCode" class="qrcode" src="http://bcscdn.baidu.com/bcs-cdn/pic-camera/qrcode.png"/>
+	</div>
+	<ul class="mod-xj-l">
+		<li class="xj-i num1 left">
+			<div class="hd">
+				<h4 class="xj-t yahei">独创智能模式</h4>
+				<em class="xj-d yahei">智能识别场景自动美化，帮你拍出最美照片</em>
+			</div>
+			<div class="desc clearfix">
+				<div class="content">
+					<dl>
+						<dt class="yahei" style="margin:50px 0 20px 0;">智能模式</dt>
+						<dd>
+							利用百度独创的场景分析系统（Scene Analysis System，  简称SAS）对拍摄对象进行识别和分析，如人物面部、被拍摄物体色调、亮度、运动轨迹、对比度等，根据照片分析结果进行智能美化。
+							<br/><br/>
+							精确识别夜景、人像、风景、食物、宠物、植物、大雾、演出、儿童等场景，自动对照片进行实时美化。业余拍手也能拍出专业水准的照片！
+						</dd>
+					</dl>
+				</div>
+				<div class="bg"></div>
+			</div>
+		</li>
+		<li class="xj-i num2 right">
+			<div class="hd">
+				<h4 class="xj-t yahei">丰富的美图功能</h4>
+				<em class="xj-d yahei">智能图片处理系统，一键美化照片</em>
+			</div>
+			<div class="desc clearfix">
+				<div class="content">
+					<dl>
+						<dt class="yahei">智能美化</dt>
+						<dd>
+							智能识别拍摄对象，对照片进行自动美化。
+						</dd>
+						<dt class="yahei">特效</dt>
+						<dd>
+							百度滤镜攻坚组+专业摄影师联手打造数十款滤镜。实时浏览，所见即所得；拍后编辑，效果更惊艳。
+						</dd>
+						<dt class="yahei">美容</dt>
+						<dd>
+							瘦脸瘦身、祛痘、祛黑眼圈、美肤、眼睛放大，您的美丽您做主。
+						</dd>
+						<dt class="yahei">旋转和翻转</dt>
+						<dd>
+							快速修复拍摄方向有误的照片。
+						</dd>
+						<dt class="yahei">裁剪</dt>
+						<dd>
+							轻松裁剪出您满意尺寸的照片。
+						</dd>
+					</dl>
+				</div>
+				<div class="bg"></div>
+			</div>
+		</li>
+		<li class="xj-i num3 left">
+			<div class="hd">
+				<h4 class="xj-t yahei">简单实用“扫一扫”</h4>
+				<em class="xj-d yahei">准确识别二维码和条形码，轻松扫描商品比价</em>
+			</div>
+			<div class="desc clearfix">
+				<div class="content">
+					<dl>
+						<dt class="yahei" style="padding-top:25px;">二维码</dt>
+						<dd>
+							准确识别文本、电话号码、网址、短信、Wi-Fi、名片等信息。 
+						</dd>
+						<dt class="yahei">条形码</dt>
+						<dd>
+							快速获取商品信息，进行价格对比。
+						</dd>
+						<dt class="yahei">图书、CD封面</dt>
+						<dd>
+							便捷获取商品简介、购买渠道等相关信息。
+						</dd>
+						<dt class="yahei">宠物狗</dt>
+						<dd>
+							快速识别狗狗类别，获取百科等相关信息。
+						</dd>
+						<dt class="yahei">文字翻译</dt>
+						<dd>
+							扫描文字即可获得文字英文翻译。
+						</dd>
+					</dl>
+				</div>
+				<div class="bg"></div>
+			</div>
+		</li>
+		<li class="xj-i num4 right">
+			<div class="hd">
+				<h4 class="xj-t yahei">更多精彩功能</h4>
+				<em class="xj-d yahei">更多惊喜，等你发现</em>
+			</div>
+			<div class="desc clearfix">
+				<div class="content">
+					<dl>
+						<dt class="yahei" style="margin-top: 40px;">触控对焦</dt>
+						<dd>
+							快速准确的触控对焦，全面掌控照片和曝光。 
+						</dd>
+						<dt class="yahei">触屏拍照</dt>
+						<dd>
+							轻触屏幕即可拍照，没有前置摄像头也能轻松自拍。
+						</dd>
+						<dt class="yahei">全景</dt>
+						<dd>
+							大视角大范围，缓慢移动屏幕，轻松实现广角拍照。 
+						</dd>
+						<dt class="yahei">HDR</dt>
+						<dd>
+							高动态范围成像，最大程度保留图像细节，让您的照片更生动。
+						</dd>
+						<dt class="yahei">连拍</dt>
+						<dd>
+							快速流畅的连续拍摄，全面记录点滴变化。
+						</dd>
+					</dl>
+				</div>
+				<div class="bg"></div>
+			</div>
+		</li>
+	</ul>
+	<div class="mod-footer">
+        <p class="yahei">
+            <!-- <a target="_blank" href="http://xiangce.baidu.com/sdk/">SDK官网</a> -->
+            <span>官网：xiangji.baidu.com</span>
+            <span class="mail">邮箱：baiducamera@baidu.com</span>
+            <span>QQ群：92240548</span>
+        </p>
+        <p class="yahei">2013@Baidu</p>
+    </div>
+    <!-- 添加统计 -->
+	<div style="display:none">
+	            <script type="text/javascript">
+	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F50131ca038392e8451c928cf94e53130' type='text/javascript'%3E%3C/script%3E"));
+	</script>      
+	</div>
+	</body>
+	<script type="text/javascript" src="http://mopai.baidu.com/xiangji/qrcodeconfig.js"></script>
+	<script type="text/javascript">
+        var elem = {
+            downloadBtn : document.getElementById('downloadBtn'),
+            erCode : document.getElementById('erCode')
+        };
+
+        if (pageConfigData && pageConfigData.erCodeUrl != '') {
+            elem.erCode.src = pageConfigData.erCodeUrl;
+        }
+
+        if (pageConfigData && pageConfigData.downloadUrl != '') {
+            elem.downloadBtn.href = pageConfigData.downloadUrl;
+        }
+	</script>
+
+</body>
+</html>

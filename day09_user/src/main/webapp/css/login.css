@@ -1,0 +1,49 @@
+body{
+	margin:0px;
+	padding:0px;
+	font-size:12px;
+	background-color:016aa9;
+	overflow:hidden;
+	text-align:center;
+}
+
+#container{
+	
+}
+
+#image{
+	background-image:url(../images/login.gif);
+	width:882px;
+	height:344px;
+	margin-top:120px;
+}
+
+#image #form{
+	margin-top:165px;
+	margin-left:-20px;
+}
+.input{
+	margin-bottom:5px;
+}
+
+.inputtext{
+	width:120px;
+	height:16px;
+	background-color:#292929;
+	border:0px;
+	color:6cd0ff;
+}
+
+#btn{
+	margin-top:8px;
+	margin-left:28px;
+}
+
+.btn{
+	background-image:url(../images/dl.gif);
+	border:0px;
+	width:49px;
+	height:18px;
+	color:#FFFFFF;
+	cursor:hand;
+}

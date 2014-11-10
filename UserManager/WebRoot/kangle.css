@@ -1,0 +1,20 @@
+BODY {
+	FONT-SIZE: 10pt;	
+}
+TABLE {
+	FONT-SIZE: 15pt;
+
+}
+A:link {
+	COLOR: white; TEXT-DECORATION: none
+}
+A:visited {
+	TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: red; TEXT-DECORATION: none
+} 
+
+.img{
+	float:left
+}

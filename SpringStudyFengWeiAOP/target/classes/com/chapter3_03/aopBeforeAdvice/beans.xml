@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"      
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           				   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           				   http://www.springframework.org/schema/aop
+	   					   http://www.springframework.org/schema/beans/spring-aop-3.0.xsd">
+	<!-- 启动对@AspectJ注解的支持 -->
+    <aop:aspectj-autoproxy/>
+    <!-- load aspect class 声明切面的对象,没有灵魂  -->
+    <bean id="securityCheck" class="com.chapter3_03.aopBeforeAdvice.SecurityCheck"></bean>
+    <!-- load bean 声明目标的对象,只要在切入点范围内,spring会自动为其创建代理-->
+    <bean id="userManager" class="com.chapter3_03.aopBeforeAdvice.UserManager"></bean>
+    
+    <!-- 在Spring的配置文件中，所有的切面和通知都必须定义在<aop:config>元素内部。 
+                    （一个application context可以包含多个 <aop:config>,
+                      一个<aop:config>可以包含pointcut，advisor和aspect元素 -->
+    <aop:config>
+    	<!-- 声明切面,有灵魂 -->
+    	<aop:aspect ref="securityCheck">
+    	<!-- 配置切入点 -->
+        <!-- 
+                             切入点表达式:例如
+                            例如: * * com.chapter3_03.aopBeforeAdvice.UserManagerImpl.save*(..);
+              execution - 匹配方法执行的连接点，这是你将会用到的Spring的最主要的切入点指示符。 
+              
+              
+          //原型
+          execution（modifiers-pattern? ret-type-pattern declaring-type-pattern? name-pattern（param-pattern）
+          throws-pattern?）
+          
+                            执行表达式的格式如下: ?表示不是必须的
+                execution（
+                   modifiers-pattern?:方法的修饰符模式  public protected...
+                   ret-type-pattern :返回类型模式 必须的
+                       *:  "*" 代表了匹配任意的返回类型
+                       *:  例如   java.lang.String XXXX.UserManagerImpl.save*(..)
+                                             	表示方法的返回类型必须是String类型    
+                   declaring-type-pattern? :声明类型模式 不是必须的
+                                   * 就是类所在的路径
+                   name-pattern:名字模式,方法的名称,必须的
+                                    * "*":表示方法的名称任意
+                                    * "save*":表示以save开头的所有的方法
+                                                      （param-pattern:参数模式,方法的参数
+                                    * () 匹配了一个不接受任何参数的方法.
+                                    * (..)匹配了一个接受任意数量参数的方法(零或者更多),参数的类型任意.
+                                    * (*) 匹配了一个接受一个任何类型的参数的方法
+                                    * (*,String) 匹配了一个接受两个参数的方法，第一个可以是任意类型， 第二个则必须是String类
+                   throws-pattern?）:异常模式
+                               
+                        例子:       
+                           任意公共方法的执行：execution（public * *（..））
+		   任何一个名字以“set”开始的方法的执行：execution（* set*（..））
+	     AccountService接口定义的任意方法的执行：execution（* com.xyz.service.AccountService.*（..））
+		   在service包中定义的任意方法的执行：execution（* com.xyz.service.*.*（..））
+	               在service包或其子包中定义的任意方法的执行：execution（* com.xyz.service..*.*（..））
+       -->      
+    		<aop:pointcut id="perform" expression="execution(* com.chapter3_03.aopBeforeAdvice.UserManagerImpl.save*(..))" />
+    	</aop:aspect>
+    </aop:config>
+</beans>

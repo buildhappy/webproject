@@ -1,0 +1,55 @@
+package Map;
+/*
+map扩展知识--集合嵌套。
+
+map集合被使用是因为具备映射关系。
+
+"yureban" Student("01" "zhangsan");
+"yureban" Student("02" "lisi");
+
+"jiuyeban" Student("01" "wangwu");
+"jiuyeban" Student("02" "zhaoliu");
+
+HashMap<String,List<Student>> czbk：
+一个学校有多个教室(每一个教室都有名称),每个教室中有多个学生(这些学生连成一条链表)
+
+一对多映射
+ */
+import java.util.HashMap;
+import java.util.List;
+import java.util.ArrayList;
+public class MapNestingList {
+	//创建学校
+	HashMap<String , List<Student>> bupt = new HashMap<String , List<Student>>();
+	//创建教室
+	List<Student> wangyan = new ArrayList<Student>();
+	List<Student> jisuanji = new ArrayList<Student>();
+	//往教室中添加学生
+	wangyan.add(new Student("sansan" , 12));
+	
+}
+
+class Student{
+	private String name;
+	private int age;
+	public Student(String name , int age){
+		this.name = name;
+		this.age = age;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	public String toString(){
+		return this.name + "..." + this.age;
+	}
+}

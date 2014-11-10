@@ -1,0 +1,12 @@
+1411351856626	Delete element
+1411439899693	Rename type 'FileCopyWithProgress'
+1411439978174	Rename type 'ShowFileStatus'
+1411545706307	Rename package 'buildhappy.hadoopMaven'
+1411699394157	Rename package 'buildhappy.hadoopMapreduce'
+1411699418117	Rename package 'buildhappy.hadoopHBase'
+1411717276430	Move 'core-site.xml' to 'target'
+1411723038127	Move compilation units
+1411783157980	Delete elements
+1411783263884	Move compilation unit
+1411788362565	Rename type 'WordCounter'
+1411789343311	Move compilation unit

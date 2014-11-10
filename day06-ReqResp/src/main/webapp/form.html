@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>form.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    <form action="/day06-ResReq/Request05Form" method="post">
+    	用户名：<input type="text" name="username"><br/>
+    	密&nbsp&nbsp码：<input type="password" name="password"><br/>
+    	性&nbsp&nbsp别：
+    		<input type="radio" name="gender" value="male">男
+    		<input type="radio" name="gender" value="female">女
+    		<br/>
+    	城&nbsp&nbsp市：<select name="city">
+    		 	<option value="bj">北京</option>
+    		 	<option value="sh">上海</option>
+    		 	<option vlaue="cs">长沙</option>
+    		 </select><br/>
+    		 
+    	爱&nbsp&nbsp好：
+    		<input type="checkbox" name="like" value="games">游戏
+    		<input type="checkbox" name="like" value="movies">电影
+    		<input type="checkbox" name="like" vlaue="song">听歌
+    		<input type="checkbox" name="like" value="dance">跳舞
+    		<br/>
+    	简&nbsp&nbsp历：<textarea rows="5" cols="60" name="resume"></textarea><br/>
+    	大头照：<input type="file" name="file"><br/>
+    	
+    	<input type="hidden" name="aaa" value="bbb"><br/>
+    		
+    	<input type="button" value="点点">
+    		
+    	<input type="submit" value="提交">
+    </form>
+  </body>
+</html>

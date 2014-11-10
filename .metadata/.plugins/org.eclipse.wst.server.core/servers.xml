@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v7.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v7.0 Server at localhost" name="Tomcat v7.0 Server at localhost" runtime-id="Apache Tomcat v7.0" server-type="org.eclipse.jst.server.tomcat.70" server-type-id="org.eclipse.jst.server.tomcat.70" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="20">
+    <list key="modules" value0="SpringAction::org.eclipse.jst.jee.server:SpringAction::jst.web::2.5" value1="day09_user::org.eclipse.jst.j2ee.server:day09_user::jst.web::2.4" value2="newsManagement3.1Beta::org.eclipse.jst.j2ee.server:newsManagement3.1Beta::jst.web::2.3" value3="newsManagement3.0SpringAndMybatis::org.eclipse.jst.j2ee.server:newsManagement3.0SpringAndMybatis::jst.web::2.3" value4="day14_user-jdbc::org.eclipse.jst.j2ee.server:day14_user-jdbc::jst.web::2.3" value5="movieRecommender::org.eclipse.jst.j2ee.server:movieRecommender::jst.web::2.3"/>
+  </server>
+</servers>

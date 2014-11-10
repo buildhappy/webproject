@@ -1,0 +1,26 @@
+body{
+	padding : 0;
+	margin : 0;
+	background : #fff;
+}
+.head{
+	width : 100%;
+	background : rgb(255,255,255);
+	position : fixed;
+	top : 0;
+}
+.header{
+	position : fixed;
+	top : 0;
+}
+.content{
+}
+.bottom {
+	margin : 0;
+	padding : 0;
+	padding-top : 25px;
+	width : 100%;
+	height : 60px;
+	background : gray;
+	text-align : center;
+}

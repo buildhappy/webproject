@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>百度安全中心—百度杀毒、卫士、浏览器，指定官网下载、交流网站</title>
+
+    <meta name="keywords" content="安全中心 杀毒软件 百度卫士 浏览器 电脑加速"/>
+    <meta name="description" content="百度安全中心是百度唯一指定官方安全网站，集合百度卫士、百度杀毒、百度浏览器三款产品。百度卫士集合电脑加速、系统清理、木马查杀和软件管理功能，上网更快、更安全；百度杀毒不骚扰、不胁迫、不窃取，给你“闪电查杀”体验；百度浏览器，百度云安全护航，网购无忧。"/>
+    <link href="http://img1sw.baidu.com/www/weishi/v1.0.4/asset/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="http://img5sw.baidu.com/min/static/anquan/v3.0.1/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="http://img5sw.baidu.com/min/static/anquan/v3.0.1/css/anquan.css"/>
+
+    <script type="text/javascript">
+        var anquan = new Object();
+        anquan.index = new Object();
+        anquan.zt = new Object();
+        var _hmt = _hmt || [];
+    </script>
+    <script type="text/javascript" src="http://img5sw.baidu.com/min/static/anquan/v3.0.1/js/respond.min.js"></script>
+</head>
+
+<body id="home" >
+
+<!-- the header and main navigation -->
+<div id="header" class="group">
+    <div class="main">
+        <a class="logo" href="#"></a>
+        <div id="main-nav">
+            <ul class="m-c">
+                <li><a href="/index">首页</a></li>
+                <li class="pro"><a href="javascript:;">产品</a></li>
+				<li><a href="http://zhuanjia.baidu.com/?from=gw" target="_blank">电脑专家</a></li>
+                <li><a href="http://rj.baidu.com/" onclick="_hmt.push(['_trackPageview', '/nav/soft']);_hmt.push(['_trackPageview', '/nav/home/soft']);" target="_blank">软件中心</a></li>
+                <li class="community"><a href="javascript:;">社区</a>
+            </ul>
+
+           	<ul class="m-c-m m-c-p">
+                <li class="weishi"><a href="/weishi" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;百度卫士</a></li>
+                <li class="shadu"><a href="/shadu" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;百度杀毒</a></li>
+                <li class="llq"><a href="http://liulanqi.baidu.com/" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;百度浏览器</a></li>
+            </ul>
+			<ul class="m-c-c m-c-p">
+                <li><a href="http://anquan.baidu.com/bbs?from=gw" onclick="_hmt.push(['_trackPageview', '/nav/bbs']);_hmt.push(['_trackPageview', '/nav/home/bbs']);" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;安全论坛</a></li>
+                <li><a href="http://anquan.baidu.com/zt/jidi" onclick="_hmt.push(['_trackPageview', '/nav/jidi']);_hmt.push(['_trackPageview', '/nav/home/jidi']);" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;安全基地</a></li>
+                <li><a href="/action_center" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;专题汇总</a></li>
+			</ul>
+        </div>
+    </div>
+</div>
+
+<!-- the product introduce -->
+<div id="banner">
+    <!-- the product nav -->
+    <div id="sub-nav" >
+        <div class="sub-nav-wrap">
+            <ul>
+                <li class="weishi"><a class="active" href="javascript:;"><span></span>百度卫士</a></li>
+                <li class="shadu"><a href="javascript:;"><span></span>百度杀毒</a></li>
+                <li class="llq"><a href="javascript:;"><span></span>百度浏览器</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- the product info -->
+    <div class="pr-info">
+        <ul class="pros">
+            <li class="b weishi">
+                <div class='i-s'>
+                    <h2>百度卫士&nbsp;&nbsp;因为自由</h2>
+                    <p>你是否还记得上一次没有负担地飞快奔跑是在哪里？是否还记得上一次无人打扰地安静思考是在哪个年岁？你是否还能从心所欲地自由选择你对每个问题的答案？<br>你是否能够感知你的安全感究竟来自何处？</p>
+                </div>
+                <div class="i-o">
+
+                    <a class="download" href="http://weishi.baidu.com/index/freedownload" target="_self" onclick="_hmt.push(['_trackPageview', '/weishi_download/free']);"><span class="download-content"></span></a>
+                    <p class="d-info">版本：<font id="version_ws"><!-- 1.0 Beta2 --></font><span class="v-gap"></span>日期：<font id="update_time_ws"><!--5月9日 --></font><span class="v-gap"></span>系统：<font id="os_list_ws"><!-- XP / Vista / Win7 --> </font></p>
+                    <a class="m-v" href="#">更多版本</a>
+                    <ul class="m-v-panel">
+                        <li><a href="javascript:void(0)" id="lixian_down_url_ws" target="_self" onclick="_hmt.push(['_trackPageview', '/weishi_download/AZ']);">离线安装包</a></li>
+                        <li><a href="javascript:void(0)" id="full_mini_down_url_ws" target="_self" onclick="_hmt.push(['_trackPageview', '/weishi_download/lixian']);">稳定版</a></li>
+                        <li><a href="javascript:void(0)" id="trial_down_url_ws" target="_self" onclick="_hmt.push(['_trackPageview', '/weishi_download/trial']);">体验版</a></li>
+                        <li><a href=" http://dl1sw.baidu.com/client1/common/install/14984945728/BaiduAn_Setup_2.1.8.1114.exe" target="_self" onclick="_hmt.push(['_trackPageview', '/weishi_download/EY']);">恶意网址检测专版</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="b shadu">
+                <div class='i-s'>
+                    <h2>百度杀毒&nbsp;&nbsp;冰雪新芯</h2>
+                    <p>轻巧的身形可以蕴藏巨大的能量，安静的存在却是最忠诚的坚守。更简单，更透明，张弛有度，锲而不舍。冰冻三尺非一日之寒。</p>
+                </div>
+                <div class="i-o">
+                    <a class="download" href="http://shadu.baidu.com/index/freedownload" target="_self" onclick="_hmt.push(['_trackPageview', '/shadu_download/free']);"><span class="download-content"></span></a>
+                    <p class="d-info">版本：<font id="version_sd"><!-- 1.0 Beta2 --></font><span class="v-gap"></span>日期：<font id="update_time_sd"><!--  5月9日  --></font><span class="v-gap"></span>系统：<font id="os_list_sd"><!--  XP / Vista / Win7  --></font></p>
+                    <a class="m-v" href="#">更多版本</a>
+                    <ul class="m-v-panel">
+                        <li><a href="javascript:void(0)" id="lixian_down_url_sd" target="_self" onclick="_hmt.push(['_trackPageview', '/shadu_download/lx']);">离线安装包</a></li>
+                        <li><a href="javascript:void(0)" id="full_mini_down_url_sd" target="_self" onclick="_hmt.push(['_trackPageview', '/shadu_download/wd']);">稳定版</a></li>
+                        <li><a href="http://dl1sw.baidu.com/client1/common/install/14982150503/Baidusd_Setup_1.6.0.62023.exe" target="_self" onclick="_hmt.push(['_trackPageview', '/shadu_download/zs']);">搜索保障版</a></li>
+                        <li><a href="http://w.x.baidu.com/go/full/2/l_11111" target="_self" onclick="_hmt.push(['_trackPageview', '/shadu_download/ldfy']);">漏洞防御专版</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="b llq">
+                <div class='i-s'>
+                    <h2>百度浏览器&nbsp;&nbsp;一简轻新</h2>
+                    <p>简约的外表蕴含着丰富的内涵，  清新的界面配上流畅的速度，给你一站式上网新快感。努力前行，为你打开一扇通往全世界的窗！</p>
+                </div>
+                <div class="i-o">
+                    <a class="download" href="http://dl.client.baidu.com/union/getbdbrowser.php?tn=newbdie" target="_self" onclick="_hmt.push(['_trackPageview', '/liulanqi_download/free']);"><span class="download-content"></span></a>
+                    <p class="d-info">版本：6.5<span class="v-gap"></span>日期：2014-07-18<span class="v-gap"></span>系统：XP &nbsp;&nbsp;/&nbsp;&nbsp; Win7 &nbsp;&nbsp;/&nbsp;&nbsp; Win8</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- the product bg -->
+    <ul class="bg">
+        <li class="weishi"></li>
+        <li class="shadu"></li>
+        <li class="llq"></li>
+    </ul>
+
+    <div class="scroll"><span></span></div>
+</div>
+
+<!-- the content -->
+<div id="content">
+
+    <div class="func-exp">
+        <div class="main">
+            <h3>你想要的，都在这里。</h3>
+            <h4>功能体验</h4>
+            <div class="wrap">
+                <ul>
+                    <li class="exp-1">
+                        <span></span>
+                        <h5>视频加速</h5>
+                        <p>视频加速，是免费的在线视频加速工<br>具，网速最高提升10倍！体验飞一般<br>的流畅！超清、1080P想看就看。</p>
+                        <a href="http://weishi.baidu.com/langdingpage/kpbk.html" target="_blank">立即下载&nbsp;&nbsp;&nbsp;</a>
+
+                    </li>
+                    <li class="exp-2">
+                        <span></span>
+                        <h5>极速空间</h5>
+                        <p>极速空间，给力的百度卫士小工具，给<br>软件加速，让电脑再飞一会儿，没有什么不可以。</p>
+                        <a href="http://anquan.baidu.com/zt/appbooster" target="_blank">立即下载&nbsp;&nbsp;&nbsp;</a>
+                    </li>
+                    <li class="exp-3">
+                        <span></span>
+                        <h5>XP保护</h5>
+                        <p>百度卫士首推终极解决方案，独有Xpro<br>保护技术优化提速，漏洞修复，防黑加<br>固，提高系统免疫能力。</p>
+                        <a href="http://anquan.baidu.com/hd/xp" target="_blank">立即下载&nbsp;&nbsp;&nbsp;</a>
+                    </li>
+                    <li class="exp-4">
+                        <span></span>
+                        <h5>抢票专版</h5>
+                        <p>最快抢票神器，没有之一！精简流程，一步到位，全自动抢票，比浏览器抢票<br>快5秒，还支持提前预约哦！</p>
+                        <a href="http://anquan.baidu.com/qp/landingpage" target="_blank">立即下载&nbsp;&nbsp;&nbsp;</a>
+                    </li>
+                    <li class="exp-5">
+                        <span></span>
+                        <h5>浏览器保护</h5>
+                        <p>保护您的IE和浏览器主页不再被恶意篡改，同时保证系统安全，实现网页轻松浏览。</p>
+                        <a href="http://weishi.baidu.com/index/freedownload" target="_blank">立即下载&nbsp;&nbsp;&nbsp;</a>
+                    </li>
+                    <li class="exp-6">
+                        <span></span>
+                        <h5>手机体检</h5>
+                        <p>帮您解决安卓手机卡、慢等一系列问题，同时保护电脑安全，防止手机病毒交叉传染。</p>
+                        <a href="http://weishi.baidu.com/index/freedownload" target="_blank">立即下载&nbsp;&nbsp;&nbsp;</a>
+                    </li>
+                    <li class="exp-7">
+                        <span></span>
+                        <h5>网速调控</h5>
+                        <p>网速调控，可随需要自由支配网络带宽，提高网络响应速度，及时快速的进行网络资源支配。</p>
+                        <a href="http://anquan.baidu.com/bbs/thread-117467-1-1.html" target="_blank">立即下载&nbsp;&nbsp;&nbsp;</a>
+                    </li>
+                </ul>
+            </div>
+            <span class="l-c change"></span>
+            <span class="r-c change"></span>
+        </div>
+
+    </div>
+
+    <div class="news">
+        <div class="main">
+            <h3>发现最真实的世界</h3>
+            <h4>安全资讯</h4>
+            <div class="main-wrap">
+                <div class="wrap">
+                    <ul id="hot-zt">
+                        <li class="1"><a href="http://anquan.baidu.com/bbs/thread-129670-1-1.html?status=1" target="_blank"><img src="http://img5sw.baidu.com/min/static/anquan/v3.0.1/images/news-1.jpg"/></a></li>
+                        <li class="2"><a href="http://anquan.baidu.com/bbs/thread-137724-1-1.html" target="_blank"><img src="http://img5sw.baidu.com/min/static/anquan/v3.0.1/images/news-2.jpg"/></a></li>
+                        <li class="3"><a href="http://anquan.baidu.com/bbs/thread-137121-1-1.html" target="_blank"><img src="http://img5sw.baidu.com/min/static/anquan/v3.0.1/images/news-3.jpg"/></a></li>
+                    </ul>
+                </div>
+						<div class="bbs-news"><script type="text/javascript" src="http://anquan.baidu.com/bbs/api.php?mod=js&bid=323"></script></div>
+                <span class="l-c change" ></span>
+                <span class="r-c change"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="links">
+        <div class="main">
+            <div class="l-s">我们获得的荣誉只因有你<br/>创造最有价值的产品</div>
+            <ul class="l-h">
+                <li><img title="英国西海岸实验室认证" alt="英国西海岸实验室认证" src="http://img5sw.baidu.com/min/static/anquan/v3.0.1/images/link-1.png"/></li>
+                <li><img title="AV-TEST认证" alt="AV-TEST认证" src="http://img5sw.baidu.com/min/static/anquan/v3.0.1/images/link-2.png"/></li>
+                <li><img title="微软MAPP合作成员" alt="微软MAPP合作成员"  src="http://img5sw.baidu.com/min/static/anquan/v3.0.1/images/link-3.png"/></li>
+                <li><img title="微软XP保护合作伙伴" alt="微软XP保护合作伙伴" src="http://img5sw.baidu.com/min/static/anquan/v3.0.1/images/link-4.png"/></li>
+                <li><img title="中国电信荣誉合作伙伴" alt="中国电信荣誉合作伙伴" src="http://img5sw.baidu.com/min/static/anquan/v3.0.1/images/link-5.png"/></li>
+            </ul>
+            <span class="v-line1 v-line"></span>
+            <span class="v-line2 v-line"></span>
+            <span class="h-line1"></span>
+        </div>
+    </div>
+
+    <div class="about-us">
+        <div class="main">
+            <div class="wrap">
+                <dl class="a-i">
+                    <dt>百度安全中心</dt>
+                    <dd>百度安全中心是一个专注于自主研发高端电脑安全软件的科技网站，旗下产品已获得来自英国西海岸实验室、AV-TEST测试等国际权威认证。我们会始终致力于电脑安全防御的强化，同时为用户带来更自由、安全、快捷的互联网生活方式。</dd>
+                </dl>
+                <dl class="a-p">
+                    <dt>产品站点</dt>
+                    <dd><a href="http://anquan.baidu.com/weishi/" target="_blank">百度卫士</a></dd>
+                    <dd><a href="http://anquan.baidu.com/shadu/" target="_blank">百度杀毒</a></dd>
+                    <dd><a href="http://liulanqi.baidu.com/" target="_blank">百度浏览器</a></dd>
+                    <dd><a href="http://rj.baidu.com/" target="_blank">软件中心</a></dd>
+                    <dd><a href="http://zhuanjia.baidu.com/" target="_blank">百度电脑专家</a></dd>
+                </dl>
+                <dl class="a-a">
+                    <dt>关于我们</dt>
+                    <dd><a href="http://anquan.baidu.com/bbs/thread-139307-1-1.html?status=1" target="_blank">联系我们</a></dd>
+                    <dd><a href="http://anquan.baidu.com/bbs/thread-139307-1-1.html?status=1" target="_blank">加入我们</a></dd>
+                </dl>
+                <dl class="a-c">
+                    <dt>联系我们</dt>
+                    <dd><span class="num">400-810-8198</span></dd>
+                    <dd><span>客服时间10:00-17:00</span></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- the footer -->
+<div id="footer">
+
+    <div class="interact">
+		<div class="weixin">关注微信<span>加百度安全微信好友</span></div>
+        <a href="http://weibo.com/secbaidu" target="_blank" class="weibo">新浪微博</a>
+    </div>
+
+    <div class="copy-right">&copy;2014 Baidu | <a href="http://www.baidu.com/duty/"  target="_blank">使用百度前必读</a> | <a href="/weishi/privacy.html" target="_blank">百度卫士用户使用许可协议</a> | <a href="/shadu/privacy.html" target="_blank">百度杀毒用户使用许可协议</a></div>
+
+</div>
+
+<!--goto top-->
+<a class="goto" href="#banner" title="回到顶部" target="_self"></a>
+</body>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://img5sw.baidu.com/min/static/anquan/v3.0.1/js/anquan.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+    anquan.index.init();
+});
+
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F76d2e9efb74a8a3c384d120077fcccbe' type='text/javascript'%3E%3C/script%3E"));
+
+var _hmt = _hmt || [];
+_hmt.push(['_trackPageview', '/_site_uv']);
+
+
+</script>
+</html>
+
+
+<script type="text/javascript">
+
+    var shadu = 3;
+    var weishi = 4;
+
+    $.get('/api/index/json_get_ad_info',function(data){
+
+        $(".offline_download").show();
+        $("#version_ws").html(data.msg[weishi].version);
+        $("#lixian_down_url_ws").attr('href',data.msg[weishi].lixian_down_url);
+        $("#trial_down_url_ws").attr('href',data.msg[weishi].trial_down_url);
+        $("#full_mini_down_url_ws").attr('href',data.msg[weishi].full_mini_down_url);
+        $("#update_time_ws").html(data.msg[weishi].update_time);
+        $("#os_list_ws").html(data.msg[weishi].os_list);
+        $("#filesize_ws").html(data.msg[weishi].file_size);
+
+        $("#version_sd").html(data.msg[shadu].version);
+        $("#lixian_down_url_sd").attr('href',data.msg[shadu].lixian_down_url);
+        $("#full_mini_down_url_sd").attr('href',data.msg[shadu].full_mini_down_url);
+        $("#trial_down_url_sd").attr('href',data.msg[shadu].trial_down_url);
+        $("#update_time_sd").html(data.msg[shadu].update_time);
+        $("#os_list_sd").html(data.msg[shadu].os_list);
+
+    },'json');
+
+</script>

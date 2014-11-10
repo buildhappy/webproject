@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns="http://www.springframework.org/schema/security"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/security 
+        http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+                        
+<!-- 从数据库中读用户数据 -->
+	<!--
+    <jdbc-user-service id="userService" 
+       data-source-ref="dataSource"
+       users-by-username-query=
+          "select username, password, true from spitter where username=?"
+       authorities-by-username-query=
+          "select username,'ROLE_SPITTER' from spitter where username=?" />
+     -->
+<!-- 内容中存储的用户数据 -->
+     <user-service id="userService">
+    	<user name="habuma" password="123456"
+    						authorities="ROLE_SPITTER , ROLE_ADMIN"/>
+    	<user name="twoqubed" password="123456"
+    						authorities="ROLE_SPITTER , ROLE_ADMIN"/>
+    	<user name="admin" password="123456"
+    						authorities="ROLE_SPITTER , ROLE_ADMIN"/>					
+    </user-service>
+
+</beans:beans>

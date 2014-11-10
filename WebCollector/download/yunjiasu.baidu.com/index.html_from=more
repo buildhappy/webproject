@@ -1,0 +1,626 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+    <!-- STATUS OK -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.6, user-scalable=yes" />
+    <title>百度云加速 - 云时代的网站安全加速平台 | 免费网站加速_网站防火墙_防CC_防DDOS_免费CDN加速</title>
+    <meta name="description" content="百度云加速依托百度强大的云计算能力，为站长免费提供CDN加速和全方位安全防护服务" />
+    <meta name="keywords" content="网页加速,CDN加速,免费CDN,网站防火墙,云加速,网站加速,防DDOS,防CC,防黑客,网站安全保护,网站防火墙,web防火墙,web应用防火墙,网站安全,网站篡改护" />
+    <meta name="baidu-site-verification" content="EjIX2w7KjK" />
+    <link rel="shortcut icon" href="http://static_fhl.baidu.com/static/images/favicon.ico?r=20140328" type="image/x-icon"/>
+    <script type="text/javascript" src="http://static_fhl.baidu.com/static/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="http://static_fhl.baidu.com/static/js/underscore.js"></script>
+    <script type="text/javascript" src="http://static_fhl.baidu.com/static/js/unslider-master/src/unslider.js"></script>
+    <script src="http://static_fhl.baidu.com/static/js/jquery/JQueryEasing.js" type="text/javascript"></script>
+    <script src="http://static_fhl.baidu.com/static/js/animateBackground-plugin.js" type="text/javascript"></script>
+    <script src="http://static_fhl.baidu.com/static/js/jquery.marquee.min.js" type="text/javascript"></script>
+    <link type="text/css" rel="stylesheet" href="http://static_fhl.baidu.com/static/bootstrap-2.3.1/css/bootstrap.min.css" />
+    <link href="http://static_fhl.baidu.com/static/css/main_2014.css?v=20140520" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://static_fhl.baidu.com/static/css/base.css?v=201311220" />
+    <link rel="stylesheet" href="http://static_fhl.baidu.com/static/css/base_2014.css?v=20131220" />
+    <link href="http://static_fhl.baidu.com/static/css/menu.css?v=20140513" rel="stylesheet" type="text/css">
+    <link href="http://static_fhl.baidu.com/static/css/jquery.marquee.min.css" rel="stylesheet" type="text/css">
+    
+    <script src="http://static_fhl.baidu.com/static/bootstrap-2.3.1/js/bootstrap.js"></script>
+
+    <script type="text/javascript">
+            $(function(){
+                    //phone
+                    if($("body").css("min-width")=="320px"){
+                    $(".banner").remove();
+                    }
+                    });
+                </script>
+    <style>
+        .news ul li {
+            float: left;
+            clear: both;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 250px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!--[if lt IE 7]>
+    <div style="color:#B94A48;text-align:center;font-size:13px;border:1px solid #dedede;background:#FCF8E3;height:24px;line-height:24px;">
+        您的浏览器版本过低，百度云加速暂不支持，百度云加速推荐您升级到
+        <a href="http://windows.microsoft.com/zh-CN/internet-explorer/products/ie/home" target="_blank">IE8</a>
+        以上或者使用
+        <a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html" target="_blank">谷歌浏览器</a>
+    </div>
+    <![endif]-->
+    
+<div class="navbar_header">
+    <div class="mid" id="baidu_user_info">
+    </div>
+    <div class="grayline">
+    </div>
+    <div class="mid">
+        <div class="logo" style="font-size:15px;font-family: 微软雅黑">
+            <a href="/" title="返回首页"><img src="http://static_fhl.baidu.com/static/images/logo_wzgj.png"></a>
+            <!-- 招用户体验设计师 请联系 security@baidu.com -->
+        </div>
+        <ul class="nav_header" id="nav_menu">
+            <li class="left-item" id="nav_index"><a href="/">首页</a></li>
+            
+            
+            <li class="left-item" id="nav_news"><a href="/news/">新闻</a></li>
+            <li class="left-item" id="nav_plans"><a href="/trade/plans/">套餐</a></li>
+            <li class="left-item" id="nav_help"><a href="/help/">帮助</a></li>
+			
+        </ul>
+    </div>
+</div>
+<script>
+    var pathname =  location.pathname.split('/');
+    //console.log(pathname)
+        $('#nav_'+pathname[pathname.length-2]).addClass("current")
+        var c_index = 0;
+        var $leftItem = $('.navbar_header li.left-item');
+        //console.log($leftItem);
+        $leftItem.on({
+            mouseenter: function(e){
+                var $li = $(this);
+                $.each($leftItem, function(index, item){
+                    var $item = $(item);
+                    if($item.hasClass('current')){
+                        $item.removeClass('current');
+                        c_index = index;
+                    }
+                });
+            },
+            mouseleave: function(e){
+                $leftItem.eq(c_index).addClass('current');
+            }
+        });
+$.ajax({
+	url: '/user_info/?timestamp=' + new Date().getTime(),
+	success: function(data){
+
+
+		$("#baidu_user_info").append($(data).find("#menu").html());
+		$("#baidu_user_info").append($(data).find("#down").html());
+		$("#baidu_user_info li.user,li.login").mouseover(function(){
+        $(".nav_img_username").addClass("active")
+			$(this).find('i').stop();
+			$(".secnav_"+this.className).stop();
+			$(".secnav_"+this.className).animate({top:40}, 200,'swing');
+			$(".secnav_"+this.className).mouseover(function(){
+				$(this).stop();
+				$(this).animate({top:40}, 200,'swing');
+
+			})
+			$(".secnav_"+this.className).mouseout(function(){
+				$(this).stop();
+				$(this).animate({top:-200}, 800,'swing');
+               //  $(".nav_img_username").removeClass("adtive")
+			})
+		})
+		$("#baidu_user_info li.user,li.login").mouseout(function(){
+			$(this).find('i').stop();
+			$(".secnav_"+this.className).stop();
+			$(".secnav_"+this.className).animate({top:-200}, 800,'swing');
+            $(".nav_img_username").removeClass("active")
+
+		});
+        $(".navbar_header .secnav_user").width($("#nav_account").width()+40+"px")
+	}
+});
+</script>
+
+    <!-- mobile-banner /-->
+    <div class="mobile-banner">
+        <a href="/website/" class="mobile-rocket" title="网站管理"> <i class="bd"></i> <i class="m-fire"></i>
+        </a>
+    </div>
+    <!-- / mobile-banner-->
+    <div class="banner">
+        
+        <a class="banner-go" href="javascript:;" onclick="$('#baidu_login_btn').click();" ></a>
+        
+        <ul>
+            <li style="background: #21335a url(http://static_fhl.baidu.com/static/images/banner_20140423_1.jpg) top center no-repeat;"></li>
+            <li style="background: #783d60 url(http://static_fhl.baidu.com/static/images/banner_20140423_2.jpg) top center no-repeat;"></li>
+            <li style="background: #479244 url(http://static_fhl.baidu.com/static/images/banner_20140423_3.jpg) top center no-repeat;"></li>
+        </ul>
+    </div>
+    <!--content block-->
+    <div class="content-block clearfix">
+        <!--tool bar-->
+        <!--
+        <div class="toolbar">
+            <div class="move">
+                <div class="move_text"> <strong >新闻:</strong>
+                    <ul class="marquee" id="marquee" style="">
+                        
+                        <li>
+                        <a target="_blank" href="/news/53e839c1671e814a84cab73f/" >
+                           百度云加速开通代备案服务
+                        </a>
+                        </li>
+                        
+                        <li>
+                        <a target="_blank" href="/news/53e04a44671e81121cbef0a0/" >
+                           百度云加速增加节点升级　增加3个节点　免费用户全面获益
+                        </a>
+                        </li>
+                        
+                        <li>
+                        <a target="_blank" href="/news/53df19a6671e8165ad9c88e1/" >
+                           控制面板v2.0全新上线
+                        </a>
+                        </li>
+                        
+                        <li>
+                        <a target="_blank" href="/news/53ac23a39b241108caa7f3bf/" >
+                           遇见50X别着急
+                        </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="hotline hide ">
+                    <span>客服电话：400-876-8800</span>
+                    <a class="qq_server" href="http://wpa.qq.com/msgrd?v=3&uin=2948961597&site=qq&menu=yes"></a>
+                </div>
+            </div>
+        </div>
+        -->
+        <div class="middle-content clearfix">
+        <div class="left">
+            <ul class="feature">
+                <li class="feature-detail feature-detail-last-row feature-test-pic" style="height:150px;">
+                <div class="feature-img fast"></div>
+                <div class="feature-title">极速</div>
+                <div class="feature-desc">遍布全国骨干网的加速节点和领先的页面优化技术，大幅降低网络延迟，提高加载速度。</div>
+                </li>
+                <li class="feature-detail feature-test-pic" style="">
+                    <div class="feature-img stable"></div>
+                    <div class="feature-title">稳定</div>
+                    <div class="feature-desc">百度商用级别的高稳定性保障，全天候值守数据中心，让您的网站坚如磐石。</div>
+                </li>
+                <li class="feature-detail" style="">
+                    <div class="feature-img safety"></div>
+                    <div class="feature-title">安全</div>
+                    <div class="feature-desc">专业的Web防火墙和芯片级抗DDoS/CC设备，有效抵御各种攻击，解除您的后顾之忧。</div>
+                </li>
+                <li class="feature-detail" >
+                    <div class="feature-img easy"></div>
+                    <div class="feature-title">便捷</div>
+                    <div class="feature-desc">全方位的扩展服务，显著提高搜索引擎友好度和用户体验，使您可以专注于核心业务。</div>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <h3 class="content-title">
+                <i class="title-head"></i>
+                <a class="more-news" target="_blank" href="/news/">更多>></a>
+                新闻公告
+            </h3>
+            <div class="news">
+                <ul>
+                    
+                        <li>
+                        <a target="_blank" title="百度云加速开通代备案服务" href="/news/53e839c1671e814a84cab73f/" >
+                               百度云加速开通代备案服务
+                            </a>
+                        </li>
+                    
+                        <li>
+                        <a target="_blank" title="百度云加速增加节点升级　增加3个节点　免费用户全面获益" href="/news/53e04a44671e81121cbef0a0/" >
+                               百度云加速增加节点升级　增加3个节点　免费用户全面获益
+                            </a>
+                        </li>
+                    
+                        <li>
+                        <a target="_blank" title="控制面板v2.0全新上线" href="/news/53df19a6671e8165ad9c88e1/" >
+                               控制面板v2.0全新上线
+                            </a>
+                        </li>
+                    
+                        <li>
+                        <a target="_blank" title="遇见50X别着急" href="/news/53ac23a39b241108caa7f3bf/" >
+                               遇见50X别着急
+                            </a>
+                        </li>
+                    
+                </ul>
+            </div>
+            <h3 class="content-title">
+                <i class="title-head"></i>
+                <a class="more-news" target="_blank" href="/help/#help_title=常见FAQ">更多>></a>
+                常见问题
+            </h3>
+            <div class="news">
+                <ul>
+                    <li>
+                        <a target="_blank" href="/help/#help_title=什么是百度云加速">
+                            什么是百度云加速？
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="/help/#help_title=如何开启百度云加速">
+                            如何开启百度云加速？
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="/help/#help_title=百度云加速能够为我做什么">
+                            百度云加速能够为我做什么？
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <!--
+           <div class="move_btn" title="点击进入迁移页面，享受百度云加速的专业服务">
+                <a href="/move/"></a>
+            </div>
+            -->
+    </div>
+</div>
+    <div class="index-case clearfix">
+        <p>典型案例</p>
+        <div>
+            <div class="left-btn"></div>
+                <div class="case-list">
+                    <ul>
+                        <li><img src="http://static_fhl.baidu.com/static/images/case/qunar.jpg"/></li>
+                        <li><img src="http://static_fhl.baidu.com/static/images/case/yzwb.JPG"/></li>
+                        <li><img src="http://static_fhl.baidu.com/static/images/case/im286.png"/></li>
+                        <li><img src="http://static_fhl.baidu.com/static/images/case/5you.png"/></li>
+                        <li><img src="http://static_fhl.baidu.com/static/images/case/dianxin.png"/></li>
+                        <li><img src="http://static_fhl.baidu.com/static/images/case/linuxdic.png"/></li>
+                        <li><img src="http://static_fhl.baidu.com/static/images/case/evdays.png"/></li>
+                        <li><img src="http://static_fhl.baidu.com/static/images/case/beiwaionline.png"/></li>
+                        <li><img src="http://static_fhl.baidu.com/static/images/case/199it.png"/></li>
+
+                    </ul>
+                </div>
+            <div class="right-btn"></div>
+        </div>
+    </div>
+</div>
+<script src="http://static_fhl.baidu.com/static/js/login/2.0.1.2.js"></script>
+<script type='text/javascript' src='http://cas.baidu.com/staticv2/dep/common-login/api.js'></script>
+<script type="text/javascript" src="http://static_fhl.baidu.com/static/js/banner.js?20131230"></script>
+<script type="text/javascript">
+    $(function(){
+        var left = 0;
+        var rightnum = $(".index-case li img").length;
+        var leftnum = 0;
+        var animate =false;
+        var caseList = $(".index-case .case-list ul");
+        $(document).on("click" , ".index-case .left-btn" ,function(){
+            var num = 5;
+            if(animate){
+                return;
+            }
+
+            if( leftnum < 5 && leftnum > 0){
+                num = leftnum;
+            }else if(leftnum <= 0){
+                return;
+            }
+            animate =true;
+            left += 180*num;
+            caseList.animate({
+                "left": left },
+                400, function() {
+                leftnum -= num;
+                rightnum += num;
+                animate = false;
+            });
+        });
+
+        $(document).on("click" , ".index-case .right-btn" ,function(){
+            if(animate){
+                return;
+            }
+            var num = 5;
+            if( rightnum < 10 && rightnum > 5){
+                num = rightnum - num ;
+            }else if(rightnum <= 5){
+                return;
+            }
+            animate =true;
+            left -= 180*num;
+            caseList.animate({
+                "left": left },
+                400, function() {
+                 rightnum -= num;
+                 leftnum += num;
+                 animate = false;
+            });
+        });
+    })
+
+    $(function(){
+            $("a.weixin").mouseover(function(){
+                $(".popover-content").css("display", "block");
+                }).mouseout(function(){
+                    $(".popover-content").css("display", "none");
+                    });
+            $("#nav_menu #nav_index").addClass('current').siblings().removeClass('current');
+   /*         $('#hezuocon').bxCarousel({
+display_num: 8,
+auto: true,
+move: 6,
+margin: 18
+});*/
+});
+$(document).on('click','.move_btn',function(){location.href="/move/"})
+$(function(){
+//        document.title="百度云加速 - 网站安全专家，自主创新，互联网安全中国梦";
+        //document.title="沙盒";
+        });
+function open_dns(obj){
+    var url = 'http://www.' + $(obj).attr("address");
+    window.open(url);
+    return false;
+}
+$(function(){
+        $(".move_ppt").click(function(){
+            $("#ppt_modal").css("display","none");
+            });
+        //百度云加速的原理
+        $("#btn_to_ppt").click(function(){
+            $("button.move_ppt").css("display","none");
+            $(".img_number").text("1");
+            $(".ppt-contact").addClass("hidden");
+            $("#prev").css("display","none");
+            $("#next").css("display","block");
+            $("#ppt_list").css("margin-left", "0px");
+            $("#ppt_modal").css("display","block");
+            })
+        });
+$(document).ready(function(){
+        var handLeft = $("#prev"),
+        handRight = $("#next"),
+        slideCon = $("#ppt_list"),
+        imgNum = $(".img_number");
+        for(var i=0;i<4;i++){
+        slideCon.append("<li></li>");
+        }
+        var itemLen = slideCon.find("li").length,
+        itemWidth =parseInt(slideCon.find("li").width()),
+        fn,flag=true;
+        slideCon.css("width",itemLen*itemWidth+"px");
+        if(itemLen ==0 ) return;
+        fn = {
+toLeft:function(){
+if(!flag) return;
+flag = false;
+var lFlag = parseInt(this.tag.css("marginLeft"));
+var currIndex = Math.abs(lFlag/itemWidth);
+if(currIndex === 0){
+flag = true;
+return;
+}
+$(".ppt-contact").addClass("hidden");
+$("#next").css("display","block");
+if(currIndex === 1){
+    $("#prev").css("display","none");
+}
+var __next = currIndex-1;
+var __newImg = "<img src='/static/images/ppt/guide"+__next.toString()+".png?v=5'/>";
+if(slideCon.find("li").eq(__next).find("img").length == 0){
+    slideCon.find("li").eq(__next).append(__newImg);
+}
+this.tag.stop(true);
+if(lFlag == 0 ){
+    this.tag.animate({"marginLeft":"-"+(itemLen-1)*itemWidth+"px"},function(){
+            flag = true;
+            imgNum.text(__next+1);
+            });
+    return;
+}
+this.tag.animate({"marginLeft":"+="+itemWidth+"px"},function(){
+        flag = true;
+        imgNum.text(__next+1);
+        });
+},
+toRight:function(){
+            if(!flag) return;
+            flag = false;
+            var rFlag = parseInt(this.tag.css("marginLeft"));
+            var currIndex = Math.abs(rFlag/itemWidth);
+            if(currIndex === itemLen-1){
+                flag = true;
+                return;
+            }
+            $(".ppt-contact").addClass("hidden");
+            if(currIndex === itemLen-2){
+                $("#next").css("display","none");
+                $("button").css("display","block");
+                $(".ppt-contact").removeClass("hidden");
+            }
+            $("#prev").css("display","block");
+            var __next = currIndex+1;
+            var __newImg = "<img src='/static/images/ppt/guide"+__next.toString()+".png?v=5'/>";
+            if(slideCon.find("li").eq(__next).find("img").length==0){
+                slideCon.find("li").eq(__next).append(__newImg);
+            }
+            this.tag.stop(true);
+            if(rFlag == -(itemLen-1)*itemWidth){
+                this.tag.animate({"marginLeft":"0"},function(){
+                        flag = true;
+                        imgNum.text(1);
+                        });
+                return;
+            }
+            this.tag.animate({"marginLeft":"-="+itemWidth+"px"},function(){
+                    flag = true;
+                    imgNum.text(__next+1);
+                    });
+        },
+tag:slideCon
+}
+handLeft.bind("click",function(){
+        fn.toLeft();
+        });
+handRight.bind("click",function(){
+        fn.toRight();
+        });
+});
+var option = {
+ keys: true,
+     dots: true,
+     delay: 5500
+     };
+var unslider = $('.banner').unslider(option);
+window.onresize =  _.throttle(function(){
+        $('.banner').find('.dots').remove();
+        $('.banner').css('width', '100%').unslider(option);
+}, 0);
+$("#marquee").marquee({
+    yScroll: 'bottom'
+});
+</script>
+
+
+<div id="foot" class="clearfix">
+    <style>
+        #foot .foot ul{
+        }
+        #foot .foot ul li {
+            display: inline-block;
+            width: 240px;
+        }
+        .contact_type{
+            background-image: url(http://static_fhl.baidu.com/static/images/server_bg.png);
+            width: 42px;
+            height: 34px;
+            float: left;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .span1 li{
+            height: 22px;
+        }
+        .contact_type a{
+            width: 100%;
+            height: 100%;
+        }
+        .weibo{
+            background-position: 149px 0px;
+        }
+        .qq{
+            background-position: 42px 0px;
+        }
+        .email{
+            background-position: 95px 0px;
+        }
+        #foot ul li strong {
+            font-size : 14px;
+        }
+    </style>
+	<div class="foot clearfix">
+		
+        
+        <div class="row">
+            <div class="span2">
+                <img src="http://static_fhl.baidu.com/static/images/baiduweixin.jpg"/>
+            </div>
+            <div class="span1">
+                <ul>
+                    <li><strong>关于</strong></li>
+                    <li><a target="_blank" href="/overview/">关于我们</a></li>
+                    <li><a target="_blank" href="/contact/">联系我们</a></li>
+                    <li><a target="_blank" href="http://tieba.baidu.com/f?ie=utf-8&kw=%E7%99%BE%E5%BA%A6%E4%BA%91%E5%8A%A0%E9%80%9F&fr=search">官方论坛</a></li>
+                </ul>
+            </div>
+            <div class="span1" style="margin-left:60px">
+                <ul>
+                    <li><strong>使用</strong></li>
+                    <li><a target="_blank" href="/terms/">服务条款  </a></li>
+                    <li><a target="_blank" href="/privacy/">隐私声明</a></li>
+                    <li><a target="_blank" href="/help/">产品帮助</a></li>
+                </ul>
+            </div>
+            <div class="span1" style="margin-left: 60px;">
+                <ul>
+                    <li><strong>友情链接</strong></li>
+                    <li><a href="http://tongji.baidu.com" target="_blank">百度统计 </a></li>
+                    <li><a href="http://zhanzhang.baidu.com/leakdetect/index" target="_blank">百度站长平台  </a></li>
+                    <li><a href="http://developer.baidu.com" target="_blank">百度开发者中心  </a></li>
+                </ul>
+            </div>
+            <div class="span1" style="margin-left: 60px;">
+                <ul>
+                    <li><strong>站长工具</strong></li>
+                    <li><a href="/icp/" target="_blank">网站备案 </a></li>
+                    <li><a href="http://ce.baidu.com" target="_blank">网站体检  </a></li>
+                </ul>
+            </div>
+            <div class="span3 pull-right">
+                <ul>
+                    <li style="text-align: right;">©2014 Baidu    All rights reserved</li>
+                    <li style="text-align: right;">京ICP证030173号</li>
+                    <!--
+                    <li>咨询电话：400-876-8800</li>
+                    <li>
+                    <div class="contact_type weibo"><a target="_blank" href="http://weibo.com/baiduyunjiasu"></a></div>
+                        <div class="contact_type email"><a href="mailto:yunjiasu@baidu.com"></a></div>
+                        <div class="contact_type qq"><a target="_blank" href="http://wpa.qq.com/msgrd?V=1&Uin=4008768800&Site=-&Menu=no"></div>
+                    </li>
+                    -->
+                    <li style="text-align: right;">
+
+                    <!--<a style="float:right; margin-left: 8px"  target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=6f4db4b4bd71482a98249a7a4f5097740c280ab4235c21510e5dfbc723b3de77"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="百度云加速官方1群" title="百度云加速官方1群"></a>-->
+                    <!--a style="float:right; margin-left: 8px"  target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=c6fe3ca4b7cf5df2d499a651634949ef6accffd805730c7fd03a00f2c323c1ef"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="百度云加速官方2群" title="百度云加速官方2群"></a>-->
+                        <!--script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODAyOTUyN18xNTUyNTlfNDAwODc2ODgwMF8"></script-->
+                        <a class="pull-right" style="margin-left:10px"><iframe allowtransparency="" border="0" frameborder="0" height="22" marginheight="0" marginwidth="0" scrolling="no" src="http://widget.weibo.com/relationship/followbutton.php?width=200&amp;height=22&amp;uid=5103621134&amp;style=5&amp;btn=red&amp;dpc=1" style="width: 64px; height: 22px;" width="200"></iframe></a>
+                        <a class="pull-right  mr-10" target="_blank" href="http://crm2.qq.com/page/portalpage/wpa.php?uin=4008768800&aty=0&a=0&curl=&ty=1"><img border="0" src="http://static_fhl.baidu.com/static/images/QQ.png" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+                    </li>
+                </ul>
+            </div>
+        <span class="copyright">
+            <p>
+				<!--Copyright © 百度云加速 All rights reserved.--!>
+            </span>
+		</div>
+		
+    </div>
+</div>
+
+
+
+<div style="display:none">
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F6c205c77a759024c1b6f1cf20b28f388' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</div>
+
+
+<script type="text/javascript">
+    if(location.href != top.location.href){
+        top.location.href = location.href;
+    }
+</script>
+</body>
+</html>

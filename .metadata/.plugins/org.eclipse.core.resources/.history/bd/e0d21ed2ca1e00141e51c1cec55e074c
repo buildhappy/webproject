@@ -1,0 +1,81 @@
+<!DOCTYPE web-app PUBLIC
+	 "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+	 "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>newsManagement3.0SpringAndMybatis</display-name>
+
+	<servlet>
+		<servlet-name>LoginCheck</servlet-name>
+		<display-name>LoginCheck</display-name>
+		<description></description>
+		<servlet-class>com.buildhappy.controller.LoginCheck</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>PictureCheckCode</servlet-name>
+		<display-name>PictureCheckCode</display-name>
+		<description></description>
+		<servlet-class>com.buildhappy.domain.PictureCheckCode</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SaveNews</servlet-name>
+		<display-name>SaveNews</display-name>
+		<description></description>
+		<servlet-class>com.buildhappy.controller.SaveNews</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Test</servlet-name>
+		<display-name>Test</display-name>
+		<description></description>
+		<servlet-class>com.buildhappy.controller.Test</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Index</servlet-name>
+		<display-name>Index</display-name>
+		<description></description>
+		<servlet-class>com.buildhappy.controller.Index</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteNews</servlet-name>
+		<display-name>DeleteNews</display-name>
+		<description></description>
+		<servlet-class>com.buildhappy.controller.DeleteNews</servlet-class>
+	</servlet>
+	
+	
+	<servlet-mapping>
+		<servlet-name>LoginCheck</servlet-name>
+		<url-pattern>/LoginCheck</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PictureCheckCode</servlet-name>
+		<url-pattern>/PictureCheckCode</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SaveNews</servlet-name>
+		<url-pattern>/SaveNews</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Test</servlet-name>
+		<url-pattern>/Test</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Index</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteNews</servlet-name>
+		<url-pattern>/DeleteNews</url-pattern>
+	</servlet-mapping>
+	
+	<!--配置默认的欢迎页面-->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<!-- 错误页面 -->
+	<error-page>
+		
+	</error-page>
+	
+</web-app>

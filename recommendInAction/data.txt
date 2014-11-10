@@ -1,0 +1,4 @@
+jack:a,b,d
+mary:a,c
+amy:b,e
+robert:c,d,e

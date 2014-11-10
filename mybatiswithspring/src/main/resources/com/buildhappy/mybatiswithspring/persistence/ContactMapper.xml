@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+		<!--namespace指向该sql mapper对应的接口-->
+<mapper namespace="com.buildhappy.mybatiswithspring.persistence.ContactMapper">  
+	<resultMap id="contactResultMap" type="Contact">
+		<id property="id" column="id"/>
+		<result property="firstName" column="first_name" />
+		<result property="lastName" column="last_name" />
+		<result property="birthDate" column="birth_date" />
+	</resultMap>
+	<!--basic CRUD-->
+    <select id="findAll" resultMap="contactResultMap">
+    	select id,first_name,last_name,birth_date from contact
+    </select>
+    <select id="findById" parameterType="int" resultMap="contactResultMap">
+    	select * from contact where id=#{id}
+    </select>
+    
+	<insert id="insertContact" parameterType="Contact">
+		insert into contact (first_name,last_name,birth_date) values(#{firstName},#{lastName},#{birthDate})
+	</insert>
+	
+	<delete id="deletByName" parameterType="String" >
+		delete from contact where last_name like #{lastName}
+		<!-- delete from contact where last_name like "smith" and first_name like "John" -->
+	</delete>
+	
+	<update id="updateById" parameterType="Contact">
+		update contact set first_name=#{firstName},last_name=#{lastName},birth_date=#{birthDate} where id=#{id}
+	</update>
+	
+	<!-- association select -->
+	<resultMap id="contactResultDetailMap" type="Contact">
+		<id property="id" column="id" />
+		<result property="firstName" column="first_name" />
+		<result property="lastName" column="last_name" />
+		<result property="birthDate" column="birth_date" />
+		<collection property="contactTelDetails"  ofType="ContactTelDetail" 
+					column="id" select="selectTelDetailsForContact">
+		</collection>
+	</resultMap>
+	<resultMap id="contactTelDetailMap" type="ContactTelDetail">
+		<id property="id" column="id" />
+		<result property="telType" column="tel_type" />
+		<result property="telNumber" column="tel_number" />
+	</resultMap>
+	
+	<select id="findAllWithDetail" resultMap="contactResultDetailMap">
+		select c.id,c.first_name,c.last_name,c.birth_date from contact c
+	</select>
+	<select id="selectTelDetailsForContact" parameterType="long" resultType="ContactTelDetail" resultMap="contactTelDetailMap">
+		select id,tel_type,tel_number from contact_tel_detail where contact_id=#{id}
+	</select>
+</mapper>

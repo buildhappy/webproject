@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean id="person" class="com.chapter2.setter.Person"></bean>
+	<bean id="personService" class="com.chapter2.setter.PersonServiceImp">
+		<property name="name" value="buildhappy"></property>
+		<property name="age" value="12"></property>
+		<!-- inject the object -->
+		<property name="person">
+			<ref bean="person"></ref>
+		</property>
+		
+		<!-- inner bean(inject the bean to PersonServiceImp) -->
+		<property name="personClass">
+			<bean class="com.chapter2.setter.Person"></bean>
+		</property>
+		
+		<!-- inject Array -->
+		<property name="objs">
+			<list>
+				<value>ArrObj01</value>
+				<value>ArrObj02</value>
+				<ref bean="person"/>
+			</list>
+		</property>
+		
+		<!-- inject list -->
+		<property name="lists">
+			<list>
+				<value>List01</value>
+				<value>List02</value>
+				<ref bean="person"/>
+			</list>
+		</property>
+		
+		<!-- inject set -->
+		<property name="sets">
+			<set>
+				<value>Set01</value>
+				<value>Set02</value>
+				<ref bean="person"/>
+			</set>
+		</property>
+		
+		<!-- inject map -->
+		<property name="map">
+			<map>
+				<entry key="key01">
+					<value>map01</value>
+				</entry>
+				<entry key="key02">
+					<ref bean="person"/>
+				</entry>
+			</map>
+		</property>
+	</bean>
+</beans>

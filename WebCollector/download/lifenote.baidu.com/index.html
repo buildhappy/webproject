@@ -1,0 +1,340 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta content="width=device-width,minimum-scale=1,maximum-scale=1" name="viewport">
+<meta name="keywords" content="百度，生活手记，生活记录，生活，手记，笔记，云笔记，云记事，记事，记事本，札记，记录，日记，心情，记忆，回忆，隐私，私密，语音，可爱，精美，印象笔记，有道云笔记，为知笔记，onenote，flava，记，点滴，时光，随手记，事件记录，记事本软件，手机记事本，记事软件，安卓记事本，android记事本，心情日记，胶囊日记，日记软件，轻松记录，畅所欲言，生活点滴" />
+<meta name="description" content="生活手记是一款通过时间轴和精美卡片来记录生活点滴与精彩瞬间的私密记事应用。百度出品，可以信赖生活记事平台，让美好的记忆不再散落天涯。" />
+<title>生活手记</title>
+<style type='text/css'>
+
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+p,h2{
+	margin:0;
+	padding:0;
+}
+ol, ul {
+    list-style: none outside none;
+	padding:0;
+	margin:0;
+}
+li {
+    display: list-item;
+}
+a{
+	text-decoration:none;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+body{
+	font-family:'Microsoft Yahei',Arial;
+	background-color:#ffffff;
+	font-size:13px;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+
+#banner img{
+	width:100%;
+    display:inline-block;
+}
+#download{
+	text-align:center;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+#download img{
+	display:inline-block;
+    width:50%;
+}
+
+div.dotted{
+  width:95%;
+  height:2px;
+  margin:0 auto;	
+  border-top:1px dotted #e1e1e1;	
+}
+
+p#slogan{
+  padding:15px 10px;	
+  font-size:16px;
+  color:#5b5e60;
+}
+div#feature{
+  padding:0 10px;	
+}
+
+
+p.title{
+	font-size:20px;
+	color:#ee4939;
+	height:30px;
+	line-height:30px;
+	overflow:hidden;
+	position:relative;
+	padding-left:20px;
+}
+p.title span{
+	position:absolute;
+	font-size:40px;
+	left:0px;
+	display:inline-block;
+	top:-13px;
+}
+#footer{
+ padding:0 10px;
+ margin-bottom:30px;
+}
+
+#footer .site{
+ padding-left:20px;
+ font-size:16px;
+ line-height:30px;	
+}
+#footer .more{
+ font-size:16px;
+ padding-left:20px;
+ line-height:30px;	
+}
+#footer .partner img{
+	width:30px;
+    float:left;
+}
+#footer .partner .tieba img{
+	margin-left:5px;
+}
+#footer .partner .weixin img{
+	margin-left:7px;
+}
+#footer .partner span{
+	float:left;
+}
+div.feature{
+	margin:10px 0;
+	width:100%;
+}
+div.feature .left{
+	width:25%;
+	min-height:40px;
+}
+div.feature .right{
+	width:75%;
+}
+div.feature .pic img{
+	width:100%;
+}
+
+div.feature p{
+	text-align:left;
+	padding-left:15px;
+	
+}
+div.feature p.content{
+	color:#333333;
+	font-size:18px;
+	line-height:34px;
+}
+div.feature p.desc{
+	color:#c4c4c4;
+	font-size:16px;
+	line-height:18px;
+}
+
+/*---------dialog*/
+.dialog_cover{
+	position:fixed; width:100%; bottom:0; top:0; background-color:rgba(0,0,0,0.3); z-index:999999; font-family: 微软雅黑, sans-serif; font-size:14px;
+	-webkit-tap-highlight-color:rgba(0,0,0,0); 
+	display: none;
+	z-index: 99999999;
+}
+.dialog_wrap{
+	display:block; width:17em; margin:0 auto; background-color:#e6e6e6; border-radius:6px; overflow:hidden;color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -10em;
+	margin-top: -80px;
+	padding: 1.5em;
+}
+.dialog_title{
+	text-align:center; padding:8px;font-size: 1.25em;line-height: 2;
+	color: #151515;
+}
+.dia_close{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAuCAYAAAC4e0AJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABKpJREFUeNrMmV1IXEcUx092bW1goVJRfCr4WS2VBlLSl9KWSAMioi1+VtSIRiysWCotgYRAYXUR9TUh0IfS0tBAaaFUjK4VK341GiKUBEJKpZKCGPClgWIw2vPfnLm5XvZj7r0T9cCf3bu7M/M7c8+ce2b2WEVFBRmwk6zTrHLW66Ljtu//Y90V/cGKsVb9Dprho+1rrE5WKysvzW+Pi4MnbZ9tsL4W3fMCEPDQBqBfse6wPtcAT9XPeennspd+3MCHWBHWXzLjQTJj6OcT1n3Wl45wMwL/KmuBdcFN5y4Nk3OJ9buMZwT+PdZtWYwHYeXiwDt+4c+yJlmv0MEa4v9XVqNXeKS+q6wX6XAM436T6g4kgy9ifX+I4HYHfky2BhLBvywNcuhoGDh+SZQoEsFfOMDF6WYRR9LB4/b00dE0cJ1IBR89AnGe6mF2KRl8ebrUpKyrq4umpqYoHA77omlvb6fJyUnq69O+2R/aQ9oOH9Z95NfU1MRfa2trqb+/3xN4T08Ptba2UiAQoOrqasrMzNRt2u2ER6jU6bYeGxuz3ldWVrp2AOB1dc+GGx8fp+3tbd3mH6tJDhYUFOD1A9Y53dYrKyuUnZ1NJSUl8evi4mLKycmhxcXF9NPW3U319fXW9fT0NI2MjNDe3p7u8EiZN1gPFDzKgHfdzN7S0pJrBwDe0NBgXc/MzFA0GqXd3V23Ufcna07Bo64udNtDIgdwjc91wAcHB72Aw/5lXVfwEXmykhcHMOMAh8ERpwPITo2NjabAYYixywp+xOOuKm4IlWQOALypqckkuIr7aIZsAnzvikZHR63sA6uqqqLS0lIqLHwWjbOzsybA1cYlGDC5M4IDSHvKnOCRSMQEuOVAQI4lyKQDa2tr+z7b2NgwDQ57BPhHJnvs6Oig/Pz8/duivDzq7e01OQwm/IlapOumwFtaWqzrzc1N6z1KAL+1kM3W7eXBXb+9ociygyPG29raaGJiwvoMtZAhB+7Zy4M3dHbrqcBRZDmzys7OTjxd5ubmUlFRUfw7ZKBQKETLy8t+4K8j6yr4l6Tg8Q0+NzdHAwMDcfD404RrFqcDZWVlfh24iNBR8A9Yn7Fe8AuOrKLArcehWQe26Okx446Cx2g4OH1TtwdAI6bTgTsdQOZR+d+jA9fkgMCKeeXRWZ3WKLA6Ozu1we0OoJRwOhAMBml1VfvEOyyRsq+e+Q0cOq2bm5ut9wsLC1rgyvCgGh4eplgstq8/7Kg0DHxWzW2fedjfCOV0PaDowowhDQ4NDWmDO+9AVlZWvJiDI/Pz8zpNW+zPpGMJ/hn5TifzYKZMPO5d9HNN4FMeOmFD+o/O7Tdhmv3gX5RPdU7M8MMa0wWbD3vCwobgoQ487BZKlSMC3yvJhHTh1SP44iGDf8G6knS9pGk8wGo7hBDCeDgfGU652DU6+pb1vqyFg7B1Ge+HtJlKs8ObrLdZPz9n8J9knJtaadbljCALVcqCNmm3pN+P3NxhL8cdOGp7i3VGZuqxR+DHEhpnpL8bbjvw8/d9TIR/Ck+LTkl1Gkq0YZYdEGqTaUl/W35uV4aBW74lM+hcYPniGL5fex4L5H8BBgD5mJ9K7wXe4QAAAABJRU5ErkJggg==) center no-repeat;
+	background-size: 20px 20px;
+	right: 0px;
+	top: 0px;
+}
+.dialog_body{
+	/* padding:20px; */
+	color: #8d8d8d;
+	width: 100%;
+}.dialog_body table{
+	width: 100%;
+	font-size: 13px;
+}.dialog_body table td{
+	padding:5px 0;
+}.dialog_body.iPhone_weixin tr.android{
+	display: none;
+}
+.dialog_body.Android_weixin tr.iphone{
+	display: none;
+}
+.dialog_body.undefined tr.iphone{
+	display: none;
+}
+.dialog_body  img{	
+	vertical-align: middle;
+}.dia-img{
+	height: 70px;
+	width: 70px;
+}.dia-img-li{
+	width: 24px;
+	height: 24px;
+}
+.dialog_body .icon{
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	-webkit-radius: 30px;
+	border-radius: 30px;
+	background-color: #3285f5;
+	color:#fff;
+	border:solid 2px #fff;
+	line-height: 20px;
+	text-align: center;
+}
+.dialog_split{
+	border-top: 1px solid #dadada;
+	border-bottom: 1px solid #f2f2f2;
+	margin-bottom: 10px;
+}
+
+.dialog_foot{
+	border-top-color: #e4e9ee;padding-bottom:10px; text-align:center;
+	}
+	
+.dialog_foot button{
+		width: 109px;
+		margin:0 5px;
+		height: 30px;
+		color: #fff;
+		border-radius: 2px;
+		font-size: 16px;
+		line-height: 30px;
+		border:none;
+		background-color: #5d5d5d;
+	}
+/* .dialog_foot button:first-child{
+		background-color: #919191;
+	}.dialog_foot button:nth-child(2){
+		background-color: #5d5d5d;
+	} */
+
+
+</style>
+<script>
+        var _hmt = _hmt || [];
+</script>
+</head>
+<body>
+ <div id="banner">
+   <img src="static/wapimages/banner_1_1.jpg" alt="生活手记" title="生活手记">
+ </div>
+ <div id="download">
+   <a class="btn" href="/d.php?channel=1006726c"><img src="static/wapimages/button.jpg"></a>
+ </div>
+ <div class="dotted"></div>
+ <p id="slogan">生活手记是一款通过时间轴和精美卡片来记录生活点滴与精彩瞬间的私密记事应用。</p>
+ <div class="dotted"></div>
+ 
+ <div id="feature">
+   <p class="title"><span class="dian">.</span>特色功能</p>
+    <div class="feature">
+      <div class="fl left pic">
+       <img src="static/wapimages/feature1.jpg">
+      </div>
+      <div class="fl right">
+       <p class="content">快捷语音记录</p>
+       <p class="desc">用语音轻松记录生活的每一个瞬间，分秒不错过~</p>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <div class="feature">
+      <div class="fl left pic">
+       <img src="static/wapimages/feature2.jpg">
+      </div>
+      <div class="fl right">
+       <p class="content">智能萌动贴纸</p>
+       <p class="desc">智能语意识别，自动添加萌爆可爱贴纸~</p>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <div class="feature">
+      <div class="fl left pic">
+       <img src="static/wapimages/feature3.jpg">
+      </div>
+      <div class="fl right">
+       <p class="content">炫彩记事卡片</p>
+       <p class="desc">绚丽丰富的详情页卡片，让你的记忆缤纷多彩~</p>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <div class="feature">
+      <div class="fl left pic">
+       <img src="static/wapimages/feature4.jpg">
+      </div>
+      <div class="fl right">
+       <p class="content">2T超大容量云存储</p>
+       <p class="desc">突破想象极限的超大云存储空间，让记录从此无拘无束</p>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+ </div>
+  <div class="dotted"></div>
+  <div id="footer">
+    <div class="partner">
+     <span class="more">关注更多：</span>
+      <a href="http://weibo.com/5060958971" class="weibo" target="_blank"><img src="static/wapimages/weibo.png"></a>
+      <a href="http://tieba.baidu.com/f?ie=utf-8&kw=%E7%94%9F%E6%B4%BB%E6%89%8B%E8%AE%B0" class="tieba" target="_blank"><img src="static/wapimages/tieba.png"></a>
+      <!-- <a href="javascript:void(0);" class="weixin"><img src="static/wapimages/weixin.png"></a> -->
+      <div class="clear"></div>
+   </div>
+   
+  </div>
+
+  
+  
+  
+  
+  
+             
+<div class="blank" style="display:none;"><img src="http://hd.mi.baidu.com/lifenote/count.png?type=wap&channel=1006726c&tt=1407827680&from=self"/></div>
+<div style="display:none;">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4aa246e74c385811d215bc7d175f851b' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</div>
+</body>	

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <display-name>Archetype Created Web Application</display-name>
+  <!--  
+  <filter>
+  	<filter-name>FilterDemo1</filter-name>
+  	<filter-class>cn.web.filter.FilterDemo1</filter-class>
+  	<init-param>
+  		<param-name>xxx</param-name>
+  		<param-value>yyyy</param-value>
+  	</init-param>
+  </filter>
+  
+   <filter>
+  	<filter-name>FilterDemo2</filter-name>
+  	<filter-class>cn.web.filter.FilterDemo2</filter-class>
+  </filter>
+  
+  
+  <filter-mapping>
+  	<filter-name>FilterDemo1</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+     <filter-mapping>
+  	<filter-name>FilterDemo2</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+
+ <filter>
+  	<filter-name>CharacterEncodingFilter</filter-name>
+  	<filter-class>cn.web.filter.example.CharacterEncodingFilter</filter-class>
+  	<init-param>
+  		<param-name>charset</param-name>
+  		<param-value>UTF-8</param-value>
+  	</init-param>
+  </filter>
+  
+  
+  <filter-mapping>
+  	<filter-name>CharacterEncodingFilter</filter-name>
+  	<url-pattern>/index.jsp</url-pattern>
+  	<dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
+  
+  <filter>
+  	<filter-name>NoCacheFilter</filter-name>
+  	<filter-class>cn.web.filter.example.NoCacheFilter</filter-class>
+  </filter>
+  
+  
+  <filter-mapping>
+  	<filter-name>NoCacheFilter</filter-name>
+  	<url-pattern>*.jsp</url-pattern>
+  	<dispatcher>FORWARD</dispatcher>
+  	<dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
+  
+   <filter>
+  	<filter-name>CacheFilter</filter-name>
+  	<filter-class>cn.web.filter.example.CacheFilter</filter-class>
+  	<init-param>
+  		<param-name>css</param-name>
+  		<param-value>10</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>jpg</param-name>
+  		<param-value>1</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>js</param-name>
+  		<param-value>20</param-value>
+  	</init-param>
+  </filter>
+  
+  
+  <filter-mapping>
+  	<filter-name>CacheFilter</filter-name>
+  	<url-pattern>*.jpg</url-pattern>
+  </filter-mapping>
+  
+    <filter-mapping>
+  	<filter-name>CacheFilter</filter-name>
+  	<url-pattern>*.css</url-pattern>
+  </filter-mapping>
+  
+   <filter-mapping>
+  	<filter-name>CacheFilter</filter-name>
+  	<url-pattern>*.js</url-pattern>
+  </filter-mapping>
+  
+  
+  
+  <filter>
+  	<filter-name>AutoLoginFilter</filter-name>
+  	<filter-class>cn.web.filter.example.AutoLoginFilter</filter-class>
+  </filter>
+  
+  
+  <filter-mapping>
+  	<filter-name>AutoLoginFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+    -->
+  <filter>
+  	<filter-name>CharacterEncodingFilter2</filter-name>
+  	<filter-class>cn.web.filter.example.CharacterEncodingFilter2</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>CharacterEncodingFilter2</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+  	<filter-name>GzipFilter</filter-name>
+  	<filter-class>cn.web.filter.example.GzipFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>GzipFilter</filter-name>
+  	<url-pattern>*.jsp</url-pattern>
+  	<dispatcher>FORWARD</dispatcher>
+  	<dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
+  
+  
+  <filter-mapping>
+  	<filter-name>GzipFilter</filter-name>
+  	<url-pattern>*.html</url-pattern>
+  </filter-mapping>
+  
+  
+  <filter-mapping>
+  	<filter-name>GzipFilter</filter-name>
+  	<url-pattern>*.js</url-pattern>
+  </filter-mapping>
+  
+  
+  <filter>
+  	<filter-name>WebCacheFilter</filter-name>
+  	<filter-class>cn.web.filter.example.WebCacheFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>WebCacheFilter</filter-name>
+  	<url-pattern>/servlet/ServletDemo4</url-pattern>
+  </filter-mapping>
+  
+  <!--  
+  <filter>
+  	<filter-name>HtmlFilter</filter-name>
+  	<filter-class>cn.web.filter.example.HtmlFilter</filter-class>
+  </filter>
+  
+  
+  <filter-mapping>
+  	<filter-name>HtmlFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  -->
+  <servlet>
+    <servlet-name>ServletDemo1</servlet-name>
+    <servlet-class>cn.web.servlet.ServletDemo1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>cn.web.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletDemo2</servlet-name>
+    <servlet-class>cn.web.servlet.ServletDemo2</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletDemo3</servlet-name>
+    <servlet-class>cn.web.servlet.ServletDemo3</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletDemo4</servlet-name>
+    <servlet-class>cn.web.servlet.ServletDemo4</servlet-class>
+  </servlet>
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>ServletDemo1</servlet-name>
+    <url-pattern>/servlet/ServletDemo1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/servlet/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletDemo2</servlet-name>
+    <url-pattern>/servlet/ServletDemo2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletDemo3</servlet-name>
+    <url-pattern>/servlet/ServletDemo3</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletDemo4</servlet-name>
+    <url-pattern>/servlet/ServletDemo4</url-pattern>
+  </servlet-mapping>
+ 
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

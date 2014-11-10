@@ -1,0 +1,846 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>百度校园 | 看见你的光芒</title>
+<meta name="keywords" content="百度校园,百度校园品牌,校园社区,校园网,校园网站,校园威客,校园站长,站长社区,免费虚拟主机,免费vps，校园实训,百度课程,百度技术,校园活动,百度招聘,校园招聘,百度校园招聘,校园俱乐部,百度粉丝团" />
+<meta name="description" content="百度校园是全球最大的中文搜索引擎公司——百度推出的校园门户网站。加入百度校园你可以：和同学们一起加入有趣的校园活动；深入体验最新最炫的百度技术；获取免费的技术指导和实训任务；更有免费的虚拟主机和vps等你来体验。" />
+<meta name="dzweditor" content="百度校园" />
+<meta name="source" content="百度校园" />
+<base href="http://campus.baidu.com/" />
+<script type="text/javaScript" src="/js/jquery-1.4.2.min.js"></script>
+<script type="text/javaScript" src="/images/js/common.js"></script>
+<script type="text/javaScript" src="/images/js/admin.js"></script>
+<script type="text/javascript" src="/images/js/validator.js"></script>
+<script type="text/javascript" src="/images/js/form.js"></script>
+<script type="text/javascript" src="/js/layer/layer.js"></script>
+<script type="text/javascript" src="/js/sign.js"></script>
+<script type="text/javascript" src="/js/global.js"></script>
+<link rel="stylesheet" type="text/css" href="css/import.css">
+<link href="favicon.ico" rel="shortcut icon" />
+        <script type="text/javascript">
+            function setTab(name, cursel, n) {
+                for (i = 1; i <= n; i++) {
+                    var menu = document.getElementById(name + i);
+                    var con = document.getElementById("con_" + name + "_" + i);
+                    menu.className = i == cursel ? "hover": "";
+                    con.style.display = i == cursel ? "block": "none";
+                }
+            }
+            window.setTab=setTab;
+            $(document).ready(function() {
+                $('#joinBaiduButton').bind('mouseenter mouseleave', function() {                	
+                    $('#joinBaiduContainerb').toggle()
+                }) ;
+                $('#joinBaiduContainerb').bind('mouseenter mouseleave',function() {
+                    $('#joinBaiduContainerb').toggle()
+                })
+            })
+        </script>
+</head>
+
+<body class="s_index">
+
+
+<!--
+<div class="w1003 top">
+<div class="logo"><a href="/"><img src="images/logo.jpg" /></a></div>
+<div class="mod">
+<div id="joinBaiduContainer"><a href="http://shixisheng.baidu.com" target="_blank">实习生</a>&nbsp;&nbsp;<a href="http://tongxue.baidu.com" target="_blank">校招</a>&nbsp;&nbsp;<a href="http://hr.baidu.com" target="_blank">社招</a></div>
+<span class="sp1"><a href="http://e.weibo.com/baiduxiaoyuan" target="_blank">校园微博</a></span>
+<span class="sp2"><a href="http://tongxue.baidu.com" id="joinBaiduButton" target="_blank">加入百度</a></span>
+<span class="sp3"><a href="user/login">登录</a>
+</span>
+    	</div>
+<div class="clear"></div>
+<div id="tips_head_total_div">
+</div>
+</div>
+
+<div class="nav">
+<ul>
+        <li><a class="current" href="/">校园首页</a></li>
+        <li><a  href="/news">新闻中心</a></li>
+        <li><a href="http://cbbs.baidu.com" target="_blank">校园社区</a></li>
+        <li><a  href="/experience">技术体验</a></li>
+        <li><a  href="/course">校园课程</a></li>
+        <li><a href="http://cbbs.baidu.com" target="_blank">产品论坛</a></li>
+        <li><a href="http://talent.baidu.com/baidu/web/index/CompbaiduPageschool_idx" target="_blank">校园招聘</a></li>
+        <li class="last"><a  href="/pages/about">关于我们</a></li>
+</ul>
+<div class="clear"></div>
+</div>
+-->
+
+<!-- 新 header-->
+<div class="header">
+        <div class="w1003 s_top">
+            <a href="/">
+                <img src="images/sin1_05.png" class="logo">
+            </a>
+            <div class="topnav">
+                <div id="joinBaiduContainerb">
+                    <a href="http://shixisheng.baidu.com" target="_blank">
+                        实习生
+                    </a>
+                    &nbsp;&nbsp;
+                    <a href="http://tongxue.baidu.com" target="_blank">
+                        校招
+                    </a>
+                    &nbsp;&nbsp;
+                    <a href="http://hr.baidu.com" target="_blank">
+                        社招
+                    </a>
+                </div>
+                <span class="sp1">
+                    <a href="http://e.weibo.com/baiduxiaoyuan" target="_blank">
+                        校园微博
+                    </a>
+                </span>
+                <span class="sp2">
+                    <a href="http://tongxue.baidu.com" id="joinBaiduButton" target="_blank">
+                        加入百度
+                    </a>
+                </span>
+                <span class="sp3">
+                    <a href="user/login">
+                        登录
+                    </a>
+                </span>
+            </div>
+            <ul class="ulnav">
+        <li><a class="current" href="/">校园首页</a></li>
+        <li><a  href="/news">新闻中心</a></li>
+        <li><a  href="/community">校园社区</a></li>
+        <li><a  href="/experience">技术体验</a></li>
+        <li><a  href="/course">校园课程</a></li>
+        <li><a href="http://cbbs.baidu.com" target="_blank">产品论坛</a></li>
+        <li><a href="http://talent.baidu.com/baidu/web/index/CompbaiduPageschool_idx" target="_blank">校园招聘</a></li>
+        <li class="last"><a  href="/pages/about">关于我们</a></li>
+            </ul>
+        </div>
+</div>
+<!--end header--><div class="w1003 main">
+<div class="boxa" style="margin-top:10px;">
+<link rel="stylesheet" type="text/css" href="css/sliderman.css" />
+
+<script type="text/javascript" src="js/picShow.js"></script>
+<script type="text/javascript" src="https://passport.baidu.com/v2/api/?getapi&class=login&tpl=ca&tangram=true"></script>
+
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<div class="w733 fl" style="height:337px;">
+        <div class="highlight_tip">
+        	<ul class="tab clear">
+                        		<li class="tab1 navigation"><a href="http://rw.baidu.com/forum.php?mod=viewthread&tid=85007&extra=page%3D1" target="_blank"><img src="/_upload/file/up_53b3db1066e40.jpg" width="99" height="48" /></a>
+                        		<li class="tab2 navigation"><a href="http://rw.baidu.com/plugin.php?id=sinreworldcup:show" target="_blank"><img src="/_upload/file/up_53b397a73fa44.jpg" width="99" height="48" /></a>
+                        		<li class="tab3 navigation"><a href="http://lvyou.baidu.com/campus/?fr=xiaoyuan" target="_blank"><img src="/_upload/file/up_53b396ef5f28c.jpg" width="99" height="48" /></a>
+                        		<li class="tab4 navigation"><a href="http://www.baidu.com/s?wd=百度卫士&rsv_spt=1&issp=1&rsv_bp=0&ie=utf-8&tn=baiduhome_pg" target="_blank"><img src="/_upload/file/up_53b637705e3fb.jpg" width="99" height="48" /></a>
+                        		<li class="tab5 navigation"><a href="http://rw.baidu.com/forum.php?mod=forumdisplay&fid=105" target="_blank"><img src="/_upload/file/up_532a6301792f6.jpg" width="99" height="48" /></a>
+                        		<li class="tab6 navigation"><a href="http://baike.baidu.com/city" target="_blank"><img src="/_upload/file/up_52de19c8c7646.jpg" width="99" height="48" /></a>
+                        		<li class="tab7 navigation"><a href="http://ctech.baidu.com" target="_blank"><img src="/_upload/file/up_514fc23184f3d.jpg" width="99" height="48" /></a>
+                
+        	</ul>
+        </div>
+    	<div class="v_content_list">
+        	<ul class="clear">
+            	                <li><a href="http://rw.baidu.com/forum.php?mod=viewthread&tid=85007&extra=page%3D1" target="_blank"><img src="/_upload/file/up_53b3db1066e40.jpg" width="733" height="337" /></a></li>
+                                <li><a href="http://rw.baidu.com/plugin.php?id=sinreworldcup:show" target="_blank"><img src="/_upload/file/up_53b397a73fa44.jpg" width="733" height="337" /></a></li>
+                                <li><a href="http://lvyou.baidu.com/campus/?fr=xiaoyuan" target="_blank"><img src="/_upload/file/up_53b396ef5f28c.jpg" width="733" height="337" /></a></li>
+                                <li><a href="http://www.baidu.com/s?wd=百度卫士&rsv_spt=1&issp=1&rsv_bp=0&ie=utf-8&tn=baiduhome_pg" target="_blank"><img src="/_upload/file/up_53b637705e3fb.jpg" width="733" height="337" /></a></li>
+                                <li><a href="http://rw.baidu.com/forum.php?mod=forumdisplay&fid=105" target="_blank"><img src="/_upload/file/up_532a6301792f6.jpg" width="733" height="337" /></a></li>
+                                <li><a href="http://baike.baidu.com/city" target="_blank"><img src="/_upload/file/up_52de19c8c7646.jpg" width="733" height="337" /></a></li>
+                                <li><a href="http://ctech.baidu.com" target="_blank"><img src="/_upload/file/up_514fc23184f3d.jpg" width="733" height="337" /></a></li>
+                
+            </ul>
+        </div>
+</div>
+                	        	
+        	
+                <div class="w256 fr s_bor1 s_w256">
+                    <div class="boxa2 login-index">
+                <ul>
+                    <li id="login1" onclick="setTab('login',1,2)" class="hover">百度账号</li>
+                    <li id="login2" onclick="setTab('login',2,2)" class="">校园账号</li>
+<span><a href="https://passport.baidu.com/v2/?reg&regType=1&tpl=ca&u=http://campus.baidu.com/user/updateInfo">注册</a></span>
+                </ul>
+                
+            
+            <div class="con-box">
+                <div id="con_login_1" class="con-login-1">
+                	<div id="outerDom" class="outer-dom">
+                    </div>
+                </div>
+                
+                <div id="con_login_2" style="display:none;">
+                	<form action="/user/login_done" name="myform" method="post" id="one">
+                        <div class="boxa2a">
+                            <dl>
+                                <dt>用户名</dt>
+                                <dd><input type="text" class="tx01" name="infos[userName]" require="true" datatype="require" msg=" "></dd>
+                                <div class="clear"></div>
+                            </dl>
+                            <dl>
+                                <dt>密&nbsp;&nbsp;码</dt>
+                                <dd><input type="password" class="tx01" name="infos[password]" require="true" datatype="require" msg=" "></dd>
+                                <div class="clear"></div>
+                            </dl>
+                            <dl>
+                                <dt>验证码</dt>
+                                	<dd><input type="text" name="Checknum" class="tx22"  require="true" datatype="require|ajax" msg="验证码不为空" url="/user/Check_code" msgid="msgid6" class="tx14" /> <img src="/yz.php" onclick="this.src='/yz.php?'+Math.random()" style="cursor:pointer" /> <span id=msgid6 style="color:red"></span></dd>
+                                <div class="clear"></div>
+                            </dl>
+                            <dl>
+                                <dt>&nbsp;</dt>
+                                <dd><input type="submit" class="bts01" value=""> <a href="/user/findpwd">忘记密码？</a></dd>
+                                <div class="clear"></div>
+                            </dl>
+                       
+
+                        </div>
+        			</form>
+        			                    
+                </div>
+                    <p class="other-box">其他账号登录：<a href="/api/Sina"><img src="images/icon05.jpg"></a> <a href="/api/QQ"><img src="images/icon06.jpg"></a> <a href="/api/RenRen"><img src="images/icon08.jpg"></a></p>
+                    <p class="sign-box"><a href="https://passport.baidu.com/v2/?reg&regType=1&tpl=ca&u=http://campus.baidu.com/user/updateInfo"><img class="showOnPic" src="images/icon04.jpg" off="images/icon04.jpg" on="images/icon04_on.jpg" /></a></p>
+            </div>
+        </div>	
+
+</div>
+        <div class="clear"></div>
+</div>
+
+<div class="boxa">
+<div class="w733 fl">
+<div class="boxa1 s_boxa1 s_bor1">
+<h2 class="t2"><strong>校园新闻</strong><span><a href="news" target="_blank">更多>></a></span></h2>
+<div class="boxa1b">
+<!--
+<div class="boxa1b_1">
+  <dl>
+<dt><a href="/news/detail/816"><img src="/_upload/file/up_5375aa0adf09d.jpg" /></a></dt>
+<dd>
+<h3><a href="/news/detail/816">给力干货GET√！快来聆听百度推荐背后的秘密</a></h3>
+<p>世界上第一台计算机诞生于哪一年？它是由多少个电子管、电阻器、电容器组成？体积...<a href="/news/detail/816">[详细]</a></p>
+</dd>
+</dl>
+</div>
+-->
+
+<div class="boxa1b_1">
+<!--校园新闻左侧修改--->
+<a href="/news/detail/816" target="_blank">
+<img src="/_upload/file/up_5375aa0adf09d.jpg">
+<span>给力干货GET√！快来聆听百度推荐背后的秘密</span>
+</a>
+<!--校园新闻左侧修改-->
+</div>
+
+
+
+<div class="boxa1b_2">
+<!--校园列表修改-->
+<div class="con_one">
+<a href="/news/detail/816" target="_blank">给力干货GET√！快来聆听百度推荐背后的秘密</a>
+<p>世界上第一台计算机诞生于哪一年？它是由多少个电子管、电阻器、电容器组成？体积多大？计算效率又如何？魔兽哪里求靠谱攻略？世界杯分组情...</p>
+</div>
+<ul class="u1">
+                            <li><a href="news/detail/893" target="_blank">天灾无情“网”有情——赈灾背后的百度校招生</a><small>2014-08-12</small></li>
+                            <li><a href="news/detail/892" target="_blank">连接“人与物”的工作 ——百度视觉设计师</a><small>2014-08-11</small></li>
+                            <li><a href="news/detail/891" target="_blank">俞鼎力：有5件百度之星T恤的百度之星</a><small>2014-08-08</small></li>
+                            <li><a href="news/detail/890" target="_blank">知识图谱竞赛截止在即 各大高手决胜排行榜</a><small>2014-08-08</small></li>
+                            <li><a href="news/detail/889" target="_blank">百度实习生徐新超：有理想的吃货</a><small>2014-08-08</small></li>
+                            <li><a href="news/detail/888" target="_blank">2014百度之星总冠军:今年的百度之星不输ACM</a><small>2014-08-07</small></li>
+                            <li><a href="news/detail/887" target="_blank">第十届百度之星落下帷幕 中山大学蒙澎权夺冠</a><small>2014-08-06</small></li>
+                            <li><a href="news/detail/886" target="_blank">百度创新孵化中心商务经理——能拓展、善沟通</a><small>2014-08-05</small></li>
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+<div class="w256 fr s_bor1 s_boxcc">
+<div class="boxa2">
+<h2 class="t1"><strong class="s2" style="background:none;">活动直播</strong><span><a href="activity" target="_blank">更多>></a></span></h2>
+<div class="boxa2b">
+<div class="box1">
+<div style="position:relative;left:0;top:0;width:220px; height:120px;overflow:hidden">
+<div id="activityImgCon" style="width:880px;height:120px;position:relative">
+                                <a href="http://campus.baidu.com/news/detail/232" /><img src="/_upload/file/up_50d2c33b11e81.jpg" style="width:220px; height:120px;"/></a><a href="http://campus.baidu.com/news/detail/221" /><img src="/_upload/file/up_50d2c361e5dbb.jpg" style="width:220px; height:120px;"/></a><a href="javascript:void(0)" /><img src="/images/Snap3.jpg" style="width:220px; height:120px;"/></a><a href="javascript:void(0)" /><img src="/images/Snap2.jpg" style="width:220px; height:120px;"/></a>                            </div>
+<div id="activityImgButton" style="position:absolute;bottom:2px; right:5px;">
+<div style="cursor:pointer;text-align:center;color:#fff;margin-left: 3px;float:left;width:16px; height:16px; line-height:16px;overflow:hidden;background-image:url(/images/imgButton.png);background-position:left center;">1</div>
+<div style="cursor:pointer;text-align:center;color:#fff;margin-left: 3px;float:left;width:16px; height:16px; line-height:16px;overflow:hidden;background-image:url(/images/imgButton.png);background-position:right center;">2</div>
+<div style="cursor:pointer;text-align:center;color:#fff;margin-left: 3px;float:left;width:16px; height:16px; line-height:16px;overflow:hidden;background-image:url(/images/imgButton.png);background-position:right center;">3</div>
+<div style="cursor:pointer;text-align:center;color:#fff;margin-left: 3px;float:left;width:16px; height:16px; line-height:16px;overflow:hidden;background-image:url(/images/imgButton.png);background-position:right center;">4</div>
+</div>
+</div>
+<script>
+$(document).ready(function(){
+var index=0;
+var width=220;
+var total=4;
+var activityImgCon=$("#activityImgCon");
+var activityImgButton=$("#activityImgButton>div");
+var speed=5000;
+play=function(){
+activityImgCon.animate({
+left:-width*index
+},function(){
+activityImgButton.css("backgroundPosition","16px")
+activityImgButton.eq(index).css("backgroundPosition","0")
+index=++index>=total?0:index;
+})
+}
+activityImgButton.click(function(){
+index=activityImgButton.index(this);
+play();
+})
+var time=setInterval(play,speed);
+})
+</script>
+</div>
+<div class="box2">
+<ul class="u2">
+
+
+<li><a href="/article/ndetail/news/524" target="_blank">新的开始和起航——粉丝团之家专访...</a></li>
+<li><a href="/article/ndetail/news/525" target="_blank">百度校园粉丝团西南区元旦活动成功...</a></li>
+<li><a href="/article/ndetail/news/526" target="_blank">百度校园粉丝团华东区首次线下活动...</a></li>
+<li><a href="/article/ndetail/news/527" target="_blank">用声音凝聚你我 百度校园粉丝团线...</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+</div>	
+
+
+
+
+
+    <div class="boxa s_boxab s_bor1"><!--添加样式-->
+
+
+
+<div class="index_a_hdp">
+<div class="boxa1">
+
+
+<div id="Tab21" class="vbox21">
+<div class="t2" style="border:0px;">
+<strong>校园社区</strong>
+<ul>   
+   <li><a href="http://astar.baidu.com/" target="_blank">百度之星社区</a></li>
+   <li><a href="http://openresearch.baidu.com/" target="_blank">开放研究社区</a></li>
+   <li><a href="http://cbbs.baidu.com/" target="_blank">百度产品论坛</a></li>
+</ul>
+<div style="right:0;"></div>
+</div>
+<div class="Contentbox">
+<div class="index_a_content">
+<div class="index_a_pic">
+<ul class="scroll_index" style="margin-left: -200%;">
+<!-- 
+<p class="index_a_text0">搜索大赛社区为爱好搜索的人提供了参赛平台，组织比赛的平台，<br />同时，也汇集了一群热爱搜索的人，为大家提供了沟通交流的圈子，<br />在搜索大赛社区，你将获得不一样的收获。</p>
+-->
+</li>							
+<li><a href="http://astar.baidu.com"  target="_blank"><img src="./images/index_a_pic3.jpg" /></a>
+<!-- 
+<p class="index_a_text1">百度之星技术社区为参赛选手提供了“百度之星-云IDE”。<br />参赛选手可以选择使用本地开发工具或使用“云IDE”进行在线代码编写、调试。</p>
+ -->
+</li>
+<li><a href="http://openresearch.baidu.com" target="_blank"><img src="./images/index_a_pic5.jpg" /></a></li>
+<li><a href="http://rw.baidu.com" target="_blank"><img src="./images/index_a_pic1.jpg" /></a></li>
+<!-- 
+<p class="index_a_text2">当前社区已经正式对外开放，欢迎互联网领域以及其他领域的专家学者，对技术<br />有浓厚兴趣的人士加入社区，利用丰富资源，实现你的技术梦想。</p>
+ -->
+</ul>
+</div>
+<!-- 
+<div class="index_a_left_btn"><a href="javascript:void(0)"></a></div>
+<div class="index_a_right_btn"><a href="javascript:void(0)"></a></div>
+ -->
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<div class="bnr01 mb13" style="display:none;">
+<script src="/plus/ad_js.php?apid=47" type="text/javascript"></script>
+</div>
+<div class="s_left">
+   <div class="boxa" style="display:;">
+         <div class="w733 fl s_w733 s_bor1"><!--添加样式-->
+<div class="boxa1">
+<h2 class="t2"><strong>专题比赛</strong></h2>
+<div class="boxa1c">
+<div class="box3g">
+<dl>
+<dt><a href="http://openresearch.baidu.com/courses/index.jhtml?channelId=673" target="_blank"><img src="/_upload/file/up_53479c1905292.jpg" /></a></dt>
+<dd>
+<h3><a href="http://openresearch.baidu.com/courses/index.jhtml?channelId=673" target="_blank">开发学习：百度技术课程</a></h3>
+<p>提供搜索引擎技术、计算广告学、自然语言处理、移动应用开发等百度核心技术课程，打造互联网爱好者的集聚乐园，助力大学生应用开发者创新创业。百度开发学习社区，每天进步一点点！</p>
+                                <a href="http://openresearch.baidu.com/courses/index.jhtml?channelId=673" class="s_more" target="_blank">查看详细>></a><!--添加-->
+</dd>
+<div class="clear"></div>
+</dl>
+<dl>
+<dt><a href="http://astar.baidu.com/index.php?r=contest/index" target="_blank"><img src="/_upload/file/up_53479996d13ca.jpg" /></a></dt>
+<dd>
+<h3><a href="http://astar.baidu.com/index.php?r=contest/index" target="_blank">百度之星：十年坚持，助您成长</a></h3>
+<p>2014年正值Astar百度之星程序设计大赛十周年庆典。2014百度之星不再只是编程大牛们的竞技平台，所有有热情、有梦想的同学都可参与其中，一起见证Astar的成长之路,感受Astar带来的激情和欢乐！</p>
+                                <a href="http://astar.baidu.com/index.php?r=contest/index" class="s_more" target="_blank">查看详细>></a><!--添加-->
+</dd>
+<div class="clear"></div>
+</dl>
+<dl>
+<dt><a href="http://openresearch.baidu.com/topic/66.jspx" target="_blank"><img src="/_upload/file/up_53479b5585773.jpg" /></a></dt>
+<dd>
+<h3><a href="http://openresearch.baidu.com/topic/66.jspx" target="_blank">开放研究：校园LBS应用大赛</a></h3>
+<p>用户在使用地图的时候经常会遇到这样的问题：某个地方新修了一条路，但是这条路在地图上没有。如何才能缩短更新时间，尽可能小的影响用户的体验，则需要更新新的路网采集方式。</p>
+                                <a href="http://openresearch.baidu.com/topic/66.jspx" class="s_more" target="_blank">查看详细>></a><!--添加-->
+</dd>
+<div class="clear"></div>
+</dl>
+<dl>
+<dt><a href="http://openresearch.baidu.com/geek.jspx" target="_blank"><img src="/_upload/file/up_53479abe831a8.jpg" /></a></dt>
+<dd>
+<h3><a href="http://openresearch.baidu.com/geek.jspx" target="_blank">开放研究：百度校园极客</a></h3>
+<p>“极客”现在更多是代指一种值得宣扬的生活态度，追求极限并超越极限。恪守坚持，只为了发自心底的热爱；寻求极致，即使在无人问津时也要敢于捍卫梦想。</p>
+                                <a href="http://openresearch.baidu.com/geek.jspx" class="s_more" target="_blank">查看详细>></a><!--添加-->
+</dd>
+<div class="clear"></div>
+</dl>
+
+
+
+<div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+               <!--新 校园产品活动-->
+               <div class="w733 fl s_w733 s_bor1">
+               	     <h2 class="t2">
+                        <strong>校园产品活动</strong>
+                            <a href="http://cbbs.baidu.com/product/" class="s_more1" target="_blank">更多</a>
+                     </h2>
+                     <ul class="ullist1">
+                     	<li>
+                     		<a href="http://rw.baidu.com/plugin.php?id=appform:form&aid=45" target="_blank"><img src="/_upload/file/up_534795fc99e02.jpg"></a>
+                     		<a href="http://rw.baidu.com/plugin.php?id=appform:form&aid=45" target="_blank" class="a">产品论坛运营者联盟</a>
+                     	</li>
+                     	<li>
+                     		<a href="http://cbbs.baidu.com/plugin.php?id=appform:form&aid=48" target="_blank"><img src="http://cbbs.baidu.com/source/plugin/appform/static/images/img/bdnewspc.jpg"></a>
+                     		<a href="http://cbbs.baidu.com/plugin.php?id=appform:form&aid=48" target="_blank" class="a"> 百度新闻客户端有奖评测</a>
+                     	</li>
+                     	<li>
+                     		<a href="http://rw.baidu.com/forum.php?mod=viewthread&tid=5972" target="_blank"><img src="/_upload/file/up_534797e662253.jpg"></a>
+                     		<a href="http://rw.baidu.com/forum.php?mod=viewthread&tid=5972" target="_blank" class="a">秀出你最爱的百度移动产品</a>
+                     	</li>
+
+                     </ul>
+               </div>
+               <!-- end新 校园产品活动 -->
+
+
+           <div class="w733 fl  s_w733 s_bor1"><!--新样式-->
+            <div class="boxa1">
+                <div id="Tab23" class="vbox21">
+                    <div class="Menubox">
+                        <ul>
+                       	<li id="twb1"  onmouseover="setTab('twb',1,6)" class="hover">技术体验</li>
+                           <li id="twb2" onmouseover="setTab('twb',2,6)" class="">创意作品</li>
+                           <li class="" id="twb3" onmouseover="setTab('twb',3,6)">校园课程</li>
+                           <li class="" id="twb4" onmouseover="setTab('twb',4,6)">百度平台</li>						   
+                           <li class="" id="twb5" onmouseover="setTab('twb',5,6)">校园俱乐部</li>
+                            <li class="" id="twb6" onmouseover="setTab('twb',6,6)">百度技术圈</li>
+                        </ul>
+                    </div>
+                    <div class="Contentbox index">
+                    
+                    <div id="con_twb_2" style="display:none;">
+        	<div class="box-work">
+            	<div class="more"><a class="more" href="/talent" hidefocus="true" target="_blank">更多&gt;&gt;</a></div>
+                <ul>
+                                 <li>
+                   	 <div class="img"><a href="http://app.baidu.com/app/enter?appid=302376"
+                   	  hidefocus="true" target="_blank">
+                   	                      	  <img src="http://apps.bdimg.com/store/static/kvt/8b580140c6597279318c35c6a629a8cc.png" width="70" height="70"/></a></div>
+                                        <div class="name">
+                                                                               	 <a href="http://app.baidu.com/app/enter?appid=302376" hidefocus="true" target="_blank">二维码</a>
+                                       	                                         </div>
+                                        <div class="from">来源：伟良</div>
+                                    </li>
+                                                     <li>
+                   	 <div class="img"><a href="http://app.baidu.com/app/enter?appid=251836"
+                   	  hidefocus="true" target="_blank">
+                   	                      	  <img src="http://apps3.bdimg.com/store/static/kvt/27f177a495617558b4d51d5c03232add.png" width="70" height="70"/></a></div>
+                                        <div class="name">
+                                                                               	 <a href="http://app.baidu.com/app/enter?appid=251836" hidefocus="true" target="_blank">投篮挑战赛...</a>
+                                       	                                         </div>
+                                        <div class="from">来源：GAME.COM.CN</div>
+                                    </li>
+                                                     <li>
+                   	 <div class="img"><a href="http://app.baidu.com/app/enter?appid=247319"
+                   	  hidefocus="true" target="_blank">
+                   	                      	  <img src="http://apps1.bdimg.com/store/static/kvt/34cc32b3f2b88f0cdb3ab8fe2c319009.jpg" width="70" height="70"/></a></div>
+                                        <div class="name">
+                                                                               	 <a href="http://app.baidu.com/app/enter?appid=247319" hidefocus="true" target="_blank">密码生成器...</a>
+                                       	                                         </div>
+                                        <div class="from">来源：展恒民</div>
+                                    </li>
+                                                     <li>
+                   	 <div class="img"><a href="http://app.baidu.com/app/enter?appid=225596"
+                   	  hidefocus="true" target="_blank">
+                   	                      	  <img src="http://apps1.bdimg.com/store/static/kvt/360f9dff5f936c066f04e939a7b92fdd.jpg" width="70" height="70"/></a></div>
+                                        <div class="name">
+                                                                               	 <a href="http://app.baidu.com/app/enter?appid=225596" hidefocus="true" target="_blank">GPA计算器</a>
+                                       	                                         </div>
+                                        <div class="from">来源：潘磊</div>
+                                    </li>
+                                                     <li>
+                   	 <div class="img"><a href="http://app.baidu.com/app/enter?appid=222857"
+                   	  hidefocus="true" target="_blank">
+                   	                      	  <img src="http://apps3.bdimg.com/store/static/kvt/fda69e39d7917e73c5bd4dab5ed0cac7.png" width="70" height="70"/></a></div>
+                                        <div class="name">
+                                                                               	 <a href="http://app.baidu.com/app/enter?appid=222857" hidefocus="true" target="_blank">个人简历范文下...</a>
+                                       	                                         </div>
+                                        <div class="from">来源：双语宝贝</div>
+                                    </li>
+                                                    </ul>
+            </div>
+        </div>
+                        <div style="display: block;" id="con_twb_1">
+                            <div class="boxa1e" style="padding-left:20px;">
+                                <ul class="u14">
+                                    <li><a href="experience" target="_blank"><img src="images/injs_01.jpg" /></a></li>
+                                    <li><a href="experience" target="_blank"><img src="images/injs_02.jpg" /></a></li>
+                                    <li><a href="experience" target="_blank"><img src="images/injs_03.jpg" /></a></li>
+                                    <li><a href="experience" target="_blank"><img src="images/injs_04.jpg" /></a></li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        </div>
+                        <div id="con_twb_3" style="display: none;">
+                            <div class="boxa1e" style=" padding:25px 0 0 15px;">
+                                <div class="kc1a"><strong>关键词：</strong><a href="javascript:void(0)" onclick="$('#courseSearch .tx25').val($(this).html());$('#courseSearch .bts16').click()" class="keyword">搜索引擎</a>  <a href="javascript:void(0)" onclick="$('#courseSearch .tx25').val($(this).html());$('#courseSearch .bts16').click()" class="keyword">架构</a>  <a href="javascript:void(0)" onclick="$('#courseSearch .tx25').val($(this).html());$('#courseSearch .bts16').click()" class="keyword">web前端</a>  <a href="javascript:void(0)" onclick="$('#courseSearch .tx25').val($(this).html());$('#courseSearch .bts16').click()" class="keyword">产品</a>  <a href="javascript:void(0)" onclick="$('#courseSearch .tx25').val($(this).html());$('#courseSearch .bts16').click()" class="keyword">运维</a>  </div>
+                                <div class="kc1b">
+<form action="http://ctech.baidu.com/index.php?r=courses" method="post" name="courseSearch" id="courseSearch" target="_blank">
+<ul>
+<li><input type="text" name="key_name" class="tx25" /></li>
+<li><input type="submit" value="" name="submit" class="bts16" /></li>
+<li><a href="http://ctech.baidu.com/index.php?r=courses" target="_blank"><img src="images/icon85.jpg" /></a></li>
+</ul>
+</form>
+                                    <div class="clear"></div>
+                                </div>  
+                            </div>
+                        </div>
+                        <div style="display: none;" id="con_twb_4">
+                            <div class="boxa1e" style="padding-left:20px;">
+                                <ul class="u14">
+                                    <li><a href="http://wenku.baidu.com/" target="_blank"><img src="images/link_wenku.jpg" /></a></li>
+                                    <li><a href="http://tieba.baidu.com/tb/xy.html?from=bdxy" target="_blank"><img src="images/tbxy-152-93.jpg" /></a></li>
+                                    <li><a href="http://lvyou.baidu.com/event/s/20120615travelbook/index.html" target="_blank"><img src="images/link_bj.jpg" /></a></li>
+                                    <li><a href="http://lvyou.baidu.com/event/s/20120803travelbook/" target="_blank"><img src="images/link_sh.jpg" /></a></li>
+
+
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div id="con_twb_5" style="display: none;">
+                            <div class="boxa1e" style="padding:0px;height:153px;">
+                               <div style="float:left;padding:28px 5px 0 10px">
+                                    <a href="http://campus.baidu.com/topic/1" target="_blank"><img src="/images/club.jpg" width="230" height="99"/></a>
+                               </div>
+                               <div style="float:left;width:460px;padding:28px 0 0 10px;line-height:20px;">
+                                    &nbsp;&nbsp; 百度校园俱乐部作为百度公司与学生沟通的桥梁，聚集了来自各个专业的优秀同学。在这里，同学们可以分享学习心得，结交志同道合的朋友，通过组织并参与丰富多彩的校园活动体验团队协作精神。百度公司对于俱乐部同学提出的优秀创意给予全方位的支持。自成俱乐部立以来，百度通过校园巡讲、大型比赛、参观访问等活动，丰富了俱乐部同学们的校园生活，也加强了百度与学生的沟通与交流。 
+ 
+                                    
+                               </div>
+                            </div>
+                        </div>
+                        <div id="con_twb_6" style="display: none;">
+                            <div class="boxa1e">
+                                <div class="boxa1e_1"><a href="http://open.baidu.com/data/" target="_blank"><img src="images/Snap85.jpg" width="158" height="99" /></a></div>
+                                <div class="boxa1e_2">
+                                    <ul class="u4">
+                                        <li><a href="http://developer.baidu.com" target="_blank">百度开发者中心</a></li>
+                                        <li><a href="http://zhanzhang.baidu.com" target="_blank">百度站长平台</a></li>
+                                        <li><a href="http://www.infoq.com/cn/zones/baidu-salon/" target="_blank">百度技术沙龙</a></li>
+                                        <li><a href="http://adm.baidu.com" target="_blank">百度广告管家</a></li>
+                                        <li><a href="http://union.baidu.com" target="_blank">百度联盟</a></li>
+                                        <li><a href="http://tongji.baidu.com" target="_blank">百度统计</a></li>
+                                        <li><a href="http://share.baidu.com/" target="_blank">百度分享</a></li>
+                                        <li><a href="http://open.baidu.com/data/" target="_blank">百度数据开放平台</a></li>
+                                        <li><a href="http://open.zhidao.baidu.com/" target="_blank">百度知道开放平台</a></li>
+                                        <li><a href="http://youxi.baidu.com/open/index.xhtml" target="_blank">百度游戏开放平台</a></li>
+                                        <li><a href="http://baike.baidu.com/hezuo/" target="_blank">百度百科开放平台</a></li>
+                                        <li><a href="http://tangram.baidu.com/index.html" target="_blank">百度Tangram开源库</a></li>
+                                    </ul>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+<div class="clear"></div>
+</div>	
+            <!-----------------------------右侧------------------------------------------------------------>
+            <div class="s_right">
+            	
+            	 <div class="w256 fr">
+                    <div class="bnr02 mt8">
+                        <a href="javascript:void(0)" onclick="alert('请先登录后再签到！')">                            <img src="images/sin1_18.png" /><!-- 修改图-->
+                        </a>
+                    </div>
+                    <div class="bnr02 mt8">
+                        <a href="javascript:void(0)" onclick="alert('暂没有开放哦！')">
+                            <img src="images/sin1_21.png" /><!-- 修改图-->
+                        </a>
+                    </div>
+                    <div class="bnr02">
+                        <a href="javascript:void(0)"  onclick="here(3)">
+                            <img src="images/sin1_23.png" /><!-- 修改图-->
+                        </a>
+                    </div>
+                </div>
+                <!--新产品论坛-->
+                <div class="w256 fr s_bor1 s_boxcc s_wright">
+                    <div class="boxa2">
+                        <h2 class="t1">
+                            <strong class="s2" style="background:none;">
+                                               产品论坛
+                            </strong>
+                            <span>
+                                <a href="http://cbbs.baidu.com" target="_blank">
+                                                           更多&gt;&gt;
+                                </a>
+                            </span>
+                        </h2>  
+                        <ul class="ullist2">
+<script type="text/javascript" src="http://cbbs.baidu.com/api.php?mod=js&bid=44"></script>
+                        </ul>                      
+                    </div>                    
+                </div>
+                <!--end新产品论坛-->
+                
+                <!--新邮箱订阅-->
+
+
+  <div class="w256 fr s_bor1 s_boxcc s_wright">
+            <div class="boxa2">
+                <h2 class="t1"><strong class="s2" style="background:none;">邮箱订阅</strong></h2>
+                <div class="boxa2d">
+                
+                    <p>输入邮箱地址，<br />免费订阅百度课程周刊。</p>
+                    <p><input type="text" class="tx03" name="email" id='mail'/></p>
+                  
+                    <p style="float:left"><input type="button" value="" class="bts02" onclick="sub()"  /></p>
+                    
+                     <!--  <p id="s1" style="color:red;width:60px;float:left;margin:5px 0 0 5px"></p> -->
+                </div>
+            </div>
+        </div> 
+        
+<script type="text/javascript">
+
+
+
+function sub(){
+    var reg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/g;
+    if($('#mail').val() == ''){
+       // $('#s1').css('color','red');
+       // $('#s1').html('请输入邮箱');
+       alert('请输入邮箱');
+       
+        return false;
+    }else{
+        $('#s1').html('');
+    }
+    
+    if($('#mail').val().match(reg) == null){
+      //  $('#s1').css('color','red');
+       // $('#s1').html('格式不正确');
+       alert('邮箱格式不正确');
+        return false;
+    }else{
+        $('#s1').html('');
+    }
+    
+    $.ajax({
+       type:"POST",
+       url:'/index/Subscribe',
+       data:"dosubmit=1&email="+$('#mail').val(),
+       success:function(msg){
+           if(msg == 'success'){
+               
+      //         $('#s1').css('color','green');
+     //          $('#s1').html('订阅成功');
+               alert('订阅成功');
+               
+           }else if(msg == 'lost'){
+             //  $('#s1').css('color','red');
+             //  $('#s1').html('订阅失败');
+             alert('订阅失败');
+           }else{
+             //  $('#s1').html(msg);
+             alert(msg)
+           }
+           
+       }
+    });
+    
+
+    
+    
+}
+</script>                
+            </div>
+            <!------------------------------end 右侧------------------------------------------------------------>            
+          
+            
+           
+       
+        </div>
+        <div class="clear"></div>
+<!--内容-->   
+</div>
+
+<script src="/js/guest.js"></script>
+<script type="text/javascript">
+$('#one').checkForm(1);
+
+
+function sign(){
+    
+    $.ajax({
+       type : "POST",
+       url : "user/sign",
+       data: "dosubmit=1",
+       success : function(msg){
+          // alert(msg);
+          if(msg == 'success' ){
+            $('#pic').css('display','none');
+             var num = parseInt($('#jf').html());
+            $('#jf').html(num+10);
+            new x.creat(1,50,25,30);
+            $('#qd').attr("onclick","");
+            $('#qd').click(function(){
+            	alert('您今天已经签到了');
+            });
+            //$('#qd').unbind('click');
+          }
+           else
+           alert('签到失败');
+       }
+    });
+    
+   /* $.layer({   
+        v_title : '签到提示',
+        v_box : 1,
+        v_dom : '#ts',    //id
+        v_area : ['280px','180px'],
+        v_btns : 0,
+        v_offset : ['180px',''] //为空时数据默认
+});
+    
+    setTimeout(layer_close,1000);*/
+    
+  //  layer_load(2);
+}
+</script>
+<script type="text/javascript">
+        bdPass.api.login.init({
+            outerDomId: 'outerDom',
+            u:'http://campus.baidu.com/'
+            ,
+            onReady: function(form) {
+                document.getElementById("pass_login_label_username_0").innerHTML = "用户名";
+                document.getElementById("pass_login_label_password_0").innerHTML = "密&nbsp;&nbsp;码";
+                document.getElementById("pass_login_label_verifycode_0").innerHTML = "验证码";
+            },
+            staticpage: 'http://campus.baidu.com/v2Jump.html'
+        });
+        
+    </script>
+<!--message-->
+<div id="msg" style=" display:none;">
+<form action="user/guest" method="post" id="two" >
+<div class="logboxb">
+<table>
+<tr>
+<td>详细描述：</td>
+<td><textarea require="true" datatype="require" msg=" " name="content"  class="text1"></textarea></td>
+</tr>
+<tr>
+<td>验  证  码:</td>
+<td style="position:relative;"><input type="text" class="tx02" require="true" name="yzm" id="yzm" datatype="require|ajax" url="bbs/checkyzm"  msg="填写验证码" msgid="msgid1" />
+<img src="yz.php" id="yzm" onclick="this.src='yz.php?rand='+Math.random()" style="position: absolute;top: 10px;" />
+<input type="hidden" name="dosubmit" value="1"/>
+<input type="hidden" name="status" id="status" />
+</td>
+</tr>
+<tr>
+<td></td>
+<td><input type="submit" value="" class="bts04" > <span style="color:red" id="msgid1"></span></td>
+</tr>
+</table>
+</div>
+</form>
+</div>
+<!--message-->
+<!--新 footer-->
+<div class="sfooter">
+<div class="w_1003" style="width:1003px;margin:0px auto;text-align:center;">		
+
+            <p class="fnav">
+<a href="http://home.baidu.com/" target="_blank">关于百度</a><span>|</span><a href="http://ir.baidu.com/phoenix.zhtml?c=188488&p=irol-homeprofile" target="_blank">About Baidu</a><span>|</span><a href="http://e.weibo.com/baiduxiaoyuan" target="_blank">校园微博</a><span>|</span><a href="http://tongxue.baidu.com/baidu/" target="_blank">校园招聘</a><span>|</span><a href="http://test.baidu.com/" target="_blank">百度众测</a><span>|</span><a href="http://cbbs.baidu.com/" target="_blank">百度产品论坛</a><span>|</span><a href="http://gongyi.baidu.com/" target="_blank">百度公益</a><span>|</span><a href="alliance">校园站长</a><span>|</span><a href="http://campus.baidu.com/user/login" target="_blank">网站导航</a>
+            </p>
+            <p>
+                联系我们邮箱：
+                    campus@baidu.com
+                &nbsp;&nbsp; Hi:百度校园品牌 &nbsp;&nbsp; 贴吧：
+                    百度校园品牌
+            </p>
+    </div>
+</div>
+<!--end 新 footer-->  
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F11317b3e5655c1116a6379e5c510f57e' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

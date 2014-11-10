@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;Map&apos; to &apos;map&apos;&#x0D;&#x0A;- Original project: &apos;JavaTest&apos;&#x0D;&#x0A;- Original element: &apos;JavaTest/src/Map&apos;&#x0D;&#x0A;- Renamed element: &apos;JavaTest/src/map&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;Map&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;Map" name="map" qualified="false" references="true" stamp="1405997772111" textual="false" version="1.0"/>
+</session>

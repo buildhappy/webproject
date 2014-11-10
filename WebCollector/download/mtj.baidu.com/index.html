@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<title>百度移动统计|移动应用APP统计|android统计分析|iOS统计分析</title>
+    <meta name="description" content="百度移动统计是一款专业免费的移动应用统计分析工具，支持android，ios平台。" />
+    <meta name="keywords" content="百度移动统计;移动应用统计;移动APP统计;Android统计;iOS统计;iphone统计" />
+    <link href="/web/css/login.css?__v=20140716114300" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+    
+    <div class="header">
+        <div class="top-nav">
+			<a href="/web/welcome/industry" target="_blank" class="trackable"><span class="nav-icon report-icon"></span>数据报告</a>
+			<span class="split">|</span>
+            <a href="/web/welcome/whitepaper" target="_blank" class="trackable">白皮书</a>
+            <span class="split">|</span>
+			<a href="http://yingxiao.baidu.com/support/mtj/index.html" target="_blank" class="trackable"><span class="nav-icon help-icon"></span>帮助</a>
+			<span class="split">|</span>
+            <a href="http://tongji.baidu.com/" target="_blank" class="trackable">百度统计</a>
+			<span class="split">|</span>
+			<a href="http://munion.baidu.com" target="_blank" class="trackable">移动联盟</a>
+            <span class="split">|</span>
+            <a href="/web/welcome/contact" target="_blank" class="trackable">联系我们</a>
+        </div>
+        <div class="attention-container">
+            <span>关注我们：&nbsp;</span>
+            <a class="tieba" title="i贴吧" target="_blank" href="http://tieba.baidu.com/i/15733862">&nbsp; </a>
+            <a title="新浪微博" target="_blank" href="http://e.weibo.com/u/2881688750" class="weibo">&nbsp; </a>
+            <a title="腾讯微博" target="_blank" href="http://t.qq.com/baidutongji" class="tqq"> &nbsp; </a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="content">
+            
+<div class="main">
+    <div class="login-shadow-top"></div>
+    <div class="tabs">
+        <div id="MainTab" class="main-tab">
+            <ul>
+                <li>
+                    <a href="/web/welcome/login" class="cur">移动统计首页</a>
+                </li>
+                <li>
+                    <a href="http://tongji.baidu.com/data/mobile/brand" target="_blank">移动流量研究院</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="top">
+        <div class="center">
+            <div id="SlidesContainer" style="overflow: hidden;" class='slides-container'>
+                <div id="Slider" style="position: absolute; left: 0px; top: 0px;"></div>
+                <div id="SliderBtn" class="slider-btn" style="opacity: 0.85;"></div>
+            </div>
+            <div class="login-main" id="LoginMain">
+                <div id="LoginTab" class="login-tab">
+                <ul id="LoginType">
+                    <li class="f"><a href="javascript:void(0);">百度账号</a></li>
+                    <li class="s"><a href="javascript:void(0);">联盟账号</a></li>
+                </ul>
+                </div>
+                <div class="login-input" id="LoginInput">
+                    <div id="Psp" style="display:none;">
+                        <div id="Login4Psp" class="tang-pass-login pspForm clearfix"><div id="SumLoginError" class="sum-login-error error"></div></div>
+                        <div style="display:none;" id="ForgetPassword"><a id="PspForgetPassword" class="pass_login_a_fgtpwd" href="https://passport.baidu.com/?getpass_index">找回密码</a></div>
+                    </div>
+                    <div id="TJ" style="display:none;">
+                        <div style="color:#FC7E02;display:none;" id="WebMasterTip">百度统计站长/移动联盟/百度联盟&nbsp;&nbsp;&nbsp;账号在此登录</div>
+                                                <div style="display: none;" id="ErrorNoSubmit" class="error"></div>
+                        <form action="https://cas.baidu.com/?action=login" method="post">
+                        <input type="hidden" name="appid" id="Appid" value="12" />
+                        <table id="LoginTable">
+                        <tbody>
+                        <tr>
+                            <th>用户名：</th>
+                            <td><input type="text" class="text" tabindex="1" value="" name="entered_login" id="UCUserName" /></td>
+                        </tr>
+                        <tr>
+                            <th>密&#12288;码：</th>
+                            <td><div id="uc-safe-pwd-input" class="uc-safe-pwd-input-hidden"></div>
+                                <input type="password" class="text" tabindex="2" style="ime-mode:disabled" name="entered_password" id="UCPassword" /></td>
+                        </tr>
+                        <tr>
+                            <th>验证码：</th>
+                            <td>
+                                <input type="text" class="text" style="ime-mode:disabled" tabindex="3" autocomplete="off" maxlength="4" name="entered_imagecode" id="UCValicode" />
+                                <img align="middle" width="60" height="28" src="http://cas.baidu.com/?action=image&key=1407827685" alt="验证码" id="cas_code" />
+                                <a style="margin: 0 auto; position: relative; top: 8px;" id="change_cas" href="#">换一张</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td class="submit-td"><input type="submit" value="" tabindex="4" class="l login-btn form-btn" id="Submit" />
+                            </td>
+                        </tr>
+                        <tr id="GetForgetUrlWrap">
+                            <th></th>
+                            <td><label for="safe-check" class="safe-check"><input type="checkbox" tabindex="5" id="safe-check"/>安全控件登录</label><a target="_blank" href="" id="GetForgetUrl">找回密码</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                            <input type="hidden" value="utf-8" name="charset" />
+                            <input type="hidden" id="FromUrl" value="http://mtj.baidu.com/web/welcome/uc" name="fromu" />
+                            <input type="hidden" value="http://mtj.baidu.com/web/welcome/login" name="selfu" />
+                            <input type="hidden" value="1" name="senderr" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="login-shadow-bottom"></div>
+</div>
+<div class="clearfix aside">
+    <div class="left">
+        <div class="list-bar last-news">
+            <div class="list-bar-header">
+                <div class="header-inner"><a class="more" href="/web/welcome/news" target="_blank">更多&gt;&gt;</a><span class="bar-title">最新动态</span></div>
+            </div>
+            <ul class="disc">
+                                <li>
+                    <span class="date r">14-07-15</span><a title="百度“英雄汇”移动开发者沙龙成都、上海站启动报名" target="_blank" href="http://hi.baidu.com/apptongji/item/0f4db828dad37075c38d59ec">百度“英雄汇”移动开发者沙龙成都、上海站启动报名</a>
+                </li>
+                                <li>
+                    <span class="date r">14-05-13</span><a title="百度统计站长交流会武汉站即将启动" target="_blank" href="http://hi.baidu.com/apptongji/item/726034833b6a8dedb17154b7">百度统计站长交流会武汉站即将启动</a>
+                </li>
+                                <li>
+                    <span class="date r">14-05-07</span><a title="留存用户报告升级了-新增活跃用户留存" target="_blank" href="http://hi.baidu.com/apptongji/item/1bf162416e3a44cf1e19bc76">留存用户报告升级了-新增活跃用户留存</a>
+                </li>
+                                <li>
+                    <span class="date r">14-04-24</span><a title="百度移动统计：数据分析带来移动应用产品精细化运营" target="_blank" href="http://hi.baidu.com/apptongji/item/d21ae27b9688c67b0d0a0796">百度移动统计：数据分析带来移动应用产品精细化运营</a>
+                </li>
+                            </ul>
+        </div>
+        <div class="list-bar suc-case">
+            <div class="list-bar-header">
+                <div class="header-inner"><span class="bar-title">成功案例</span></div>
+            </div>
+            <ul class="disc">
+                <li><span class="suc-logo suc-logo-1"></span><div class="content"><a href="/web/welcome/cases?flag=1" target="_blank" title="移动统计的用户细分功能给我们带来了很大的帮助，我们可以定位这些强交友目的的人群，研究他们的用户行为，不断研发和优化新的产品，以保持产品的行业和市场地位。" class="quote">移动统计的用户细分功能给我们带来了很大的帮助，我们可以定位这些......</a><p class="author">世纪佳缘  商务总监  陈万清</p></div></li>
+                <li><span class="suc-logo suc-logo-2"></span><div class="content"><a href="/web/welcome/cases?flag=2" target="_blank" title="使用了百度移动统计之后，我们更加真实地掌握了用户的行为，与用户有了更为紧密的联系。" class="quote">使用了百度移动统计之后，我们更加真实地掌握了用户的行为，与用户......</a><p class="author">轻笔记  市场总监  付惠芳</p></div></li>
+            </ul>
+        </div>
+    </div>
+    <div class="right">
+        <div class="demo">
+            <a class="check" title="查看演示" href="/web/welcome/ico?key=8503dc9e"></a>
+        </div>
+        <div class="sdk-download-btn">
+            <a title="下载SDK" target="_blank" href="/web/welcome/sdk"></a>
+        </div>
+    </div>
+</div>
+<div class="partners aside">
+    <div class="list-bar-header">
+        <div class="header-inner"><span class="bar-title">合作伙伴</span></div>
+    </div>
+    <div class="arrows"><a class="arrow-top" id="logoPre"></a><a class="arrow-down" id="logoNext"></a><div style="height:1px;"></div></div>
+    <div id="mask" class="par-icos">
+        <ul id="users_logos">
+            <li><a href="http://www.jiayuan.com" target="_blank"><span class="pa-logo-1"></span>世纪佳缘</a></li>
+            <li><a href="http://www.365rili.com/" target="_blank"><span class="pa-logo-2"></span>365日历</a></li>
+            <li><a href="http://www.xcar.com.cn/" target="_blank"><span class="pa-logo-3"></span>爱卡汽车</a></li>
+            <li><a href="http://www.qingbiji.cn" target="_blank"><span class="pa-logo-4"></span>轻笔记</a></li>
+            <li><a href="http://www.jj.cn" target="_blank"><span class="pa-logo-5"></span>JJ比赛</a></li>
+            <li><a href="http://www.wali.com" target="_blank"><span class="pa-logo-6"></span>瓦力流量仪</a></li>
+            <li><a href="http://www.7k7k.com/" target="_blank"><span class="pa-logo-7"></span>7k7k小游戏</a></li>
+            <li><a href="http://www.tiexue.net/" target="_blank"><span class="pa-logo-8"></span>铁血网</a></li>
+            <li class="last"><a href="http://m.19lou.com" target="_blank"><span class="pa-logo-9"></span>19楼</a></li>
+        </ul>
+    </div>
+</div>
+
+        </div>
+    </div>
+    
+        <div class="footer">
+            <span>©2014 Baidu</span> 
+            <a target="_blank" href="http://www.baidu.com/duty/">使用百度前必读</a>&nbsp;&nbsp;
+            <a target="_blank" href="http://www.baidu.com">百度首页</a>
+         </div>
+     
+    
+    
+    <script type="text/javascript">
+    (function () {
+        if (window.top !== window.self) {
+            var notify = function (msg) {
+                msg = '{ "data": ' + msg + ', "type": "Authorization" }';
+                if (window.postMessage) {
+                    window.top.postMessage(msg, "*");
+                }
+                else {
+                    var iframe = window.top.frames['waiting'];
+                    if (iframe) {
+                        iframe.window.name = msg;
+                        iframe.window.location = 'about:blank';
+                    }
+                }
+            };
+            notify('登录超时');
+        }
+        
+    })();
+    </script>
+    
+    <script src="/web/js/tangram.js?__v=20140716114300" type="text/javascript"></script> <script src="/web/js/common.js?__v=20140716114300" type="text/javascript"></script>
+    <script type="text/javascript">
+        T.extend(T.config,{"systemConfig":{"domain":"mtj.baidu.com","webRoot":"\/web","baseUri":"\/web","ajaxUri":"\/web\/ajax\/post","memoUri":"\/web\/common\/memo","trackUri":"\/web\/stat\/index","now":1407827685000,"hmJsFootCode":"<script type=\"text\/javascript\">\nvar _bdhmProtocol = ((\"https:\" == document.location.protocol) ? \" https:\/\/\" : \" http:\/\/\");\ndocument.write(unescape(\"%3Cscript src='\" + _bdhmProtocol + \"hm.baidu.com\/h.js%3F767db4ee1769de108fba6ac84b763cf3' type='text\/javascript'%3E%3C\/script%3E\"));\n<\/script>"},"pageInfo":{"title":"\u767e\u5ea6\u79fb\u52a8\u7edf\u8ba1","helpUri":"\/web\/home\/user\/help","logoutUri":"\/web\/welcome\/logout","ucFromUrl":"http:\/\/mtj.baidu.com\/web\/welcome\/uc","selfUrl":"http:\/\/mtj.baidu.com\/web\/welcome\/login","ucForget":"https:\/\/cas.baidu.com\/?controller=user&action=retrivepwd&appscope[]=12&appscope[]=32&appscope[]=6","ucslJsUrl":"cas.baidu.com\/ucsl\/ucsl.js","passport_returnurl":"\/welcome\/psp","passport_jumpurl":"\/welcome\/jump","passport_domain":"https:\/\/passport.baidu.com","passport_cdn":"http:\/\/passport.bdimg.com","appKey":"8503dc9e","errMsg":""},"menuList":[{"id":"sdk","title":"SDK\u4e2d\u5fc3","collapsed":false,"uri":"\/web\/welcome\/sdk"},{"id":"contact","title":"\u8054\u7cfb\u6211\u4eec","collapsed":false,"uri":"\/web\/welcome\/contact"},{"id":"news","title":"\u6700\u65b0\u52a8\u6001","collapsed":false,"uri":"\/web\/welcome\/news"},{"id":"industry","title":"\u884c\u4e1a\u62a5\u544a","collapsed":false,"uri":"\/web\/welcome\/industry"},{"id":"whitepaper","title":"\u767d\u76ae\u4e66","collapsed":false,"uri":"\/web\/welcome\/whitepaper"}],"userInfo":null,"bannerList":[{"id":23,"alt":"","title":"","content":"http:\/\/h.hiphotos.bdimg.com\/album\/pic\/item\/fd039245d688d43f80b062f47f1ed21b0ef43b9e.jpg","url":"http:\/\/hi.baidu.com\/apptongji\/item\/abad4c011eca5702a0312def","date":"13-11-28","extraInfo":[]},{"id":6,"alt":"","title":"","content":"\/web\/image\/login_banner_1.jpg?v=4","url":"http:\/\/hi.baidu.com\/apptongji\/item\/156129043d7eeca53c42e27b","date":"13-04-18","extraInfo":null},{"id":5,"alt":"","title":"","content":"\/web\/image\/login_banner_2.jpg?v=4","url":"http:\/\/mtj.baidu.com\/web\/welcome\/sdk","date":"13-04-18","extraInfo":null}]});
+    </script>
+    
+<script type="text/javascript" src="http://passport.bdimg.com/passApi/js/wrapper.js?cdnversion=1407827685000"></script>
+<script type="text/javascript">
+var _bducProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='"+ _bducProtocol + "cas.baidu.com/ucsl/ucsl.js%3Fappid=12%26d="
+     + Math.floor((+new Date)/(864e5)) + "' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script src="/web/js/login.js?__v=20140716114300" type="text/javascript"></script>
+ <script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F767db4ee1769de108fba6ac84b763cf3' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

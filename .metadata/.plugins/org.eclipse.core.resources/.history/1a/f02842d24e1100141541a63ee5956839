@@ -1,0 +1,87 @@
+package io;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class CopyFile {
+
+	public static void main(String[] args) {
+		copyFile2();
+		System.out.println("hah2");
+	}
+	
+	//方法一：读一个字符,写一个字符
+	public static void copyFile1(){
+		//读文件流
+		FileReader fr = null;
+		//写文件流
+		FileWriter fw = null;
+		try{
+			fr = new FileReader("a.txt");
+			fw = new FileWriter("a_copy.txt");
+			
+			int num = 0;
+			while((num = fr.read()) != -1){
+				fw.write(num);
+			}
+		}catch(IOException e){
+			System.out.println(e.toString());
+		}finally{
+			//关闭读文件流
+			try{
+				if(fr != null){
+					fr.close();
+				}
+			}catch(IOException e){
+				System.out.println(e.toString());
+			}
+			
+			//关闭写文件流
+			try{
+				if(fw != null){
+					fw.close();
+				}
+			}catch(IOException e){
+				System.out.println(e.toString());
+			}
+		}
+	}
+	
+	//方法二：利用byte数组进行缓存
+	public static void copyFile2(){
+		FileReader fr = null;
+		FileWriter fw = null;
+		System.out.println("hah");
+		try{
+			fr = new FileReader("a.txt");
+			fw = new FileWriter("a_copy.txt");
+			//字节缓存数字
+			char[] cf = new char[1024];
+			int len = 0;
+			while(len != -1){
+				len = fr.read(cf);
+				fw.write(cf, 0, len);
+				System.out.println(new String(cf));
+			}
+		}catch(IOException e){
+			System.out.println(e.toString());
+		}finally{
+			try{
+				if(fr != null){
+					fr.close();
+				}
+			}catch(IOException e){
+				System.out.println(e);
+			}
+			
+			try{
+				if(fw != null){
+					fw.close();
+				}
+			}catch(IOException e){
+				System.out.println(e.toString());
+			}
+		}
+	}
+}

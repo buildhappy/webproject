@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;newsManagement3.0/src/main/java/com.buildhappy.controller&apos;&#x0D;&#x0A;- Original project: &apos;newsManagement&apos;&#x0D;&#x0A;- Destination element: &apos;newsManagement3.0/src/main/java/com.buildhappy.controller&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     controller.PrintNews.java&#x0D;&#x0A;     controller.AdminService.java" description="Copy compilation units" destination="=newsManagement3.0/src\/main\/java&lt;com.buildhappy.controller" element1="/src\/main\/java&lt;controller{PrintNews.java" element2="/src\/main\/java&lt;controller{AdminService.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1401332037579" units="2" version="1.0"/>
+</session>

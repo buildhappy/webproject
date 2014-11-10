@@ -1,0 +1,21 @@
+package buildhappy.tools.berkeleyDB;
+
+import java.io.FileNotFoundException;
+
+import com.sleepycat.collections.StoredMap;
+import com.sleepycat.je.DatabaseException;
+
+/**
+ * 实现真正的TODO表
+ * @author Administrator
+ *
+ */
+public class BDBFrontier extends AbstractFrontier implements Frontier{
+	private StoredMap pendingUrisDB = null;
+	
+	//使用默认的路径和缓存大小构造函数
+	public BDBFrontier(String homeDirectory) throws DatabaseException,FileNotFoundException{
+		super(homeDirectory);
+		
+	}
+}

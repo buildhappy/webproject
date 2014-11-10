@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<!--STATUS OK-->
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<meta http-equiv="content-type" content="text/html;charset=gbk" />
+		<meta property="wb:webmaster" content="3aababe5ed22e23c" />
+		<title>百度知道 - 全球最大中文互动问答平台</title>
+		
+<script type="text/javascript">
+//
+void function(e,t,n,a,o,i,m){e.alogObjectName=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=e[o].l||+new Date,i=t.createElement(n),i.asyn=1,i.src=a,m=t.getElementsByTagName(n)[0],m.parentNode.insertBefore(i,m)}(window,document,"script","http://img.baidu.com/hunter/alog.min.js","alog");
+//
+void function(e,o){var t,n="Other";(t=/\b(safari|firefox|chrome|opera)\b.*?(\d+)/i.exec(o))&&(n=t[1]),(t=/MSIE ([0-9]*)/.exec(o))&&(n="IE"+t[1]),!/^IE/.test(n)&&(t=/trident\/.* rv:([\w]+)?/i.exec(o))&&(n="IE"+t[1]),/(M?QQBrowser)\/([0-9.]*)/.test(o)&&(n="QQ Browser"),/SE 2.X MetaSr/.test(o)&&(n="Sogou Explorer"),alog("exception.set","browser",n);var r=!1;e.onerror=function(e,o,t,n){var c=!0;return!o&&/^script error/i.test(e)&&(r?c=!1:r=!0),c&&alog("exception.send","exception",{msg:e,js:o,ln:t,col:n}),!1},alog("exception.on","catch",function(e){alog("exception.send","exception",{msg:e.msg,js:e.path,ln:e.ln,method:e.method,flag:"catch"})}),alog("exception.on","count",function(e){alog("exception.send","exception",{msg:e.toString(),flag:"count"})})}(window,navigator.userAgent);
+</script>
+
+		        
+<meta name="description" content="百度知道是由全球最大的中文搜索引擎百度自主研发、基于搜索的互动式知识问答分享平台。用户可以根据自身的需求，有针对性地提出问题；同时，这些答案又将作为搜索结果，满足有相同或类似问题的用户需求。" />
+
+		<script type="text/javascript">
+			!function(){var n={},t={};n.context=function(n,e){var i=arguments.length;if(i>1)t[n]=e;else if(1==i){if("object"!=typeof n)return t[n];for(var o in n)n.hasOwnProperty(o)&&(t[o]=n[o])}},"F"in window||(window.F=n)}();;
+																																							
+			F.context('user', {"isLogin":"","stoken":"","name":"","id":"","wealth":"","gradeIndex":""});
+
+							F.context('defaultQuery', '{"title":"","value":""}');
+																			F.context('zhimaTagOpen', {
+					'open': 1,
+					'url': 'http://zhidao.baidu.com/zhima/',
+					'text': '#芝麻开门#'
+				});
+					</script>
+
+		
+<script type="text/javascript">
+	  	F.context('category', {
+	  			  		74: [
+	  				  				{"name": "电脑装机\/选购", "id": 1063}
+	  				,	  				  				{"name": "编程语言", "id": 1073}
+	  				,	  				  				{"name": "软件开发", "id": 1237}
+	  				,	  				  				{"name": "百度产品", "id": 1075}
+	  				,	  				  				{"name": "笔记本电脑", "id": 872}
+	  				,	  				  				{"name": "平板电脑", "id": 1238}
+	  				,	  				  				{"name": "操作系统\/系统故障", "id": 89}
+	  					  				  		],	  			  		80: [
+	  				  				{"name": "美食\/烹饪", "id": 148}
+	  				,	  				  				{"name": "购房置业", "id": 153}
+	  				,	  				  				{"name": "家居装修", "id": 154}
+	  				,	  				  				{"name": "家电", "id": 874}
+	  				,	  				  				{"name": "保健养生", "id": 928}
+	  				,	  				  				{"name": "购车养车", "id": 155}
+	  				,	  				  				{"name": "交通出行", "id": 158}
+	  				,	  				  				{"name": "生活常识", "id": 163}
+	  				,	  				  				{"name": "婚嫁", "id": 876}
+	  				,	  				  				{"name": "起名\/算命", "id": 162}
+	  				,	  				  				{"name": "礼节礼仪", "id": 166}
+	  				,	  				  				{"name": "育儿", "id": 160}
+	  					  				  		],	  			  		79: [
+	  				  				{"name": "外科", "id": 791}
+	  				,	  				  				{"name": "肿瘤科", "id": 770}
+	  				,	  				  				{"name": "儿科", "id": 793}
+	  				,	  				  				{"name": "五官科", "id": 795}
+	  				,	  				  				{"name": "男性泌尿科", "id": 930}
+	  				,	  				  				{"name": "传染科", "id": 796}
+	  				,	  				  				{"name": "中医", "id": 140}
+	  				,	  				  				{"name": "精神心理科", "id": 143}
+	  				,	  				  				{"name": "皮肤科", "id": 794}
+	  				,	  				  				{"name": "医院", "id": 1193}
+	  				,	  				  				{"name": "整形科", "id": 1291}
+	  				,	  				  				{"name": "性病科", "id": 1292}
+	  					  				  		],	  			  		78: [
+	  				  				{"name": "奥运\/赛事", "id": 999}
+	  				,	  				  				{"name": "赛车\/F1", "id": 126}
+	  				,	  				  				{"name": "小球运动", "id": 778}
+	  				,	  				  				{"name": "田径", "id": 127}
+	  				,	  				  				{"name": "游泳", "id": 997}
+	  				,	  				  				{"name": "棋牌麻将", "id": 132}
+	  				,	  				  				{"name": "户外运动", "id": 779}
+	  				,	  				  				{"name": "运动用品", "id": 135}
+	  				,	  				  				{"name": "体育名人", "id": 109}
+	  				,	  				  				{"name": "武术搏击", "id": 131}
+	  				,	  				  				{"name": "亚运会", "id": 1192}
+	  				,	  				  				{"name": "女子运动", "id": 1057}
+	  					  				  		],	  			  		95: [
+	  				  				{"name": "MP4\/MP3", "id": 879}
+	  					  				  		],	  			  		82: [
+	  				  				{"name": "外汇", "id": 1079}
+	  				,	  				  				{"name": "基金", "id": 862}
+	  				,	  				  				{"name": "保险", "id": 159}
+	  				,	  				  				{"name": "企业管理", "id": 774}
+	  				,	  				  				{"name": "商务文书", "id": 185}
+	  				,	  				  				{"name": "银行业务", "id": 786}
+	  				,	  				  				{"name": "经济研究", "id": 923}
+	  				,	  				  				{"name": "产业信息", "id": 924}
+	  				,	  				  				{"name": "贸易", "id": 183}
+	  				,	  				  				{"name": "个人理财", "id": 164}
+	  					  				  		],	  			  		83: [
+	  				  				{"name": "升学入学", "id": 1092}
+	  				,	  				  				{"name": "院校信息", "id": 192}
+	  				,	  				  				{"name": "学习帮助", "id": 197}
+	  				,	  				  				{"name": "职业教育", "id": 1093}
+	  				,	  				  				{"name": "出国\/留学", "id": 189}
+	  				,	  				  				{"name": "人文学科", "id": 1223}
+	  					  				  		],	  			  		84: [
+	  				  				{"name": "公务办理", "id": 1095}
+	  				,	  				  				{"name": "军事", "id": 211}
+	  				,	  				  				{"name": "宗教", "id": 208}
+	  				,	  				  				{"name": "其他社会话题", "id": 204}
+	  					  				  		],	  			  		85: [
+	  				  				{"name": "民俗传统", "id": 206}
+	  				,	  				  				{"name": "地理", "id": 1096}
+	  				,	  				  				{"name": "器乐\/声乐", "id": 214}
+	  				,	  				  				{"name": "舞蹈", "id": 212}
+	  					  				  		],	  			  		77: [
+	  				  				{"name": "腾讯游戏", "id": 1113}
+	  				,	  				  				{"name": "网易游戏", "id": 1116}
+	  				,	  				  				{"name": "盛大游戏", "id": 1114}
+	  				,	  				  				{"name": "搜狐畅游", "id": 1224}
+	  				,	  				  				{"name": "完美游戏", "id": 1115}
+	  				,	  				  				{"name": "巨人游戏", "id": 1194}
+	  				,	  				  				{"name": "光宇游戏", "id": 1195}
+	  				,	  				  				{"name": "金山游戏", "id": 1196}
+	  				,	  				  				{"name": "久游游戏", "id": 1117}
+	  				,	  				  				{"name": "绿岸游戏", "id": 1225}
+	  				,	  				  				{"name": "百度游戏", "id": 1190}
+	  				,	  				  				{"name": "网页游戏", "id": 1107}
+	  				,	  				  				{"name": "电视游戏", "id": 113}
+	  				,	  				  				{"name": "掌机游戏", "id": 1197}
+	  				,	  				  				{"name": "手机游戏", "id": 114}
+	  				,	  				  				{"name": "小游戏", "id": 118}
+	  				,	  				  				{"name": "桌上游戏", "id": 1108}
+	  					  				  		],	  			  		1031: [
+	  				  				{"name": "电视", "id": 97}
+	  				,	  				  				{"name": "明星", "id": 75}
+	  				,	  				  				{"name": "星座\/运势", "id": 101}
+	  				,	  				  				{"name": "度假旅游", "id": 965}
+	  				,	  				  				{"name": "摄影摄像", "id": 780}
+	  				,	  				  				{"name": "宠物", "id": 151}
+	  				,	  				  				{"name": "花鸟鱼虫", "id": 169}
+	  				,	  				  				{"name": "收藏", "id": 168}
+	  				,	  				  				{"name": "幽默滑稽", "id": 103}
+	  				,	  				  				{"name": "脑筋急转弯", "id": 104}
+	  				,	  				  				{"name": "谜语", "id": 1032}
+	  				,	  				  				{"name": "博彩", "id": 105}
+	  					  				  		],	  			  		81: [
+	  				  				{"name": "家庭关系", "id": 173}
+	  				,	  				  				{"name": "两性问题", "id": 174}
+	  				,	  				  				{"name": "青春期", "id": 175}
+	  				,	  				  				{"name": "校园生活", "id": 176}
+	  				,	  				  				{"name": "交友技巧", "id": 167}
+	  					  				  		],	  			  		1101: [
+	  				  				{"name": "软件共享", "id": 763}
+	  				,	  				  				{"name": "文档\/报告共享", "id": 196}
+	  				,	  				  				{"name": "数字证书共享", "id": 1106}
+	  				,	  				  				{"name": "号码类资源共享", "id": 1221}
+	  					  				  		],	  			  		1: [
+	  				  				{"name": "天津", "id": 239}
+	  				,	  				  				{"name": "重庆", "id": 241}
+	  				,	  				  				{"name": "河北", "id": 242}
+	  				,	  				  				{"name": "辽宁", "id": 243}
+	  				,	  				  				{"name": "黑龙江", "id": 244}
+	  				,	  				  				{"name": "吉林", "id": 245}
+	  				,	  				  				{"name": "山西", "id": 247}
+	  				,	  				  				{"name": "安徽", "id": 248}
+	  				,	  				  				{"name": "浙江", "id": 249}
+	  				,	  				  				{"name": "江苏", "id": 250}
+	  				,	  				  				{"name": "江西", "id": 251}
+	  				,	  				  				{"name": "广东", "id": 252}
+	  				,	  				  				{"name": "福建", "id": 253}
+	  				,	  				  				{"name": "海南", "id": 254}
+	  				,	  				  				{"name": "河南", "id": 255}
+	  				,	  				  				{"name": "湖北", "id": 256}
+	  				,	  				  				{"name": "湖南", "id": 257}
+	  				,	  				  				{"name": "四川", "id": 258}
+	  				,	  				  				{"name": "云南", "id": 259}
+	  				,	  				  				{"name": "贵州", "id": 260}
+	  				,	  				  				{"name": "陕西", "id": 261}
+	  				,	  				  				{"name": "甘肃", "id": 262}
+	  				,	  				  				{"name": "青海", "id": 263}
+	  				,	  				  				{"name": "宁夏", "id": 264}
+	  				,	  				  				{"name": "内蒙古", "id": 265}
+	  				,	  				  				{"name": "广西", "id": 266}
+	  				,	  				  				{"name": "西藏", "id": 267}
+	  				,	  				  				{"name": "新疆", "id": 268}
+	  				,	  				  				{"name": "香港", "id": 269}
+	  				,	  				  				{"name": "澳门", "id": 270}
+	  				,	  				  				{"name": "台湾", "id": 271}
+	  				,	  				  				{"name": "海外地区", "id": 760}
+	  					  				  		]	  			  	});
+	</script>
+
+        <!--[if lte IE 8]>
+            <script>
+                (function(){
+                    var e="abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(","),
+                    i=e.length;
+                    while(i--){document.createElement(e[i])}
+                 })();
+            </script>
+        <![endif]-->
+	<link rel="stylesheet" type="text/css" href="http://cdn.iknow.bdimg.com/static/common/pkg/common_99bc49c.css" /><link rel="stylesheet" type="text/css" href="http://cdn.iknow.bdimg.com/static/home/pkg/module_6126226.css" /></head>
+    
+    
+<script> alog('speed.set', 'ht',new Date);</script>
+
+
+	<body class="layout-center home-search">
+		
+                            
+<div class="line">
+<div id="userbar" class="userbar">
+            <ul class="main-list">
+            <li><a rel="nofollow" href="http://www.baidu.com/" id="userbar-baidu-index">百度首页</a></li>
+            <li class="line">|</li>
+            <li><a rel="nofollow" alog-alias="usrbar-login" href="javascript:;" id="userbar-login" log="type:2026,pname:account,mod:login,action:show,pos:pop">登录</a></li>
+            <li><a rel="nofollow" alog-alias="usrbar-reg" id="userbar-reg" href="https://passport.baidu.com/v2/?reg&tpl=ik&color=green&u=" target="_blank">注册</a></li>
+        </ul>
+    </div>
+</div>
+
+
+            		
+        
+		
+                    	<header id="header" class="container">
+                        <a href="http://zhidao.baidu.com/s/guagua/index.html" title="" target="_blank" class="adTopImg" style="background:url(http://img.baidu.com/img/iknow/sula01/ggkshouyebanner200X70.jpg);"></a>
+                		
+    			<div id="search-box" class="search-box line pt-20">
+  <a class="logo" href="/" title="百度知道"></a>
+  <ul class="channel grid">
+    <li><a log="sc_pos:c_news" rel="nofollow" href="http://news.baidu.com/">新闻</a></li> 
+    <li><a log="sc_pos:c_baidu" rel="nofollow" href="http://www.baidu.com/">网页</a></li> 
+    <li><a log="sc_pos:c_tieba" rel="nofollow" href="http://tieba.baidu.com/">贴吧</a></li> 
+    <li><strong>知道</strong></li> 
+    <li><a log="sc_pos:c_mp3" rel="nofollow" href="http://music.baidu.com/">音乐</a></li> 
+    <li><a log="sc_pos:c_pic" rel="nofollow" href="http://image.baidu.com/">图片</a></li> 
+    <li><a log="sc_pos:c_video" rel="nofollow" href="http://v.baidu.com/">视频</a></li> 
+    <li><a log="sc_pos:c_map" rel="nofollow" href="http://map.baidu.com/">地图</a></li> 
+    <li><a log="sc_pos:c_baike" rel="nofollow" href="http://baike.baidu.com/">百科</a></li> 
+    <li><a log="sc_pos:c_doc" rel="nofollow" href="http://wenku.baidu.com/">文库</a></li>
+    <li><a log="sc_pos:c_jingyan" href="http://jingyan.baidu.com/">经验</a></li>
+  </ul>
+
+  <form action="/search" name="search-form" method="get" id="search-form" class="search-form"> 
+    <div class="box">
+      <span class="search-box-bg sb-bg-low"></span><span class="search-box-bg"></span>
+      <input class="hdi" id="kw" maxlength="256" tabindex="1" size="46" name="word" value="" autocomplete="off" />
+      <span class="btn-wrap"><input alog-action="g-search-anwser" type="submit" id="search-btn" hidefocus="true" onmouseover="this.className='btn-global btn-hover';" onmouseout="this.className='btn-global';" onmousedown="this.className='btn-global btn-active'" tabindex="2" value="搜索答案" class="btn-global" /></span>
+      <a href="#" alog-action="g-i-ask" class="f-14" id="ask-btn">我要提问</a>
+    </div>
+  </form>
+</div>
+
+    		
+    	</header>
+        	<div id="body" class="container">
+        		
+<div id="menu" class="menu">
+		<ul>
+			<li class="current">
+				<a log="action:menuclick,index:1" href="http://zhidao.baidu.com/">首页</a>
+			</li>
+			<li >
+				<a log="action:menuclick,index:3" href="http://zhidao.baidu.com/browse/">分类</a>
+			</li>
+			<li >
+				<a log="action:menuclick,index:2" rel="nofollow" href="http://zhidao.baidu.com/shop">公社</a>
+                <div class="sub-menu">
+                	<div class="sub-item">
+                		<a rel="nofollow" href="http://zhidao.baidu.com/shop">财富商城</a>
+                		<a rel="nofollow" href="http://zhidao.baidu.com/team">知道团队</a>
+                		<a rel="nofollow" class="spacing" href="http://zhidao.baidu.com/user/admin">管 理 员</a>
+                        <a rel="nofollow" href="http://zhidao.baidu.com/s/star/index.html">知道之星</a>
+                        <a rel="nofollow" href="http://zhidao.baidu.com/s/activity/index.html">知道活动</a>
+                	</div>
+                </div>
+			</li>
+			<li>
+				<a log="action:menuclick,index:12" target="_blank" href="http://zhidao.baidu.com/hangjia">知道行家</a>
+			</li>
+			<li >
+                <a log="action:menuclick,index:6" rel="nofollow" href="http://zhidao.baidu.com/yisheng">问医生</a>
+            </li>
+            <li >
+                <a log="action:menuclick,index:5" rel="nofollow" href="http://zhidao.baidu.com/lvshi">问律师</a>
+            </li>
+			<li class="menu-new ">
+				<a log="action:menuclick,index:4" rel="nofollow" href="http://zhidao.baidu.com/prof/education">问作业</a>
+			</li>
+			<li>
+				<a log="action:menuclick,index:9" target="_blank" href="http://jingyan.baidu.com">经验</a>
+			</li>
+		</ul>
+		<a  log="action:menuclick,index:10" rel="nofollow" href="/uhome" target="_blank" class="ucenter"><i class="ik-icon-uhome mr-5"></i>个人中心</a>
+		<span class="double-line"></span>
+		<a  log="action:menuclick,index:11" rel="nofollow" href="http://zhidao.baidu.com/zt/ikapp/index.html?fr=home" target="_blank" class="ucenter"><i class="ik-icon-phone mr-5"></i>手机知道</a>
+		<span class="double-line"></span>
+		<a log="action:menuclick,index:13" rel="nofollow" href="http://zhidao.baidu.com/openapi?fr=home" target="_blank" class="ucenter"><i class="ik-icon-open mr-5"></i>开放平台</a>
+</div>
+<div id="main-content">
+<div class="content-left">
+<div id="recommend-info">
+<div class="block-info" >
+<a class="recommend-pic" alog-action="recom-pic" target="_blank" href="http://zhidao.baidu.com/daily/view?id=737" title="女人，哪里最先老？" data-img="http://img.iknow.bdimg.com/jctuijian/0812/jctj.jpg?t=1407810170"><img src="http://img.iknow.bdimg.com/jctuijian/0812/jctj.jpg?t=1407810170" alt="" /></a>
+<dl>
+<dt><span class="dt-ask">问</span><a alog-group="recom-title" target="_blank" href="http://zhidao.baidu.com/daily/view?id=739">【知道日报】埃博拉病毒可以通过飞机传播到世界各地？</a></dt>
+<dd class="info-content"><span class="dd-answer">答</span>世界卫生组织的发言人Gregory称，目前官方认为全球大流行的风险小，但仍然希望在航空运输中提高警惕。</dd>
+<dd class="info-user">
+回答者：煎蛋</dd>
+</dl>
+<ul class="other">
+<li>
+<a alog-group="recom-title" target="_blank" href="http://zhidao.baidu.com/daily/view?id=742">【知道日报】为何在电话机上按银行卡密码会被窃取？</a>
+<span></span>
+</li>
+<li>
+<a alog-group="recom-title" target="_blank" href="http://zhidao.baidu.com/daily/view?id=743">【知道日报】中国男人到底丑在哪儿了？</a>
+<span></span>
+</li>
+<li>
+<a alog-group="recom-title" target="_blank" href="http://zhidao.baidu.com/liuyan">【真相问答机】埃博拉病毒可在空气中传播？</a>
+<span></span>
+</li>
+</ul>
+</div>
+<div class="block-info" style="display:none;">
+<a class="recommend-pic" alog-action="recom-pic" target="_blank" href="http://zhidao.baidu.com/daily/view?id=732" title="唱歌跑调是种病？" data-img="http://img.iknow.bdimg.com/jctuijian/0811/JCTJ.jpg?t=1407810170"></a>
+<dl>
+<dt><span class="dt-ask">问</span><a alog-group="recom-title" target="_blank" href="http://zhidao.baidu.com/daily/view?id=731">【知道日报】什么叫不孕不育？</a></dt>
+<dd class="info-content"><span class="dd-answer">答</span>不孕症（sterility）是指育龄夫妇性生活正常，同居、未避孕、1年从未妊娠。女性35岁以上者，建议半年未孕即可进...</dd>
+<dd class="info-user">
+回答者：生命时报</dd>
+</dl>
+<ul class="other">
+<li>
+<a alog-group="recom-title" target="_blank" href="http://zhidao.baidu.com/daily/view?id=734">【知道日报】如何摧毁互联网？</a>
+<span></span>
+</li>
+<li>
+<a alog-group="recom-title" target="_blank" href="http://zhidao.baidu.com/daily/view?id=733">【知道日报】牙膏里到底有什么？</a>
+<span></span>
+</li>
+<li>
+<a alog-group="recom-title" target="_blank" href="http://zhidao.baidu.com/liuyan/detail?id=5529">【真相问答机】饭后百步走，能活九十九？</a>
+<span></span>
+</li>
+</ul>
+</div>
+<div class="block-info" style="display:none;">
+<a class="recommend-pic" alog-action="recom-pic" target="_blank" href="http://zhidao.baidu.com/daily/view?id=717" title="如何才能健康地减重？" data-img="http://img.iknow.bdimg.com/jctuijian/0810/JCTJ.jpg?t=1407810170"></a>
+<dl>
+<dt><span class="dt-ask">问</span><a alog-group="recom-title" target="_blank" href="http://zhidao.baidu.com/daily/view?id=727">【知道日报】路痴都是天生的吗？</a></dt>
+<dd class="info-content"><span class="dd-answer">答</span>那些经常嚷嚷一出门就没了东南西北的路痴们，很可能三种导航细胞天生发育不充分，或者记忆力已退化。</dd>
+<dd class="info-user">
+回答者：壹读君</dd>
+</dl>
+<ul class="other">
+<li>
+<a alog-group="recom-title" target="_blank" href="http://zhidao.baidu.com/daily/view?id=728">【知道日报】有钱人在网上都干些啥？</a>
+<span></span>
+</li>
+<li>
+<a alog-group="recom-title" target="_blank" href="http://zhidao.baidu.com/daily/view?id=726">【知道日报】宇航员如何在太空上厕所？</a>
+<span></span>
+</li>
+<li>
+<a alog-group="recom-title" target="_blank" href="http://zhidao.baidu.com/liuyan/detail?id=5577">【真相问答机】洗桑拿会导致不育？</a>
+<span></span>
+</li>
+</ul>
+</div>
+<div class="select-bar-back">
+<span class="border-first"></span>
+<span class="border-second"></span>
+<span class="border-third"></span>
+<div class="selected-back"></div>
+<div class="select-bar">
+<div class="recommend-title current" data-index="0">【知道日报】埃博拉病毒可以通过飞机传播...</div>
+<div class="recommend-title " data-index="1">【知道日报】什么叫不孕不育？</div>
+<div class="recommend-title " data-index="2">【知道日报】路痴都是天生的吗？</div>
+<a alog-action="recom-more" class="more" target="_blank" href="http://zhidao.baidu.com/home_reclist/index.html">更多</a>
+</div>
+</div>
+</div>
+</div>
+<div class="content-right">
+<div id="zhidao-info">
+<div class="logo line">
+<div class="grid-r tree"></div>
+<p class="first">总有一个人</p>
+<p>知道你问题的答案</p>
+</div>
+<div class="finish-count">
+<em>解决</em>
+<div class="total">
+<ul>
+<li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+</div>
+<em>问题</em>
+</div>
+<div alog-group="realtime-scroll" class="scroll">
+<ul>
+<li>
+<a href="/question/168698385.html" target="_blank">
+1秒前&nbsp;<span>乐观的和姓赞同了dlb2...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/175674306189707204.html" target="_blank">
+1秒前&nbsp;<span>雪白钦仰强壮毕赞同了...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/577318394.html" target="_blank">
+1秒前&nbsp;<span>酌银子mrilth赞同了神...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/391418838438713805.html" target="_blank">
+1秒前&nbsp;<span>sww198904赞同了神圣剑...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/175674306189707204.html" target="_blank">
+1秒前&nbsp;<span>wang1356964赞同了神圣...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/1860259019336225387.html" target="_blank">
+1秒前&nbsp;<span>妙蛙王65赞同了神圣剑...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/1860259019336225387.html" target="_blank">
+1秒前&nbsp;<span>留恋寥寂寂然赞同了神...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/1859416931979891147.html" target="_blank">
+1秒前&nbsp;<span>yiitgug164赞同了神圣...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/577318394.html" target="_blank">
+1秒前&nbsp;<span>sunwei0107赞同了神圣...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/552496239291666492.html" target="_blank">
+1秒前&nbsp;<span>NeptuneBJ赞同了神圣剑...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/391418838438713805.html" target="_blank">
+1秒前&nbsp;<span>sxt1024赞同了神圣剑帝</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/1860259019336225387.html" target="_blank">
+1秒前&nbsp;<span>涤荡思逸尘世赞同了神...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/2116721791491555947.html" target="_blank">
+1秒前&nbsp;<span>pcsnxcx50759赞同了bi...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/134494631254821365.html" target="_blank">
+1秒前&nbsp;<span>8603256赞同了神圣剑帝</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/552496239291666492.html" target="_blank">
+1秒前&nbsp;<span>AK2D_Cat赞同了神圣剑...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/623879373079435844.html" target="_blank">
+1秒前&nbsp;<span>洼冢途染赞同了神圣剑...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/577318394.html" target="_blank">
+1秒前&nbsp;<span>228295868赞同了神圣剑...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/1366565823601756459.html" target="_blank">
+1秒前&nbsp;<span>东莞市航业金属解决了...</span>&nbsp;的问题</a>
+</li>
+<li>
+<a href="/question/552496239291666492.html" target="_blank">
+1秒前&nbsp;<span>花蕊馨香兴奋弓赞同了...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/552496239291666492.html" target="_blank">
+1秒前&nbsp;<span>554664918赞同了神圣剑...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/1110456612297697779.html" target="_blank">
+1秒前&nbsp;<span>hbz28281zdo赞同了神圣...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/1110456612297697779.html" target="_blank">
+1秒前&nbsp;<span>exqf4363sjx赞同了神圣...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/1860259019336225387.html" target="_blank">
+1秒前&nbsp;<span>微弱愉快思恋赞同了神...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/1859416931979891147.html" target="_blank">
+1秒前&nbsp;<span>luannqbi5897赞同了神...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/577318394.html" target="_blank">
+1秒前&nbsp;<span>313880655赞同了神圣剑...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/1110456612297697779.html" target="_blank">
+1秒前&nbsp;<span>rdwz2047yy赞同了神圣...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/744511142811472292.html" target="_blank">
+1秒前&nbsp;<span>死都忠于吴亦凡赞同了...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/134494631254821365.html" target="_blank">
+1秒前&nbsp;<span>junio2007赞同了神圣剑...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/1859416931979891147.html" target="_blank">
+1秒前&nbsp;<span>huiztzhui0673赞同了神...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/1859416931979891147.html" target="_blank">
+1秒前&nbsp;<span>guavmcia775赞同了神圣...</span>&nbsp;的回答</a>
+</li>
+<li>
+<a href="/question/391418838438713805.html" target="_blank">
+1秒前&nbsp;<span>syccqtong赞同了神圣剑...</span>&nbsp;的回答</a>
+</li>
+</ul>
+</div>
+<div class="btn-line">
+<a alog-alias="zhidao-ask-btn" class="btn-32-white location" target="_blank" rel="nofollow" href="/new">
+<span class="i-ask"></span><span>我要提问</span>
+</a>
+<a alog-alias="zhidao-answer-btn" class="btn-32-white" target="_blank" rel="nofollow" href="/browse/">
+<span class="i-answer"></span><span>我要回答</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div id="info-content" class="line">
+<div class="info-left">
+<div class="info-left-leftside">
+<div id="category-list"><h3>问题分类</h3>
+<dl alog-group="hm-cate" data-cid="74">
+<dt class="more-flag line">
+<i class="i-more grid-r mt-5"></i>
+<a href="/browse/74" target="_blank">电脑/网络</a>
+</dt>
+<dd>
+<a href="/browse/86">硬件</a><a href="/browse/1069">常见软件</a><a href="/browse/88">互联网</a></dd>
+</dl>
+<dl alog-group="hm-cate" data-cid="80">
+<dt class="more-flag line">
+<i class="i-more grid-r mt-5"></i>
+<a href="/browse/80" target="_blank">生活</a>
+</dt>
+<dd>
+<a href="/browse/149">服装/首饰</a><a href="/browse/147">美容/塑身</a><a href="/browse/152">购物</a></dd>
+</dl>
+<dl alog-group="hm-cate" data-cid="79">
+<dt class="more-flag line">
+<i class="i-more grid-r mt-5"></i>
+<a href="/browse/79" target="_blank">医疗健康</a>
+</dt>
+<dd>
+<a href="/browse/790">内科</a><a href="/browse/792">妇产科</a><a href="/browse/146">人体常识</a></dd>
+</dl>
+<dl alog-group="hm-cate" data-cid="78">
+<dt class="more-flag line">
+<i class="i-more grid-r mt-5"></i>
+<a href="/browse/78" target="_blank">体育/运动</a>
+</dt>
+<dd>
+<a href="/browse/123">足球</a><a href="/browse/124">篮球</a><a href="/browse/134">健身</a></dd>
+</dl>
+<dl alog-group="hm-cate" data-cid="95">
+<dt class="more-flag line">
+<i class="i-more grid-r mt-5"></i>
+<a href="/browse/95" target="_blank">电子数码</a>
+</dt>
+<dd>
+<a href="/browse/1078">手机/通讯</a><a href="/browse/843">照相机/摄像机</a></dd>
+</dl>
+<dl alog-group="hm-cate" data-cid="82">
+<dt class="more-flag line">
+<i class="i-more grid-r mt-5"></i>
+<a href="/browse/82" target="_blank">商业/理财</a>
+</dt>
+<dd>
+<a href="/browse/772">股票</a><a href="/browse/184">财务税务</a><a href="/browse/182">创业投资</a></dd>
+</dl>
+<dl alog-group="hm-cate" data-cid="83">
+<dt class="more-flag line">
+<i class="i-more grid-r mt-5"></i>
+<a href="/browse/83" target="_blank">教育/科学</a>
+</dt>
+<dd>
+<a href="/browse/202">理工学科</a><a href="/browse/187">外语学习</a></dd>
+</dl>
+<dl alog-group="hm-cate" data-cid="84">
+<dt class="more-flag line">
+<i class="i-more grid-r mt-5"></i>
+<a href="/browse/84" target="_blank">社会民生</a>
+</dt>
+<dd>
+<a href="/browse/209">法律</a><a href="/browse/177">求职就业</a><a href="/browse/973">时事政治</a></dd>
+</dl>
+<dl alog-group="hm-cate" data-cid="85">
+<dt class="more-flag line">
+<i class="i-more grid-r mt-5"></i>
+<a href="/browse/85" target="_blank">文化/艺术</a>
+</dt>
+<dd>
+<a href="/browse/1097">文学</a><a href="/browse/761">历史话题</a><a href="/browse/213">书画美术</a></dd>
+</dl>
+<dl alog-group="hm-cate" data-cid="77">
+<dt class="more-flag line">
+<i class="i-more grid-r mt-5"></i>
+<a href="/browse/77" target="_blank">游戏</a>
+</dt>
+<dd>
+<a href="/browse/111">网络游戏</a><a href="/browse/112">单机游戏</a></dd>
+</dl>
+<dl alog-group="hm-cate" data-cid="1031">
+<dt class="more-flag line">
+<i class="i-more grid-r mt-5"></i>
+<a href="/browse/1031" target="_blank">娱乐休闲</a>
+</dt>
+<dd>
+<a href="/browse/99">音乐</a><a href="/browse/96">电影</a><a href="/browse/100">动漫</a></dd>
+</dl>
+<dl alog-group="hm-cate" data-cid="81">
+<dt class="more-flag line">
+<i class="i-more grid-r mt-5"></i>
+<a href="/browse/81" target="_blank">烦恼</a>
+</dt>
+<dd>
+<a href="/browse/172">夫妻</a><a href="/browse/171">恋爱</a><a href="/browse/180">情感情绪</a></dd>
+</dl>
+<dl alog-group="hm-cate" data-cid="1101">
+<dt class="more-flag line">
+<i class="i-more grid-r mt-5"></i>
+<a href="/browse/1101" target="_blank">资源共享</a>
+</dt>
+<dd>
+<a href="/browse/1035">视频共享</a><a href="/browse/1102">音频/歌曲共享</a></dd>
+</dl>
+<dl alog-group="hm-cate" data-cid="1">
+<dt class="more-flag line">
+<i class="i-more grid-r mt-5"></i>
+<a href="/browse/1" target="_blank">地区</a>
+</dt>
+<dd>
+<a href="/browse/220">北京</a><a href="/browse/240">上海</a><a href="/browse/246">山东</a></dd>
+</dl>
+</div>
+</div>
+<div class="dotted-line"></div>
+<div class="info-left-content">
+<div id="push-unlogin" alog-group="index-que">
+<h3>大家都在问</h3>
+<dl >
+<dt>
+<span class="no-score"></span>
+<a  href="/question/1668730613246230387.html?push=asking" target="_blank">求达人帮忙，谢谢了。</a>
+<span class="time">37 秒前</span>
+</dt>
+<dd>
+热心网友、热心网友等7人参与了回答</dd>
+</dl>
+<dl >
+<dt>
+<span class="no-score"></span>
+<a  href="/question/1818666267960578068.html?push=asking" target="_blank">全天24小时刷采纳 1个月30块钱 先付款 骗子绕道</a>
+<span class="time">37 秒前</span>
+</dt>
+<dd>
+热心网友、热心网友参与了回答</dd>
+</dl>
+<dl >
+<dt>
+<span class="no-score"></span>
+<a  href="/question/1046949720194201179.html?push=asking" target="_blank">微信好用吗感觉不如QQ</a>
+<span class="time">41 秒前</span>
+</dt>
+<dd>
+热心网友、热心网友等4人参与了回答</dd>
+</dl>
+<dl >
+<dt>
+<span class="no-score"></span>
+<a  href="/question/304490539043149444.html?push=asking" target="_blank">机智的小伙伴们，求教这道题的详细做法，多谢啦</a>
+<span class="time">50 秒前</span>
+</dt>
+<dd>
+热心网友、热心网友参与了回答</dd>
+</dl>
+<dl >
+<dt>
+<span class="no-score"></span>
+<a  href="/question/1818666267831657108.html?push=asking" target="_blank">英式早餐炸面包片怎么做</a>
+<a rel="nofollow" href="http://zhidao.baidu.com/s/2011wapadv/index.html?fr=index&tab=1" class="i-from-wap" title="来自手机知道"></a>
+<span class="time">51 秒前</span>
+</dt>
+<dd>
+紫依亦儿、rainbow馃挀参与了回答</dd>
+</dl>
+<dl >
+<dt>
+<span class="no-score"></span>
+<a  href="/question/1668730613116429027.html?push=asking" target="_blank">小米手机密码忘记</a>
+<span class="time">55 秒前</span>
+</dt>
+<dd>
+热心网友、热心网友等3人参与了回答</dd>
+</dl>
+<dl >
+<dt>
+<span class="no-score"></span>
+<a  href="/question/263502323995981725.html?push=asking" target="_blank">杂牌手机是什么？</a>
+<a rel="nofollow" href="http://zhidao.baidu.com/s/2011wapadv/index.html?fr=index&tab=1" class="i-from-wap" title="来自手机知道"></a>
+<span class="time">58 秒前</span>
+</dt>
+<dd>
+1036375971、brave丶小豪等3人参与了回答</dd>
+</dl>
+<dl >
+<dt>
+<span class="no-score"></span>
+<a title="一篮鸡蛋，3个一数多1个，4个一数多2个，5个一数多3，这蓝鸡蛋有多少个？简单的方法" href="/question/1818666267766632348.html?push=asking" target="_blank">一篮鸡蛋，3个一数多1个，4个一数多2个，5个一数多3...</a>
+<span class="time">58 秒前</span>
+</dt>
+<dd>
+热心网友、热心网友等3人参与了回答</dd>
+</dl>
+<dl >
+<dt>
+<span class="i-wealth">5</span>
+<a title="现在天天酷跑我要不要买小明和单车？但听说这几天会有新角色和坐骑，到底要不要买？" href="/question/1818666267766407188.html?push=asking" target="_blank">现在天天酷跑我要不要买小明和单车？但听说这几天会...</a>
+<a rel="nofollow" href="http://zhidao.baidu.com/s/2011wapadv/index.html?fr=index&tab=1" class="i-from-wap" title="来自手机知道"></a>
+<span class="time">1 分钟前</span>
+</dt>
+<dd>
+热心网友、猪猪猪猪猪猪1等5人参与了回答</dd>
+</dl>
+<dl >
+<dt>
+<span class="no-score"></span>
+<a  href="/question/1510707661891614900.html?push=asking" target="_blank">第一道题</a>
+<span class="time">1 分钟前</span>
+</dt>
+<dd>
+热心网友、热心网友参与了回答</dd>
+</dl>
+<dl class="last">
+<dt>
+<span class="no-score"></span>
+<a  href="/question/1668730613051035307.html?push=asking" target="_blank">打印名片在哪里印的啊，求解</a>
+<a rel="nofollow" href="http://zhidao.baidu.com/s/2011wapadv/index.html?fr=index&tab=1" class="i-from-wap" title="来自手机知道"></a>
+<span class="time">1 分钟前</span>
+</dt>
+<dd>
+陌陌ww2、我爱瓶宝宝参与了回答</dd>
+</dl>
+</div>
+</div>
+<div class="block-line"></div>
+<div class="info-left-leftside">
+<div class="rank-block" id="expert-rank">
+<h3>知道专家排行</h3>
+<div class="rank-one">
+<div class="inner-left">
+<a class="expert-img" alog-group="expert-rank-title" data-img="http://hiphotos.baidu.com/zhidao/pic/item/d1160924ab18972b4a167413e7cd7b899e510a3e.jpg" rel="nofollow" href="/prof/view/888256988" target="_blank"></a>
+</div>
+<div class="inner-right">
+<a rel="nofollow" href="/prof/view/888256988" target="_blank"><strong>李庆峰</strong>医生</a>
+<p>专长：妇产科</p><p>上周回答数：<b class="f-orange">7740</b></p>
+<p>好评率：<div class="expert-star">
+<span class="expert-star-c"></span>
+</div>
+</p></div>
+</div>
+<div class="rank-middle-line"></div>
+<dl>
+<dt class="rank1">
+<span class="answer-r">上周回答<b class="f-orange">7581</b></span>
+<a class="answer-l" alog-group="expert-rank-title" rel="nofollow" href="/prof/view/888258559" target="_blank">朱福印医生</a></dt>
+<dt class="rank2">
+<span class="answer-r">上周回答<b class="f-orange">6550</b></span>
+<a class="answer-l" alog-group="expert-rank-title" rel="nofollow" href="/prof/view/uewkekvg" target="_blank">赵国华医生</a></dt>
+<dt class="rank3">
+<span class="answer-r">上周回答<b class="f-orange">5713</b></span>
+<a class="answer-l" alog-group="expert-rank-title" rel="nofollow" href="/prof/view/hpujty" target="_blank">高国静医生</a></dt>
+<dt class="rank4">
+<span class="answer-r">上周回答<b class="f-orange">5524</b></span>
+<a class="answer-l" alog-group="expert-rank-title" rel="nofollow" href="/prof/view/888257662" target="_blank">张清伦医生</a></dt>
+</dl>
+</div>
+</div>
+<div class="info-left-content">
+<div class="recommend-user famous-user"><h3>名医义诊</h3>
+<div class="inner">
+<div class="inner-left">
+<div class="famous-logo"></div>
+<a alog-action="famous-img" rel="nofollow" href="http://zhidao.baidu.com/s/mingyi09/index.html" target="_blank" data-img="http://img.iknow.bdimg.com/mingyi/images/mingyi09_tx2.jpg?t=1396011228"></a>
+<a alog-action="famous-help" class="btn-22-white" target="_blank" rel="nofollow" href="http://zhidao.baidu.com/s/mingyi09/index.html">进入专题</a>
+</div>
+<div class="inner-right">
+<h5><a alog-action="famous-title" rel="nofollow" href="http://zhidao.baidu.com/s/mingyi09/index.html" target="_blank">汪波主任：冬季呼吸疾病的防治</a></h5>
+<div class="content">
+<p>回答数<b>40</b><span class="split"></span>帮助了<b>24847</b>人</p>
+<p>北京大学医院急诊科</p>
+</div>
+<div class="question">
+<p class="ask line">
+<i class="i-ask grid mt-5"></i>
+<a class="detail" alog-action="famous-question" target="_blank" href="http://zhidao.baidu.com/question/454787977264584365.html">前些天突发心慌气短，医院检查是说是房颤...</a>
+</p>
+<p class="answer line">
+<i class="i-answer grid mt-5"></i>
+<span class="detail">
+房颤通常跟高血压、冠心病、风湿性心脏病以及甲亢有关系，所以要排除...<i class="i-evaluate"></i><span class="value-num">294</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+<div class="other">
+<h4>推荐名医</h4>
+<ul>
+<li >
+<a alog-action="famous-other" target="_blank" rel="nofollow" href="http://zhidao.baidu.com/prof/view/%E7%86%8A%E8%BE%89%E5%8C%BB%E7%94%9F">北京大学医院熊辉</a>
+</li>
+<li >
+<a alog-action="famous-other" target="_blank" rel="nofollow" href="http://zhidao.baidu.com/prof/view/%E8%B5%B5%E5%85%8B%E6%98%8E%E6%95%99%E6%8E%88">北京军联骨科医院赵克明</a>
+</li>
+<li class="last">
+<a alog-action="famous-other" target="_blank" rel="nofollow" href="http://zhidao.baidu.com/prof/view/%E6%9D%A8%E4%BF%9D%E6%9E%97%E5%8C%BB%E7%94%9F">北京东直门医院杨保林</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="block-line"></div>
+<div class="info-left-leftside">
+<div id="user-rank">
+<div class="tab" alog-group="user-rank-tab">
+<a rel="nofollow" href="http://zhidao.baidu.com/misc/alltop?type=week" class="select" target="_blank">周采纳数上升排行</a>
+<a rel="nofollow" href="http://zhidao.baidu.com/misc/alltop?type=all" class="not-selected-total" target="_blank">总积分排行</a>
+</div>
+<div class="block-tab-content" alog-group="user-rank-title">
+<div class="info-block">
+<div class="rank-block">
+<div class="rank-one rank-one-buf">
+<div class="inner-left">
+<a rel="nofollow" href="http://www.baidu.com/p/k99200801?from=zhidao" data-img="http://himg.bdimg.com/sys/portrait/item/e3c86b39393230303830317905.jpg" target="_blank"></a>
+<a alog-action="user-rank-help" target="_blank" href="#" data-username="k99200801" class="btn-22-white fixed-ask">向TA求助</a>
+</div>
+<div class="inner-right">
+<a rel="nofollow" href="http://www.baidu.com/p/k99200801?from=zhidao" target="_blank">k99200801</a>
+<p>全部回答数：34674</p>
+<p>上升采纳数：2919</p>
+</div>
+</div>
+<div class="rank-middle-line-buf1"></div>
+<dl>
+<dt class="rank1"><a rel="nofollow" href="http://www.baidu.com/p/luo9807119?from=zhidao" target="_blank">luo9807119</a></dt>
+<dt class="rank2"><a rel="nofollow" href="http://www.baidu.com/p/%E5%B9%B8%E7%A6%8F%E5%92%8C%E8%87%AA%E7%94%B1%E7%8C%AA?from=zhidao" target="_blank">幸福和自由猪</a></dt>
+<dt class="rank3"><a rel="nofollow" href="http://www.baidu.com/p/wjh301314?from=zhidao" target="_blank">wjh301314</a></dt>
+<dt class="rank4"><a rel="nofollow" href="http://www.baidu.com/p/%E9%92%A5%E5%8C%99%E5%BF%83%E8%AE%B0%E5%BD%95?from=zhidao" target="_blank">钥匙心记录</a></dt>
+</dl>
+</div>
+</div>
+<div class="info-block" style="display:none;">
+<div class="rank-block">
+<div class="rank-one rank-one-buf">
+<div class="inner-left">
+<a rel="nofollow" href="http://www.baidu.com/p/12345A%E5%B8%AE%E5%8A%A9?from=zhidao" data-img="http://himg.bdimg.com/sys/portrait/item/515f313233343541b0efd6faf303.jpg" target="_blank"></a>
+<a alog-action="user-rank-help" target="_blank" href="#" data-username="12345A帮助" class="btn-22-white fixed-ask">向TA求助</a>
+</div>
+<div class="inner-right">
+<a rel="nofollow" href="http://www.baidu.com/p/12345A%E5%B8%AE%E5%8A%A9?from=zhidao" target="_blank">12345A帮助</a>
+<p>全部回答数：497197</p>
+<p>全部经验值：12445708</p>
+</div>
+</div>
+<div class="rank-middle-line-buf1"></div>
+<dl>
+<dt class="rank1"><a rel="nofollow" href="http://www.baidu.com/p/%E5%A6%99%E9%85%92?from=zhidao" target="_blank">妙酒</a></dt>
+<dt class="rank2"><a rel="nofollow" href="http://www.baidu.com/p/qsmm?from=zhidao" target="_blank">qsmm</a></dt>
+<dt class="rank3"><a rel="nofollow" href="http://www.baidu.com/p/%E9%82%93%E5%8D%9A%E5%A3%AB%E4%B8%BA%E4%BD%A0%E5%8F%96%E5%90%8D?from=zhidao" target="_blank">邓博士为你取名</a></dt>
+<dt class="rank4"><a rel="nofollow" href="http://www.baidu.com/p/Rok_Lancelot?from=zhidao" target="_blank">Rok_Lancelot</a></dt>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="info-left-content">
+<div class="recommend-user master-user"><h3>达人风采</h3>
+<div class="inner">
+<div class="inner-left">
+<div class="master-logo"></div>
+<a alog-action="master-img" rel="nofollow" href="http://passport.baidu.com/?business&un=%BE%B0%C1%FA%CA%A2%CA%C0&from=prin#2" target="_blank" data-img="http://img.iknow.bdimg.com/123.jpg?t=1396011228"></a>
+<a alog-action="master-help" class="btn-22-white fixed-ask" target="_blank" data-username="景龙盛世" href="#">向TA求助</a>
+</div>
+<div class="inner-right">
+<h5><a alog-action="master-title" rel="nofollow" href="http://passport.baidu.com/?business&un=%BE%B0%C1%FA%CA%A2%CA%C0&from=prin#2" target="_blank">景龙盛世：知道之星</a></h5>
+<div class="content">
+<p>被赞同数:<b>10459</b><span class="split"></span>回答数:<b>35124</b></p>
+<p><span class="split"></span><a href="http://hi.baidu.com/zhishibole/item/a0ef244e1fe34416896d100f" style="display:none" class="interview" target="_blank">达人访谈</a></p>
+</div>
+<div class="question">
+<p class="ask line">
+<i class="i-ask grid mt-5"></i>
+<a class="detail" alog-action="master-question" target="_blank" href="http://zhidao.baidu.com/question/1046063369816934939.html">求鉴定这只翡翠值多少钱？</a>
+</p>
+<p class="answer line">
+<i class="i-answer grid mt-5"></i>
+<span class="detail">
+从图上来看这是一只天然翡翠A货手镯，货真价实，其翡翠料子为糯种...<i class="i-evaluate"></i><span class="value-num">1</span>
+</span>
+</p>
+</div>
+</div>
+</div>
+<div class="other">
+<h4>推荐达人</h4>
+<ul>
+<li >
+<a alog-action="master-other" target="_blank" rel="nofollow" href="http://passport.baidu.com/?business&un=xinan3377&from=prin#2">xinan3377：知道之星</a>
+</li>
+<li >
+<a alog-action="master-other" target="_blank" rel="nofollow" href="http://passport.baidu.com/?business&un=skyhunter002&from=prin#2">skyhunter002：知道之星</a>
+</li>
+<li class="last">
+<a alog-action="master-other" target="_blank" rel="nofollow" href="http://www.baidu.com/p/wzhq777?from=zhidao">wzhq777：知道达人</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="block-line"></div>
+<div class="info-left-leftside">
+<script id="t:enterprise-rank" type="text/html">
+	<h3>明星企业知道周排行榜</h3>
+	<a href="http://zhidao.baidu.com/c/rank/view" class="more-enterprise" target="_blank">更多</a>
+	<div class="rank-one rank-one-enterprise">
+		<div class="inner-left">
+			<a alog-action="enterprise-rank-img" href="<#:=rank[0].domain#>" target="_blank"><img src="<#=rank[0].logo#>" alt="" /></a>
+			<a alog-action="enterprise-rank-help" target="_blank" rel="nofollow" href="/new?opensiteid=<#=rank[0].raw_site_id#>&opencid=0" class="btn-22-white">求助客服</a>
+		</div>
+		<div class="inner-right">
+			<a alog-group="enterprise-rank-title" href="<#:=rank[0].domain#>" target="_blank"><#=rank[0].name#></a>
+			<p>周回答数：<#=rank[0].answer#></p>
+			<p>周满意回答数：<#=rank[0].good#></p>
+		</div>
+	</div>
+	<div class="rank-middle-line"></div>
+	<dl>
+		<#for (var i=1;i<rank.length;i++) { #>
+			<dt class="rank<#=i#>"><a alog-group="enterprise-rank-title" class="enterprise" href="<#=rank[i].domain#>" target="_blank"><#=rank[i].name#></a></dt>
+		<#}#>
+	</dl>
+</script>
+<div class="rank-block" id="enterprise-rank"></div>
+</div>
+<div class="info-left-content">
+<div id="logo-wall">
+<h3><a rel="nofollow" href="http://zhidao.baidu.com/s/enterprise/">企业知道</a></h3>
+<a rel="nofollow" href="http://zhidao.baidu.com/s/enterprise/#logo-section" target="_blank" id='logo-wall-more'>更多</a>
+<div alog-group="qiye-title" id="logo-content">
+<div id="logo-back">
+<div class="big-one">
+<a href="http://zhidao.baidu.com/c/lenovo" data-img="http://hiphotos.baidu.com/openiknow/pic/item/a686c917afb39297c83d6d48.jpg" class="big-one-a" target="_blank"></a>
+<div class="info" style="display:none;">
+<p class="b-info-title">联想企业平台</p>
+<p class="b-info-content">全球领先pc企业，享誉全球的Think及Idea品牌。</p>
+</div>
+</div>
+<div class="small-imgs location-up">
+<a href="http://zhidao.baidu.com/c/xiaomi" data-img="http://hiphotos.baidu.com/openiknow/pic/item/728da97725914685b151b946.jpg" class="small-imgs-a" target="_blank"></a>
+<div class="info" style="display:none;">
+<p class='b-small-info-title'>小米企业平台</p>
+<p class='b-info-content'></p>
+</div>
+</div>
+<div class="small-imgs location-up">
+<a href="http://zhidao.baidu.com/c/samsung" data-img="http://hiphotos.baidu.com/openiknow/pic/item/c75c103809dfea58b311c722.jpg" class="small-imgs-a" target="_blank"></a>
+<div class="info" style="display:none;">
+<p class='b-small-info-title'>三星数字服务平台</p>
+<p class='b-info-content'></p>
+</div>
+</div>
+<div class="small-imgs location-up">
+<a href="http://zhidao.baidu.com/c/ah189" data-img="http://hiphotos.baidu.com/openiknow/pic/item/024f78f0879c3f717831aa39.jpg" class="small-imgs-a" target="_blank"></a>
+<div class="info" style="display:none;">
+<p class='b-small-info-title'>安徽电信企业平台</p>
+<p class='b-info-content'></p>
+</div>
+</div>
+<div class="small-imgs location-up">
+<a href="http://zhidao.baidu.com/c/intel" data-img="http://hiphotos.baidu.com/zhidao/pic/item/42a98226cffc1e17c7f70b924890f603728de9cd.jpg" class="small-imgs-a" target="_blank"></a>
+<div class="info" style="display:none;">
+<p class='b-small-info-title'>英特尔服务平台</p>
+<p class='b-info-content'></p>
+</div>
+</div>
+<div class="small-imgs location-down">
+<a href="http://zhidao.baidu.com/c/chinaunicom" data-img="http://hiphotos.baidu.com/openiknow/pic/item/a2cc7cd9fe97115a38012f5e.jpg" class="small-imgs-a" target="_blank"></a>
+<div class="info" style="display:none;">
+<p class='b-small-info-title'>联通企业平台</p>
+<p class='b-info-content'></p>
+</div>
+</div>
+<div class="small-imgs location-down">
+<a href="http://zhidao.baidu.com/c/cmbchina" data-img="http://hiphotos.baidu.com/openiknow/pic/item/f2deb48fbaaff228f11f36a5.jpg" class="small-imgs-a" target="_blank"></a>
+<div class="info" style="display:none;">
+<p class='b-small-info-title'>招商银行企业知道平台</p>
+<p class='b-info-content'></p>
+</div>
+</div>
+<div class="small-imgs location-down">
+<a href="http://zhidao.baidu.com/c/oppo" data-img="http://hiphotos.baidu.com/openiknow/pic/item/ac6eddc4bd5e745538db4947.jpg" class="small-imgs-a" target="_blank"></a>
+<div class="info" style="display:none;">
+<p class='b-small-info-title'>OPPO企业知道平台</p>
+<p class='b-info-content'></p>
+</div>
+</div>
+<div class="small-imgs location-down">
+<a href="http://zhidao.baidu.com/c/ijinshan" data-img="http://hiphotos.baidu.com/openiknow/pic/item/f91986181cc5361c4bedbc0c.jpg" class="small-imgs-a" target="_blank"></a>
+<div class="info" style="display:none;">
+<p class='b-small-info-title'>金山网络企业平台</p>
+<p class='b-info-content'></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="union-home_bottom" class="wgt-union union-home_bottom line"></div>
+</div>
+<div class="info-right">
+<div id="announcement">
+<h3>
+<a alog-alias="announ-more" rel="nofollow" href="http://hi.baidu.com/new/zhidao" target="_blank">更多</a>
+公告区</h3>
+<ul alog-group="hm-gg-title">
+<li>
+<i class="i-disc"></i>
+<a target="_blank" style="color:#090;" rel="nofollow" href="http://tieba.baidu.com/p/2997629064">坚决清理网上淫秽色情信息</a></li>
+<li>
+<i class="i-disc"></i>
+<a target="_blank"  rel="nofollow" href="http://zhidao.baidu.com/baobao">知道新品：宝宝知道App上线啦</a></li>
+<li>
+<i class="i-disc"></i>
+<a target="_blank"  rel="nofollow" href="http://www.baidu.com/search/zhidao_help.html">帮助手册：如何使用知道</a></li>
+<li>
+<i class="i-disc"></i>
+<a target="_blank"  rel="nofollow" href="http://zhidao.baidu.com/zuoyebang/">新品上线：作业帮APP发布啦</a></li>
+<li>
+<i class="i-disc"></i>
+<a target="_blank"  rel="nofollow" href="http://tieba.baidu.com/p/3192145145">百度知道升级规则优化啦！</a></li>
+</ul>
+</div>
+<div class="wgt-promotion" id="site-promotion">
+<div class="promotion-block" id="imgs-block">
+</div>
+<div id="site-navigator-back">
+</div>
+<div id="site-navigator">
+</div>
+</div>
+<div class="wgt-openapi-block">
+<a href="/openapi" target="_blank" data-img="http://img.iknow.bdimg.com/home/openapi.jpg"></a>
+</div>
+<div id="hot-topic" alog-group="hot-topic-title">
+<a href="http://zhidao.baidu.com/baobao" target="_blank" class="title-img" data-img="http://img.baidu.com/img/iknow/sula/muyingzhuanti.jpg?t=1407122658"></a>
+<a href="http://zhidao.baidu.com/baobao" class="topic-title" target="_blank">
+关爱母婴特辑
+</a>
+<div class="hot-topic">
+<a href="http://zhidao.baidu.com/daily/view?id=651" class="title" target="_blank">
+<i class="i-ask grid"></i>
+<span class="detail">受精卵到胎儿，如何成长？</span>
+</a>
+<div class="answer" >
+<i class="i-answer grid"></i>
+<span class="detail">瑞典摄影师花了12年拍摄胎儿在子宫里36周的成长发育。</span>
+</div>
+</div>
+<div class="hot-topic">
+<a href="http://zhidao.baidu.com/daily/view?id=655" class="title" target="_blank">
+<i class="i-ask grid"></i>
+<span class="detail">孕妇易发脾气，如何调节？</span>
+</a>
+<div class="answer" style="display:none">
+<i class="i-answer grid"></i>
+<span class="detail">准爸爸应更加包容关爱自己的伴侣，当好“后勤部长”。</span>
+</div>
+</div>
+<div class="hot-topic">
+<a href="http://zhidao.baidu.com/daily/view?id=657" class="title" target="_blank">
+<i class="i-ask grid"></i>
+<span class="detail">夏季带宝宝出游必备药品</span>
+</a>
+<div class="answer" style="display:none">
+<i class="i-answer grid"></i>
+<span class="detail">夏季带宝宝出游必备退烧药、腹泻药、防晒霜、驱蚊液等。</span>
+</div>
+</div>
+</div>
+<div id="info-block-bottom"></div>
+</div>
+</div>
+
+	</div>
+
+
+		
+            <footer id="footer" class="wgt-footer">
+    <p>
+        <a target="_blank" rel="nofollow" href="http://www.baidu.com/search/zhidao_help.html">帮助</a>
+        &nbsp;|&nbsp;
+        <a target="_blank" rel="nofollow" href="http://zhidao.baidu.com/feedback">意见反馈</a>
+        &nbsp;|&nbsp;
+        <a target="_blank" rel="nofollow" href="http://tousu.baidu.com/zhidao">投诉举报</a>
+        &nbsp;|&nbsp;
+        <a rel="nofollow" href="http://www.baidu.com/search/zhidao_help.html#知道协议" target="_blank">知道协议</a>
+        &nbsp;|&nbsp;
+        <a target="_blank" rel="nofollow" href="http://zhidao.baidu.com/misc/more/joinus">加入我们</a>
+    </p>
+    <p>
+     &copy;2014 Baidu&nbsp;&nbsp; <a rel="nofollow" href="http://www.baidu.com/duty/" target="_blank">使用百度前必读</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://zhidao.baidu.com/openapi" target="_blank">百度知道开放平台</a>
+    </p>
+</footer>
+		
+
+	    
+
+        
+
+        
+                    
+	</body><script type="text/javascript" src="http://cdn.iknow.bdimg.com/static/common/lib/mod_4a8b07f.js"></script><script type="text/javascript">require.resourceMap({"res":{"common:widget\/lib\/swfupload\/swfupload.js":{"url":"http:\/\/cdn.iknow.bdimg.com\/static\/common\/widget\/lib\/swfupload\/swfupload_f2dd275.js"}},"pkg":[]});</script><script type="text/javascript" src="http://cdn.iknow.bdimg.com/static/common/pkg/framework_41c4328.js"></script><script type="text/javascript" src="http://cdn.iknow.bdimg.com/static/common/pkg/module_a49b9f2.js"></script><script type="text/javascript" src="http://cdn.iknow.bdimg.com/static/common/pkg/more_c8834be.js"></script><script type="text/javascript" src="http://cdn.iknow.bdimg.com/static/home/pkg/module_b5d48e9.js"></script><script type="text/javascript">
+!function(){    require.async('common:widget/userbar/userbar.js');
+}();
+!function(){  require.async('common:widget/js/logic/search-box/search-box.js');
+}();
+!function(){require.async('common:widget/menu/menu.js', function(menu){
+	menu.init();
+});
+}();
+!function(){	require.async('home:widget/recommend/recommend.js');
+}();
+!function(){	require.async('home:widget/zhidao-info/zhidao-info.js',function(e){
+		e.init({'finishCount':327187261});
+	});
+}();
+!function(){	require.async('home:widget/category/category.js');
+}();
+!function(){    require.async(['common:widget/js/util/tangram/tangram.js', 'home:widget/js/lazyload/lazyload.js', 'common:widget/js/ui/prof-star/prof-star.js'], function($, lazyload, ProfStar){
+    	ProfStar({
+    		target: $('.expert-star-c'), 
+    		rate: parseInt('98.881118881119'), 
+    		starW: 17, 
+    		starG: 3
+    	});
+		lazyload.add('#expert-rank', '#expert-rank .expert-img');
+        //util.fixedAsk.bind('#expert-rank .fixed-ask')
+	});
+}();
+!function(){	require.async(['home:widget/js/lazyload/lazyload.js', 'home:widget/js/fixed-ask/fixed-ask.js'], function(lazyload, fixedAsk){
+		lazyload.add('.famous-user', '.famous-user .inner-left a');
+        fixedAsk.bind('.famous-user .fixed-ask');
+	});
+}();
+!function(){require.async("home:widget/user-rank/user-rank.js");}();
+!function(){	require.async(['home:widget/js/lazyload/lazyload.js', 'home:widget/js/fixed-ask/fixed-ask.js'], function(lazyload, fixedAsk){
+		lazyload.add('.master-user', '.master-user .inner-left a');
+        fixedAsk.bind('.master-user .fixed-ask');
+	});
+}();
+!function(){	require.async('home:widget/enterprise-rank/enterprise-rank.js');
+}();
+!function(){	require.async('home:widget/enterprise-logo/enterprise-logo.js');
+}();
+!function(){                    require.async(['home:widget/union/union.js', 'home:widget/js/lazyload/lazyload.js'], function(union, lazyload){
+                lazyload.add('#union-home_bottom', function(){
+                    union.init('615519', 'union-home_bottom');
+                }, {method: 'callback'});
+            });
+            }();
+!function(){	require.async('home:widget/promotion/promotion.js',function(e){
+		e.init([{"imgUrl":"http:\/\/img.baidu.com\/img\/iknow\/r\/image\/2014-08-06\/6419a6887c67711c3372b0ef12d639a6.jpg?t=1407723682","url":"http:\/\/zhidao.baidu.com\/hangjia\/?fr=8slzm","title":""},{"imgUrl":"http:\/\/img.baidu.com\/img\/iknow\/sula\/shoyebanner.jpg?t=1407723682","url":"http:\/\/zhidao.baidu.com\/s\/guagua\/index.html?qq-pf-to=pcqq.c2c#","title":""},{"imgUrl":"http:\/\/img.baidu.com\/img\/iknow\/sula01\/zhongchoushouyebanner.jpg?t=1407723682","url":"http:\/\/zhidao.baidu.com\/s\/book\/index.html","title":""}]);
+	});
+}();
+!function(){	require.async('home:widget/hot-topic/hot-topic.js');
+}();
+!function(){    require.async(['common:widget/js/util/tangram/tangram.js', 'common:widget/js/util/log/log.js'], function(T, log){
+
+        T('a[href!="#"]').click(function(e){
+            log.send({ 'type': 2058, 'pos': 'home_link_pv', 'evtType': 'click', 'href': this.href });
+        });
+ 		T(document).ready(function(){
+            if ( T('#bottom-ad table').length > 0 ) {
+                log.send({ 'type':2058, 'params':'home' });
+            }
+
+	 	});
+ 	});
+ }();
+!function(){		
+																require.async('common:widget/js/logic/dom-ready/dom-ready.js', function(D){ D.init({"pathname":"\/"}) });
+            }();
+</script>
+    
+<script type="text/javascript">
+(function (){
+	(function(e){e=e||{};var a="http://img.baidu.com/hunter/alog/",t="http://nsclick.baidu.com/u.gif",p="http://static.tieba.baidu.com/tb/pms/img/st.gif";e.page&&(alog("set","alias",{monkey:a+"monkey.min.js",element:a+"element.min.js",speed:"http://static.tieba.baidu.com/tb/pms/wpo_alog_speed.js",feature:a+"feature.min.js"}),alog("require",["monkey","element"],function(a){var p={page:e.page,pid:"241",p:"102",hid:"2680",postUrl:t,pageflag:e.pageflag||"",reports:{refer:1,staytime:1}};if(e.params)for(var i in e.params)p[i]=e.params[i];a.create(p)}),alog("monkey.send","pageview",{now:+new Date}),e.err&&parseFloat(e.err.sample)>=Math.random()&&alog("exception.create",{postUrl:t,page:e.page,pid:"170",p:"102"}),e.feature&&parseFloat(e.feature.sample)>=Math.random()&&alog("require","feature",function(a){a.create({dv:4,postUrl:p,page:e.page,p:"102"}),a.fire("commit")})),e.wpd&&alog("speed.set","options",{is_login:F.context("user").isLogin?1:0,sample:parseFloat(e.wpd.sample),product_id:"102",page_id:e.wpd.pageid})}).apply(window,"undefined"!=typeof arguments&&arguments);;
+})({"page":"zhidao-home","pageflag":"0","wpd":{"sample":"0.1","pageid":"4"}});
+
+void function(g,a){function i(m,n,l){l=l||15;var o=new Date();o.setTime(new Date().getTime()+l*1000);a.cookie=m+"="+escape(n)+";path=/;expires="+o.toGMTString()}function h(m){var l=a.cookie.match(new RegExp("(^| )"+m+"=([^;]*)(;|$)"));if(l!=null){return unescape(l[2])}return null}function c(l){if(g.attachEvent){g.attachEvent("onload",l,false)}else{if(g.addEventListener){g.addEventListener("load",l)}}}function e(){var m=alog.tracker&&alog.tracker("speed").get("options")||{};var q=m.random=Math.random();var p=m.special_pages||[];var l=[];for(var n=0;n < p.length;n++){var o=p[n];if(q < o.sample){l.push(o.id)}}if(l.length){alog("speed.set","special_id","["+l+"]")}if(q<=m.sample||l.length){alog("speed.set","send",true);if(m.product_id&&m.page_id){alog("require","speed")}}}function b(){var l=h("PMS_JT");if(l){i("PMS_JT","",-1);try{l=eval(l);}catch(e){l={};}if(!l.r||a.referrer.replace(/#.*/,"")==l.r){alog("speed.set","wt",l.s)}}}b();var f=false;
+function d(){alog.on&&alog.on("mark",function(p){var n=alog.tracker&&alog.tracker("speed").get("options")||{};f=true;if(n&&n.custom_metrics&&n.custom_metrics.constructor==Array){var m=n.custom_metrics;var l=alog.tracker("speed").fields;for(var o=0;o < m.length;o++){if(!l||!l.hasOwnProperty(m[o])){f=false;break}}}f&&e()})}c(function(){d();alog("speed.set","lt",+new Date);alog.fire&&alog.fire("mark")});function k(n,m){var l=0;if((m.nodeName||m.tagName).toLowerCase()===n.toLowerCase()){return m}while(m=m.parentNode){l++;if((m.nodeName||m.tagName).toLowerCase()===n.toLowerCase()){return m}if(l>=4){return null}}return null}function j(l){if(a.attachEvent){a.attachEvent("onclick",l)}else{a.addEventListener("click",l,false)}}j(function(n){var n=n||window.event;var m=n.target||n.srcElement;var o=k("a",m);if(o){var l=o.getAttribute("href");if(!/^#|javascript:/.test(l)){i("PMS_JT",'({"s":'+(+new Date)+',"r":"'+document.URL.replace(/#.*/,"")+'"})')}}})}(window,document);
+//
+with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://img.baidu.com/hunter/zhidao.js?cdnversion='+~(new Date()/864e5)];
+require.async('common:widget/lib/jquery/jquery.js', function($){ 
+	$(function(){
+		alog && alog('speed.set', 'drt', new Date);
+			});
+});
+</script>
+
+</html>

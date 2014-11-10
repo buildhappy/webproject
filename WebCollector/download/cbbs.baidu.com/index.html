@@ -1,0 +1,599 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>论坛首页 -  百度产品论坛</title>
+
+<meta name="keywords" content="论坛首页" />
+<meta name="description" content="论坛首页 ,百度产品论坛" />
+<meta name="generator" content="Discuz! X3.1" />
+<meta name="author" content="Discuz! Team and Comsenz UI Team" />
+<meta name="copyright" content="2001-2013 Comsenz Inc." />
+<meta name="MSSmartTagsPreventParsing" content="True" />
+<meta http-equiv="MSThemeCompatible" content="Yes" />
+<link rel="shortcut icon" type="image/x-icon" href="http://www.baidu.com/favicon.ico">
+<base href="http://rw.baidu.com/" />
+
+
+<script src="/static/js/jquery-1.8.0.min.js" type="text/javascript"></script>
+<script src="/static/js/jquery.superslide.2.1.1.js" type="text/javascript"></script><link rel="stylesheet" type="text/css" href="data/cache/style_2_common.css?BRw" /><link rel="stylesheet" type="text/css" href="data/cache/style_2_portal_list.css?BRw" /><script type="text/javascript">var STYLEID = '2', STATICURL = 'static/', IMGDIR = 'static/image/common', VERHASH = 'BRw', charset = 'utf-8', discuz_uid = '0', cookiepre = '963f_2132_', cookiedomain = '', cookiepath = '/', showusercard = '1', attackevasive = '0', disallowfloat = '', creditnotice = '1|威望|,2|百度金币|,3|贡献|,4|小度豪金|,5|输入法积分|', defaultstyle = '', REPORTURL = 'aHR0cDovL3J3LmJhaWR1LmNvbS9pbmRleC8=', SITEURL = 'http://rw.baidu.com/', JSPATH = 'static/js/', DYNAMICURL = '';</script>
+<script src="static/js/common.js?BRw" type="text/javascript"></script>
+<meta name="application-name" content="百度产品论坛" />
+<meta name="msapplication-tooltip" content="百度产品论坛" />
+<meta name="msapplication-task" content="name=版块;action-uri=http://rw.baidu.com/forum.php;icon-uri=http://rw.baidu.com/static/image/common/bbs.ico" />
+<script src="static/js/portal.js?BRw" type="text/javascript"></script>
+
+
+<link rel="stylesheet" type="text/css" id="diy_common" href="template/default/common/bbs.css?BRw" />
+<link rel="stylesheet" type="text/css" href="template/pbbs/common/reset.css?BRw" />
+<link rel="stylesheet" type="text/css" href="template/pbbs/common/style.css?BRw" />
+
+
+</head>
+
+<body id="nv_portal" class="pg_list pg_list_4" onkeydown="if(event.keyCode==27) return false;">
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+<div id="toptb" class="cl">
+<div class="wp">
+<div class="z"><a href="javascript:;"  onclick="setHomepage('http://rw.baidu.com/');">设为首页</a><a href="http://rw.baidu.com/"  onclick="addFavorite(this.href, '百度产品论坛');return false;">收藏本站</a></div>
+<div class="y">
+<a id="switchblind" href="javascript:;" onclick="toggleBlind(this)" title="开启辅助访问" class="switchblind">开启辅助访问</a>
+</div>
+</div>
+</div>
+
+<div id="qmenu_menu" class="p_pop blk" style="display: none;">
+<div class="ptm pbw hm">
+请 <a href="javascript:;" class="xi2" onclick="lsSubmit()"><strong>登录</strong></a> 后使用快捷导航<br />没有帐号？<a href="member.php?mod=register" class="xi2 xw1">立即注册</a>
+</div>
+</div><div id="hd">
+<div class="wp">
+<div class="hdc cl"><h2><a href="./" title="百度产品论坛"><img src="static/image/common/logo.png" alt="百度产品论坛" border="0" /></a></h2><link rel="stylesheet" type="text/css" href="./rw/Public/Css/login.css" media="all"> 
+<script src="http://fe.bdimg.com/tangram/2.0.2.1.js" type="text/javascript"></script>
+
+<script src="./rw/Public/Js/tangram-all.js" type="text/javascript"></script>
+<script src="./rw/Public/Js/tangram-custom-full-source-min.js" type="text/javascript"></script>
+<script src="https://passport.baidu.com/v2/api/?getapi&class=login&tpl=crt&tangram=true" type="text/javascript"></script>
+<script>
+jQuery(function(){
+jQuery('.login').click(function(){
+jQuery.ajax({ 
+type : "post", 
+url : "/rw/Uctest/userstatus", 
+dataType: 'json',
+async : false, 
+success : function(data){
+if(data.status == 1){
+window.location.href = '/rw/Api/passportCallbacks/referer/'+escape(location.href);
+}else{
+jQuery.getScript("http://passport.bdimg.com/passApi/js/uni_login_wrapper.js?cdnversion=" + new Date().getTime(), function() {
+var instance  = passport.pop.init({
+apiOpt: {
+staticPage: 'http://rw.baidu.com/rw/jump.html',
+product: 'crt',
+charset: 'utf-8',
+'u':'http://rw.baidu.com/rw/Api/passportCallbacks/referer/'+escape(location.href),
+memberPass: true,                                 
+safeFlag: 0                         
+},                               
+cache: false,
+ onShow: function() {
+ // $('.close-btn').hide();
+ },      
+ tangram: false
+}); 
+instance.show();
+});
+}
+}
+  		})			
+})
+
+jQuery('.close-btn').live("click",function(){
+jQuery("#passport-login-pop").remove();
+});
+})	
+</script>
+<script src="static/js/logging.js?BRw" type="text/javascript"></script>
+
+<div class="mod_ks_log" style="float: right; width: 100px; text-align: right; padding-top: 22px; font-size: 14px; line-height: 25px;">
+<a class="login" href="javascript:">登录</a> <span style="color: #707070; font-size: 12px;">|</span> <a class="" target="_blank" href="https://passport.baidu.com/v2/?reg&amp;tpl=crt&amp;u=http%3A%2F%2Frw.baidu.com%2FApi%2FpassportCallbacks">注册</a>
+</div>	
+
+
+<form method="post" autocomplete="off" id="lsform" action="member.php?mod=logging&amp;action=login&amp;loginsubmit=yes&amp;infloat=yes&amp;lssubmit=yes" onsubmit="return lsSubmit();">
+
+<div class="fastlg cl" style="display: none;">
+<span id="return_ls" style="display:none"></span>
+<div class="y pns">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<span class="ftid">
+<select name="fastloginfield" id="ls_fastloginfield" width="40" tabindex="900">
+<option value="username">用户名</option>
+<option value="email">Email</option>
+</select>
+</span>
+<script type="text/javascript">simulateSelect('ls_fastloginfield')</script>
+</td>
+<td><input type="text" name="username" id="ls_username" autocomplete="off" class="px vm" tabindex="901" /></td>
+<td class="fastlg_l"><label for="ls_cookietime"><input type="checkbox" name="cookietime" id="ls_cookietime" class="pc" value="2592000" tabindex="903" />自动登录</label></td>
+<td>&nbsp;<a href="javascript:;" onclick="showWindow('login', 'member.php?mod=logging&action=login&viewlostpw=1')">找回密码</a></td>
+</tr>
+<tr>
+<td><label for="ls_password" class="z psw_w">密码</label></td>
+<td><input type="password" name="password" id="ls_password" class="px vm" autocomplete="off" tabindex="902" /></td>
+<td class="fastlg_l"><button type="submit" class="pn vm" tabindex="904" style="width: 75px;"><em>登录</em></button></td>
+<td>&nbsp;<a href="member.php?mod=register" class="xi2 xw1">立即注册</a></td>
+</tr>
+</table>
+<input type="hidden" name="quickforward" value="yes" />
+<input type="hidden" name="handlekey" value="ls" />
+</div>
+</div>
+</form>
+
+</div>
+
+<div id="nv">
+<a href="javascript:;" id="qmenu" onmouseover="delayShow(this, function () {showMenu({'ctrlid':'qmenu','pos':'34!','ctrlclass':'a','duration':2});showForummenu(0);})">快捷导航</a>
+<ul><li 1id="mn_N6a99" ><a href="index" hidefocus="true"  >首页</a></li><li 1id="mn_forum" ><a href="forum.php" hidefocus="true" title="BBS"  >版块<span>BBS</span></a></li><li 1id="mn_N2136" ><a href="rw/Zt" hidefocus="true"  >任务活动</a></li><li 1id="mn_Nf5bf" ><a href="product" hidefocus="true"  >玩转产品</a></li><li 1id="mn_Nc76a" ><a href="active" hidefocus="true"  >线下互动</a></li><li 1id="mn_Nfdcf" ><a href="plugin.php?id=dze_jfdh:dze_jfdh" hidefocus="true"  >积分兑换</a></li><li 1id="mn_Ne065" ><a href="cloud/" hidefocus="true" target="_blank"  >移动产品论坛</a></li><li 1id="mn_N5779" ><a href="http://x.baidu.com/bbs" hidefocus="true" target="_blank"   style="font-weight: bold;">小度硬件专区</a></li><!--new-->
+<div class="div_right">
+<span class="nv_search"><input type="text" id="id_ntxt" /><em></em></span>
+<ol class="n_li_ol">
+<li><a href="#" target="_blank">搜“<b>百度云</b>”相关帖子</a></li>
+<li style="display:none;"><a href="#" target="_blank">搜“<b>百度云</b>”相关版块</a></li>
+<li><a href="#" target="_blank">搜“<b>百度云</b>”相关用户</a></li>
+</ol>
+</div>
+<script>
+jQuery(function(){
+//搜索
+var $=jQuery;
+var offset=jQuery('.nv_search').offset();	
+var n_li_ol=jQuery('.n_li_ol'),val='';
+
+jQuery('.nv_search').on('click focus','input',function(){
+offset=jQuery('.nv_search').offset();
+//n_li_ol.css({left:offset.left+'px',top:offset.top+26+'px'})	
+}).on('click','em',function(){
+var txt=jQuery('#id_ntxt').val();
+if(txt.length<1){
+alert('请输入搜索内容')
+return false;
+}	
+/*location.href='search.php?searchsubmit=yes&mod=search&formhash=d8bee527&srchtype=title&srhfid=0&srhlocality=portal::list&=&source=discuz&fId=0&srchtxt='+$('#id_ntxt').val();//默认帖子搜索	*/
+
+window.open('search.php?searchsubmit=yes&mod=search&formhash=d8bee527&srchtype=title&srhfid=0&srhlocality=portal::list&=&source=discuz&fId=0&srchtxt='+jQuery('#id_ntxt').val());
+jQuery('#id_ntxt').val('')
+}).on('keyup','input',function(event){
+val=jQuery(this).val();
+console.log(val);
+if(val.length<1){
+n_li_ol.hide();
+}else{
+n_li_ol.show();
+}
+if(val.length>3){
+val=val.substr(0,3)+'..';				
+}		
+n_li_ol.find('b').html(val);
+n_li_ol.find('a').eq(0).attr('href','search.php?searchsubmit=yes&mod=search&formhash=d8bee527&srchtype=title&srhfid=0&srhlocality=portal::list&=&source=discuz&fId=0&srchtxt='+jQuery(this).val())//默认帖子搜索	
+n_li_ol.find('a').eq(1).attr('href','1.html?type=1&key='+jQuery(this).val())//版块搜索	
+
+n_li_ol.find('a').eq(2).attr('href','home.php?mod=spacecp&ac=search&searchsubmit=yes&username='+jQuery(this).val())//用户搜索	
+if(event.keyCode=="13"){
+            n_li_ol.hide();
+//默认帖子搜索	
+window.open('search.php?searchsubmit=yes&mod=search&formhash=d8bee527&srchtype=title&srhfid=0&srhlocality=portal::list&=&source=discuz&fId=0&srchtxt='+jQuery(this).val());
+            
+jQuery('#id_ntxt').val('');
+}	
+})
+n_li_ol.on('click','li',function(){
+n_li_ol.hide();
+jQuery('#id_ntxt').val('')
+})
+
+//收起 
+jQuery('span.tab_nav1').on('click',function(){
+jQuery(this).toggleClass('current');
+jQuery(this).parents('.bpb_a_box').find('.forum_a_box').toggle();
+})
+
+
+})
+</script>
+<!--end new-->
+</ul>
+</div>
+<div class="p_pop h_pop" id="mn_userapp_menu" style="display: none"></div><div id="mu" class="cl">
+</div><div id="scbar" class="cl">
+<form id="scbar_form" method="post" autocomplete="off" onsubmit="searchFocus($('scbar_txt'))" action="search.php?searchsubmit=yes" target="_blank">
+<input type="hidden" name="mod" id="scbar_mod" value="search" />
+<input type="hidden" name="formhash" value="d8bee527" />
+<input type="hidden" name="srchtype" value="title" />
+<input type="hidden" name="srhfid" value="0" />
+<input type="hidden" name="srhlocality" value="portal::list" />
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="scbar_icon_td"></td>
+<td class="scbar_txt_td"><input type="text" name="srchtxt" id="scbar_txt" value="请输入搜索内容" autocomplete="off" x-webkit-speech speech /></td>
+<td class="scbar_type_td"><a href="javascript:;" id="scbar_type" class="xg1" onclick="showMenu(this.id)" hidefocus="true">搜索</a></td>
+<td class="scbar_btn_td"><button type="submit" name="searchsubmit" id="scbar_btn" sc="1" class="pn pnc" value="true"><strong class="xi2">搜索</strong></button></td>
+<td class="scbar_hot_td">
+<div id="scbar_hot">
+<strong class="xw1">热搜: </strong>
+
+<a href="search.php?mod=forum&amp;srchtxt=%E5%B0%8F%E5%BA%A6wifi&amp;formhash=d8bee527&amp;searchsubmit=true&amp;source=hotsearch" target="_blank" class="xi2" sc="1">小度wifi</a>
+
+
+
+<a href="search.php?mod=forum&amp;srchtxt=%E7%99%BE%E5%BA%A6%E5%8D%AB%E5%A3%AB&amp;formhash=d8bee527&amp;searchsubmit=true&amp;source=hotsearch" target="_blank" class="xi2" sc="1">百度卫士</a>
+
+
+
+<a href="search.php?mod=forum&amp;srchtxt=%E5%B0%8F%E5%BA%A6%E8%B7%AF%E7%94%B1&amp;formhash=d8bee527&amp;searchsubmit=true&amp;source=hotsearch" target="_blank" class="xi2" sc="1">小度路由</a>
+
+</div>
+</td>
+</tr>
+</table>
+</form>
+</div>
+<ul id="scbar_type_menu" class="p_pop" style="display: none;"><li><a href="javascript:;" rel="forum" class="curtype">帖子</a></li><li><a href="javascript:;" rel="user">用户</a></li></ul>
+<script type="text/javascript">
+initSearchmenu('scbar', '');
+</script>
+</div>
+</div>
+
+
+<div id="wp" class="wp">
+<link rel="stylesheet" type="text/css" href="../template/pbbs/common/reset.css?BRw" />
+<link rel="stylesheet" type="text/css" href="../template/pbbs/common/style.css?BRw" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <div class="forum w960 clearfix">
+    <div id="top_picsx" class="area">
+        <div id="framej86yJ3" class=" frame move-span cl frame-1">
+            <div id="framej86yJ3_left" class="column frame-1-c">
+                <div id="framej86yJ3_left_temp" class="move-span temp"></div>
+                <div class="banner_index w960 clearfix">
+<div class="banner_index_a">
+<div class="s_banner">
+    <ul class="s_banner_pic">
+                                                                                                                                                                        <li>
+          <a href="http://rw.baidu.com/forum.php?mod=viewthread&tid=101205" target="_blank"><img src="http://rw.baidu.com/data/attachment/common/cf/013127w33tp6ahblrrll6o.jpg"  alt="百度基金会宣布向鲁甸地震灾区捐款500万" /></a>
+        </li>
+                                                                                                                                                                              <li>
+          <a href="http://rw.baidu.com/portal.php?mod=topic&topicid=9" target="_blank"><img src="http://rw.baidu.com/data/attachment/common/cf/033131xhepdpppcb9fwc5e.jpg"  alt="晒个幸福" /></a>
+        </li>
+                                                                                                                                                                              <li>
+          <a href="http://rw.baidu.com/forum.php?mod=viewthread&tid=85007" target="_blank"><img src="http://rw.baidu.com/data/attachment/common/cf/082630vroyqzzvnyrqrrcr.jpg"  alt="" /></a>
+        </li>
+                                                                                                                                                                              <li>
+          <a href="http://rw.baidu.com/plugin.php?id=sinreworldcup:show" target="_blank"><img src="http://rw.baidu.com/data/attachment/common/cf/024251f65hpzxivexui7pq.jpg"  alt="" /></a>
+        </li>
+                                                                                              <li>
+          <a href="http://rw.baidu.com/forum.php?mod=viewthread&tid=100502" target="_blank"><img src="http://rw.baidu.com/data/attachment/common/cf/180525s7w1kpbwbb793sla.jpg"  alt="百度钱包" /></a>
+        </li>
+                                                                                              <li>
+          <a href="http://rw.baidu.com/forum.php?mod=viewthread&tid=48266" target="_blank"><img src="http://rw.baidu.com/data/attachment/common/cf/060902tvjuez5vyrndrpmd.jpg"  alt="" /></a>
+        </li>
+                                                                                              <li>
+          <a href="http://rw.baidu.com/static/topic/wifi_gy" target="_blank"><img src="http://rw.baidu.com/data/attachment/common/cf/092416fojxwel6celvpwxu.jpg"  alt="百度产品论坛，那是我们的家" /></a>
+        </li>
+                                                                                              <li>
+          <a href="http://rw.baidu.com/cloud/" target="_blank"><img src="http://rw.baidu.com/data/attachment/common/cf/061249pqwb47bbxqqojlbm.jpg"  alt="移动论坛" /></a>
+        </li>
+                                                                                              <li>
+          <a href="http://rw.baidu.com/forum.php?mod=viewthread&tid=63139&qq-pf-to=pcqq.c2c" target="_blank"><img src="http://rw.baidu.com/data/attachment/common/cf/100023j0ix9xa4d1k0ad1n.jpg"  alt="百度卫士“世界杯”一起来big idea" /></a>
+        </li>
+              </ul>
+    <a class="prev" href="javascript:void(0)"></a>
+    <a class="next" href="javascript:void(0)"></a>
+    <div class="num">
+    	<ul></ul>
+    </div>
+</div>
+</div>
+<div class="banner_index_b">
+<ul class="clearfix">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   <li class="banner_index_b1">
+    <a href="http://rw.baidu.com/forum.php?mod=viewthread&tid=81499" target="_blank">
+      <img src="http://rw.baidu.com/data/attachment/portal/201407/08/151933gjmv3gl9lbjomezv.jpg" width="189" height="160" title="谈搜索，赢奖励" />
+    </a>
+</li>
+<li class="banner_index_b2">
+    <a href="http://rw.baidu.com/forum.php?mod=viewthread&tid=85924" target="_blank">
+      <img src="http://rw.baidu.com/data/attachment/portal/201407/08/151153cbok3pqs6zfr1qqg.jpg" width="190" height="160" title="【微话筒】⑭期：万万没想到"/>
+    </a>
+</li>
+
+</ul>
+<div class="banner_index_b_1">
+        <a href="http://rw.baidu.com/forum.php?mod=viewthread&tid=91249" target="_blank"> 
+          <img src="http://rw.baidu.com/data/attachment/portal/201407/09/154130bg2gy334l8p0zwia.jpg" width="390" height="150"  title="论坛重磅打造“百渊文学社”面向全论坛热招" />
+        </a>
+</div>
+</div>
+</div>
+            </div>
+        </div>
+    </div>
+
+<div class="bpb_a">
+<div class="bpb_a_box article">
+
+<!--[diy=diy99]--><div id="diy99" class="area"><div id="frameKSpZt3" class=" frame move-span cl frame-1"><div id="frameKSpZt3_left" class="column frame-1-c"><div id="frameKSpZt3_left_temp" class="move-span temp"></div><div id="portal_block_32" class="block move-span"><div id="portal_block_32_content" class="dxb_bc"><div class="portal_block_summary"><div class="bpb_a_1">
+						<h2><a href="plugin.php?id=appform:form&aid=45" target="_blank">百度产品论坛 运营者联盟招新开启</a></h2>
+						<dl class="clearfix">
+							<dt class="fl" style="border:0px;"><a href="plugin.php?id=appform:form&aid=45" target="_blank"><img src="data/attachment/portal/201403/11/111011td7fx0d0gxmbca05.jpg" /></a></dt>
+							<dd class="fr">
+								<div class="s_tit"><p><a href="javascript:void(0)">admin</a> | &nbsp;&nbsp;2014年03月11日</p></div>
+								<div class="txt">百度产品论坛 百度校园品牌部为互联网产品用户提供话题讨论、粉丝互动的社区平台。涵盖线上任务、专题比赛、产品试用、产品评测、粉丝互动等版块内容。在这里，你可以和志同道合的同学参与互动讨论，免费体验最in的互联网产品，和百度PM讨论行业动态，参与各式各样的有奖任务和专题比赛......在这里，我们选拔有责任心的版主直接参与版块的日常运营，同时提供完善的晋升空间和活动资源。百度产品论坛欢迎您的加入！
+</div>
+								<div class="s_tit"><span class="" style="float:left;"><em class="ico_view">21523</em><a class="ico_comments" href="">125</a></span><span style="float:right;"><a class="txt_more" href="plugin.php?id=appform:form&aid=45" style="background:none" target="_blank">阅读全文 >></a></span></div>
+							</dd>
+						</dl>
+					</div></div></div></div></div></div></div><!--[/diy]-->
+
+<div class="article_list">
+<ul class="u_b2"><li>
+<h2><a href="portal.php?mod=view&aid=103" target="_blank">百度产品论坛-校园产品智囊团</a></h2>
+<div class="s_tit clearfix">
+<p><a href="home.php?mod=space&amp;uid=" target="_blank">zhengfangweiye</a> | &nbsp;&nbsp;2014-7-9 15:51</p>
+<span class=""><!--<script src="./rw/Zt/product/url/" type="text/javascript"></script>--></span>
+<span class="fr"><a class="ico_share_sina" href="http://service.weibo.com/share/share.php?url=http%3A%2F%2Fcbbs.baidu.com%2Fportal.php%3Fmod%3Dview%26aid%3D103&amp;title=百度产品论坛-校园产品智囊团" target='_blank' title='分享'>分享</a></span>
+
+</div>
+<div class="img"><a href="portal.php?mod=view&aid=103" target="_blank"><img width="608" height="230" src="data/attachment/portal/201407/09/155108r3bb26j3lj3ux2yy.jpg" alt="百度产品论坛-校园产品智囊团" class="tn" /></a></div><p class="m"><a href="portal.php?mod=view&aid=103" target="_blank">阅读全文 >></a></p>
+</li>
+<li>
+<h2><a href="portal.php?mod=view&aid=102" target="_blank">【智囊团第二季】百度地图校园实景情景创意有奖征集</a></h2>
+<div class="s_tit clearfix">
+<p><a href="home.php?mod=space&amp;uid=" target="_blank">zhengfangweiye</a> | &nbsp;&nbsp;2014-7-9 15:50</p>
+<span class=""><!--<script src="./rw/Zt/product/url/" type="text/javascript"></script>--></span>
+<span class="fr"><a class="ico_share_sina" href="http://service.weibo.com/share/share.php?url=http%3A%2F%2Fcbbs.baidu.com%2Fportal.php%3Fmod%3Dview%26aid%3D102&amp;title=【智囊团第二季】百度地图校园实景情景创意有奖征集" target='_blank' title='分享'>分享</a></span>
+
+</div>
+<div class="img"><a href="portal.php?mod=view&aid=102" target="_blank"><img width="608" height="230" src="data/attachment/portal/201407/09/155000dk7shxzxkhekthh6.jpg" alt="【智囊团第二季】百度地图校园实景情景创意有奖征集" class="tn" /></a></div>百度地图能看大学全景图你造吗？ 神马 食堂啊，图书馆啊，美女啊，帅哥啊~应有尽有~ 亲，你想让神马东东进入全景图？那就一起Brain storm吧！<p class="m"><a href="portal.php?mod=view&aid=102" target="_blank">阅读全文 >></a></p>
+</li>
+<li>
+<h2><a href="portal.php?mod=view&aid=101" target="_blank">【超级转账创意汇】同学，来设计你的百度钱包</a></h2>
+<div class="s_tit clearfix">
+<p><a href="home.php?mod=space&amp;uid=" target="_blank">zhengfangweiye</a> | &nbsp;&nbsp;2014-7-9 15:49</p>
+<span class=""><!--<script src="./rw/Zt/product/url/" type="text/javascript"></script>--></span>
+<span class="fr"><a class="ico_share_sina" href="http://service.weibo.com/share/share.php?url=http%3A%2F%2Fcbbs.baidu.com%2Fportal.php%3Fmod%3Dview%26aid%3D101&amp;title=【超级转账创意汇】同学，来设计你的百度钱包" target='_blank' title='分享'>分享</a></span>
+
+</div>
+<div class="img"><a href="portal.php?mod=view&aid=101" target="_blank"><img width="608" height="230" src="data/attachment/portal/201407/09/154852jcpjqdv8fqh7ehjm.jpg" alt="【超级转账创意汇】同学，来设计你的百度钱包" class="tn" /></a></div>百度的支付产品（跟支付宝差不多的那位），我们的理念是打造“随身随付”的“有折扣的钱包”，将百度旗下的产品（文库、视频、音乐、糯米等等等）及海量商户（比如国美一分钱买啤酒，联通买手机理财等）以优惠的方式 ...<p class="m"><a href="portal.php?mod=view&aid=101" target="_blank">阅读全文 >></a></p>
+</li>
+<li>
+<h2><a href="portal.php?mod=view&aid=100" target="_blank">玩转产品——百度口碑</a></h2>
+<div class="s_tit clearfix">
+<p><a href="home.php?mod=space&amp;uid=" target="_blank">zhengfangweiye</a> | &nbsp;&nbsp;2014-7-9 15:48</p>
+<span class=""><!--<script src="./rw/Zt/product/url/" type="text/javascript"></script>--></span>
+<span class="fr"><a class="ico_share_sina" href="http://service.weibo.com/share/share.php?url=http%3A%2F%2Fcbbs.baidu.com%2Fportal.php%3Fmod%3Dview%26aid%3D100&amp;title=玩转产品——百度口碑" target='_blank' title='分享'>分享</a></span>
+
+</div>
+<div class="img"><a href="portal.php?mod=view&aid=100" target="_blank"><img width="608" height="230" src="data/attachment/portal/201407/09/154805l7dkuonhobzxiyuu.jpg" alt="玩转产品——百度口碑" class="tn" /></a></div>百度口碑是什么?
+怎样找到网站在百度口碑的评论页面？
+百度口碑对网站百度排名的影响如何?
+口碑币是什么？口碑币有什么作用？<p class="m"><a href="portal.php?mod=view&aid=100" target="_blank">阅读全文 >></a></p>
+</li>
+<li>
+<h2><a href="portal.php?mod=view&aid=99" target="_blank">2014百度节日LOGO高校征集赛</a></h2>
+<div class="s_tit clearfix">
+<p><a href="home.php?mod=space&amp;uid=" target="_blank">zhengfangweiye</a> | &nbsp;&nbsp;2014-7-9 15:46</p>
+<span class=""><!--<script src="./rw/Zt/product/url/" type="text/javascript"></script>--></span>
+<span class="fr"><a class="ico_share_sina" href="http://service.weibo.com/share/share.php?url=http%3A%2F%2Fcbbs.baidu.com%2Fportal.php%3Fmod%3Dview%26aid%3D99&amp;title=2014百度节日LOGO高校征集赛" target='_blank' title='分享'>分享</a></span>
+
+</div>
+<div class="img"><a href="portal.php?mod=view&aid=99" target="_blank"><img width="608" height="230" src="data/attachment/portal/201407/09/154325f9iqwnzaiqrtniat.jpg" alt="2014百度节日LOGO高校征集赛" class="tn" /></a></div>百度节日Logo是百度于重大节日、国际赛事或其他纪念日在首页上展示的具有特别意义的Logo版本。Logo的设计充分体现节日气氛，并富有趣味、内涵和创造性。 ...<p class="m"><a href="portal.php?mod=view&aid=99" target="_blank">阅读全文 >></a></p>
+</li>
+	
+</ul>
+<div class="pgs cl">
+<div class="pg"><strong>1</strong><a href="http://rw.baidu.com/index/index.php?page=2">2</a><a href="http://rw.baidu.com/index/index.php?page=3">3</a><a href="http://rw.baidu.com/index/index.php?page=4">4</a><label><input type="text" name="custompage" class="px" size="2" title="输入页码，按回车快速跳转" value="1" onkeydown="if(event.keyCode==13) {window.location='http://rw.baidu.com/index/index.php?page='+this.value;; doane(event);}" /><span title="共 4 页"> / 4 页</span></label><a href="http://rw.baidu.com/index/index.php?page=2" class="nxt">下一页</a></div></div>
+</div>
+</div>
+</div>
+<div class="bpb_b"><style id="diy_style" type="text/css"></style>
+<div class="bpb_b_box">
+<dl class="qd">
+                        <dd class='nqd'>
+<a class="qd_1 login" href="javascript:void(0);" id="qd"></a>
+</dd>
+  </dl>
+</div>
+<div class="bpb_b_box">
+<h4>TOP 10</h4>
+<div class="bpb_b_cont">
+    <ul class="u101 clearfix">
+  <li><a href="forum.php?mod=forumdisplay&fid=104">度粉杂谈</a></li><li><a href="forum.php?mod=forumdisplay&fid=91">百度地图</a></li><li><a href="forum.php?mod=forumdisplay&fid=93">百度翻译</a></li><li><a href="forum.php?mod=forumdisplay&fid=130">意见反馈</a></li><li><a href="forum.php?mod=forumdisplay&fid=119">百度团购</a></li><li><a href="forum.php?mod=forumdisplay&fid=118">百度风云榜</a></li><li><a href="forum.php?mod=forumdisplay&fid=169">百度口碑</a></li><li><a href="forum.php?mod=forumdisplay&fid=116">Hao123</a></li><li><a href="forum.php?mod=forumdisplay&fid=121">百度大数据</a></li><li><a href="forum.php?mod=forumdisplay&fid=164">PC输入法</a></li>  <li class="all"><a href="./forum.php">查看全部论坛板块 >></a></li>
+</ul>
+</div>
+</div>
+
+<div class="bpb_b_box">
+<dl class="bpb_b_box_1">
+<dt>论坛运营者联盟</dt>
+<dd>
+<a class="jiaru" href="plugin.php?id=appform:form&amp;aid=45" target="_blank"></a>
+<ul>
+<li><script src="plugin.php?id=appform:alliance&&ac=count" type="text/javascript"></script></li>
+<li><a href="plugin.php?id=appform:form&amp;aid=45" target="_blank">查看详细规则</a></li>
+</ul>
+</dd>
+</dl>
+</div>
+                <div class="bpb_b_box">
+<h4>热点推荐<span></span></h4>
+<div class="bpb_b_box4"><ul><li><a href="forum.php?mod=viewthread&tid=103466" title="这个暑期，你穷游了吗" target="_blank">这个暑期，你穷游了吗</a></li><li><a href="forum.php?mod=viewthread&tid=103350" title="熊，我的币和礼品呢？为什么刚才能看到现在没了？" target="_blank">熊，我的币和礼品呢？为什么刚才能看到现在</a></li><li><a href="forum.php?mod=viewthread&tid=103366" title="度粉福利来了：第四代GPS和北斗双模导航定位芯片西安量产" target="_blank">度粉福利来了：第四代GPS和北斗双模导航定</a></li><li><a href="forum.php?mod=viewthread&tid=103479" title="百度地图鼓浪屿浪漫之行——火热报名中" target="_blank">百度地图鼓浪屿浪漫之行——火热报名中</a></li><li><a href="forum.php?mod=viewthread&tid=103284" title="新人福利！！" target="_blank">新人福利！！</a></li><li><a href="forum.php?mod=viewthread&tid=103439" title="有了孩子以后真烦心" target="_blank">有了孩子以后真烦心</a></li><li><a href="forum.php?mod=viewthread&tid=103485" title="深圳一女子放生毒蛇称积功德 警方调查" target="_blank">深圳一女子放生毒蛇称积功德 警方调查</a></li><li><a href="forum.php?mod=viewthread&tid=103335" title="小米4 PK 华为P7：究竟谁更胜一筹？" target="_blank">小米4 PK 华为P7：究竟谁更胜一筹？</a></li><li><a href="forum.php?mod=viewthread&tid=103498" title="产假应该歇多久，你怎么看" target="_blank">产假应该歇多久，你怎么看</a></li><li><a href="forum.php?mod=viewthread&tid=103289" title="美国最赚钱的十五个行业" target="_blank">美国最赚钱的十五个行业</a></li></ul></div>
+</div>
+<div class="bpb_b_box">
+<h4>专题活动<span><a href="./rw/Zt" target="_blank">更多>></a></span></h4>
+<div class="bpb_b_box_2">
+<script src="./rw/Zt/api" type="text/javascript"></script>
+</div>
+</div>
+<div class="bpb_b_box">
+<h4>原创评测<span></span></h4>
+<div class="bpb_b_box_3">
+<ul>
+<li>
+<img class="ico" src="data/attachment/common/2b/common_115_icon.jpg" />
+<h2><a href="portal.php?mod=view&amp;aid=46" target="_blank">百度手机浏览器评测报告 </a></h2>
+<p><a href="product/" target="_blank">原创评测</a><em>|</em>admin<em>|</em>2014-2-27</p>
+</li>
+<li>
+<img class="ico" src="data/attachment/common/73/common_113_icon.jpg" />
+<h2><a href="portal.php?mod=view&amp;aid=71" target="_blank">百度杀毒体验报告【西安交大】</a></h2>
+<p><a href="product/" target="_blank">原创评测</a><em>|</em>admin<em>|</em>2014-03-25</p>
+</li>
+<li>
+<img class="ico" src="data/attachment/common/73/common_113_icon.jpg" />
+<h2><a href="portal.php?mod=view&amp;aid=51" target="_blank">百度杀毒体验报告【浙江大学】</a></h2>
+<p><a href="product/" target="_blank">原创评测</a><em>|</em>admin<em>|</em>2014-2-27</p>
+</li>
+<li>
+<img class="ico" src="data/attachment/common/2b/common_115_icon.jpg" />
+<h2><a href="portal.php?mod=view&amp;aid=70" target="_blank">百度手机浏览器产品体验报告</a></h2>
+<p><a href="product/" target="_blank">原创评测</a><em>|</em>admin<em>|</em>2014-03-25</p>
+</li>
+<li>
+<img class="ico" src="data/attachment/common/2b/common_115_icon.jpg" />
+<h2><a href="portal.php?mod=view&amp;aid=68" target="_blank">百度手机浏览器WP版评测</a></h2>
+<p><a href="product/" target="_blank">原创评测</a><em>|</em>admin<em>|</em>2014-03-25</p>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="bpb_b_box scrollh" id="scroll1">
+<div class="scrollnav">
+<h4>玩转产品</h4>
+    <ul class="nav100">
+    <li class="ico_prev" cat="prev"></li>
+    				<li class="ico_next" cat="next"></li>
+    </ul>
+    </div>
+    <div class="bpb_b_box_2 scrollhcon">
+    <ul class="ullist">
+<li>
+<dl class="clearfix">
+<dt><a href="plugin.php?id=appform:form&amp;aid=46" target="_blank"><img src="source/plugin/appform/static/images/img/bdsjwsyjpc.jpg"></a></dt>
+<dd><h2><a href="plugin.php?id=appform:form&amp;aid=46" target="_blank">百度手机卫士有奖评测</a></h2><p><a class="canyu" href="plugin.php?id=appform:form&amp;aid=46" target="_blank" title="百度手机卫士有奖评测">查看详情</a></p></dd>
+</dl>
+</li>
+<li>
+<dl class="clearfix">
+<dt><a href="plugin.php?id=appform:form&amp;aid=47" target="_blank"><img src="source/plugin/appform/static/images/img/bdwsyjpc.jpg"></a></dt>
+<dd><h2><a href="plugin.php?id=appform:form&amp;aid=47" target="_blank">百度安全卫士有奖评测</a></h2><p><a class="canyu" href="plugin.php?id=appform:form&amp;aid=47" target="_blank" title="百度安全卫士有奖评测">查看详情</a></p></dd>
+</dl>
+</li>
+<li>
+<dl class="clearfix">
+<dt><a href="plugin.php?id=appform:form&amp;aid=48" target="_blank"><img src="source/plugin/appform/static/images/img/bdnewspc.jpg"></a></dt>
+<dd><h2><a href="plugin.php?id=appform:form&amp;aid=48" target="_blank">百度新闻客户端有奖评测</a></h2><p><a class="canyu" href="plugin.php?id=appform:form&amp;aid=48" target="_blank" title="百度新闻客户端有奖评测">查看详情</a></p></dd>
+</dl>
+</li>
+<li>
+<dl class="clearfix">
+<dt><a href="plugin.php?id=appform:form&amp;aid=49" target="_blank"><img src="source/plugin/appform/static/images/img/bdwifipc.jpg"></a></dt>
+<dd><h2><a href="plugin.php?id=appform:form&amp;aid=49" target="_blank">小度wifi有奖评测</a></h2><p><a class="canyu" href="plugin.php?id=appform:form&amp;aid=49" target="_blank" title="小度wifi有奖评测">查看详情</a></p></dd>
+</dl>
+</li>
+    </ul>
+    </div>
+</div>
+
+<div class="bpb_b_box" style="display:none;">
+<h4>积分兑换<span><a href="plugin.php?id=dze_jfdh:dze_jfdh" target="_blank">更多>></a></span></h4>
+<div class="bpb_b_box_9 clearfix">
+ <script src="plugin.php?id=dze_jfdh:recommend&fid=" type="text/javascript"></script>
+</div>
+</div>
+
+<div class="bpb_b_box">
+<h4>线下互动<span><a href="./active" target="_blank">更多>></a></span></h4>
+<div class="bpb_b_box_6"><div class="s_banner_b">
+						    <ul class="u31 s_banner_pic"><li class="clearfix">
+									<div class="img"><a href="active" target="_blank"><img src="data/attachment/block/08/080d4db068d2819605b4dc2d227bcd73.jpg" width="270" height="190" /></a></div>
+									<dl>
+										<dt></dt>
+										<dd><a href=""><a href="portal.php?mod=view&aid=98" target="_blank">产品论坛-云丰产品粉丝见面会第二期</a> </a></dd>
+									</dl>
+								</li><li class="clearfix">
+									<div class="img"><a href="active" target="_blank"><img src="data/attachment/block/de/deaea9d3f35e5b00d4ce3ecd886ab86a.jpg" width="270" height="190" /></a></div>
+									<dl>
+										<dt></dt>
+										<dd><a href=""><a href="portal.php?mod=view&aid=97" target="_blank">产品论坛-云丰产品粉丝见面会第二期</a> </a></dd>
+									</dl>
+								</li><li class="clearfix">
+									<div class="img"><a href="active" target="_blank"><img src="data/attachment/block/9a/9a326f4f9c5076db48b7f1a77bae511c.jpg" width="270" height="190" /></a></div>
+									<dl>
+										<dt></dt>
+										<dd><a href=""><a href="portal.php?mod=view&aid=96" target="_blank">百度产品论坛-产品粉丝见面会第一期</a> </a></dd>
+									</dl>
+								</li></ul>
+						    <a class="prev" href="javascript:void(0)"></a>
+						    <a class="next" href="javascript:void(0)"></a>
+						    <div class="num">
+						    	<ul></ul>
+						    </div>
+						</div></div>
+</div>
+  
+<script type="text/javascript">
+ 	  jQuery(function(){
+          jQuery('#qd').click(function(){
+          	jQuery.post("home.php?mod=task",{'do':'apply','id':2},function(data){
+                if(data.status){
+                	jQuery('#qd').css({'background':'url(static/image/common/mrqd.jpg) no-repeat  10px -104px'});
+                    jQuery('#qd').unbind( "click" );
+                	showPrompt(null, null,'<i>' + data.msg + '</i>' , 3000);
+                }else{
+                	showPrompt(null, null,'<i>' + data.msg + '</i>' , 3000,'popuptext');
+                }
+                return false;     
+  	    },'json');
+          })
+  })
+</script>
+</div>
+</div>	</div>
+<div class="a_fr"><a href="http://rw.baidu.com/forum.php?mod=viewthread&tid=44392" target="_blank"><img src="http://rw.baidu.com/data/attachment/common/cf/112205onki5zn7khkk588n.jpg" height="191" width="117" border="0"></a><br /><a href="javascript:;" onclick="setcookie('adclose_', 1, 86400);this.parentNode.style.display='none'"><img src="static/image/common/ad_close.gif" /></a></div>
+<div id="footer" style="position:absolute;width:100%;">
+<div class="bpb_f">
+<div class="bpb_f_box clearfix">
+<ul>
+<li><a href="http://home.baidu.com/" target="_blank">关于百度</a><em>|</em><a href="http://campus.baidu.com/" target="_blank">百度校园</a><em>|</em><a href="http://tongxue.baidu.com/baidu/" target="_blank">校园招聘</a><em>|</em><a href="/rw/Zt" target="_blank">任务平台</a></li>
+<li>联系我们邮箱：<a href="mailto:edm@baidu.com">edm@baidu.com</a><em></em>Hi：百度校园品牌<em></em>贴吧：百度校园品牌</li>
+</ul>
+<div class="bpb_f_box_pic"><img src="../static/image/common/f_pic.png" /></div>
+</div>
+</div>
+
+
+
+<div class="footer">2014 Baidu    <a href="http://www.baidu.com/duty/" target="_blank">使用百度前必读</a>    京ICP证030173号  
+Powered by <strong><a href="http://www.discuz.net" target="_blank">Discuz!</a></strong> <em>X3.1</em> 
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fbef9178b28d09622c93435e68bc379fc' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</div>
+
+</div></div>
+<script src="home.php?mod=misc&ac=sendmail&rand=1407827683" type="text/javascript"></script>
+<div id="scrolltop">
+<span hidefocus="true"><a title="返回顶部" onclick="window.scrollTo('0','0')" class="scrolltopa" ><b>返回顶部</b></a></span>
+</div>
+<script type="text/javascript">_attachEvent(window, 'scroll', function () { showTopLink(); });checkBlind();</script>
+			<div id="discuz_tips" style="display:none;"></div>
+			<script type="text/javascript">
+				var tipsinfo = '29896393|X3.1|0.6||0||0|7|1407827683|6898a52c1d2ed0ff657771d2784f96fa|2';
+			</script>
+			<script src="http://discuz.gtimg.cn/cloud/scripts/discuz_tips.js?v=1" type="text/javascript" charset="UTF-8"></script><script src="/static/js/s_focus.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--STATUS OK-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>百度无线__全球最大的中文手机搜索引擎</title>
+<meta name="keywords" content="中文,手机搜索引擎,无线搜索引擎,移动搜索引擎,3G搜索,网页搜索,WAP搜索,小说搜索,图片搜索,铃声搜索,视频搜索,游戏搜索,MP3搜索,新闻搜索,软件搜索,主题搜索,知道,贴吧,本地搜索,生活搜索,实用搜索,娱乐搜索,手机地图,手机输入法,掌上百度,百度快搜,手机浏览器,mobile" />
+<meta name="description" content="百度无线是中文搜索第一品牌“百度”在移动互联网领域的延伸，这里除了提供百度各项经典产品的手机版本，更专为手机用户量身打造了丰富的移动互联网产品。" />
+<link href="/resource/css/top.css" rel="stylesheet" type="text/css" />
+<link href="/resource/css/new.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/resource/js/jquery.js"></script>
+<script type="text/javascript" src="/resource/js/main.js"></script>
+<script type="text/javascript" src="/resource/js/small_news.js"></script>
+<script type="text/javascript" src="/resource/js/top.js"></script>
+<style type='text/css'>
+	.center{}
+	.small{width:361px}
+	#news_tab span{width:71px; margin-right:0; border:none; border-top:1px solid #D9D9D9; border-right:1px solid #EAECED;}
+    #news_tab .first{border-left: 1px solid #D9D9D9;}
+    #news_tab .last{border-right: 1px solid #D9D9D9;}
+    #news_tab .select{border-right: 1px solid #D9D9D9;}
+     #news_tab .beforeselect{border-right: 1px solid #D9D9D9;}
+	.news-center .news-area{width:359px; height:205px; border-left:1px solid #d9d9d9; border-bottom:1px solid #D9D9D9; border-right:1px solid #D9D9D9;}
+	.news-center .news-area ul{padding:8px 10px 10px 10px; display:none;}
+	.news-center .news-area ul li {padding-top:8px;*padding-top:5px; _padding-top:3px; line-height:14px;  padding-bottom:0px; }
+	.news-center .news-area ul li  .news-tag{background-image: url(/resource/images/new/icon.png);color:transparent; height:10px;width:6px;left:0px;top:8px;background-position:-240px -5px; margin:3px 5px 0 0;}
+	.activity-content ul{padding:8px 10px 10px 16px;}
+	.activity-content ul li{padding-top:8px; padding-bottom:0px; }
+	.activity-content ul li  .news-tag{background-image: url(/resource/images/new/icon.png);color:transparent; height:10px;width:6px;left:0px;top:8px;background-position:-240px -5px; margin:3px 5px 0 0;}
+	.activity-content ul{padding:8px 10px 10px 10px;}
+	.left{float:left;}
+	.right{float:right;}
+	.imgnews .news-detail{width:242px; margin-left:8px;}
+    .imgnews a img{border:1px solid #D9D9D9;}
+    .news-time{color:#999}
+    .full-news-time{color:#999}
+    .clear{clear:both; height:0px; font-size:0px; line-height:0px;}
+	.activity-center{width:356px; height:236px; border:1px solid #D9D9D9; margin-left:15px; margin-top:-32px;}
+	.activity-center .activity-title{position:relative; height:25px; padding-top:5px; border-bottom:1px solid #EAECED}
+	.activity-center .activity-title h3{color:#000000; padding-left:10px; line-height:20px;}
+	.activity-center .activity-title a{position:absolute; right:10px; top:5px; line-height:20px;}
+	.video{margin-top:-32px; height:236px; border:1px solid #D9D9D9; padding-left:0; margin-left:14px;}
+	.video .video-bar{position:relative; height:25px; padding-top:5px; }
+	.video .video-bar h3{color:#000000; padding-left:10px;line-height:20px;}
+	.video .video-bar a{position:absolute; right:0; top:5px;line-height:20px;}
+	.active .active-recommend .thumbs .handle{_padding-left:8px; _width:220px;}
+    .active .active-recommend .thumbs .handle-left{_padding-left:11px;}
+
+	.activity-banner-img{position:relative;}
+	.activity-banner-img .imgs-list{height:270px;overflow:hidden;position:relative;z-index:1}
+	.activity-banner-img .imgs-list li{height:270px;overflow:hidden;position:absolute;top:0px;left:0px;}
+	.activity-banner-img .imgs-list li a{display: block;}
+	.activity-banner-img .imgs-num{text-align:center;position:absolute;z-index:2;left:0px;top:240px;width:100%;}
+	.imgs-num .select{background-position:3px 1px;}
+	.activity-banner-img ul li{background-color:#E6E6E6;}
+	.activity-banner-img ul li .discribe{width:399px; height:270px;}
+	.activity-banner-img ul li .discribe .banner-head{color:#0066CC; font:normal bold 28px '黑体';  margin:40px 0 10px 20px; }
+	.activity-banner-img ul li .discribe .banner-head .name{color:#000000;}
+	.activity-banner-img ul li .discribe .banner-content{color:#000000; margin:15px 0 10px 20px;}
+	.activity-banner-img ul li .discribe .banner-time{color:#000000; font:normal bold 14px '宋体'; margin:10px 0 20px 20px; }
+	.activity-banner-img ul li .discribe .banner-join{margin:10px 0 20px 30px;}
+    .partner-list li a img:hover{border:1px solid #0066cc}
+
+    .hot-app .hot-app-list .app .download{background:url(/resource/images/new/down1_on.png) no-repeat scroll center;}
+    .hot-app .hot-app-list .app .download:active{background:url(/resource/images/new/down1_press.png) no-repeat scroll center;}
+    .hot-app .hot-app-list .app .open{background:url(/resource/images/new/enter1_on.png) no-repeat scroll center;}
+    .hot-app .hot-app-list .app .open:active{background:url(/resource/images/new/enter1_press.png) no-repeat scroll center;}
+	.news-content{ line-height:18px;}
+</style>
+</head>
+<body>
+<div>
+    <div class="top_up" id="top_up">
+    </div>
+  	<div class="top_bg" id="top_bg">
+  	</div>
+  	<script type="text/javascript">
+		showTop(1);
+    </script>
+    <div class="nav width">
+    <div class="hot-app-txt">
+
+                热门产品： <a href="/php/jump.php?n=百度搜索&ref=index&url=http://wuxian.baidu.com/baidusearch/">百度</a><span class="sep">|</span><a href="/php/jump.php?n=百度手机助手&ref=index&url=http://as.baidu.com/a/appsearch?pre=web_am_index" target='_blank'>百度手机助手</a><span class="sep">|</span><a href="/php/jump.php?n=百度地图&ref=index&url=http://wuxian.baidu.com/map/">百度地图</a><span class="sep">|</span><a href="/php/jump.php?n=百度手机浏览器&ref=index&url=http://wuxian.baidu.com/browser/">百度手机浏览器</a>
+
+        </div>
+    </div>
+    <div class="banner-img" id="banner-img">
+            <ul class="imgs-list width">
+            <li><a href="http://wuxian.baidu.com/baidusearch/"><img src="http://wuxian.baidu.com/r/image/2014-06-30/2701f8049d34c46bdd683c46139e35fe.jpg" alt="手机百度5.3.5"/></a></li>
+            <li><a href="http://developer.baidu.com/static/assets/reportpdf/百度移动互联网发展趋势报告2014春节专版.pdf"><img src="http://shouji.baidu.com/r/image/2014-03-12/468c8495b59f6e8d7db57e724f0f6724.png" alt="移动趋势报告"/></a></li>
+            <li><a href="http://srf.baidu.com/?ref=wuxian"><img src="http://shouji.baidu.com/r/image/2014-01-24/d15efb7bcd29bed33b0bc8b32da18823.jpg" alt="输入法"/></a></li>
+            <li><a href="http://shouji.baidu.com/browser/ "><img src="http://shouji.baidu.com/r/image/2014-01-24/1f99daa8fd70e8d36956ca3b07363755.jpg" alt="手机浏览器4.3"/></a></li>
+            <li><a href="http://wuxian.baidu.com/superphone/"><img src="http://shouji.baidu.com/r/image/2013-11-29/ca0a98b374bcfbc7b1e663d35d509af7.jpg" alt="超级电话"/></a></li>
+            <li><a href="http://as.baidu.com/a/appsearch?f=home_2002_0"><img src="http://shouji.baidu.com/r/image/2013-10-10/a671fb8c180cc40f89aac5f2eec50eee.png" alt="百度手机助手"/></a></li>
+          </ul>
+    <div class="imgs-num"></div>
+
+        </div>
+
+        <div class="hot-app width">
+
+            <div class="title"><h3>热门产品</h3><a class="more" href="/all/?bsf=hot2">更多 >></a></div>
+
+            <ul class="hot-app-list cls">
+
+                <li>
+
+                        <div class="app">
+
+                            <a class="app-icon" href="/php/jump.php?n=百度语音助手&ref=indexhot&url=http://wuxian.baidu.com/voiceassistant/"><img src="/resource/images/logo/logo_yuyin.png" alt="百度语音助手" /></a>
+
+                            <a class="app-name" href="/php/jump.php?n=百度语音助手&ref=indexhot&url=http://wuxian.baidu.com/voiceassistant/">百度语音助手</a>
+
+                            <a href="/php/jump.php?n=百度语音助手&ref=indexhot&url=http://wuxian.baidu.com/voiceassistant/" class="open icon">下载</a>
+
+                            <div class="platform"><span class="apple">苹果</span><span class="android">安卓</span></div>
+
+                        </div>
+
+                    </li>
+
+                <li>
+
+                        <div class="app">
+
+                            <a class="app-icon" href="/php/jump.php?n=百度搜索&ref=indexhot&url=http://wuxian.baidu.com/baidusearch/"><img src="/resource/images/logo/logo_baidusearch.png" alt="百度" /></a>
+
+                            <a class="app-name" href="/php/jump.php?n=百度搜索&ref=indexhot&url=http://wuxian.baidu.com/baidusearch/">百度</a>
+
+                            <a href="/php/jump.php?n=百度搜索&ref=indexhot&url=http://wuxian.baidu.com/baidusearch/" class="open icon">下载</a>
+
+                            <div class="platform"><span class="apple">苹果</span><span class="android">安卓</span><span class="wm">Windows Mobile</span></div>
+
+                        </div>
+
+                        <!--<div class="info">最新安卓版本：v1.0.1<span class="sep">|</span>更新时间：2012.3.20</div>-->
+
+                    </li>
+
+                 <li>
+
+                        <div class="app">
+
+                            <a class="app-icon" href="/php/jump.php?n=百度手机助手&ref=indexhot&url=http://as.baidu.com/a/appsearch?pre=web_am_index" target='_blank'><img src="/resource/images/logo/logo_as.png" alt="百度手机助手" /></a>
+
+                            <a class="app-name" href="/php/jump.php?n=百度手机助手&ref=indexhot&url=http://as.baidu.com/a/appsearch?pre=web_am_index" target='_blank'>百度手机助手</a>
+
+                            <a href="/php/jump.php?n=百度手机助手&ref=indexhot&url=http://as.baidu.com/a/appsearch?pre=web_am_index" target='_blank' class="open icon">下载</a>
+
+                            <div class="platform"><span class="apple">苹果</span><span class="android">安卓</span></div>
+
+                        </div>
+
+                    </li>
+
+                 <li>
+
+                        <div class="app">
+
+                            <a class="app-icon" href="/php/jump.php?n=百度地图&ref=indexhot&url=http://wuxian.baidu.com/map/"><img src="/resource/images/logo/logo_map.png" alt="百度地图" /></a>
+
+                            <a class="app-name" href="/php/jump.php?n=百度地图&ref=indexhot&url=http://wuxian.baidu.com/map/">百度地图</a>
+
+                            <a href="/php/jump.php?n=百度地图&ref=indexhot&url=http://wuxian.baidu.com/map/" class="open icon">下载</a>
+
+                            <div class="platform"><span class="apple">苹果</span><span class="symbian">塞班</span><span class="android">安卓</span></div>
+
+                        </div>
+
+                    </li>
+
+                 <li>
+
+                        <div class="app">
+
+                            <a class="app-icon" href="/php/jump.php?n=百度手机浏览器&ref=indexhot&url=http://wuxian.baidu.com/browser/"><img src="/resource/images/logo/logo_browser.png" alt="百度手机浏览器" /></a>
+
+                            <a class="app-name" href="/php/jump.php?n=百度手机浏览器&ref=indexhot&url=http://wuxian.baidu.com/browser/">百度手机浏览器</a>
+
+                            <a href="/php/jump.php?n=百度手机浏览器&ref=indexhot&url=http://wuxian.baidu.com/browser/" class="open icon">下载</a>
+
+                            <div class="platform"><span class="apple">苹果</span><span class="android">安卓</span><span class="wm">wm</span></div>
+
+                        </div>
+
+                    </li>
+
+                <li>
+
+                        <div class="app">
+
+                            <a class="app-icon" href="/php/jump.php?n=百度手机输入法&ref=indexhot&url=http://wuxian.baidu.com/input/"><img src="/resource/images/logo/logo_input.png" alt="百度手机输入法" /></a>
+
+                            <a class="app-name" href="/php/jump.php?n=百度手机输入法&ref=indexhot&url=http://wuxian.baidu.com/input/">百度手机输入法</a>
+
+                            <a href="/php/jump.php?n=百度手机输入法&ref=indexhot&url=http://wuxian.baidu.com/input/" class="open icon">下载</a>
+
+                            <div class="platform"><span class="apple">苹果</span><span class="symbian">塞班</span><span class="android">安卓</span><span class="wm">Windows Mobile</span></div>
+
+                        </div>
+
+                    </li>
+
+                    <li>
+
+                        <div class="app">
+
+                            <a class="app-icon" href="/php/jump.php?n=百度云智能终端平台&ref=indexhot&url=http://wuxian.baidu.com/platform/"><img src="/resource/images/logo/logo_cloud.png" alt="百度云智能终端平台" /></a>
+
+                            <a class="app-name" href="/php/jump.php?n=百度云智能终端平台&ref=indexhot&url=http://wuxian.baidu.com/platform/">百度云智能终端平台</a>
+						 <a href="/php/jump.php?n=百度云智能终端平台&ref=indexhot&url=http://wuxian.baidu.com/platform/" class="open icon">打开</a>
+
+                            <div class="platform"><span class="android">安卓</span></div>
+
+                        </div>
+
+                    </li>
+
+					<li>
+
+                        <div class="app">
+
+                            <a class="app-icon" href="/php/jump.php?n=百度云&ref=indexhot&url=http://yun.baidu.com/" target='_blank'><img src="/resource/images/logo/logo_bdcloud.png" alt="百度云" /></a>
+
+                            <a class="app-name" href="/php/jump.php?n=百度云&ref=indexhot&url=http://yun.baidu.com/"  target='_blank'>百度云</a>
+
+                            <a href="/php/jump.php?n=百度云&ref=indexhot&url=http://yun.baidu.com/cloud/download/" class="download icon">下载</a>
+
+                            <div class="platform"><span class="apple">苹果</span><span class="android">安卓</span><span class="wm">Windows Mobile</span></div>
+
+                        </div>
+
+                    </li>
+					<li>
+
+                        <div class="app">
+
+                            <a class="app-icon" href="/php/jump.php?n=百度手机卫士&ref=indexhot&url=http://shoujiweishi.baidu.com/" target='_blank'><img src="/resource/images/logo/logo_weishi.png" alt="百度手机卫士" /></a>
+
+                            <a class="app-name" href="/php/jump.php?n=百度手机卫士&ref=indexhot&url=http://shoujiweishi.baidu.com/"  target='_blank'>百度手机卫士</a>
+
+                            <a href="/php/jump.php?n=百度手机卫士&ref=indexhot&url=http://shoujiweishi.baidu.com/" class="open icon">下载</a>
+
+                            <div class="platform"><span class="apple">苹果</span><span class="android">安卓</span></div>
+
+                        </div>
+
+                    </li>
+					<li class="noborder">
+
+                        <div class="app">
+
+                            <a class="app-icon" href="/php/jump.php?n=百度桌面&ref=indexhot&url=http://zhuomian.baidu.com/" target='_blank'><img src="/resource/images/logo/logo_launcher.png" alt="百度桌面" /></a>
+
+                            <a class="app-name" href="/php/jump.php?n=百度桌面&ref=indexhot&url=http://zhuomian.baidu.com/"  target='_blank'>百度桌面</a>
+
+                            <a href="/php/jump.php?n=百度桌面&ref=indexhot&url=http://zhuomian.baidu.com/" class="open icon">下载</a>
+
+                            <div class="platform"><span class="android">安卓</span></div>
+
+                        </div>
+
+                    </li>
+                    <li class="noborder">
+
+                        <div class="app">
+
+                            <a class="app-icon" href="/php/jump.php?n=生活手记&ref=indexhot&url=http://lifenote.baidu.com/"><img src="/resource/images/logo/lifenote.png" alt="生活手记" /></a>
+                            <a class="app-name" href="/php/jump.php?n=生活手记&ref=indexhot&url=http://lifenote.baidu.com/">生活手记</a>
+                            <a href="/php/jump.php?n=生活手记&ref=indexhot&url=http://lifenote.baidu.com/" class="open icon">下载</a>
+                            <div class="platform"><span class="android">安卓</span></div>
+                        </div>
+
+                    </li>
+                    <li class="noborder">
+
+                        <div class="app">
+
+                            <a class="app-icon" href="/php/jump.php?n=百度理财&ref=indexhot&url=http://8.baidu.com/"><img src="/resource/images/logo/logo_baidufinance.png" alt="百度理财" /></a>
+
+                            <a class="app-name" href="/php/jump.php?n=百度理财&ref=indexhot&url=http://8.baidu.com/">百度理财</a>
+
+                            <a href="/php/jump.php?n=百度理财&ref=indexhot&url=http://8.baidu.com/" class="open icon">下载</a>
+
+                            <div class="platform"><span class="apple">苹果</span><span class="android">安卓</span></div>
+
+                        </div>
+
+                    </li>
+            </ul>
+
+        </div>
+
+		<div class='center width cls'>
+			<div class="title"><h3>最新消息</h3><a class="more" href="/newscenter/">更多 >></a></div>
+			<div class='center-content'>
+				<div class='news-center' >
+					<div class="news-option common-wrap small">
+					<div class="slider-wrap">
+						<div class="tab cls" id="news_tab"><span class="select first">最新动态</span><span>版本更新</span><span>业界声音</span><span>品牌活动</span><span class='last'>重大新闻</span></div>
+					</div>
+					</div>
+					<div class="news-area left">
+						<ul class="news-list active">
+							<li class="imgnews"><div class="news-img left"><a href="http://tech.sina.com.cn/s/2012-07-17/11407396396.shtml" target="_blank"><img src="/resource/images/news/1.jpg
+"></a></div><div class="news-detail left"><div class="news-title"><a href="http://tech.sina.com.cn/s/2012-07-17/11407396396.shtml" target="_blank">探究输入差异 百度手机输入法内核解析
+</a></div><div class="news-content">不久前iPhone百度手机输入法3.0版本迎来了内核的第三次升级，那么新内 核表现如何呢？让我们一探究竟。
+ </div></div><div class="clear"></div></li><li class="news"><div class="news-tag left"></div><div class="news-detail left"><div class="news-title"><a href="http://tech.hexun.com/2012-07-16/143615213.html" target="_blank">你说它写 iPhone百度手机输入法3.0评测
+</a></div></div><div class="news-time right">07.16
+</div><div class="clear"></div></li><li class="news"><div class="news-tag left"></div><div class="news-detail left"><div class="news-title"><a href="http://tech.sina.com.cn/s/2012-07-16/08107391126.shtml" target="_blank">百度输入法for MacV1.0 beta版发布
+</a></div></div><div class="news-time right">07.16
+</div><div class="clear"></div></li><li class="news"><div class="news-tag left"></div><div class="news-detail left"><div class="news-title"><a href="http://www.newhua.com/2012/0713/168177.shtml" target="_blank">百度浏览器：语音搜索和视频播放各尽其妙
+</a></div></div><div class="news-time right">07.13
+</div><div class="clear"></div></li><li class="news"><div class="news-tag left"></div><div class="news-detail left"><div class="news-title"><a href="http://tech.sina.com.cn/s/s/2012-07-13/11017384617.shtml" target="_blank">跟Siri抢语音输入 百度输入法3.0版试用
+</a></div></div><div class="news-time right">07.13
+</div><div class="clear"></div></li>
+
+						</ul>
+						<ul class="uodate-list active">
+							<li class="imgnews"><div class="news-img left"><a href="http://tech.sina.com.cn/s/2012-07-16/08107391126.shtml" target="_blank"><img src="/resource/images/news/11.jpg
+"></a></div><div class="news-detail left"><div class="news-title"><a href="http://tech.sina.com.cn/s/2012-07-16/08107391126.shtml" target="_blank">百度输入法for Mac V1.0 beta版发布
+</a></div><div class="news-content">百度输入法for Mac V1.0 beta近日发布，引入第三代输入引擎，支持双拼输入和模糊音等功能。
+ </div></div><div class="clear"></div></li><li class="news"><div class="news-tag left"></div><div class="news-detail left"><div class="news-title"><a href="http://tieba.baidu.com/f?kz=1718543971&amp;fr=ala0" target="_blank">百度输入法MacV1.0发布，输入提速，让Mac更出色
+</a></div></div><div class="news-time right">07.11
+</div><div class="clear"></div></li><li class="news"><div class="news-tag left"></div><div class="news-detail left"><div class="news-title"><a href="http://tieba.baidu.com/f?kz=1716236707&amp;fr=ala0" target="_blank">百度手机输入法塞班3.0版发布！
+</a></div></div><div class="news-time right">07.10
+</div><div class="clear"></div></li><li class="news"><div class="news-tag left"></div><div class="news-detail left"><div class="news-title"><a href="http://news.mydrivers.com/1/233/233448.htm" target="_blank">新增动态皮肤 百度输入法2.0正式版登场
+</a></div></div><div class="news-time right">07.05
+</div><div class="clear"></div></li><li class="news"><div class="news-tag left"></div><div class="news-detail left"><div class="news-title"><a href="http://www.newhua.com/2012/0704/166743.shtml" target="_blank">百度网盘iPhone版更新 新增离线收藏
+</a></div></div><div class="news-time right">07.13
+</div><div class="clear"></div></li>
+
+						</ul>
+						<ul class="voice-list active">
+							<li class="imgnews"><div class="news-img left"><a href="http://tech.hexun.com/2012-07-16/143615213.html" target="_blank"><img src="/resource/images/news/17.jpg
+"></a></div><div class="news-detail left"><div class="news-title"><a href="http://tech.hexun.com/2012-07-16/143615213.html" target="_blank">你说它写 iPhone百度手机输入法3.0评测
+</a></div><div class="news-content">对于iPhone而言，可能我们可以说出它千般万般的好，但在个别方面却是相当不尽如人意，比如中文输入。
+ </div></div><div class="clear"></div></li><li class="news"><div class="news-tag left"></div><div class="news-detail left"><div class="news-title"><a href="http://www.newhua.com/2012/0713/168177.shtml" target="_blank">百度浏览器：语音搜索和视频播放各尽其妙
+</a></div></div><div class="news-time right">07.13
+</div><div class="clear"></div></li><li class="news"><div class="news-tag left"></div><div class="news-detail left"><div class="news-title"><a href="http://tech.sina.com.cn/s/s/2012-07-13/11017384617.shtml" target="_blank">跟Siri抢语音输入 百度输入法3.0版试用
+</a></div></div><div class="news-time right">07.13
+</div><div class="clear"></div></li><li class="news"><div class="news-tag left"></div><div class="news-detail left"><div class="news-title"><a href="http://www.techweb.com.cn/mobile/2012-07-13/1213983.shtml" target="_blank">WP7必备应用 百度手机浏览器2.0抢先评
+</a></div></div><div class="news-time right">07.13
+</div><div class="clear"></div></li><li class="news"><div class="news-tag left"></div><div class="news-detail left"><div class="news-title"><a href="http://tech.qianlong.com/33443/2012/07/13/4302@8111740.htm" target="_blank">百度手机浏览器2.0:在WP7上让世界听你搜
+</a></div></div><div class="news-time right">07.13
+</div><div class="clear"></div></li>
+
+						</ul>
+						<ul class="huodong-list active">
+							<li class="imgnews"><div class="news-img left"><a href="http://soft.zol.com.cn/307/3071626.html" target="_blank"><img src="/resource/images/news/36.jpg
+"></a></div><div class="news-detail left"><div class="news-title"><a href="http://soft.zol.com.cn/307/3071626.html" target="_blank">百度云智能终端平台炫色极客沙龙第一期
+</a></div><div class="news-content">百度云智能终端平台与中关村在线联手举办了“百度炫色极客沙龙”的第一期活动。此次活动共邀15位炫色极客莅临现场。
+ </div></div><div class="clear"></div></li><li class="news"><div class="news-tag left"></div><div class="news-detail left"><div class="news-title"><a href="http://tech.163.com/12/0713/19/86AKKUV000094MOK.html" target="_blank">百度启动云应用开发大赛 奖金高达150万
+</a></div></div><div class="news-time right">07.13
+</div><div class="clear"></div></li><li class="news"><div class="news-tag left"></div><div class="news-detail left"><div class="news-title"><a href="http://tech.qq.com/a/20120712/000158.htm" target="_blank">百度媒体开放日揭输入法、移动搜索产品密码
+</a></div></div><div class="news-time right">07.12
+</div><div class="clear"></div></li><li class="news"><div class="news-tag left"></div><div class="news-detail left"><div class="news-title"><a href="http://news.sxpmg.com/ynxx/szcb/201207/95709.html" target="_blank">百度加大云平台开发者支持力度 整体分成达去年三倍
+</a></div></div><div class="news-time right">07.07
+</div><div class="clear"></div></li><li class="news"><div class="news-tag left"></div><div class="news-detail left"><div class="news-title"><a href="http://www.techweb.com.cn/internet/2012-05-29/1197357.shtml" target="_blank">IT龙门阵移动云存储专场：拥抱开放持续价格战
+</a></div></div><div class="news-time right">05.29
+</div><div class="clear"></div></li>
+
+						</ul>
+
+						<ul class="bignews-list active">
+							<li class="imgnews"><div class="news-img left"><a href="http://it.people.com.cn/n/2012/0629/c1009-18410338.html" target="_blank"><img src="/resource/images/news/41.jpg
+"></a></div><div class="news-detail left"><div class="news-title"><a href="http://it.people.com.cn/n/2012/0629/c1009-18410338.html" target="_blank">王劲:百度云为开发者提供大数据一站式服务
+</a></div><div class="news-content">百度技术副总裁王劲应邀出席2012年亚洲移动通信博览会,并发表了题为“掘金大数据”的主题演讲。
+ </div></div><div class="clear"></div></li><li class="news"><div class="news-tag left"></div><div class="news-detail left"><div class="news-title"><a href="http://news.zdnet.com.cn/zdnetnews/2012/0621/2098943.shtml" target="_blank">百度王劲:“四大引擎”助推开发者对接“移动空间站”
+</a></div></div><div class="news-time right">06.21
+</div><div class="clear"></div></li>
+
+						</ul>
+					</div>
+				</div>
+				<div class='activity-center left'>
+
+					<div class='activity-title'><h3>文档下载</h3><a class="more" href="/newscenter/">更多 >></a></div>
+					<div class='activity-content'>
+						<ul>
+							<li class="news">
+
+							<div class="news-tag left"></div>
+
+							<div class="news-detail left">
+
+								<div class="news-title"><a href="http://developer.baidu.com/report">百度移动互联网发展趋势报告2012 Q4</a></div>
+
+								<div class="news-content"></div>
+
+							</div>
+
+							<div class="full-news-time right">2013-02-26</div>
+
+							<div class="clear"></div>
+
+						</li>
+
+					<li class="news">
+
+							<div class="news-tag left"></div>
+
+							<div class="news-detail left">
+
+								<div class="news-title"><a href="http://developer.baidu.com/report">百度移动互联网发展趋势报告2012 Q3</a></div>
+
+								<div class="news-content"></div>
+
+							</div>
+
+							<div class="full-news-time right">2012-11-21</div>
+
+							<div class="clear"></div>
+
+					</li><li class="news">
+
+							<div class="news-tag left"></div>
+
+							<div class="news-detail left">
+
+								<div class="news-title"><a href="http://developer.baidu.com/report">百度移动互联网发展趋势报告2012 Q2</a></div>
+
+								<div class="news-content"></div>
+
+							</div>
+
+							<div class="full-news-time right">2012-08-14</div>
+
+							<div class="clear"></div>
+
+					</li><li class="news">
+
+							<div class="news-tag left"></div>
+
+							<div class="news-detail left">
+
+								<div class="news-title"><a href="http://developer.baidu.com/report">百度移动互联网发展趋势报告2012 Q1</a></div>
+
+								<div class="news-content"></div>
+
+							</div>
+
+							<div class="full-news-time right">2012-05-24</div>
+
+							<div class="clear"></div>
+
+						</li>
+
+					<li class="news">
+
+							<div class="news-tag left"></div>
+
+							<div class="news-detail left">
+
+								<div class="news-title"><a href="http://developer.baidu.com/report">百度移动互联网发展趋势报告2011 Q4</a></div>
+
+								<div class="news-content"></div>
+
+							</div>
+
+							<div class="full-news-time right">2012-03-01</div>
+
+							<div class="clear"></div>
+
+						</li>
+
+						</ul>
+					</div>
+				</div>
+				<div class='video left'>
+					<div class='video-bar'>
+					<h3>精彩视频</h3>
+					</div>
+					<div class="videobox">
+						 <object type="application/x-shockwave-flash"
+		width="230" height="181" wmode="transparent"
+		data="http://player.youku.com/player.php/sid/XNTU4MTg5MzUy/v.swf">
+			<param name="movie" value="http://player.youku.com/player.php/sid/XNTU4MTg5MzUy/v.swf" />
+			<param name="wmode" value="transparent" />
+		</object>
+
+						</div>
+				</div>
+			</div>
+		</div>
+
+        <div class="active width cls">
+
+            <div class="left-wap">
+
+                <iframe src="/wapbrowser/wapbrowser.php?url=http://m.baidu.com" frameborder="0" height="353" width="240"></iframe>
+
+            </div>
+
+            <div class="active-recommend">
+
+                <div class="title"><h3>活动推荐</h3><a class="more" href="/activity/"><!-- 更多 >> --></a></div>
+
+                <div class="newest-news part" style='padding:0'>
+
+                      <div class="activity-banner-img" id="activity-banner-img">
+            <ul class="imgs-list">
+
+
+            <li><a href='http://zhuomian.baidu.com' target='_blank' href='activity'><img src='/resource/images/activity/activity_tieba_index.jpg'></img></a>
+            </li>
+
+            </ul>
+            <div class="imgs-num" style='width:70%'>
+
+            </div>
+        </div>
+
+                </div>
+
+                <div class="thumbs">
+
+                    <ul class="thumbs-list cls">
+						<li class="handle handle-left"><span><a href="http://as.baidu.com/a/item?docid=2958727&qd=1000561t&f=1000561t" target="_blank"><img src="/resource/images/new/a-r-4.jpg" alt=""></a></span></li>
+
+                        <li class="handle"><span><a href="http://as.baidu.com/a/topic?t=42" target="_blank"><img src="/resource/images/new/a-r-1.png" alt=""></a></span></li>
+
+                        <li class="handle handle-left"><span><a href="http://as.baidu.com/a/topic?t=51" target="_blank"><img src="/resource/images/new/a-r-2.png" alt=""></a></span></li>
+
+                       <!-- <li class="handle handle-left"><span><a href="http://as.baidu.com/a/topic?t=43" target="_blank"><img src="/resource/images/new/a-r-3.png" alt=""></a></span></li> -->
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="partner width">
+
+            <div class="title"><h3>合作伙伴</h3></div>
+
+            <ul class="partner-list cls">
+
+                <li><a href="http://www.10086.cn/" target="_blank"><img src="/resource/images/new/partner1.png" alt="中国移动通信"></a></li>
+
+                <li><a href="http://www.ct10000.com/" target="_blank"><img src="/resource/images/new/partner2.png" alt="中国电信"></a></li>
+
+                <li><a href="http://www.10010.com/" target="_blank"><img src="/resource/images/new/partner3.png" alt="中国联通"></a></li>
+
+                <li><a href="http://www.motorola.com.cn/" target="_blank"><img src="/resource/images/new/partner4.png" alt="摩托罗拉"></a></li>
+
+                <li><a href="http://www.nokia.com.cn/" target="_blank"><img src="/resource/images/new/partner5.png" alt="诺基亚"></a></li>
+
+                <li><a href="http://www.sonystyle.com.cn/" target="_blank"><img src="/resource/images/new/partner6.png" alt="索尼"></a></li>
+
+                <li><a href="http://www.dell.com.cn/" target="_blank"><img src="/resource/images/new/partner7.png" alt="戴尔"></a></li>
+
+                <li><a href="http://www.hp.com.cn/" target="_blank"><img src="/resource/images/new/partner8.png" alt="惠普"></a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="footer width" id="footer">&copy;2013 Baidu</div>
+
+    </div>
+
+
+    <script type="text/javascript" src="/resource/js/jqueryselect.min.js"></script>
+
+    <script type="text/javascript" src="/resource/js/index.js"></script>
+
+	<script type="text/javascript" src="/resource/js/checkurl.js"></script>
+
+    <script type='text/javascript'>
+        $(".download").mousedown(function(){$(this).css('background-image', '')})
+    </script>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb3dc39e4e93d56787fc263e1ed320de0' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+
+
+
+</html>

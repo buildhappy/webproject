@@ -1,0 +1,87 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>Cookie01</servlet-name>
+  	<display-name>Cookie01</display-name>
+  	<description></description>
+  	<servlet-class>cookie.Cookie01</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Cookie02</servlet-name>
+  	<display-name>Cookie02</display-name>
+  	<description></description>
+  	<servlet-class>cookie.Cookie02</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Cookie03</servlet-name>
+  	<display-name>Cookie03</display-name>
+  	<description></description>
+  	<servlet-class>cookie.Cookie03</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Session01</servlet-name>
+  	<display-name>Session01</display-name>
+  	<description></description>
+  	<servlet-class>session.Session01</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Session02</servlet-name>
+  	<display-name>Session02</display-name>
+  	<description></description>
+  	<servlet-class>session.Session02</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>IndexServlet</servlet-name>
+  	<display-name>IndexServlet</display-name>
+  	<description></description>
+  	<servlet-class>shoppingproject.shopping.IndexServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>BuyServlet</servlet-name>
+  	<display-name>BuyServlet</display-name>
+  	<description></description>
+  	<servlet-class>shoppingproject.shopping.BuyServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ListCartServlet</servlet-name>
+  	<display-name>ListCartServlet</display-name>
+  	<description></description>
+  	<servlet-class>shoppingproject.shopping.ListCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Cookie01</servlet-name>
+  	<url-pattern>/Cookie01</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Cookie02</servlet-name>
+  	<url-pattern>/Cookie02</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Cookie03</servlet-name>
+  	<url-pattern>/Cookie03</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Session01</servlet-name>
+  	<url-pattern>/Session01</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Session02</servlet-name>
+  	<url-pattern>/Session02</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>IndexServlet</servlet-name>
+  	<url-pattern>/IndexServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>BuyServlet</servlet-name>
+  	<url-pattern>/BuyServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ListCartServlet</servlet-name>
+  	<url-pattern>/ListCartServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

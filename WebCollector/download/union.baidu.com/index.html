@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="/un-cms/css/style.css?version=20130524" />
+<title>百度联盟-让合作伙伴更强</title>
+<meta name="Keywords" content="百度,百度联盟" />
+<meta name="Description" content="百度联盟隶属于全球最大的中文搜索引擎百度。一直致力于帮助合作伙伴挖掘互联网流量的媒体价值，帮助推广客户拓展精准有效的投放通路，是现今国内颇具规模的网络联盟体系之一。百度联盟的使命是，帮助合作伙伴在各自领域获得成功。" />
+<style>
+.leftBar {
+    margin: 44px 0 50px;
+}
+.slideShowBar{
+	width:960px;
+	height:300px;
+	overflow:hidden;
+}
+.slide-show{
+	position:relative;
+}
+.slide-show .container{
+	height:300px;
+	position:relative;
+	overflow:hidden;
+}
+
+.slide-show .container p{
+	position:absolute;
+	top:300px;
+	width:960px;
+	height:300px;
+	overflow:hidden;
+}
+.slide-show .container p.current,
+.slide-show .container p.next{
+	top:0;
+}
+.slide-show .container p.current{
+	z-index:1;
+}
+.slide-show .hidden{display:none;}
+.slide-show img{
+	width:960;
+	height:300px;
+}
+.slide-show .controller{
+	position:absolute;
+	top:19px;
+	left:0;
+	width:100%;
+	text-align:center;
+	z-index:2;
+}
+.slide-show .controller .current{
+	background:url(/un-cms/css/img/sprites24.png) -306px -383px no-repeat;
+        _background:url(/un-cms/css/img/sprites2.png) -306px -383px no-repeat;
+}
+.slide-show  .pager {
+	display:inline-block;
+	margin:0 6px;
+	width:10px;
+	height:10px;
+	text-align:center;
+        background:url(/un-cms/css/img/sprites24.png) -306px -420px no-repeat;
+	_background:url(/un-cms/css/img/sprites2.png) -306px -420px no-repeat;
+	cursor: pointer;
+}
+.slide-show .pager span{
+	display:inline-block;
+	text-indent:-3000px;
+}
+</style>
+<script type="text/javascript" src="/un-web-lib/js/tangram.js"></script>
+</head>
+<body id="index">
+<div class="wrapper">
+	<div class="header" id="Header">
+		<div class="mainArea">
+			<div class="logo">
+				<a href="http://union.baidu.com">
+					<img src="/un-cms/images/logo.png"/>
+				</a>
+			</div>
+			<ul class="toolbar" id="Toolbar">
+				<li>
+					<a href="http://union.baidu.com/customerLogin.html">登录</a>
+				</li>
+				<li>
+					<a href="http://union.baidu.com/register.action" class="register-link" style="display:none;">注册</a>
+				</li>
+				<li>
+					<a href="http://yingxiao.baidu.com/support/union/?controller=index&action=main&castk=LTE%3D" target="_blank">帮助</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="nav" id="Nav">
+		<div class="mainArea">
+			<ul>
+				<li><a href="http://union.baidu.com"><span>首&nbsp;页</span></a></li>
+				<li><a href="http://union.baidu.com/about.html"><span>爱上联盟</span></a></li>
+				<li><a href="http://union.baidu.com/service/servicelist.html"><span>联盟服务</span></a></li>
+				<li><a href="http://union.baidu.com/bonus/bon-index.html"><span>积分乐园</span></a></li>
+			</ul>
+			<div class="join">
+				<a href="http://union.baidu.com/register.action">现在加入</a>
+			</div>
+		</div>
+	</div>
+	<div class="indexBody">
+		<div class="indexContent mainArea">
+			<div class="slideShowBar">
+				<div class="slide-show" id="SlideShow">
+	<div class="container">
+
+<p class="clip "><a href="http://zhanzhang.baidu.com/act/question" target="_blank">
+<img src="http://union.baidu.com/un-cms/images/lianmbanner960X300.png"></a></p>
+
+<p class="clip "><a href="http://union.baidu.com/clientDetail.action?announceId=2999" target="_blank">
+<img src="http://union.baidu.com/un-cms/images/yingxionghui.png"></a></p>
+
+<p class="clip "><a href="http://imageplus.baidu.com/?hmsr=unionindex&hmmd=banner&hmpl=&hmkw=&hmci=" target="_blank">
+<img src="http://union.baidu.com/un-cms/images/tujiatuiguagn_banner_dongtai.gif"></a></p>
+
+
+                 </div>
+	<div class="controller"></div>
+</div>
+			</div>
+			<div class="leftBar">
+				<div class="union-products union-products2">
+                    <ul>
+                        <li>
+                            <div class="pic-head">
+                                <a class="pic pic-wm" href="http://union.baidu.com/product/prod-cpro.html" target="_blank">网盟推广合作业务</a>
+                                <p class="title">内容推广合作</p>
+                            </div>
+                            <p class="intro">
+                               包括网盟推广合作、鸿媒体以及百
+                                度流量交易服务。通过精确定位方
+                                式及竞价，将最具竞争力的百度推
+                                广内容投放到网站相应的页面。
+                            </p>
+                        </li>
+                        <li>
+                            <div class="pic-head">
+                                <a class="pic pic-ss" href="http://union.baidu.com/product/prod-search.html" target="_blank">搜索推广合作</a>
+                                <p class="title">搜索推广合作</p>
+                            </div>
+                            <p class="intro">
+                                可在自有业务中通过搜索框、工具
+                                栏等方式整合百度搜索功能，既提
+                                升用户体验，亦可获取高品质搜索
+                                分成。
+                            </p>
+                        </li>
+                        <li class="last">
+                            <div class="pic-head">
+                                <a class="pic pic-app" href="http://union.baidu.com/product/prod-mobile.html" target="_blank">移动应用合作</a>
+                                <p class="title">移动应用合作</p>
+                            </div>
+                            <p class="intro">
+                                为移动应用提供长期、稳定并具竞
+                                争力的移动互联网流量变现专业服
+                                务，为海量移动应用提供最佳的推
+                                广回报。
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+				<div class="parters">
+					<div class="parters-head">
+						<h3>合作伙伴</h3>
+						<a href="http://union.baidu.com/partner.html" target="_blank">更多</a>
+					</div>
+					<ul>
+						<li>
+							<a href="http://www.xunlei.com/" target="_blank" ><img src="http://union.baidu.com/un-cms/img/partner/xunlei.gif"/></a>
+						</li>
+						<li>
+							<a href="http://www.zol.com.cn" target="_blank" ><img src="http://union.baidu.com/un-cms/img/partner/zol.gif"/></a>
+						</li>
+						<li>
+							<a href="http://www.maxthon.cn/" target="_blank" ><img src="http://union.baidu.com/un-cms/img/partner/aoyou.gif"/></a>
+						</li>
+						<li>
+							<a href="http://www.58.com/" target="_blank" ><img src="http://union.baidu.com/un-cms/img/partner/58.gif"/></a>
+						</li>
+						<li class="last">
+							<a href="http://www.cntv.cn/" target="_blank" ><img src="http://union.baidu.com/un-cms/img/partner/cntv.gif"/></a>
+						</li>
+					</ul>
+					<ul class="partersList">
+						<li>
+							<a href="http://www.it168.com/" target="_blank" ><img src="http://union.baidu.com/un-cms/img/partner/it168.gif"/></a>
+						</li>
+						<li>
+							<a href="http://www.baofeng.com/" target="_blank" ><img src="http://union.baidu.com/un-cms/img/partner/baofeng.gif"/></a>
+						</li>
+						<li>
+							<a href="http://www.chinaunicom.com.cn/" target="_blank" ><img src="http://union.baidu.com/un-cms/img/partner/liantong.gif"/></a>
+						</li>
+						<li>
+							<a href="http://www.ifeng.com/" target="_blank" ><img src="http://union.baidu.com/un-cms/img/partner/ifeng.gif"/></a>
+						</li>
+						<li class="last">
+							<a href="http://www.icafe8.com/frontEnd/index.jsp" target="_blank" ><img src="http://union.baidu.com/un-cms/img/partner/shunwang.gif"/></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="rightBar">
+				<div class="loginBar">
+					<!-- <iframe width="316" scrolling="no"  frameborder="0" onload="this.height = this.contentWindow.document.body.scrollHeight" 
+					src="/userlogin!init.action" name="login_tpl" id="Login_tpl"allowtransparency="true"></iframe>
+-->
+                                    <style type="text/css">
+#LoginIn{
+    height:286px;
+    width:264px;
+    padding:18px 26px 0;
+}
+#LoginIn form{
+    width:100%;
+}
+#LoginIn .inputArea{
+    position: relative;
+    border:1px solid #d1d9dc;
+    border-radius:2px;
+    box-shadow:1px 1px 2px #d2d9dc,-1px -1px 2px #d2d9dc;
+    color:#999999;
+    overflow: hidden;
+}
+#LoginIn .login-input-hover {
+    border:1px solid #b8c3e0;
+    box-shadow:1px 1px 2px #b8c3e0,-1px -1px 2px #b8c3e0;
+    color:#666666;
+}
+#LoginIn input ,#LoginIn label{
+    padding:0;
+    height:29px;
+    line-height:29px;
+    padding-left:13px;
+    border: 0;
+}
+#LoginIn input {
+    outline: 0;
+}
+#LoginIn label{
+    position: absolute;
+    top: 0 ;
+    left: 0 ;
+    border: 0 ;
+    box-shadow: none;
+    background: #fff;
+}
+#LoginIn a{
+    color:#6f749b;
+}
+#LoginIn h3{
+    line-height:16px;
+    float:left;
+    width:40px;
+}
+#LoginIn #ErrorSpan{
+    float:right;
+    width:200px;
+    overflow: hidden;
+    color: #dd6666;
+}
+#entered_login,
+#entered_password,
+#entered_login_area label,
+#entered_password_area label{
+    width:247px;   
+}
+#entered_login_area,#entered_password_area{
+    margin-bottom:15px;
+    _margin-bottom:13px;
+    height:29px;
+    overflow: hidden;
+}
+#uc-safe-pwd-input{
+    height: 29px;
+}
+#entered_imagecode{
+    width:106px;
+    margin-bottom:15px;
+    float:left; 
+    margin:0;
+}
+#entered_imagecode_area{
+    float: left;
+}
+#LoginIn .valid{
+    display:inline;
+    width:54px;
+    height:22px;
+    padding:0 5px 0 10px;
+}
+.install-plug{
+    display: block;
+}
+#LoginIn .forget{
+    padding:0 20px;
+}
+
+#is-safe-container{
+    position: relative;
+    width: 64px;
+    line-height: 35px;
+    margin-right: 6px;
+}
+#is-safe{
+    position: absolute;
+    right: 0;
+    top:3px;
+    margin: 0;
+    padding: 0;
+}
+#LoginIn  .login-btn{
+    width:122px;
+    height:35px;
+    background:#6a6f8d url(/un-cms/css/img/sprites2.png) -108px -305px no-repeat;
+    color:white;
+    border:0;
+    margin-right: 4px;
+}
+#LoginIn  .opt{
+    border-bottom:1px dotted #d7dbea;
+    padding-bottom:13px;
+    margin-bottom:0;
+    line-height: 35px;
+}
+#LoginIn  .opt td{
+    vertical-align: middle;
+    line-height: 35px;
+}
+#LoginIn  a.joinNow{
+    display:block;
+    width:262px;
+    height:46px;
+    margin-top:14px;
+    overflow:hidden;
+    text-align:center;
+    font:18px '微软雅黑','宋体',Arial,Helvetica,sans-serif;
+    color:#5c6572;
+    background:url(/un-cms/css/img/sprites2.png) left -341px no-repeat;
+}
+#LoginIn  .joinNow span{
+    line-height:46px;
+}
+.login-head{
+    margin-bottom:17px;
+    overflow: hidden;
+    zoom :1 ;
+}
+
+#validImg{float:left;}
+#ValidArea{
+    margin-bottom:15px;
+    _margin-bottom:13px;
+    overflow:hidden;
+    zoom :1 ;
+}
+</style>
+<div id="LoginIn">  
+    <div class="login-head">
+            <h3>登&nbsp;录</h3>
+            <div  id="ErrorSpan" class="hint"></div>
+    </div>
+    <div class="login-content">
+        <form name="login_form" id="login_form" action="https://cas.baidu.com/?action=login" method="post" target="_top" onsubmit="return Form.verify();">
+            <div class="inputArea" id="entered_login_area">
+            <label style="display:none;" for="entered_login" id="entered_loginLabel">用户名</label>
+            <input type="text" id="entered_login" name="entered_login" tabindex="1" autocomplete="off"/>
+            </div>
+            <div class="inputArea" id="entered_password_area">
+                <label style="display:none;" id="entered_passwordLabel">密 码</label>
+                <input type="password" id="entered_password" name="entered_password" tabindex="2" autocomplete="off" />
+                <div id="uc-safe-pwd-input"></div>
+            </div>
+            <div id="ValidArea">
+                <div class="inputArea" id="entered_imagecode_area">
+                    <label style="display:none;"  for="entered_imagecode" id="entered_imagecodeLabel">验证码</label>
+                <input type="text" autocomplete="off" id="entered_imagecode" tabindex="3" name="entered_imagecode" maxlength="4"/> 
+                </div>
+                <img id="validImg" width="50" height="20" style="cursor:pointer" title="看不清楚？换一张" onclick="Form.reloadVerifyImg(this);" src="http://cas.baidu.com/?action=image" class="valid" />
+                </div>
+            <input type="hidden" name="appid" value="6" />
+            <input type="hidden" name="fromu" value="http%3A%2F%2Funion.baidu.com%2Fuserlogin.action" id="fromu" />
+            <input type="hidden" name="selfu" value="" />
+            <input type="hidden" name="senderr" value="1" />
+            <div class="opt">
+                <table>
+                    <tr>
+                        <td>
+                            <div id="is-safe-container" class="hidden">
+                                <span>安全登录</span>
+                                <input type="checkbox" id="is-safe" checked="checked"/>
+                            </div>
+                        </td>
+                        <td><button class="login-btn" type="submit" name="login2">登录</button> 
+                        </td>
+                        <td><a href="/findPassword!input.action" target="_top">忘记密码？</a></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <a class="joinNow" href="/register.action" target="_top"><span>现在就加入</span></a>
+    </div>
+</div>
+				</div>
+				<div class="bulletinBar">
+					<iframe width="316" scrolling="no"  frameborder="0" onload="this.height = this.contentWindow.document.body.scrollHeight" src="/clientAnnounce.action" name="Notice_tpl" id="Notice_tpl" allowtransparency="true"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer" id="Footer">
+		<div class="mainArea">
+			<div class="content">
+				<div class="reLinks">
+					<p>
+						<strong>相关链接：</strong>
+						<a href="http://union.baidu.com/regAgreement.html"  target="_blank">注册协议</a>|
+						<a href="http://union.baidu.com/contact.html"  target="_blank">联系我们</a>|
+						<a href="http://hi.baidu.com/new/bdadd"  target="_blank">联盟空间</a>|
+						<a href="http://tieba.baidu.com/f?kw=%B0%D9%B6%C8%C1%AA%C3%CB"  target="_blank">联盟贴吧</a>
+					</p>
+				</div>
+				<div class="weibo">
+					<a href="http://e.weibo.com/baiduunion" target="_blank">关注我们</a>
+				</div>
+<div class="voice">
+					<a href="http://research.baidu.com/index.php?sid=86272&lang=zh-Hans" target="_blank">联盟好声音</a>
+				</div>
+			</div>
+			<p class="copyRight"><span class="t">&copy;2012</span><span class="m">Baidu</span><a href="http://www.baidu.com/duty/" target="_blank">使用百度前必读</a></p>
+		</div>
+	</div>
+<script src="http://img.baidu.com/js/tangram-1.3.9.js" language="javascript" type="text/javascript"></script>
+<script type="text/javascript">
+function initNav(){
+	var address = window.location.href.split('/')[3];
+        var nav =baidu.G('Nav') ;
+        if( nav ){
+        var navi = baidu.G('Nav').getElementsByTagName('li');
+	
+	if(address.indexOf("index.html") == 0 || address.indexOf("customerLogin.html") == 0 || address == '' || 
+           address.indexOf("contact.html") == 0
+        ){
+		baidu.addClass(navi[0], "cur");
+	}else if(!address.indexOf("product")){
+		baidu.addClass(navi[1], "cur");
+	}else if(!address.indexOf("service")){
+		baidu.addClass(navi[2], "cur");
+	}else if(!address.indexOf("bonus")){
+		baidu.addClass(navi[3], "cur");
+	}
+       
+       if(address.indexOf("about.html") == 0){
+           baidu.addClass(navi[1], "cur");  
+       }
+      }
+	
+}
+initNav();
+</script>
+<script type="text/javascript">
+var toolbar = baidu.G("Toolbar");
+if( toolbar){
+    baidu.ajax.get("/userlogin!hasLoginAjax.action",
+    function(xhr,response) {
+	var json;
+	try {
+		json = eval('(' + response + ')');
+	} catch (ex) {
+		json = {};
+	}
+	if(json.status == 0){
+		if (json.data.login) {
+			if(toolbar){
+				toolbar.style.visibility = "hidden";
+                                if( baidu.G("Links") ){
+				    baidu.G("Links").style.visibility = "hidden";
+                                }
+			}
+		}
+		var registerLink = baidu.dom.query("a.register-link");
+		if(registerLink){
+			for(var i = 0; i < registerLink.length; i++){
+				var linkId = registerLink[i].id;
+				if(json.data.login){
+					registerLink[i].onclick = function(){
+						alert("您已经登陆，不能进行外部注册！");
+						window.location.href = "/client/main/initAccount.action";
+					};
+				}
+				else{
+					var REG_URL;
+					if(linkId != 'TuanRegister' && linkId != 'RegisterNow'){
+						REG_URL = '/register.action';
+					}
+					else{
+						REG_URL = '/register.action?tuan=on';
+					}
+					registerLink[i].href = REG_URL;
+				}
+			}
+		}
+	}
+    });
+}
+</script>
+</div>
+<script type="text/javascript">
+    var _bducProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='"
+    + _bducProtocol
+    + "cas.baidu.com/ucsl/ucsl.js%3Fappid=6%26d="
+    + Math.floor((+new Date)/(864e5))
+    + "' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+<script type="text/javascript">
+var ucsl = UC_SAFE_LOGIN;
+var ucsl = UC_SAFE_LOGIN;
+ucsl.reset =    ucsl.reset 
+            || function(){ 
+                    var sid = document.getElementById('ucsl-input-sid'); 
+                    var pwd = document.getElementById('ucsl-input-pwd'); 
+                    if( sid ){ sid.value = '';}
+                    if( pwd ){ pwd.value = '';}
+                };
+
+var Form = (function(){
+    var $ = baidu.G;
+    var isIE = !! window.ActiveXObject;//由安全控件本身特性做的判断逻辑
+
+    var trim = baidu.string.trim;
+    var hasClass = baidu.dom.hasClass ;
+    var addClass = baidu.addClass;
+    var removeClass = baidu.removeClass;
+    var BaiduSafeInput = ucsl.BaiduSafeInput;
+
+    var config = {
+        PLUGID      : 'password_edit', // 插件id
+        PLUGCONTAINERID : 'uc-safe-pwd-input',
+        LoginFormID : 'login_form',
+        UserNameID : 'entered_login' ,
+        PasswordAreaID : 'entered_password_area' ,
+        PasswordID  : 'entered_password' ,
+        VerifyCodeID : 'entered_imagecode' ,
+        IsSafeContainnerID : 'is-safe-container' ,
+        IsSafeID : 'is-safe' ,
+        ErrorBoxID : 'ErrorSpan',
+        ErrorNameID : 'ErrorSpan' ,
+        ErrorPswID : 'ErrorSpan' ,
+        ErrorCodeID : 'ErrorSpan',
+        useSafe : ucsl.support() ,
+        issafe      : 1 , //默认值 是否使用安全控件
+        isMultiple  : 1 , //是否使用多种登录模式
+        showDefault : 1 , //是否显示默认值（在输入框上漂浮显示）
+        isUseful    : 0 , //安全控件是否可用，在安全控件加载完成后会更新
+        boxHeight   : 29  //输入框单元高度
+    };
+
+    config.isMultiple = config.isMultiple && config.useSafe ;
+
+    if( baidu.cookie.get('isSafe') != null && config.isMultiple){
+        config.issafe = baidu.cookie.get('isSafe') == 1 && config.useSafe ;
+    }else{
+        config.issafe = config.issafe && config.useSafe ;
+    }
+
+    var showDefault = config.showDefault ;
+    var formInterval = 0;
+    var useFormInterval =  showDefault || baidu.browser.chrome;
+
+    var filedInfos = {};
+
+    var passwordFocusing = false;
+
+    var userNameLabel = $( config.UserNameID + 'Label' );
+    var passwordLabel = $( config.PasswordID + 'Label' );
+    var verifyCodeLabel = $( config.VerifyCodeID + 'Label' );
+
+    var passwordInput = $(config.PasswordID);
+    var passwordArea  = $(config.PasswordAreaID);
+    var plugInputContainer = $(config.PLUGCONTAINERID);
+
+    function onFocus () {
+        addClass(this.parentNode ,'login-input-hover');
+        switch( this.id ){
+            case config.UserNameID:
+                $(config.ErrorNameID).innerHTML = '';
+            break;
+            case config.PasswordID:
+                 $(config.ErrorPswID).innerHTML = '';
+                 passwordFocusing = true;
+            break;
+            case config.VerifyCodeID:
+                $(config.ErrorCodeID).innerHTML = '';
+            break;
+        }
+        
+        if(showDefault){
+            var label = $( this.id + 'Label');
+            if( label ){
+                label.style.display = 'none';
+            }
+            if((!isIE && config.issafe)){
+                hidePasswordLabel();
+                showPasswordInput();
+            }
+        }
+    }
+
+    function onBlur() {
+        removeClass(this.parentNode ,'login-input-hover');
+
+        if(showDefault){
+            var label = $( this.id + 'Label');
+            if( label && trim( this.value ) == '' ){
+                label.style.display = 'block';
+            } 
+            if(this.id == config.PasswordID) {
+              passwordFocusing = 0 ;
+            }
+        }
+    }
+
+    function onLabelClick(){
+        this.style.display = 'none';
+        if( !isIE && config.issafe){
+            hidePasswordLabel();
+        }
+    }
+
+    function onPasswordLabelClick(e){
+        passwordFocusing = 1; 
+        hidePasswordLabel();
+        showPasswordInput();
+
+        if( config.issafe ){
+            var plugInput = $(config.PLUGID);
+            if( plugInput && plugInput.focus ){
+                plugInput.focus();
+            }
+        }else{
+            passwordInput.focus();
+        }
+    }
+
+    function showPasswordInput(){
+        if(config.issafe){
+            passwordArea.scrollTop = config.boxHeight ;
+        }else{
+            passwordArea.scrollTop = 0;
+        }
+    }
+
+    //这个方法其实只是隐藏了安全登录控件
+    function hidePasswordInput(){
+        passwordArea.scrollTop = 0;
+    }
+
+    function showPasswordLabel(){
+        passwordLabel.style.display = 'block';
+    }
+
+    function hidePasswordLabel(){
+        passwordLabel.style.display = 'none';
+    }
+
+   function useSafeLogin(){
+        config.issafe = 1 ;
+        baidu.cookie.set('isSafe' ,config.issafe ,{ expires : 3600 * 1000 * 24 * 180 });
+        showPasswordInput();
+        passwordFocusing = 0 ;
+
+        if(useFormInterval){
+            if( formInterval > 0 ){
+                window.clearInterval( formInterval );
+            }
+            formInterval = 0 ;
+        }
+    }
+
+    function useNormalLogin(){
+        config.issafe = 0 ;
+        baidu.cookie.set('isSafe' ,config.issafe ,{ expires : 3600 * 1000 * 24 * 180 });
+        ucsl.reset();
+        showPasswordInput();
+        passwordInput.value = '';
+
+        if(useFormInterval){
+            formInterval = window.setInterval( formIntervalHandler , 100 );
+            window.onunload = function(){
+                window.clearInterval( formInterval );
+            }
+        }
+    }
+
+    function bindEventHandler() {
+        var username = $(config.UserNameID);
+        var usernameLabel = $(config.UserNameID + 'Label');
+        var password = $(config.PasswordID);
+        var passwordLabel = $(config.PasswordID + 'Label');
+        var code =  $(config.VerifyCodeID);
+        var codeLabel = $(config.VerifyCodeID + 'Label');
+        var submitBtn =  $(config.SubmitBtnID);
+
+        username.onfocus = onFocus;
+        password.onfocus = onFocus;
+        code.onfocus = onFocus;
+        username.onblur = onBlur;
+        password.onblur = onBlur;
+        code.onblur = onBlur;
+
+        username.onkeydown = userNameKeyDown;
+        password.onkeydown = passwordKeyDown;
+
+        if( showDefault ){
+            usernameLabel.onclick = onLabelClick ;
+            codeLabel.onclick = onLabelClick ;
+            passwordLabel.onclick = onPasswordLabelClick;
+        }
+    }
+
+    function reloadVerifyImg(obj){
+        obj.src = obj.src + '&tmp=' + Math.random();
+    }
+
+    function verify() {
+        var form = $(config.LoginFormID);
+        var flag = true;
+        if (trim(form.entered_imagecode.value) == '') {
+          $(config.ErrorCodeID).innerHTML = '请输入验证码';
+          flag = false;
+        }
+        if (trim(form.entered_login.value) == '') {
+            $(config.ErrorNameID).innerHTML = '请输入用户名';
+            flag = false;
+        }
+        if (!config.issafe && trim(form.entered_password.value) == '') {
+            $(config.ErrorPswID).innerHTML = '请输入密码';
+            flag = false;
+        }
+        if (config.issafe) {
+            if(!ucsl.verify()) {
+                $(config.ErrorPswID).innerHTML = '请输入密码';
+                flag = false;
+            } else {
+                $(config.ErrorPswID).innerHTML = '';
+            }
+        }
+        return flag;
+    }
+
+    function userNameKeyDown(e) {
+        var evt = e || window.event;
+        if( config.issafe  && 9 == evt.keyCode) {
+            try{
+                var plugInput = $(config.PLUGID);
+                if( plugInput && plugInput.focus ){
+                    hidePasswordLabel();
+                    plugInput.focus();
+
+                }
+            }catch(er){}
+
+            evt.returnValue = false;
+            return false;
+        }
+    }
+
+    function passwordKeyDown(e) {
+        var evt = e || window.event;
+        if( 9 == evt.keyCode) {
+
+            if(showDefault){
+                verifyCodeLabel.style.display = 'none';
+            }
+
+            $(config.VerifyCodeID).focus();
+            if ( e && e.preventDefault ) {
+                e.preventDefault(); 
+            }
+            else{
+                window.event.returnValue = false;
+            } 
+            return false;
+        }
+    }
+
+    function queryToJson(url) {
+        // var query = url.substr(url.lastIndexOf('?') + 1);
+        var query = url.substr(url.lastIndexOf('?') + 1);
+        var params = query.split('&');
+        var len = params.length;
+        var result = {};
+        var i = 0;
+        var key; 
+        var value;
+        var item;
+        var param;
+        
+        for (; i < len; i++) {
+            if(!params[i]){
+                continue;
+            }
+            param = params[i].split('=');
+            key = param[0];
+            value = decodeURIComponent(param[1]);
+            // value = decodeURIComponent(param[1]);
+            
+            item = result[key];
+            if ('undefined' == typeof item) {
+                result[key] = value;
+            }
+            else if (baidu.lang.isArray(item)) {
+                item.push(value);
+            }
+            else { // 这里只可能是string了
+                result[key] = [item, value];
+            }
+        }
+        return result;
+    }
+
+    function encodeHTML(str) {
+        return str.replace(/([&<>'"])/g, function (matcher, symbol) {
+            return '&#' + symbol.charCodeAt(0) + ';';
+        });
+    }
+
+    function setFieldValue ( source ) {
+       if(source['errno']) {
+            var errorBox = $(config.ErrorBoxID);
+            if(errorBox) {
+                if(source['errno'] == "135"){
+                    errorBox.innerHTML = "多次密码输入错误，账户被锁定，请使用“找回密码”功能解锁";
+                }else{
+                    errorBox.innerHTML = encodeHTML(decodeURI(source["e"]));
+                }
+            }
+        }
+        
+        var topUrl = window.top.location.href ,
+	    fromu  = baidu.url.getQueryValue(topUrl, 'fromu');
+
+	if( fromu ) {
+		fromu = decodeURIComponent( fromu ) ;
+
+		var paths = fromu.split('/');
+
+		if( paths && paths.length>=4 && paths[3] == 'client' ){
+
+			baidu.g('fromu').value = fromu + window.top.location.hash ;
+		}
+	}
+
+    }
+
+    function checkPassword(){
+        var value = passwordInput ? trim( passwordInput.value ) : '';
+        return value.length > 0;
+    }
+
+    function passwordChange(){
+        if(showDefault && !passwordFocusing && !config.issafe){
+            if( checkPassword() ){
+                hidePasswordLabel();
+            }else{
+                showPasswordLabel();
+                hidePasswordInput();
+            } 
+        }
+    }
+
+    function formIntervalHandler(){
+        passwordChange();
+
+        if(baidu.browser.chrome){
+            if( passwordFocusing )
+            {
+                showPasswordInput();
+            }
+        }
+    }
+
+    function render(){
+
+        if(config.useSafe) {
+           if(config.issafe) {
+                useSafeLogin();
+            }
+            else{
+                useNormalLogin();
+            }
+
+            if(config.isMultiple) { // 是否出现切换安全控件复选框
+                var isSafeContainer = $(config.IsSafeContainnerID);
+                var isSafe = $(config.IsSafeID);
+                if(isSafeContainer && isSafe) {
+                    removeClass(isSafeContainer ,'hidden');
+                    isSafe.onclick = function() {
+                        var checked = isSafe.checked;
+                        if(checked) {
+                           useSafeLogin();
+                        } 
+                        else {
+                           useNormalLogin();
+                        }
+                    };
+
+                    isSafe.checked = !!config.issafe ;
+                }
+            }
+        }
+
+        showPasswordInput(); //将根据是否安全登录选择合适的输入框
+
+        if(showDefault){
+            userNameLabel.style.display = 'block';
+            verifyCodeLabel.style.display = 'block';
+            passwordLabel.style.display = 'block';
+
+            /*
+            两种情况下可以用label挡住密码输入框
+            1. 普通登录，这个时候没问题
+            2. 安全登录，但是控件已安装，否则label会挡住安装链接。
+            */
+            if( !config.issafe || ucsl.isInstall){
+                hidePasswordInput(); //隐藏是因为安全登录框会挡住Label浮层
+                showPasswordLabel();
+            }
+        }
+    }
+
+    function safeInputReady(){
+        config.isUseful = 1 ;
+    }
+
+    function safeInputFail(){
+        config.isUseful = 0 ;
+    }
+
+    return {
+        reloadVerifyImg :reloadVerifyImg ,
+        verify : verify ,
+        render : render ,
+        bindEventHandler :bindEventHandler ,
+        setFieldValue : setFieldValue ,
+        queryToJson : queryToJson ,
+        safeInputReady : safeInputReady,
+        safeInputFail : safeInputFail ,
+        config : config 
+    };
+})();
+baidu.dom.ready(function(){
+    if( Form.config.useSafe ){
+    //初始化
+        ucsl.init({
+            fid: Form.config.PLUGCONTAINERID,   //父元素id
+            style: {
+                width: 262,             //密码框宽
+                height: 29,             //密码框高
+                tabindex: 2             //密码 tab index
+            },
+            tabout: Form.config.VerifyCodeID,      //tab out 元素id
+            ready : function(){
+                Form.safeInputReady();
+            },
+            fail : function(){
+                Form.safeInputFail();
+            }
+        });
+    }
+
+    Form.render();
+    Form.setFieldValue( Form.queryToJson( top.location.href ));
+    Form.bindEventHandler();
+});
+</script>
+<script type="text/javascript" src="/un-cms/js/elf.js"></script>
+<script type="text/javascript" src="/un-cms/js/SlideShow2.js"></script>
+<script type="text/javascript">
+	var slideShow = new SlideShow({	wrapId: 'SlideShow'});
+</script>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F443de0f0cee268e2df34908aba1b8744' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

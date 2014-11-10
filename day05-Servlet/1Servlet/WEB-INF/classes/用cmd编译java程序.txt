@@ -1,0 +1,3 @@
+1.切换到文件目录下 cd  /d  D:\xxxxxxxxx
+2.设置环境变量(导入需要的jar包)：set classpath=%classpath%;jarPath(可以直接将jar包文件拖进去)
+3.编译java问价：javac -encoding UTF-8 xxxx.java

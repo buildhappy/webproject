@@ -1,0 +1,5 @@
+package buildhappy.tools.berkeleyDB;
+
+public class BDBFrontier extends AbstractFrontier implements Frontier{
+
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<web-app 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+						http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+	id="WebApp_ID"  version="3.0">
+		
+  <display-name>Spring MVC</display-name>
+  
+  <!-- 定义DispatcherServlet，其会根据一个XML文件来加载sping的上下文，该xml文件名字基于它的servlet-name来确定 -->
+  <!-- 在此会创建WebApplicationContext容器；DispatchServlet会在作为一个成员(Map实例)存在该容器中，以便它用 -->
+  <servlet>
+  	<servlet-name>spitter</servlet-name>
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>spitter</servlet-name>
+  	<url-pattern>/</url-pattern><!-- proces all requests as default -->
+  </servlet-mapping>
+  
+  <!-- 负责监听、加载其他xml配置文件 -->
+  <listener>
+     <listener-class>
+         org.springframework.web.context.ContextLoaderListener
+     </listener-class>
+  </listener>
+  <context-param>
+  	<param-name>contextConfigLocation</param-name>
+    <param-value>
+        /WEB-INF/spitter-servlet.xml
+        /WEB-INF/spitter-security.xml   
+    </param-value>
+  </context-param>
+  
+  <!-- 为web security定义过滤器 P227-->
+  <filter>
+  	<filter-name>springSecurityFilterChain</filter-name>
+  	<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>springSecurityFilterChain</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+</web-app>
+ 

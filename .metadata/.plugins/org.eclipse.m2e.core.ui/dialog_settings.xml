@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item value="480" key="width"/>
+		<item value="480" key="x"/>
+		<item value="135" key="y"/>
+		<item value="450" key="height"/>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\Administrator\Desktop\hadoop\hbase权威指南代码"/>
+			<item value="C:\Users\Administrator\Desktop\webproject\demo"/>
+			<item value="C:\Users\Administrator\Desktop\webproject\WebCollector"/>
+			<item value="C:\Users\Administrator\Desktop\WebCollector"/>
+			<item value="C:\Users\Administrator\Desktop\webproject\day01"/>
+			<item value="C:\Users\Administrator\Desktop\Web Progect\day08JSP"/>
+			<item value="C:\Users\Administrator\Desktop\webproject\day06-ReqResp"/>
+			<item value="C:\Users\Administrator\Desktop\webproject\newsManagement3.0SpringAndMybatis"/>
+			<item value="C:\Users\Administrator\Desktop\webproject\SimpleSpringWebDemo"/>
+			<item value="C:\Users\Administrator\Desktop\webproject\newsManagement"/>
+			<item value="C:\Users\Administrator\Desktop\webproject\newsManagement2.0"/>
+			<item value="C:\Users\Administrator\Desktop\newsManagement2.0"/>
+			<item value="C:\Users\Administrator\Desktop\webproject\newsManagement3.0"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item value="All Catalogs" key="catalog"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+	</section>
+	<section name="MavenModuleWizardParentPage">
+		<list key="moduleName">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\Administrator\Desktop\webproject\"/>
+			<item value="C:\Users\Administrator\Desktop\webproject"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="movieRecommender.movieRecommender"/>
+			<item value="thinkingInJava.thinkingInJava"/>
+		</list>
+		<list key="groupId">
+			<item value="movieRecommender"/>
+			<item value="thinkingInJava"/>
+		</list>
+		<list key="artifactId">
+			<item value="movieRecommender"/>
+			<item value="thinkingInJava"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>
